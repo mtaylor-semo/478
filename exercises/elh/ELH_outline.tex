@@ -1,0 +1,231 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt]{article}
+%\usepackage{graphicx}
+%	\graphicspath{{/Users/goby/Pictures/teach/153/lab/}} % set of paths to search for images
+
+\usepackage{geometry}
+\geometry{letterpaper}                   
+\geometry{bottom=1in}
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+%\usepackage{amssymb}
+%\usepackage{mathtools}
+%	\everymath{\displaystyle}
+
+%\pagenumbering{gobble}
+
+\usepackage{fontspec}
+\setmainfont[Ligatures={Common}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{Linux Libertine O}
+\setsansfont[Scale=MatchLowercase,Ligatures=TeX]{Linux Biolinum O}
+\setmonofont[Scale=MatchLowercase]{Inconsolata}
+\usepackage{microtype}
+
+\usepackage{unicode-math}
+\setmathfont[Scale=MatchLowercase]{Asana-Math.otf}
+%\setmathfont{XITS Math}
+
+% To define fonts for particular uses within a document. For example, 
+% This sets the Libertine font to use tabular number format for tables.
+%\newfontfamily{\tablenumbers}[Numbers={Monospaced}]{Linux Libertine O}
+%\newfontfamily{\libertinedisplay}{Linux Libertine Display O}
+
+
+\usepackage{booktabs}
+%\usepackage{tabularx}
+%\usepackage{longtable}
+%\usepackage{siunitx}
+%\usepackage[justification=raggedright, singlelinecheck=off]{caption}
+%\captionsetup{labelsep=period} % Removes colon following figure / table number.
+%\captionsetup{tablewithin=none}  % Sequential numbering of tables and figures instead of
+%\captionsetup{figurewithin=none} % resetting numbers within each chapter (Intro, M&M, etc.)
+%\captionsetup[table]{skip=0pt}
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+\usepackage{enumitem}
+\usepackage{hyperref}
+%\usepackage{placeins} %PRovides \FloatBarrier to flush all floats before a certain point.
+\usepackage{hanging}
+
+\usepackage{titling}
+\setlength{\droptitle}{-60pt}
+\posttitle{\par\end{center}}
+\predate{}\postdate{}
+
+%\usepackage{fancyhdr}
+%\fancyhf{}
+%\pagestyle{fancy}
+%\lhead{}
+%\chead{}
+%\rhead{Name: \rule{5cm}{0.4pt} }
+%\renewcommand{\headrulewidth}{0pt}
+
+\newcommand{\VSpace}{\vspace{\baselineskip}}
+\newcommand{\BigVSpace}{\vspace{2\baselineskip}}
+
+
+\title{Ecological Life History Paper}
+\author{Outline of Requirements}
+\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\thispagestyle{fancy}
+\textbf{NOTE:} For 2016, remove point value for fish choice. Change the bibliography to an annotated bibliography. Change due date for annotated bib to a bit later in October. Make rubric/handout explaining what an annotated bibliography is.  Require they turn in the abstract of each paper, too, so I can see they are not plagiarizing the abstract for their annotations.
+
+\textbf{Of course}, this assumes I still do the ELH and not a Biotic Index report or something similar.
+
+
+\begin{enumerate}
+	\item Prepare an “ecological life history” of a fish species that interests you. The following topics are typically covered in such a paper:
+
+	\begin{enumerate}[label=\alph*.]
+	\item	Taxonomy, including races and ecotypes
+	\item Range
+	\item Food habits, feeding behavior
+	\item Fecundity, reproductive habits (time and place of spawning, spawning behavior, etc.)
+	\item Age and growth
+	\item Environmental requirements and tolerances (e.g. temperature, oxygen, depth, current, salinity, light, etc.)\\%
+		\textbf{OR}\\%
+		History in relation to humans
+	\item Literature cited
+	\end{enumerate}
+	
+	Note: you will have more success with some species (i.e., those that have economic and/or recreational importance) than others. It is better to choose a species that has been studied extensively. See W.J. Koster. 1955. Ecology 36(1): 141-153 (electronic copy located on the course website) for outline and general references on ecological life histories of fishes.
+	
+	\item Use the primary literature such journals or chapters from edited books for the body of your paper. You may use a book or encyclopedia for general information (e.g., color, morphological characteristics, range or distribution) on your species. This material will usually be included in the introduction to your paper. Some suggested periodicals are: Canadian Journal of Fisheries and Aquatic Sciences, Transactions of the American Fisheries Society, North American Journal of Fisheries Management, Copeia, Environmental Biology of Fishes, American Midland Naturalist, Journal of Fish Biology, Canadian Journal of Zoology.  A good reference for family level characteristics is Joseph Nelson’s \textit{Fishes of the World.}  The latest edition is at the library. Please copy / write down the information you need leave the book for others to use.   Earlier editions may still be available in the stacks. I will allow this text as as a primary reference.  If you are unsure whether a reference counts as primary literature, ask me.
+
+	\item Use metric measurements.  Convert U.S. measurements (yards, acres, Fahrenheit, etc) to their appropriate metric counterparts (meters, hectares, Celsius, etc).
+
+	\item The paper must not exceed a maximum of 8 pages (excluding the literature cited, tables, and figures). Please double space and number all pages.
+	
+	\item An electronic copy of the “Guide for Authors” from the Transactions of the American Fisheries Society will be available on the class website. Use this to check the correct format for presenting references in the text and literature cited section of your paper. Also check this guide for proper abbreviations of numbers, units, etc.
+	
+	\item Your literature cited section must conform to the following examples.
+	
+	\VSpace
+	\textsc{In-text citations:}
+	
+	When there is more than one citation for a particular statement, list them (1) chronologically, beginning with the oldest (with “in press” and “unpublished” sources at the end), and then (2) alphabetically within years (with citations containing “and” and “et al.” in alphabetical order).
+	\VSpace
+	(Roberts 1985; Johnson 1987; Berger, in press)\\
+	(Eldridge 1989; Smith 1992; Smith and Thomas 1992)\\
+	Exception: Group publications by the same author or authors together, even if this violates the rule about chronological listing:\\
+	(Roberts 1992, 1997; Smith 1996)
+	\VSpace
+	If you want to use the author names as part of your sentence, include only the year of publication in parentheses:
+	\VSpace
+	Roberts (1985) stated that\dots \\
+	My results were similar to those of Smith and Thomas (1992).
+
+	\VSpace
+	\textsc{Literature Cited}
+		
+	The literature that you cite in your paper should be listed (1) alphabetically by authors’ last names (ignoring the word “and”) and then (2) chronologically, with items that are in press coming last.
+	
+	Smith, R. C. 1992. Spawning patterns in\dots \\
+	Smith, R. C., J. B. Oldham, and W. F. Stone. 1998. Determinants of\dots \\
+	Smith, R. C., and H. Thompson. 1995. Observations on\dots \\
+	Smith, R. C., and H. Thompson. 1997. Additional observations on\dots
+	
+	\VSpace
+	\emph{Journals}
+	\begin{itemize}[label={}, leftmargin=1.5em, itemindent=-1.5em]
+		\item Hochachka, P. W. 1990. Scope for survival: a conceptual “mirror” to Fry’s scope for activity. Transactions of the American Fisheries Society 119:622-628.	
+		\item Kennedy, V. S. 1990. Anticipated effects of climate change on estuarine and coastal fisheries. Fisheries 15(6):16-24.
+	\end{itemize}
+	
+	\emph{Books}
+	\begin{itemize}[label={}, leftmargin=1.5em, itemindent=-1.5em]
+		\item Brönmark, C., and L.-A. Hansson. 1998. The biology of lakes and ponds. Oxford University Press, New York.
+		\item Murphy, B. R., and D. W. Willis, editors. 1996. Fisheries techniques, 2nd edition. AmericanFisheries Society, Bethesda, Maryland.
+		\item Hutchinson, G. E. 1975. A treatise on limnology, volume 1, part 1. Geography and physics of lakes. Wiley, New York.
+	\end{itemize}	
+	
+	\emph{Reports}
+	\begin{itemize}[label={}, leftmargin=1.5em, itemindent=-1.5em]
+		\item USEPA (U.S. Environmental Protection Agency). 1986. Quality criteria for water. USEPA, Report 440/5-86-001, Washington, D.C.
+		\item May, B., and R. Zubik. 1985. Quantitative\dots. Annual Report to the Bonneville Power Administration, Project 83-465, Portland, Oregon.
+	\end{itemize}
+	
+	\emph{Magazines and Newspapers}
+	\begin{itemize}[label={}, leftmargin=1.5em, itemindent=-1.5em]
+		\item Tucker, J. W., Jr. 1985. Sheepshead\dots. Tropical Fish Hobbyist (January):64-65, 68.
+		\item Larsen, R. 1986. Forestry and fisheries. The Seattle Times (February 9):A21, 27.
+		\item Saving the ocean. 2003. The Washington Post (May 21):A30.
+	\end{itemize}
+
+	\emph{Theses and Dissertations}
+	\begin{itemize}[label={}, leftmargin=1.5em, itemindent=-1.5em]
+		\item Chitwood, J. B. 1976. The effects of threadfin shad as a forage species for largemouth bass in combination with bluegill, redear, and other forage species. Masters thesis. Auburn University, Auburn, Alabama.
+		\item Hartman, K. J. 1993. Striped bass, bluefish, and weakfish in the Chesapeake Bay: Energetics, trophic linkages, and bioenergetics model applications. Doctoral dissertation. University of Maryland, College Park.
+	\end{itemize}
+
+	\emph{Web Sites}
+	\begin{itemize}[label={}, leftmargin=1.5em, itemindent=-1.5em]
+	\item Baldwin, N. A., R. W. Saalfield, M. R. Dochoda, H. J. Buettner, and R. L. Eschenroder. 2000. Commercial fish production in the Great Lakes, 1867-1996. Great Lakes Fishery Commission. Available: \url{www.glfc.org/databases/commercial/commerc.asp}. (September2000). (The date in parentheses indicates when the site was accessed.)
+	\end{itemize}
+
+
+	\emph{Software}
+	\begin{itemize}[label={}, leftmargin=1.5em, itemindent=-1.5em]
+			\item SPSS. 1993. SPSS for Windows, release 6.0. SPSS, Chicago.
+	\end{itemize}
+
+	\item Tables: The basic structure of a table includes only three horizontal lines (no vertical lines, not a box). One of the three horizontal lines lies below the title for your table, one line lies below the column headings, and the final line lies below your last data row.  Remember that the title (including the number) of the table is given above the table (not below!) and briefly and concisely describes the table.  Also, make sure that your columns are headed correctly and that the units are indicated at the heading.  Below are good examples of correctly constructed tables.  Microsoft Word has good options for making proper tables but do not use its default settings. If you are unsure how to make proper tables, ask me.
+	\VSpace
+	
+	Table 1.  Characteristics of four snail populations sampled at Nahant, MA on\\ 13 October 1985.
+	
+	\begin{tabular}{@{}lR{1.0in}R{1.0in}R{1.0in}@{}}
+	\toprule
+	Species & Average shell length (cm) & Sample size (\textit{N}) & Average no. snails per m$^2$ \\
+	\midrule
+	\textit{Crepidula fornicata}	&	1.63	&	122	&	32.1 \\
+	\textit{C. plana}	&	1.01	&	116	&	20.5 \\
+	\textit{Littorina littorea}	&	0.87	&	447	&	113.6 \\
+	\textit{L. saxatilus}	&	0.40	&	60	&	8.2 \\
+	\bottomrule
+	\end{tabular}	
+	
+	\VSpace
+	Table 2. Characteristics of antibiotic-producing \textit{Streptomyces.}
+	
+	\noindent\begin{tabular}{@{}L{1.65in}L{0.8in}L{0.8in}L{0.8in}L{0.8in}@{}}
+	\toprule
+	Determination & \textit{S. fluoricolor} & \textit{S. griseus} & \textit{S. coelicolor} & \textit{S. nocolor} \\
+	\midrule
+	Optimal temperature (°C)	&	$-$10	&	24	&	28	&	92 \\
+	Color of mycelium	&	Tan	&	Grey	&	Red	&	Purple \\
+	Antibiotic producted	&	Fluoricilinmycin	&	Streptomycin	&	Rhodomycin	&	Nomycin\\
+	Antibiotic yield (mg ml$^{-1}$)	&	4,108	&	78	&	119	&	0 \\
+	\bottomrule
+	\end{tabular}
+
+	\VSpace
+	Note that tables are numbered in the order that they are referenced in your text.  The first table that you reference is Table 1 and should appear first.  The next table is Table 2 and should appear second, and so on.
+	
+	\item Figures: Like tables, figures are numbered in the order that they are referenced in your text.  Figure 1 should appear first, Figure 2, second, and so on.  Unlike tables, the figure legend appears below the figure, beginning with the figure number.  
+
+	\item Please edit your paper rigorously. I will grade your paper primarily on the basis of content, but I will also grade spelling, grammar, etc.
+
+	\item I will only accept copies uploaded to the drop box.  Do not submit your paper to me by e-mail.
+
+	\item Due Dates: all assignments are due at the beginning of class.  A penalty of 20\% of the total points will be assessed for each day beyond this deadline, for a maximum deduction of 40\% of the total value.  After 2 days late, the assignment will not be accepted and you will receive a score of zero.
+	
+	\begin{enumerate}[label=\alph*.]
+		\item Fish Choice: 18 September.
+		\item Bibliography / References List (20 minimum): 14 October.
+		\item Final Paper: 13 November.
+		\item Graduate Student Presentations Start: on or after 13 November.
+	\end{enumerate}
+\end{enumerate}
+
+
+
+\end{document}  

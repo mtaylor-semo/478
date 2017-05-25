@@ -1,0 +1,108 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[nofonts, letterpaper]{tufte-handout}
+
+%\geometry{showframe} % display margins for debugging page layout
+
+\usepackage{graphicx} % allow embedded images
+  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+  \graphicspath{{img/}} % set of paths to search for images
+  
+\usepackage{fontspec}
+  \setmainfont[Ligatures=TeX,Numbers={Proportional}]{Linux Libertine O}
+  \setsansfont{Linux Biolinum O}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{multicol} % multiple column layout facilities
+%\usepackage{hyperref}
+%\usepackage{fancyvrb} % extended verbatim environments
+%  \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
+
+% Change the header to shift the title to the left side of the page. 
+% Replaced \quad with \hfill.  See \plaintitle in tufte-common.def
+{\fancyhead[RE,RO]{\scshape{\newlinetospace{\plaintitle}}\hfill\thepage}}
+
+\makeatletter
+% Paragraph indentation and separation for normal text
+\renewcommand{\@tufte@reset@par}{%
+  \setlength{\RaggedRightParindent}{1.0pc}%
+  \setlength{\JustifyingParindent}{1.0pc}%
+  \setlength{\parindent}{1pc}%
+  \setlength{\parskip}{0pt}%
+}
+\@tufte@reset@par
+
+% Paragraph indentation and separation for marginal text
+\renewcommand{\@tufte@margin@par}{%
+  \setlength{\RaggedRightParindent}{0pt}%
+  \setlength{\JustifyingParindent}{0.5pc}%
+  \setlength{\parindent}{0.5pc}%
+  \setlength{\parskip}{0pt}%
+}
+
+\makeatother
+
+\title{Study Guide 09}
+\author{Evolutionary History and Trends; Jawless Fishes}
+
+\date{} % without \date command, current date is supplied
+
+\begin{document}
+
+\maketitle	% this prints the handout title, author, and date
+
+%\printclassoptions
+
+\section{Vocabulary}\marginnote{\textbf{Study:} Chapters 2, 11.} \marginnote{$^1$ Both Agnatha and Osteichthys are commonly seen and sometimes still used (incorrectly) in the literature.} \marginnote{† indicates extinct taxon.}
+\vspace{-1\baselineskip}
+\begin{multicols}{2}
+monophyletic \\
+paraphyletic \\
+Cyclostomata \\
+Chondrichthyes \\
+Actinoptergyii \\
+Sarcoptergyii \\
+Agnatha$^1$ \\
+Osteichthyes$^1$ \\
+Conodonta† \\
+Ostracoderms† \\
+Myxini \\
+Petromyzontida \\
+paired species / satellite species 
+\end{multicols}
+
+\section{Concepts}
+
+\begin{enumerate}
+	\item Be able to recognize and distinguish classification groups that are monophyletic or not monophyletic.  Be able to explain why they are monophyletic or not.
+
+	\item Are the fishes, as we currently recognize them, paraphyletic, monophyletic, or polyphyletic?  What about each of the classes? Which are and which, if any, are not?
+
+	\item What characteristic(s) are shared among the jawless fishes?  When did they live? What major living and fossil groups are included within the jawless fishes?
+
+	\item What is the argument against using Agnatha to classify jawless fishes?  Similarly, what is the argument against using Osteichthyes for jawed fishes with bony elements?
+
+	\item Be able to draw a phylogeny with the correct placement of:
+	\begin{itemize}
+		\item The classes of extant fishes,
+		\item Conodonta, and
+		\item Ostracodermi.
+	\end{itemize}
+	We’ll add more taxa as we proceed.  Small steps.
+	
+	\item What geologic period is commonly known as the Age of Fishes?  Why is this so?
+
+	\item Which fishes are craniates?  Which fishes are chordates?  What are the characteristics that define chordates, and what characteristics define craniates?  Be sure you know which is a phylum and which is a subphylum.
+	
+		\item What major characteristics define the Myxini?  What are two possible explanations for knotting behavior in the Myxini?
+
+	\item What type of osmoregulation is characteristic of the Myxini?  What characteristic(s) of their habitat makes this type of osmoregulation possible?
+
+	\item What are the major characteristics of Petromyzontida?
+
+	\item Explain the paired species (also known as the satellite species) hypothesis in lampreys.  
+
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,108 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[nofonts, letterpaper]{tufte-handout}
+
+%\geometry{showframe} % display margins for debugging page layout
+
+\usepackage{graphicx} % allow embedded images
+  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+  \graphicspath{{img/}} % set of paths to search for images
+  
+\usepackage{fontspec}
+  \setmainfont[Ligatures=TeX,Numbers={Proportional}]{Linux Libertine O}
+  \setsansfont{Linux Biolinum O}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{multicol} % multiple column layout facilities
+%\usepackage{hyperref}
+%\usepackage{fancyvrb} % extended verbatim environments
+%  \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
+
+% Change the header to shift the title to the left side of the page. 
+% Replaced \quad with \hfill.  See \plaintitle in tufte-common.def
+{\fancyhead[RE,RO]{\scshape{\newlinetospace{\plaintitle}}\hfill\thepage}}
+
+\makeatletter
+% Paragraph indentation and separation for normal text
+\renewcommand{\@tufte@reset@par}{%
+  \setlength{\RaggedRightParindent}{1.0pc}%
+  \setlength{\JustifyingParindent}{1.0pc}%
+  \setlength{\parindent}{1pc}%
+  \setlength{\parskip}{0pt}%
+}
+\@tufte@reset@par
+
+% Paragraph indentation and separation for marginal text
+\renewcommand{\@tufte@margin@par}{%
+  \setlength{\RaggedRightParindent}{0pt}%
+  \setlength{\JustifyingParindent}{0.5pc}%
+  \setlength{\parindent}{0.5pc}%
+  \setlength{\parskip}{0pt}%
+}
+
+\makeatother
+
+\title{Study Guide 07}
+\author{Reproduction}
+
+\date{} % without \date command, current date is supplied
+
+\begin{document}
+
+\maketitle	% this prints the handout title, author, and date
+
+%\printclassoptions
+
+\section{Vocabulary}\marginnote{\textbf{Study:} Pgs. 156, 456--475.} 
+\vspace{-1\baselineskip}
+\begin{multicols}{2}
+spawning aggregation \\
+semelparity \\
+iteroparity \\
+pelagic spawning \\
+benthic spawning \\
+egg mimicry \\
+egg raiding \\
+allopaternal care \\
+ovoviviparity \\
+viviparity \\
+promiscuity \\
+monogamy \\
+polygyny \\
+polyandry \\
+cuckholdry \\
+sneaker male \\
+satellite male \\
+sequential hermaphroditism \\
+protandry \\
+protogyny \\
+synchronous hermaphroditism 
+\end{multicols}
+
+\section{Concepts}
+
+\begin{enumerate}
+	\item What are four mechanisms fishes may use to find a mate?
+
+	\item What is the disadvantage of using bright coloration to attract a mate?
+
+	\item Compare and contrast different types of parental care in fishes.
+
+	\item Why is male parental care more advantageous than female parental care?
+
+	\item Describe three strategies employed by nest-guarding males to increase chances of mating with a female.
+
+	\item What is the primary difference between ovoviviparity and viviparity in fishes?
+
+	\item What do most marine fishes have an extended larval stage?  How long can the larval stage last? Other than dispersal, what other hypotheses explain a lengthy larval period?  What is the disadvantage of a long larval stage?
+
+	\item What conditions favor sneaker and satellite males as an alternative reproductive strategy?  
+
+	\item What conditions favor semelparity over iteroparity?  Why is iteroparity most common in fishes?
+
+	\item Why is pelagic spawning common in marine fishes but uncommon in freshwater fishes? Conversely, why is benthic spawning common in freshwater fishes?
+\end{enumerate}
+
+
+\end{document}

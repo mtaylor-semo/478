@@ -1,0 +1,210 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+%\documentclass[t]{beamer}
+
+%%%% HANDOUTS For online Uncomment the following four lines for handout
+\documentclass[t,handout]{beamer}  %Use this for handouts.
+\usepackage{handoutWithNotes}
+\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
+	\setbeamercolor{background canvas}{bg=black!5}
+
+
+%%% Including only some slides for students.
+%%% Uncomment the following line. For the slides,
+%%% use the labels shown below the command.
+%\includeonlylecture{student}
+
+%% For students, use \lecture{student}{student}
+%% For mine, use \lecture{instructor}{instructor}
+
+
+%\usepackage{pgf,pgfpages}
+%\pgfpagesuselayout{4 on 1}[letterpaper,border shrink=5mm]
+
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Biolinum O}
+\setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
+\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/478/lectures/}%
+	{/Users/goby/Pictures/teach/common/}} % set of paths to search for images
+
+\usepackage{amsmath,amssymb}
+
+%\usepackage{units}
+
+\usepackage{booktabs}
+\usepackage{multicol}
+%	\setlength{\columnsep=1em}
+
+\usepackage{textcomp}
+\usepackage{setspace}
+\usepackage{tikz}
+	\tikzstyle{every picture}+=[remember picture,overlay]
+
+\mode<presentation>
+{
+  \usetheme{Lecture}
+  \setbeamercovered{invisible}
+  \setbeamertemplate{items}[square]
+}
+
+\usepackage{calc}
+\usepackage{hyperref}
+
+
+\begin{document}
+%\lecture{instructor}{instructor}
+%\lecture{student}{student}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{circulation_intro}}
+\begin{frame}[b,plain]{The circulatory system in fishes.}
+
+\hfill\parbox{3.2cm}{\raggedright\tiny\textcolor{white}{\textit{Chionodraco hamatus} (an icefish, Channichthyidae: Perciformes), Marrabbio2, Wikimedia Commons.}}
+
+\end{frame}
+}
+
+
+\begin{frame}[c,plain]{Fishes have a \highlight{single pump, single circuit} circulatory system.}
+	\centering
+	\includegraphics[width=\textwidth]{circulation_system}
+	
+\end{frame}
+
+\begin{frame}[c,plain]{Fishes have a \highlight{four-chambered} heart.}
+
+	\includegraphics[width=\textwidth]{circulation_heart_structure}
+	
+\end{frame}
+
+\begin{frame}[c,plain]{Blood flows from ventral to dorsal through the gills.}
+
+	\includegraphics[width=\textwidth]{circulation_gills_teleost}
+
+	\phantom{\includegraphics[width=\textwidth]{circulation_gills_lungfish}}
+	
+\end{frame}
+
+\begin{frame}[c,plain]{Lungfishes divert some blood from gills through the lungs.}
+
+	\includegraphics[width=\textwidth]{circulation_gills_teleost}
+
+	\includegraphics[width=\textwidth]{circulation_gills_lungfish}
+	
+\end{frame}
+
+
+\begin{frame}[c,plain]{Hemoglobin is monomeric in hagfishes and lampreys.}
+
+\vspace{\baselineskip}
+
+	\centering
+	\includegraphics[width=0.7\textwidth]{circulation_hemoglobin_monomer}
+
+\vskip0pt plus 1filll
+\hfill\tiny Modified from Hemogloblin diagram by OpenStax College, Wikimedia Commons.
+\end{frame}
+
+
+\begin{frame}[c,plain]{Hemoglobin is tetrameric in all other fishes.}
+
+\vspace{\baselineskip}
+
+	\centering
+	\includegraphics[width=0.7\textwidth]{circulation_hemoglobin_structure}
+	
+	Hb + O$_2 \Longleftrightarrow $ HbO$_2$
+	
+\vskip0pt plus 1filll
+\hfill\tiny Hemogloblin diagram by OpenStax College, Wikimedia Commons.
+\end{frame}
+
+\begin{frame}[c,plain]{\highlight{Oxygen affinity} describes how easily Hb binds to and releases O$_2$.}
+
+\centering
+\includegraphics{circulation_hb_affinity}
+
+\pause
+
+\begin{tikzpicture}
+
+	\draw [dashed,thick] (-4.8,4) -- (3,4);
+	\node [right] at (3,4) {P50};
+	
+\end{tikzpicture}
+	
+\end{frame}
+
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{circulation_affects_affinity}}
+\begin{frame}[t,plain]
+
+	\vspace{2\baselineskip}
+	
+	\hangpara What factors affect\\  oxygen affinity?
+	
+	\vspace{4em}
+	
+	\hangpara Do you know\\ the bicarbonate\\ buffering system?
+	
+\vskip0pt plus 1filll
+\hfill\tiny\textit{Gorgasia preclara} (Splendid Garden Eel, Congridae: Anguilliformes),\\
+\hfill\tiny  Opencage.info, Creative Commons.
+\end{frame}
+}
+
+
+\begin{frame}[c,plain]{\highlight{Bohr effect} describes how pH affects oxygen \highlight{affinity.}}
+
+	\centering
+	\includegraphics[width=\textwidth]{circulation_bohr_root}
+	\pause
+	
+\begin{tikzpicture}
+	%% Bohr shift
+	\draw [->, thick] (-3.2,5.2) -- (-0.4,5.2);
+	\draw [->, thick] (0.1,5.2) -- (2.3,5.2);
+	\node [above] at (-1.8,5.2) {Bohr Effect};
+
+\end{tikzpicture}
+
+\end{frame}
+
+
+\begin{frame}[c,plain]{\highlight{Root effect} describes how pH affects oxygen \highlight{capacity.}}
+
+	\centering
+	\includegraphics[width=\textwidth]{circulation_bohr_root}
+	\pause
+	
+\begin{tikzpicture}
+	% Root shift	
+	\draw [->, thick] (4.4,8.1) -- (4.4,6.4);
+	\draw [->, thick] (4.4,6.2) -- (4.4,5.38);
+	\node [left, text width=1cm] at (4.4,7.25) {Root Effect};
+	
+\end{tikzpicture}
+
+\end{frame}
+
+
+\begin{frame}[c,plain]{Compare and contrast O$_2$ loading and unloading in the gills and the body.}
+
+	\vspace{\baselineskip}
+	\includegraphics[width=\textwidth]{circulation_loading_unloading}
+	\vskip0pt plus 1filll
+
+\hfill\tiny\textit{Enoplosus armatus} (Old Wife, Enoplosidae:Perciformes), Richard Ling, Wikimedia Commons.
+\end{frame}
+
+\end{document}

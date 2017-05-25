@@ -1,0 +1,153 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt]{article}
+%\usepackage{graphicx}
+%	\graphicspath{{/Users/goby/Pictures/teach/153/lab/}} % set of paths to search for images
+
+\usepackage{geometry}
+\geometry{letterpaper}                   
+\geometry{bottom=1in}
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+%\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+	\everymath{\displaystyle}
+
+%\pagenumbering{gobble}
+
+\usepackage{fontspec}
+\setmainfont[Ligatures={Common}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{Linux Libertine O}
+\setsansfont[Scale=MatchLowercase,Ligatures=TeX]{Linux Biolinum O}
+\setmonofont[Scale=MatchLowercase]{Inconsolata}
+\usepackage{microtype}
+
+\usepackage{unicode-math}
+\setmathfont[Scale=MatchLowercase]{Asana-Math.otf}
+%\setmathfont{XITS Math}
+
+% To define fonts for particular uses within a document. For example, 
+% This sets the Libertine font to use tabular number format for tables.
+%\newfontfamily{\tablenumbers}[Numbers={Monospaced}]{Linux Libertine O}
+%\newfontfamily{\libertinedisplay}{Linux Libertine Display O}
+
+
+\usepackage{booktabs}
+%\usepackage{tabularx}
+%\usepackage{longtable}
+%\usepackage{siunitx}
+%\usepackage[justification=raggedright, singlelinecheck=off]{caption}
+%\captionsetup{labelsep=period} % Removes colon following figure / table number.
+%\captionsetup{tablewithin=none}  % Sequential numbering of tables and figures instead of
+%\captionsetup{figurewithin=none} % resetting numbers within each chapter (Intro, M&M, etc.)
+%\captionsetup[table]{skip=0pt}
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+\usepackage{enumitem}
+\usepackage{hyperref}
+%\usepackage{placeins} %PRovides \FloatBarrier to flush all floats before a certain point.
+\usepackage{hanging}
+
+\usepackage{titling}
+\setlength{\droptitle}{-60pt}
+\posttitle{\par\end{center}}
+\predate{}\postdate{}
+
+%\usepackage{fancyhdr}
+%\fancyhf{}
+%\pagestyle{fancy}
+%\lhead{}
+%\chead{}
+%\rhead{Name: \rule{5cm}{0.4pt} }
+%\renewcommand{\headrulewidth}{0pt}
+
+\newcommand{\VSpace}{\vspace{\baselineskip}}
+\newcommand{\BigVSpace}{\vspace{2\baselineskip}}
+
+
+\title{Comparing Diversity of Fish Assemblages}
+\author{ZO 478 / 678}
+\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\thispagestyle{fancy}
+
+Your goal for this assignment is to compare the biological diversity of fishes that we sampled from the Whitewater River and Ditch 1, both of which have approximately the same stream order (3).  You will apply two widely used measures of biological diversity and evenness. Diversity indices combine measures of species richness and evenness.  \emph{Species richness} is the total number of species present in the community or assemblage.  \emph{Evenness} is a measure of how abundance is distributed across species.  For example, if you have 10 species, with 91 individuals of the one species, and only one individual of each of the remaining species, abundance is not distributed evenly.  If you have 10 individuals of each of the 10 species, abundance is distributed evenly. 
+
+As species richness and evenness increase, so does diversity.  Communities and assemblages with high diversity will have the number of individuals distributed fairly evenly across a large number of species, although there will still be some highly abundant species and some uncommon species.  In contrast, communities and assemblages with low diversity will have fewer species, and most individuals will belong only to a few of those species.
+
+I have provided you with a printout and Excel spreadsheet with the results of our field trips to these locations.  Use these data to calculate the following measures of diversity and evenness for the fishes collected from Whitewater River and Ditch 1. 
+
+\subsection*{Shannon's Diversity Index ($H'$)}
+
+One of the most widely used diversity indices is Shannon's $H'$, defined as 
+
+\begin{equation*}
+H' = -\sum_{i=1}^{S} p_i \ln p_i
+\end{equation*}
+
+\noindent where $S = $ the total number of species collected (also known as species richness), $p_i = $ the number of specimens of species $i$ divided by the total number of specimens collected, and $\ln$ is the natural logarithm. Notice that you negate the final summation to obtain a positive value for $H'$.
+
+Roughly, $H'$ is an estimate of the uncertainty of the next species to be sampled from a community.  Imagine an assemblage of stream fishes that you are sampling randomly, one individual at a time.  If the assemblage consists of a single species, $H' = 0$ because you are absolutely certain (zero uncertainty) about the species identification of the next individual sampled.  You know with absolute certainty that the individual will belong to the only species present.  As species are added to the assemblage with varying abundances, you become increasingly uncertain what species you will sample next.  It could be species A, it could be species B, species D, etc.  Typical values of $H'$ for real biological assemblages and communities are between 1.5 and 3.5 (Stiling 1999).
+
+Evenness for Shannon’s index is calculated by
+\begin{equation*}
+E_{H'} = H'/\ln S.
+\end{equation*}
+
+Values of $E_{H' }$ range between 0 and 1, with higher values indicating a more even distribution of species abundance.
+
+\subsection*{Simpson’s Diversity Index ($D'$)}
+
+There are several variations of Simpson’s index.  The original formula is
+
+\begin{equation*}
+	D = \sum_{i=1}^{S} \frac{n_i(n_i-1)}{N(N-1)}
+\end{equation*}
+
+\noindent where $n_i = $ the number of specimens of species $i$, and $N$ is the total number of specimens sampled. $S$ was defined above for $H'$.
+
+Simpson’s index estimates the probability that any two individuals drawn at random from an assemblage will be the same species (Stiling 1999).  However, this interpretation is not intuitive.  For example, consider values of $D = 0.10$ and $D = 0.90$.  Intuitively, you would interpret the assemblage with $D = 0.90$ as the more diverse assemblage because the value of $D$ is larger.  However, $D = 0.90$ actually means that two individuals drawn at random from the assemblage have a 90\% chance of being individuals of the same species.  That means most individuals belong to a single species, which is not a diverse assemblage.
+
+Therefore, you will use a simple variation:
+\begin{equation*}
+D' = 1 - \sum_{i=1}^{S} \frac{n_i(n_i-1)}{N(N-1)}.
+\end{equation*}
+The only difference is to subtract the initial calculation from 1. $D'$ is more easily interpreted. If $D = 0.10$, then $D' = 0.90$, which is a diverse assemblage because the chances of randomly drawing two individuals of a single species is only 10\%.  Evenness is calculated by
+
+\begin{equation*}
+E_{D'} = \frac{D'}{S}
+\end{equation*}
+
+\subsection*{The Assignment}
+
+Download the Excel file from the course website. It contains the species identifications and number of specimens for the Whitewater River and Ditch 1 collections. Calculate $H'$, $E_{H'}$, $D'$, and $E_{D'}$ for both collections using Excel.  You will also need to calculate $H'$ and $E_{H'}$ at the family level (see item 4 below). I expect you to be able to figure out how to calculate the diversity and evenness measures in Excel but you may verify with me that you are doing so correctly.
+
+Then, write a simple Results and Discussion section discussing your results.  Do not worry about a minimum number of pages.  Focus on addressing issues relevant to community structure in fishes.  At a minimum, address the following set of questions.
+\begin{enumerate}
+\item How do the diversity and evenness estimates compare between the Ditch 1 and Whitewater assemblages?  How do the two diversity estimates compare within each assemblages?
+
+\item Which factors (environmental or biological) do you think have the primary influence on structure for each assemblages and why?  Speculate on possible examples, or draw specific examples from the literature.
+
+\item Assume you were to sample both sites every three months for 10 years.  Would you expect the magnitude of diversity to change for either or both of these communities?  If so, explain how would you expect diversity to change, and for which assemblages?  If not, explain why not.  (Hint: remember the two measures used to calculate diversity).  
+
+\item Use the Shannon Diversity Index and Evenness to compare the diversity of species at the family level (sum together the number of individuals for each family).  How does diversity and evenness compare between the two assemblages?  How do you explain this?  Speculate how this might change over the 10-year sampling regime described above.
+\end{enumerate}
+
+I prefer that you address the questions as a narrative with logical flow rather than as a checklist of answers.  For example, as you discuss potential changes in assemblage diversity, you could speculate how this would relate to environmental or biological factors.  Think and write as you would for any scientific paper that you have written or that you have read.  You are not required to include a Literature Cited, but you may choose to include relevant citations.  Any assertions by you must be based on a topic we specifically addressed in lecture.  Any other assertions will require that you justify your statements with citations from the literature.  Use only the primary literature (journals and edited volumes) and secondary literature (scholarly volumes by a single author) as your references.  You must not cite any internet web sites.  Scientific journal articles obtained from web sites are \emph{not} web sites. Cite them as journal articles. Follow the same format you used for your ecological life history paper.
+
+I do not expect extended discourse for each of the above questions but I do want you to relate the topics about freshwater stream assemblages that we have discussed in class to your results.  The paper by Schlosser (1987) will also provide relevant background.  Discuss possible factors that may explain the observed assemblage, and learn a little bit about diversity calculations.  I do not expect particularly long papers.  I will  grade on the quality of your reasoning. Do not hesitate to visit with me if you have questions or are unclear on the assignment. 
+
+\textbf{This assignment is worth 50 points. You must upload your Word \emph{and} Excel files to the specified drop box before the start of the final exam on 18 December, 12 pm.}
+
+\subsection*{Literature Cited}
+
+Stiling, P. 1999. \textit{Ecology: Theory and Applications}, 3rd ed. Prentiss-Hall, Upper Saddle River, NJ.
+
+\end{document}  

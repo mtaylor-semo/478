@@ -1,0 +1,98 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[nofont,letterpaper]{tufte-handout}
+
+%\geometry{showframe} % display margins for debugging page layout
+
+\usepackage{graphicx} % allow embedded images
+  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+  \graphicspath{{img/}} % set of paths to search for images
+  
+\usepackage{fontspec}
+  \setmainfont[Ligatures=TeX,Numbers={Proportional}]{Linux Libertine O}
+  \setsansfont{Linux Biolinum O}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{multicol} % multiple column layout facilities
+%\usepackage{hyperref}
+%\usepackage{fancyvrb} % extended verbatim environments
+%  \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
+
+% Change the header to shift the title to the left side of the page. 
+% Replaced \quad with \hfill.  See \plaintitle in tufte-common.def
+{\fancyhead[RE,RO]{\scshape{\newlinetospace{\plaintitle}}\hfill\thepage}}
+
+\makeatletter
+% Paragraph indentation and separation for normal text
+\renewcommand{\@tufte@reset@par}{%
+  \setlength{\RaggedRightParindent}{1.0pc}%
+  \setlength{\JustifyingParindent}{1.0pc}%
+  \setlength{\parindent}{1pc}%
+  \setlength{\parskip}{0pt}%
+}
+\@tufte@reset@par
+
+% Paragraph indentation and separation for marginal text
+\renewcommand{\@tufte@margin@par}{%
+  \setlength{\RaggedRightParindent}{0pt}%
+  \setlength{\JustifyingParindent}{0.5pc}%
+  \setlength{\parindent}{0.5pc}%
+  \setlength{\parskip}{0pt}%
+}
+\makeatother
+
+\title{Study Guide 10}
+\author{Chondrichthyes, Jaw Suspension}
+
+\date{} % without \date command, current date is supplied
+
+\begin{document}
+
+\maketitle	% this prints the handout title, author, and date
+
+%\printclassoptions
+
+\section{Vocabulary}\marginnote{\textbf{Study:} pgs 197--200, 205--229.}  
+\vspace{-1\baselineskip}
+\begin{multicols}{2}
+Placodermi \\
+autostylic \\
+amphistylic \\
+hyostylic \\
+ammocoete \\
+Chondrichthyes \\
+Holocephali \\
+Elasmobranchii \\
+Selachii \\
+Batoidea 
+\end{multicols}
+
+\section{Concepts}
+
+\begin{enumerate}
+	\item What characteristic(s) define the Gnathostomata?  What groups of extant and extinct fishes comprise the Gnathostomata?	
+
+	\item If you formed a classification scheme based on the type of jaw support found in fishes, would the hyostylic classification be monophyletic?  What about for the other two types of suspension?  Why or why not?
+
+	\item What are the possible evolutionary advantages that led to the evolution of jaws?
+
+	\item Compare and contrast the three types of jaw suspension.  For each type of jaw suspension, name 1--2 groups of extant or fossil fishes that have that type of jaw suspension.
+
+	\item What are the characteristics of the Chondrichthyes?
+
+	\item List and briefly describe each of the five basic adaptations that underlie the evolution of the Chondrichthyes.
+
+	\item Draw and label a phylogeny of the Chondrichthyes.  Provide 1--2 key characteristics for each group within the Chondrichthyes.
+
+	\item Our phylogenetic hypothesis for the evolutionary relationships of Chondrichthyes is based almost entirely on current species.  Why do we not rely more heavily on the fossil record to fill in the gaps?
+
+	\item What are the key characteristics of the subclass Holocephali?
+
+	\item Based on their body form, what life history / ecology aspects would you predict for the the Holocephali? Think form and function.
+
+	\item What are the key characteristics of the subclass Elasmobranchii?  What two groups make up the elasmobranchs?
+
+\end{enumerate}
+
+\end{document}

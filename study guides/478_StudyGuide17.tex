@@ -1,0 +1,78 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[letterpaper]{tufte-handout}
+
+%\geometry{showframe} % display margins for debugging page layout
+
+\usepackage{graphicx} % allow embedded images
+  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+  \graphicspath{{img/}} % set of paths to search for images
+  
+\usepackage{fontspec}
+  \setmainfont[Ligatures=TeX,Numbers={Proportional}]{Linux Libertine O}
+  \setsansfont{Linux Biolinum O}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{multicol} % multiple column layout facilities
+%\usepackage{hyperref}
+%\usepackage{fancyvrb} % extended verbatim environments
+%  \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
+
+% Change the header to shift the title to the left side of the page. 
+% Replaced \quad with \hfill.  See \plaintitle in tufte-common.def
+{\fancyhead[RE,RO]{\scshape{\newlinetospace{\plaintitle}}\hfill\thepage}}
+
+\makeatletter
+% Paragraph indentation and separation for normal text
+\renewcommand{\@tufte@reset@par}{%
+  \setlength{\RaggedRightParindent}{1.0pc}%
+  \setlength{\JustifyingParindent}{1.0pc}%
+  \setlength{\parindent}{1pc}%
+  \setlength{\parskip}{0pt}%
+}
+\@tufte@reset@par
+
+% Paragraph indentation and separation for marginal text
+\renewcommand{\@tufte@margin@par}{%
+  \setlength{\RaggedRightParindent}{0pt}%
+  \setlength{\JustifyingParindent}{0.5pc}%
+  \setlength{\parindent}{0.5pc}%
+  \setlength{\parskip}{0pt}%
+}
+\makeatother
+
+\title{Study Guide 17}
+\author{Special Adaptations: Caves and Polar Regions}
+
+\date{} % without \date command, current date is supplied
+
+\begin{document}
+
+\maketitle	% this prints the handout title, author, and date
+
+%\printclassoptions
+
+\section{Vocabulary}\marginnote{\textbf{Study:} 405--410, 417--419.} 
+\vspace{-1\baselineskip}
+\begin{multicols}{2}
+hypogean \\
+troglobite \\
+Antarctic convergence \\
+antifreeze glycoproteins
+\end{multicols}
+
+\section{Concepts}
+
+\begin{enumerate}
+	\item Explain the evolutionary convergence of troglobitic fishes and bathypelagic fishes.  What are the similar environmental factors and how have each group of fishes adapted?
+
+	\item How have troglobitic fishes adapted to the low productivity of the cave environment?
+
+	\item Explain how the grotto sculpin in Perry County appears to represent an adaptive transition from a surface habitat to the cave habitat?  What morphological and physiological changes are occurring?
+
+	\item Polar fishes live at or near freezing temperatures of sea water.  What adaptations prevent fishes from freezing?	\item Which polar fishes lack glomeruli and why?	\item How can some polar fishes survive without hemoglobin?  What adaptions are necessary?  Explain how each contributes to oxygen uptake or distribution in fishes without hemoglobin.	\item All notothenioids lack a swim bladder, but some species have achieved neutral buoyancy.  Explain how they have achieved neutrality.  Why is this important?
+	
+\end{enumerate}
+
+\end{document}

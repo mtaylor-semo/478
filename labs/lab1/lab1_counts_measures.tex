@@ -1,0 +1,148 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt]{article}
+%\usepackage{graphicx}
+%	\graphicspath{{/Users/goby/Pictures/teach/153/lab/}} % set of paths to search for images
+
+\usepackage{geometry}
+\geometry{letterpaper}                   
+\geometry{bottom=1in}
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+%\usepackage{amssymb}
+%\usepackage{mathtools}
+%	\everymath{\displaystyle}
+
+%\pagenumbering{gobble}
+
+\usepackage{fontspec}
+\setmainfont[Ligatures={Common}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{Linux Libertine O}
+\setsansfont[Scale=MatchLowercase,Ligatures=TeX]{Linux Biolinum O}
+\setmonofont[Scale=MatchLowercase]{Inconsolata}
+\usepackage{microtype}
+
+\usepackage{unicode-math}
+\setmathfont[Scale=MatchLowercase]{Asana-Math.otf}
+%\setmathfont{XITS Math}
+
+% To define fonts for particular uses within a document. For example, 
+% This sets the Libertine font to use tabular number format for tables.
+%\newfontfamily{\tablenumbers}[Numbers={Monospaced}]{Linux Libertine O}
+%\newfontfamily{\libertinedisplay}{Linux Libertine Display O}
+
+
+%\usepackage{booktabs}
+%\usepackage{tabularx}
+%\usepackage{longtable}
+%\usepackage{siunitx}
+%\usepackage[justification=raggedright, singlelinecheck=off]{caption}
+%\captionsetup{labelsep=period} % Removes colon following figure / table number.
+%\captionsetup{tablewithin=none}  % Sequential numbering of tables and figures instead of
+%\captionsetup{figurewithin=none} % resetting numbers within each chapter (Intro, M&M, etc.)
+%\captionsetup[table]{skip=0pt}
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+\usepackage{enumitem}
+\usepackage{hyperref}
+%\usepackage{placeins} %PRovides \FloatBarrier to flush all floats before a certain point.
+\usepackage{hanging}
+
+\usepackage{titling}
+\setlength{\droptitle}{-60pt}
+\posttitle{\par\end{center}}
+\predate{}\postdate{}
+
+%\usepackage{fancyhdr}
+%\fancyhf{}
+%\pagestyle{fancy}
+%\lhead{}
+%\chead{}
+%\rhead{Name: \rule{5cm}{0.4pt} }
+%\renewcommand{\headrulewidth}{0pt}
+
+\newcommand{\VSpace}{\vspace{\baselineskip}}
+\newcommand{\BigVSpace}{\vspace{2\baselineskip}}
+
+
+\title{Comparing Counts and Measurements}
+\author{ZO 478 / 678 Lab 1}
+\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\thispagestyle{fancy}
+
+A well-trained ichthyologist can distinguish among similar species of fishes with just a quick glance.  Learning to recognize differences among similar species, however, takes practice.  In addition, scientists can’t describe new species of fishes by simply saying, “They look different.”  Instead, fish identification and taxonomy has traditionally used a consistent set of counts and measurements that can be used to compare similar species to identify consistent differences between them.   This exercise will teach you some of the counts and measurements that you will use throughout the semester as you learn to identify different species of fishes.
+
+You have been given two different species: \textit{Lepomis megalotis} (Longear Sunfish) and \textit{Lepomis cyanellus} (Green Sunfish).  Use the separate handout called “Anatomical features, and terms and methods of counting and measuring” as a guide to the different methods of counting or measuring important features. You should make counts and measurements on one species while your partner makes the same counts and measurements for the other species.  We’ll compile the data and see if there are consistent differences between them.
+
+By tradition, all counts are made on the left side of the fish.  That means the fish’s head should point to your left when you count scales.
+
+\VSpace
+
+\textbf{Fin Ray Counts:} Count the exact number of rays and spines for the following fins.\VSpace
+
+\begin{tabular}{ll}
+
+Dorsal Spines: & \rule{3cm}{0.4pt} \\[1.5em]
+
+Dorsal Rays: & \rule{3cm}{0.4pt} \\[1.5em]
+
+Anal Spines: & \rule{3cm}{0.4pt} \\[1.5em]
+
+Anal Rays: & \rule{3cm}{0.4pt} \\[1.5em]
+
+Pectoral Rays: & \rule{3cm}{0.4pt} \\
+
+\end{tabular}
+
+\VSpace\VSpace
+
+\textbf{Scale Counts:} Count the exact number of scales for the following series.\VSpace
+
+\begin{tabular}{ll}
+
+Lateral Line Scales: & \rule{3cm}{0.4pt} \\[1.5em]
+
+Scales Below Lateral Line: & \rule{3cm}{0.4pt} \\[1.5em]
+
+Scales Above Lateral Line: & \rule{3cm}{0.4pt} \\[1.5em]
+
+Pored Lateral Line Scales: & \rule{3cm}{0.4pt} \\[1.5em]
+
+Cheek Scales: & \rule{3cm}{0.4pt} \\
+
+\end{tabular}
+
+\newpage
+
+\textbf{Measurements and Proportions:} Use a ruler and dividers to measure.\VSpace
+
+\begin{tabular}{L{8.5cm}l}
+
+Standard Length: & \rule{3cm}{0.4pt} \\[1.5em]
+
+Distance from tip of snout to front of dorsal fin (call this measurement A): & \rule{3cm}{0.4pt} \\[1.5em]
+
+Body depth at deepest point (call this measurement B): & \rule{3cm}{0.4pt} \\[1.5em]
+
+Which is greater, measurement A or measurement B? & \rule{3cm}{0.4pt} \\[1.5em]
+
+Distance from tip of snout to front of eye (measurement C): & \rule{3cm}{0.4pt} \\[1.5em]
+
+Distance from back of of eye to rear edge of the dark ear flap (measurement D): & \rule{3cm}{0.4pt} \\[1.5em]
+
+Which is greater, measurement C or measurement D? & \rule{3cm}{0.4pt} \\
+
+\end{tabular}
+
+\VSpace\VSpace
+
+\textbf{Other observed differences:}  Place the two species side by side. You can also compare with the others at your table. Are there any apparently consistent differences that you can see but not necessarily measure?  For example, what about vertical bands? Any spots on any of the fins?  Differences in the relative size of the mouth or the eyes? For example, does one species seem to have a proportionately larger eye size than the other?  Make your notes below.
+
+\end{document}  

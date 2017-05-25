@@ -1,0 +1,191 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[10pt, twoside]{article}
+
+\usepackage[left=1.2in,right=0.7in,top=0.8in,bottom=0.9in]{geometry} 
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\setlength{\parindent}{0pt}
+
+\usepackage[singlelinecheck=false]{caption}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\defaultfontfeatures{Mapping=tex-text} % converts LaTeX specials (``quotes'' --- dashes etc.) to unicode
+\setmainfont[Ligatures={Common}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
+\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{pdflscape}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{multicol}
+
+\begin{document}
+\begin{landscape}
+{\small%
+\begin{longtable}[l]{@{}L{5cm}L{4cm}L{4cm}L{4cm}L{4cm}@{}}
+\caption*{\textbf{ZO 478/678: Grading rubric for ecological life history paper.}}\\
+\toprule
+Content & Unsatisfactory (0 points) & Borderline (1 point) & Satisfactory (3 points) & Outstanding (5 points) \\ 
+\midrule
+\endfirsthead
+\toprule
+Content & Unsatisfactory (0 points) & Borderline (1 point) & Satisfactory (3 points) & Outstanding (5 points) \\ 
+\midrule
+\endhead
+\textbf{Fish Choice Deadline}%
+\begin{multicols}{2}
+\quad Unsatisfactory:\par
+\quad Borderline:\par
+\quad Satisfactory:\par
+\quad Outstanding:\par
+0\par
+3\par
+6\par
+10\par
+\end{multicols}&%
+Did not turn in any species lists	&%
+Provided less than 3 species choices from three distinct families including family and species names or did not represent 3 distinct families. &%
+Provided 3 species choices but not from three distinct families &%
+Provided 3 species choices from three distinct families including family and species names\\
+\midrule
+%%Row 2
+\textbf{Literature Cited Deadline}%
+\begin{multicols}{2}
+\quad Unsatisfactory:\par
+\quad Borderline:\par
+\quad Satisfactory:\par
+\quad Outstanding:\par
+0\par
+3\par
+6\par
+10\par
+\end{multicols}&%
+Did not turn in prior to deadline.	&%
+Provided less than 10 primary literature references organized in alphabetical then chronological order and proper format by deadline date. &%
+Provided 10 to 19 primary literature references organized in alphabetical then chronological order and proper format by deadline date \textit{or} had 20 or more were not organized and formatted properly &%
+Provided 20 or more primary literature references organized in alphabetical then chronological order and proper format by deadline date. \\
+\midrule
+%% Row 3
+\textbf{Introduction:} A concise lead-in paragraph to the report with a length limited to 3--5 sentences \& provides reader with background info on the topic; tells the reader what they are going to tell them. &%
+No introduction is provided \textit{or} is not appropriate. &%
+Gives very little information; Consists of only 1 or 2 sentences. &%
+Gives too much information, more like a summary. Length > 5 sentences. &%
+Presents a concise lead in by explaining the topic of the report; defines any broad topic terms to provide the reader with a background of the report; Length limited to 3--5 sentences.\\
+\midrule
+%% Row 4
+\textbf{Taxonomy and morphological characteristics:} Written in paragraph form that starts off with the higher level taxonomy down to species level characteristics. A distinct paragraph with family level characteristics should be included. In addition, include any subspecies, races, and ecotypes information and characteristics. Species level characteristics should be descriptive and should refer to a picture of this species that you should scan in or have an original photo. &%
+Little or no information provided or information is only from one or two sources. A picture of the species is not provided.  &%
+Some information provided from one or two sources of information; no distinct paragraphs on family level and species level information. A picture of the species may or may not be provided.  &%
+Some information provided from more than one or two sources and a paragraph on either family or species level information is provided but not both. A picture of the species is provided but not referenced. &%
+Provides a comprehensive and thorough review of what is known including distinct paragraphs on family level characteristics, and species level characteristics including information on any subspecies, races and ecotypes and a picture of the species.\\
+\midrule
+%% Row 5
+\textbf{Distribution and habitat:} Written in paragraph form: 1) a paragraph or more that starts off with the world wide distribution, goes to North American distribution down to if it occurs in Missouri. This section should include a map of the distribution. AND 2) A separate paragraph or more should be dedicated to the type of habitat this organism is known to prefer. &%
+Little or no information provided or information is only from one or two sources of information and no species distribution map is provided. &%
+Some information provided from more than one or two sources of information; A figure of the species distribution may or may not be provided.  &%
+Some information provided from more than two sources. Distinct paragraphs on range / distribution and habitat may be provided. A figure of the distribution is provided but not referenced.  &%
+Provides a comprehensive and thorough review of what is known including distinct paragraphs on range / distribution and habitat and a figure of the species distribution is provided and properly referenced. \\
+\midrule
+%% Row 6
+\textbf{Food habits and feeding behavior:} Written in paragraph form this should include some sort of summary of diet analysis and any particular feeding behavior such as night feeders, or size selection. &%
+Little or no information provided or information is only from one or two sources of information. &%
+Some information provided from more than one or two sources of information. &%
+Some information provided from more than two sources. Distinct paragraphs on food habits and feeding behavior may be provided. &%
+Provides a comprehensive and thorough review of what is known including distinct paragraphs on food habits and feeding behavior. A table of the food habits may be added to summarize data.\\
+\midrule
+%% Row 7
+\textbf{Fecundity and reproductive habits:} Written in paragraph form, this section should include number of eggs produced, number of eggs fertilized, time and place of spawning, spawning behavior (e.g. mouth brooder, redd builder), etc. &%
+Little or no information provided or information is only from one or two sources of information. &%
+Some information provided from more than one or two sources of information. &%
+Some information provided from more than two sources. Distinct paragraphs on fecundity and reproductive habits may be provided. &%
+Provides a comprehensive and thorough review of what is known including distinct paragraphs on fecundity and reproductive habits. A table may be added to summarize data.\\
+\midrule
+%% Row 8
+\textbf{Age and growth:} Written in paragraph form this section should include the minimum and maximum size and age, growth rates, male and female size comparisons, etc. &%
+Little or no information provided or information is only from one or two sources of information. &%
+Some information provided from more than one or two sources of information. &%
+Some information provided from more than two sources. Distinct paragraphs on age and growth may be provided. &%
+Provides a comprehensive and thorough review of what is known including distinct paragraphs on age and growth. A table may be added to summarize data \\
+\midrule
+%% Row 9
+\textbf{Environmental requirements and tolerances:} Written in paragraph form this section should include information on temperature, salinity, dissolved oxygen, depth, current, light, etc. &%
+Little or no information provided or information is only from one or two sources of information. &%
+Some information provided from more than one or two sources of information. &%
+Some information provided from more than two sources. Distinct paragraphs on environmental requirements and tolerances may be provided. &%
+Provides a comprehensive and thorough review of what is known including distinct paragraphs on environmental requirements and tolerances. A table may be added to summarize data. \\
+\midrule
+%% Row 10
+\textbf{History in relation to humans:} Written in paragraph form this section should include information on the use of this species is a commercially harvested or a recreation fish, if it is raised as bait, if it was introduced, if it is endangered, threatened, special concern due to anthropogenic disturbances, if it is a managed species in terms of raised in hatcheries, etc. &%
+Little or no information provided or information is only from one or two sources of information. &%
+Some information provided from more than one or two sources of information. &%
+Some information provided from more than two sources. &%
+Provides a comprehensive and thorough review of what is known. A table may be added to summarize data. \\
+\midrule
+%% Row 11
+\textbf{Figures and Tables:} See the ELH Outline of Requirements handout for details on proper format for figures and tables. 
+If you photocopy or scan figures or tables, make sure to include your own legend for each, especially to ensure it fits your numbering system. In addition, be sure to cite the source of the figures or tables and to include the citation in the Literature Cited.&%
+No figure or table legend(s); For original tables, no horizontal lines breaking the table header from the data and/or vertical lines present. &%
+Figure and  table legend(s) only consists of the word “Figure” or “Table” plus whatever number it is (e.g. Figure 1) but without a description of contents. Legend(s) incorrectly position \textit{and/or} incorrect formatting of horizontal and vertical for original figures and tables. &%
+Legends are positioned correctly and include the number (e.g. Figure 1), but does not accurately describe the contents; \textit{or} does not include the number; \textit{or} does not include the source citation;\textit{or} horizontal and vertical line formatting not correct for original figures and tables. &%
+All formatting requirements for figures and tables are met. \\
+\midrule
+%% Row 12
+\textbf{Citations and Literature Cited:} See following pages for examples of how to cite in text and how to format the literature cited. &%
+No citations provided. &%
+Some citations listed but not properly formatted \textit{and/or} some citations listed in Literature Cited but not cited in text. &%
+All citations listed in Literature Cited and in text, but not properly formatted \textit{or} 1--2 citations not listed, but were properly formatted otherwise. &%
+All citations listed in Literature Cited and in text, and properly formatted.\\
+\midrule
+%% Row 13
+\textbf{Units/Data Manipulation:} All units should be in/converted to metric measures. &%
+Units are rarely used or are generally incorrect. Dimensional analysis not used. Math not shown. Figures display data incorrectly. &%
+Units used only in some key parts of report. Calculations contain some errors in dimensional analysis or math. Figures correct. No labels or legend. &%
+Units generally used correctly in most of report. Calculations contain few errors in dimensional analysis or math. Figures correct, variables unlabeled. &%
+Units are used correctly and consistently throughout the report. Calculations clearly stated. Dimensional analysis/ math correct. Figures display data correctly, all variables labeled.\\
+\midrule
+%% Row 14
+\textbf{Continuity, Cohesiveness, Clarity and Biological Accuracy.} &%
+More than 50\% of the paper reads as a collection of random facts only loosely related. Most paragraphs contain unrelated information. &%
+More than 25\% of the paper reads as a collection of random factors.  Many paragraphs contain unrelated information. &%
+Only a few glaring errors in continuity and cohesion throughout the entire paper. 1--2 paragraphs contain random, unrelated information but most paragraphs explain specific concepts or ideas. &%
+The narrative flow of each section and the entire paper reads as a cohesive whole instead of a collection of random statements. Each statement has a clear meaning, and all sentences in the paragraph relate to the same idea or concept.  All information is biologically accurate.\\
+\midrule
+%% Row 14
+\textbf{Organization of each section into this order:} Introduction, Taxonomy and Morphological Characteristics, Distribution and Habitat, Food Habits and Feeding Behavior, Fecundity and Reproductive Habits, Age and Growth, Environmental Requirements and Tolerances \textit{or} History and Relation to Humans, Literature Cited. Tables and figures appear in text either on the same page after first mentioned, or on the page immediately following. &%
+More than 2 categories missing or out of sequence. &%
+Not more than 2 categories missing or out of sequence. &%
+Not more than one category missing or out of sequence. &%
+Proper order/sequence as listed.\\
+\midrule
+%% Row 15
+\textbf{Grammar, Spelling, and Formatting	.} &%
+Very frequent grammar and/or spelling errors \textit{or} not in proper format. &%
+More than two grammar or spelling errors but in proper format. &%
+Only one or two grammar or spelling errors but formatting correct. &%
+All grammar, spelling and formatting are correct.\\
+\midrule
+%% Row 16
+\textbf{Primary Literature Use} &%
+Less than 50\% of references are from the primary literature. &%
+Between 50 and 75\% of the references are from the primary literature. &%
+Between 76 and 99\% of the references are from the primary literature. &%
+100\% of the references are from the primary literature.\\
+\midrule
+%% Total Row
+ & & & & \textbf{Total Points: 100} \\
+%\bottomrule
+\end{longtable}
+}%End small font size
+
+\end{landscape}
+\end{document}

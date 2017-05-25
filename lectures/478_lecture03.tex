@@ -1,0 +1,349 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[t]{beamer}
+
+%%%% HANDOUTS For online Uncomment the following four lines for handout
+%\documentclass[t,handout]{beamer}  %Use this for handouts.
+%\usepackage{handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
+%	\setbeamercolor{background canvas}{bg=black!5}
+
+
+%%% Including only some slides for students.
+%%% Uncomment the following line. For the slides,
+%%% use the labels shown below the command.
+%\includeonlylecture{student}
+
+%% For students, use \lecture{student}{student}
+%% For mine, use \lecture{instructor}{instructor}
+
+
+%\usepackage{pgf,pgfpages}
+%\pgfpagesuselayout{4 on 1}[letterpaper,border shrink=5mm]
+
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Biolinum O}
+\setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
+\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/478/lectures/}%
+	{/Users/goby/Pictures/teach/common/}} % set of paths to search for images
+
+\usepackage{amsmath,amssymb}
+
+%\usepackage{units}
+
+\usepackage{booktabs}
+\usepackage{multicol}
+%	\setlength{\columnsep=1em}
+
+\usepackage{textcomp}
+\usepackage{setspace}
+\usepackage{tikz}
+	\tikzstyle{every picture}+=[remember picture,overlay]
+
+\mode<presentation>
+{
+  \usetheme{Lecture}
+  \setbeamercovered{invisible}
+  \setbeamertemplate{items}[square]
+}
+
+\usepackage{calc}
+\usepackage{hyperref}
+
+
+\begin{document}
+%\lecture{instructor}{instructor}
+%\lecture{student}{student}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{locomotion_how}}
+\begin{frame}[b,plain]
+\tiny\textcolor{white}{\textit{Lutjanus griseus} (gray snapper), Mike Malz, Flickr Creative Commons.}
+
+\end{frame}
+}
+
+\begin{frame}[c]{Fishes swim by contraction and relaxation of \highlight{myomeres.}}
+	\centering\includegraphics[width=0.9\textwidth]{locomotion_salmon_muscle}
+\end{frame}
+
+\begin{frame}[c]{Myomeres are arranged in a series along the body.}
+	\centering\includegraphics[width=\textwidth]{locomotion_myomere_arrangement}
+\end{frame}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{locomotion_myomere_contraction}}
+\begin{frame}[c]{\highlight{Contraction} of the myomere pulls the head and caudal fin toward each other.}
+	%\pause
+	\begin{tikzpicture}
+		\draw[->, ultra thick] (3.7, 1.4) -- (5.0, 1.4);
+		\draw[->, ultra thick] (8.2, 2.4) -- (6.9, 2.4); 
+		\draw[->, ultra thick] (8.2, 0.4) -- (6.9, 0.4); 
+	
+		\draw[->, line width=3, white] (3.0,-2.4) -- (5.0, -2.4); 
+		\draw[->, line width=3, white] (9.0,-2.4) -- (7.0, -2.4); 
+	
+	\end{tikzpicture}	
+	
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{locomotion_myomere_contraction}}
+\begin{frame}[c]{\highlight{Relaxation} of the myomere allows the head and caudal fin to be pulled away from each other.}
+	%\pause
+	\begin{tikzpicture}
+		\draw[->, ultra thick] (5.0, 1.4) -- (3.7, 1.4);
+		\draw[->, ultra thick] (6.9, 2.4) -- (8.2, 2.4); 
+		\draw[->, ultra thick] (6.9, 0.4) -- (8.2, 0.4); 
+	
+		\draw[->, line width=3, white] (5.0,-2.4) -- (3.0, -2.4); 
+		\draw[->, line width=3, white] (7.0,-2.4) -- (9.0, -2.4); 
+	
+	\end{tikzpicture}	
+	
+\end{frame}
+}
+
+
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{locomotion_overview}}
+\begin{frame}[b,plain]{Fishes swim by \highlight{undulation} or \highlight{oscillation.}}
+
+\hspace{3em}%
+	\parbox{\widthof{Anguilliform}}{\centering\highlight{undulation}\\ %
+		{\small \href{http://www.youtube.com/watch?v=LDrvbr_CbhE}{(video)}}}\hfill%
+		%
+	\parbox{\widthof{Carangiform}}{\centering\highlight{undulation}\\ %
+		{\small \href{http://www.youtube.com/watch?v=OYrdFlr2vU8}{(video)}}}\hfill%
+		%
+	\parbox{\widthof{Ostraciform}}{\centering\highlight{oscillation}\\ %
+		{\small \href{http://www.youtube.com/watch?v=tsJzGycQMcE}{(video)}}}%
+\hspace{3em}
+
+\vspace{1\baselineskip}
+
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{locomotion_bcf}}
+\begin{frame}[b,plain]{Undulation of body and caudal fin (\highlight{BCF}) has four forms.}
+
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{locomotion_bcf_top_view}}
+\begin{frame}[b,plain]
+
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{locomotion_mpf}}
+\begin{frame}[b,plain]{Some fishes swim by undulation or oscillation of median or paired fins (\highlight{MPF}).}
+
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{locomotion_review}}
+\begin{frame}[b,plain]
+
+\end{frame}
+}
+
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{respiration_how}}
+\begin{frame}[b,plain]
+\hfill\tiny\textcolor{white!40!orange}{\textit{Cyprinus carpio} (koi, a glorified carp), Ksionic, Flickr Creative Commons.}
+\end{frame}
+}
+
+
+\begin{frame}[t,plain]{Identify two factors that determine [O$_2$] in water.}
+	\centering
+	\includegraphics[width=\textwidth]{oxygen_content}
+\end{frame}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{gill_structure}}
+\begin{frame}[t,plain]
+\hangpara\hspace{17em} \highlight{Gills} are the primary\\ 
+	\hspace{17em} respiratory organ of fishes.
+
+\vskip0pt plus 1filll
+\hfill\tiny\textcolor{gray}{Tuna gills (right), Wikimedia Commons.}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{gill_function_one}}
+\begin{frame}[t,plain]{Gill structure maximizes surface area exposed to water.}
+
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{gill_function_two}}
+\begin{frame}[t,plain]{\highlight{Countercurrent exchange} maximizes O$_2$ uptake.}
+
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{gill_surface_area_activity_one}}
+\begin{frame}[t,plain]{Gill surface area increases with activity.}
+
+\end{frame}
+}
+
+
+
+\begin{frame}[t,plain]
+\begin{minipage}{0.55\textwidth}
+	\includegraphics[width=\textwidth]{gill_surface_area_activity_two}
+\end{minipage}\hfill
+\begin{minipage}{0.40\textwidth}
+	\raggedright
+	{\parbox{\widthof{active rover-predators}}{\footnotesize\highlight{active} rover-predators\\\highlight{large} surface area}}
+
+	\vspace{5em}
+
+	{\hangpara\hspace{17em} Gill surface area corresponds to form and function.}
+
+	\vspace{7em}
+
+	{\parbox{\widthof{sluggish rover-predators}}{\footnotesize\highlight{sluggish} bottom dwellers\\\highlight{small} surface area}}
+
+\end{minipage}
+\end{frame}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{gill_ventilation}}
+\begin{frame}[t,plain]{\highlight{Two-phase ventilation} maintains constant water flow over gills.}
+
+\hangpara\hspace{1.5em}\parbox{2cm}{Phase 1:\\opercular\\ suction\\ pump}
+\pause\hspace{8.2em}\parbox{2cm}{Phase 2:\\buccal\\ pressure\\ pump}
+
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{gill_ram_ventilation_tuna}}
+\begin{frame}[b,plain]{\textcolor{white}{High speed swimmers can use} \textcolor{orange7}{ram-gill ventilation.}}
+\tiny\textcolor{white!20!black}{Swimming tunas by TheAnimalDay.org, Flickr Creative Commons}
+\end{frame}
+}
+
+\begin{frame}[c,plain]{Identify three ways that fishes can adjust to hypoxic conditions.}
+
+	\hangpara 1. \rule{6cm}{0.4pt}
+
+	\vspace{2\baselineskip}
+
+	\hangpara 2. \rule{6cm}{0.4pt}
+
+	\vspace{2\baselineskip}
+
+	\hangpara 3. \rule{6cm}{0.4pt}
+
+	\vspace{2\baselineskip}
+
+\end{frame}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{respiration_regulator}}
+\begin{frame}[b,plain]{\textcolor{orange7}{Oxygen regulators} increase the volume of water over gills.}
+\hfill\tiny\textcolor{white!70!black}{\textit{Aphyosemion elberti} (West African killifish), Montykillies, Wikimedia Commons.}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{respiration_conformer}}
+\begin{frame}[b,plain]{\highlight{Oxygen conformers} decrease oxygen use.}
+\hfill\tiny\textcolor{white}{\textit{Thalassothia cirrhosis} (Red Sea Toadfish), Silke Baron, Flickr Creative Commons.}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{respiration_vascular_skin}}
+\begin{frame}[b,plain]
+
+\vspace{5\baselineskip}
+
+\hangpara\Large\hspace{64mm}\highlight{Air breathers} extract O$_2$\\
+\hspace{64mm}from the air.
+
+\vskip0pt plus 1filll
+\hfill\tiny\textit{Periophthalmus gracilis} (slender mudskipper),\\
+\hfill PacificKlaus, Flickr Creative Commons.
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{respiration_vascular_mouth}}
+\begin{frame}[b,plain]
+\hfill\tiny\textcolor{white}{\textit{Electrophorus electricus} (electric eel), Sibylie Stofer, Flickr Creative Commons.}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{respiration_vascular_gut}}
+\begin{frame}[b,plain]
+\tiny\textcolor{white}{\textit{Hypancistrus zebra} (loricariid catfish), Birger A, Wikimedia Commons.}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{respiration_vascular_bladder}}
+\begin{frame}[b,plain]
+\tiny\textcolor{white}{\textit{Lepisosteus oculatus} (spotted gar), Brian Gratwicke, Wikimedia Commons.}
+\end{frame}
+}
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{respiration_suprabranchial_organ}}
+\begin{frame}[b,plain]
+\hfill\tiny\textcolor{white}{\textit{Clarias} catfish (and carp), Takeaway, Wikimedia Commons.}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{respiration_suprabranchial_organ_example}}
+\begin{frame}[b,plain]{Suprabranchial organ of a clariid catfish.}
+\tiny\textcolor{white}{\textit{Clarias gariepinus} (African Sharptooth Catifhsh, Clariidae: Siluriformes) \copyright Dr. Dominique Adriaens, Universiteit Ghent.}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{respiration_labyrinth_organ}}
+\begin{frame}[b,plain]
+\hfill\tiny\textit{Trichopodus pectoralis} (snakeskin gourami), Bochr, Wikimedia Commons.
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{respiration_lungs}}
+\begin{frame}[b,plain]
+\tiny\textcolor{white}{\textit{Protopterus aethiopicus} (marbled lungfish), Joel Abroad, Flickr Creative Commons.}
+\end{frame}
+}
+
+
+
+\end{document}

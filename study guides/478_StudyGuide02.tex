@@ -1,0 +1,114 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[nofonts, letterpaper]{tufte-handout}
+
+%\geometry{showframe} % display margins for debugging page layout
+
+\usepackage{graphicx} % allow embedded images
+  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+  \graphicspath{{img/}} % set of paths to search for images
+  
+\usepackage{fontspec}
+  \setmainfont[Ligatures=TeX,Numbers={Proportional}]{Linux Libertine O}
+  \setsansfont{Linux Biolinum O}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{multicol} % multiple column layout facilities
+%\usepackage{hyperref}
+%\usepackage{fancyvrb} % extended verbatim environments
+%  \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
+
+% Change the header to shift the title to the left side of the page. 
+% Replaced \quad with \hfill.  See \plaintitle in tufte-common.def
+{\fancyhead[RE,RO]{\scshape{\newlinetospace{\plaintitle}}\hfill\thepage}}
+
+\makeatletter
+% Paragraph indentation and separation for normal text
+\renewcommand{\@tufte@reset@par}{%
+  \setlength{\RaggedRightParindent}{1.0pc}%
+  \setlength{\JustifyingParindent}{1.0pc}%
+  \setlength{\parindent}{1pc}%
+  \setlength{\parskip}{0pt}%
+}
+\@tufte@reset@par
+
+% Paragraph indentation and separation for marginal text
+\renewcommand{\@tufte@margin@par}{%
+  \setlength{\RaggedRightParindent}{0pt}%
+  \setlength{\JustifyingParindent}{0.5pc}%
+  \setlength{\parindent}{0.5pc}%
+  \setlength{\parskip}{0pt}%
+}
+
+\makeatother
+
+\title{Study Guide 02}
+\author{Form and Function}
+
+\date{} % without \date command, current date is supplied
+
+\begin{document}
+
+\maketitle	% this prints the handout title, author, and date
+
+%\printclassoptions
+
+\section{Vocabulary}\marginnote{\textbf{Study:} Pgs. 111--118, 126; Webb, P. 1984. Form and function in fish swimming. Scientific American 251: 72--82. I will hand out the Webb paper in class but I will not discuss it in lecture. You are responsible for studying this paper on your own. Use the questions below as a guide.} 
+\vspace{-1\baselineskip}
+\begin{multicols}{2}
+\textbf{Form and Function} \\
+rover-predator \\
+lie-in-wait predator \\
+surface-oriented \\
+deep-bodied \\
+eel-like \\
+bottom-oriented \\
+bottom rovers \\
+bottom clingers \\
+bottom hiders \\
+flatfish \\
+rattails \\
+fusiform \\
+compressiform  \\
+\columnbreak\textbf{Morphology from lab 1} \\
+placoid scale \\
+ganoid scale \\
+cycloid scale \\
+ctenoid scale \\
+superior mouth  \\
+terminal mouth  \\
+subterminal mouth  \\
+inferior mouth  \\
+abdominal fin position \\
+thoracic fin position \\
+jugular fin position \\
+homocercal tail \\
+lunate tail \\
+heterocercal tail \\
+isocercal tail \\
+\end{multicols}
+
+\section{Concepts}
+
+\begin{enumerate}
+\item Associate various external features (fin shape, mouth position, etc) with specific functions (life styles) of different fishes.  If I give you a specific body form (e.g., rover-predator), you should be able to tell me various external features expected to be found on that the fish.
+
+\item Similarly, if I show you a fish that is representative of a particular body form, you should be able to tell me a great deal about the fish’s life style.  
+\end{enumerate}
+
+\noindent\textbf{Things to Know from “Form and Function” article in Scientific American by Paul Webb.}
+
+\begin{enumerate}
+	\setcounter{enumi}{2}
+	\item What is the functional importance of narrow necking?  In what types of fishes would you expect to find it?  What forces are reduced by narrow necking?
+
+	\item Sharks and tunas are fusiform cruisers, but their functional morphologies are very different.  What ecological and physiological differences exist between sharks and tunas to explain the morphological differences?
+
+	\item Webb identifies three basic locomotor designs.  Each is specialized for a specific function to the exclusion of other functions.  What are the three basic designs?  What is the strength of each?  Explain how each specialized morphology is disadvantageous for the other swimming specialities.
+
+	\item Why is a tuna with only a 10--15 percent successful capture rate (when striking at prey) just as successful at obtaining food as a pike, which has a 70--80 percent successful strike rate?  Where would you expect a generalist rover-predator to fall in terms of strike rate?  Why?  Would it be as successful as the tuna or pike?
+\end{enumerate}
+
+
+\end{document}

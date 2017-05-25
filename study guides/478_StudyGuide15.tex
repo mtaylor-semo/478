@@ -1,0 +1,90 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[letterpaper]{tufte-handout}
+
+%\geometry{showframe} % display margins for debugging page layout
+
+\usepackage{graphicx} % allow embedded images
+  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+  \graphicspath{{img/}} % set of paths to search for images
+  
+\usepackage{fontspec}
+  \setmainfont[Ligatures=TeX,Numbers={Proportional}]{Linux Libertine O}
+  \setsansfont{Linux Biolinum O}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{multicol} % multiple column layout facilities
+%\usepackage{hyperref}
+%\usepackage{fancyvrb} % extended verbatim environments
+%  \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
+
+% Change the header to shift the title to the left side of the page. 
+% Replaced \quad with \hfill.  See \plaintitle in tufte-common.def
+{\fancyhead[RE,RO]{\scshape{\newlinetospace{\plaintitle}}\hfill\thepage}}
+
+\makeatletter
+% Paragraph indentation and separation for normal text
+\renewcommand{\@tufte@reset@par}{%
+  \setlength{\RaggedRightParindent}{1.0pc}%
+  \setlength{\JustifyingParindent}{1.0pc}%
+  \setlength{\parindent}{1pc}%
+  \setlength{\parskip}{0pt}%
+}
+\@tufte@reset@par
+
+% Paragraph indentation and separation for marginal text
+\renewcommand{\@tufte@margin@par}{%
+  \setlength{\RaggedRightParindent}{0pt}%
+  \setlength{\JustifyingParindent}{0.5pc}%
+  \setlength{\parindent}{0.5pc}%
+  \setlength{\parskip}{0pt}%
+}
+\makeatother
+
+\title{Study Guide 15}
+\author{Assemblage Structure of Coral Reef Fishes}
+
+\date{} % without \date command, current date is supplied
+
+\begin{document}
+
+\maketitle	% this prints the handout title, author, and date
+
+%\printclassoptions
+
+\section{Vocabulary}\marginnote{\textbf{Read:} pgs. 542-549.} 
+\vspace{-1\baselineskip}
+\begin{multicols}{2}
+recruitment \\
+pre-recruitment processes \\
+post-recruitment processes \\
+competition hypothesis \\
+lottery hypothesis \\
+recruitment limitation hypothesis \\
+predation hypothesis \\
+priority effect
+\end{multicols}
+
+\section{Concepts}
+
+\begin{enumerate}
+	\item What is the ``stochastic-deterministic debate''? How does this relate to diversity of coral reef fishes?
+
+	\item What is recruitment?
+	
+	\item Based on the assigned reading from your text and Figure 24.9, explain how pre-recruitment and post-recruitment processes may contribute to the assemblage of coral reef fishes.
+	
+	\item Explain each of the four specific hypotheses that have been proposed to explain the structure of reef communities.  Which (separately or in combination) do you think is the most likely explanation?  Justify your answer.
+
+	\item Briefly describe each of the general observations about reef fish communities that were considered as the above hypotheses were developed.
+	
+	\item Which of the four hypotheses we discussed in class could be considered pre-recruitment processes? Which hypotheses could be considered post-recruitment processes?
+	
+	\item Which of the four hypotheses we discussed in class could be considered stochastic?  Which could be considered deterministic?
+	
+	\item What is the priority effect? How does it affect larval recruitment? How does the priority effect fit into the ``stochastic-deterministic'' continuum?
+	
+\end{enumerate}
+
+\end{document}

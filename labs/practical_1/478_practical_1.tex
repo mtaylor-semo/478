@@ -1,0 +1,214 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt]{exam}
+\usepackage[left=1in,right=0.75in,top=1in]{geometry}     
+
+%\printanswers
+
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
+\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/478/exams/}}%
+
+\pagestyle{headandfoot}
+%\firstpageheader{\bfseries{Ichthyology, Exam 1, F14}}{}{\bfseries{Name: \enspace \makebox[2.5in]{\hrulefill}}}
+\firstpageheader{\bfseries{Ichthyology, Lab Practical 1, F14}}{}{%
+	\ifprintanswers\textbf{KEY}\else\bfseries{Name: \enspace \makebox[2.5in]{\hrulefill}}\fi}
+\runningheader{}{}{\small{pg. \thepage}}
+%\runningheadrule
+
+\footer{}{}{}%{\makebox[0.75in]{\hrulefill}}
+\extrafootheight{-0.5in}
+
+\usepackage{multicol}
+\usepackage{booktabs}
+
+%% Remove comment %% to print answer key.
+\unframedsolutions
+\renewcommand{\solutiontitle}{}
+\SolutionEmphasis{\bfseries}
+
+%% Create a Matching question format
+\newcommand*\Matching[1]{
+\ifprintanswers
+	\textbf{#1}
+\else
+	\rule{2.1in}{0.4pt}
+\fi
+}
+\newlength\matchlena
+\newlength\matchlenb
+\settowidth\matchlena{\rule{2.1in}{0pt}}
+\newcommand\MatchQuestion[2]{%
+	\setlength\matchlenb{\linewidth}
+	\addtolength\matchlenb{-\matchlena}
+	\parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}}
+
+\pointname{}
+
+\begin{document}
+
+\begin{questions}
+
+\fullwidth{Each question is worth 3 points. Extra credit questions (labeled \textsc{ec}) are worth 1.5 points each. Family names must be spelled correctly. One free spelling error, then 0.5 point deduction regardless of the number of errors.}
+%\vspace{-2\baselineskip}
+
+\vspace{2\baselineskip}
+
+\begin{multicols}{2}
+% 1
+\question\MatchQuestion{Sciaenidae}{}
+\vspace{2\baselineskip}
+
+%2
+\question\MatchQuestion{Bottom Rover}{}
+\vspace{2\baselineskip}
+
+%3
+\question\MatchQuestion{Lepisosteidae}{}
+\vspace{2\baselineskip}
+
+%4
+\question\MatchQuestion{Lie-in-Wait Predator}{}
+\vspace{2\baselineskip}
+
+%5
+\question\MatchQuestion{Intestine}{}
+\vspace{2\baselineskip}
+
+%6
+\question\MatchQuestion{Herbivore}{}
+\vspace{2\baselineskip}
+
+%7
+\question\MatchQuestion{Heart}{}
+\vspace{2\baselineskip}
+
+%8
+\question\MatchQuestion{Ventricle}{}
+\vspace{2\baselineskip}
+
+%9
+\question\MatchQuestion{Ventral Aorta}{}
+\vspace{2\baselineskip}
+
+%10
+\question\MatchQuestion{Amiidae}{}
+\vspace{2\baselineskip}
+
+%11
+\question\MatchQuestion{Dorsal Fin}{}
+\vspace{2\baselineskip}
+
+%12
+\question\MatchQuestion{Clupeidae}{}
+\vspace{2\baselineskip}
+
+%13
+\question\MatchQuestion{Abdominal}{}
+\vspace{2\baselineskip}
+
+%14
+\question\MatchQuestion{Cyprinidae}{}
+\vspace{2\baselineskip}
+
+%15
+\question\MatchQuestion{Catostomidae}{}
+\vspace{2\baselineskip}
+
+%16
+\question\MatchQuestion{Inferior}{}
+\vspace{2\baselineskip}
+
+%17
+\question\MatchQuestion{Centrarchidae}{}
+\vspace{2\baselineskip}
+
+%18
+\question\MatchQuestion{Rover-Predator}{}
+\vspace{2\baselineskip}
+
+%19
+\question\MatchQuestion{Aphredoderidae}{}
+\vspace{2\baselineskip}
+
+%20
+\question\MatchQuestion{Cottidae}{}
+\vspace{2\baselineskip}
+
+%21
+\question\MatchQuestion{Gas Gland/Rete}{}
+\vspace{2\baselineskip}
+
+%22
+\question\MatchQuestion{Physoclistous}{}
+\vspace{2\baselineskip}
+
+%23
+\question\MatchQuestion{Liver}{}
+\vspace{2\baselineskip}
+
+%24
+\question\MatchQuestion{Cycloid}{}
+\vspace{2\baselineskip}
+
+%25
+\question\MatchQuestion{Fundulidae}{}
+\vspace{2\baselineskip}
+
+%26
+\question\MatchQuestion{Elassomatidae}{}
+\vspace{2\baselineskip}
+
+%27
+\question\MatchQuestion{Pancreas}{}
+\vspace{2\baselineskip}
+
+%28
+\question\MatchQuestion{Epaxial}{}
+\vspace{2\baselineskip}
+
+%39
+\question\MatchQuestion{Vertical Septum}{}
+\vspace{2\baselineskip}
+
+%30
+\question\MatchQuestion{Terminal}{}
+\vspace{2\baselineskip}
+
+%31
+\question\MatchQuestion{Adipose}{}
+\vspace{2\baselineskip}
+
+%32
+\question[\textsc{ec}]\MatchQuestion{Salmonidae/Ictaluridae}{}
+\vspace{2\baselineskip}
+
+%33
+\question\MatchQuestion{Atherinidae}{}
+\vspace{2\baselineskip}
+
+%34
+\question\MatchQuestion{Caudal Peduncle}{}
+\vspace{2\baselineskip}
+
+%35ec
+\question[\textsc{ec}]\MatchQuestion{Sagitta}{}
+\vspace{2\baselineskip}
+
+%36ec
+\question[\textsc{ec}]\MatchQuestion{Any Family}{}
+\vspace{2\baselineskip}
+
+\end{multicols}
+
+\end{questions}
+\end{document}
