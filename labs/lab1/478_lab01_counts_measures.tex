@@ -1,0 +1,191 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt, hidelinks]{exam}
+\usepackage{graphicx}
+	\graphicspath{{/Users/goby/Pictures/teach/434/handouts/}
+	{img/}} % set of paths to search for images
+
+\usepackage{geometry}
+\geometry{letterpaper, left=1.5in, bottom=1in}                   
+%\geometry{landscape}                % Activate for for rotated page geometry
+\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{amssymb, amsmath}
+\usepackage{mathtools}
+	\everymath{\displaystyle}
+
+\usepackage{fontspec}
+\setmainfont[Ligatures={TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, BoldItalicFont={* BoldItalic}, Numbers={OldStyle}]{Linux Libertine O}
+\setsansfont[Scale=MatchLowercase,Ligatures=TeX]{Linux Biolinum O}
+\setmonofont[Scale=MatchLowercase]{Linux Libertine Mono O}
+\usepackage{microtype}
+
+% This defines \amper for the fancy ampersand
+% to be used in the header. See
+% https://tex.stackexchange.com/a/58185/39194
+\usepackage{xspace}
+\newfontfamily\amperfont[Style=Alternate]{Linux Libertine O}    
+\makeatletter
+\DeclareRobustCommand{\amper}{{\amperfont\ifx\f@shape\scname\smaller[1.2]\fi\&}\xspace}
+\makeatother
+
+% To define fonts for particular uses within a document. For example, 
+% This sets the Libertine font to use tabular number format for tables.
+ %\newfontfamily{\tablenumbers}[Numbers={Monospaced}]{Linux Libertine O}
+% \newfontfamily{\libertinedisplay}{Linux Libertine Display O}
+
+\usepackage{booktabs}
+\usepackage{multicol}
+\usepackage[normalem]{ulem}
+
+\usepackage{longtable}
+%\usepackage{siunitx}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+\usepackage{enumitem}
+\usepackage{hyperref}
+%\usepackage{placeins} %PRovides \FloatBarrier to flush all floats before a certain point.
+\usepackage{hanging}
+
+\usepackage{pdflscape}
+
+\usepackage[sc]{titlesec}
+
+%% Commands for Exam class
+\renewcommand{\solutiontitle}{\noindent}
+\unframedsolutions
+\SolutionEmphasis{\bfseries}
+
+\renewcommand{\questionshook}{%
+	\setlength{\leftmargin}{-\leftskip}%
+}
+
+%Change \half command from 1/2 to .5
+\renewcommand*\half{.5}
+
+\pagestyle{headandfoot}
+\firstpageheader{\textsc{zo}\,478/678 Ichthyology}{}{}
+\runningheader{}{}{\footnotesize{pg. \thepage}}
+\footer{}{}{}
+\runningheadrule
+
+\newcommand*\AnswerBox[2]{%
+    \parbox[t][#1]{0.92\textwidth}{%
+    \begin{solution}#2\end{solution}}
+%    \vspace*{\stretch{1}}
+}
+
+\newenvironment{AnswerPage}[1]
+    {\begin{minipage}[t][#1]{0.92\textwidth}%
+    \begin{solution}}
+    {\end{solution}\end{minipage}
+    \vspace*{\stretch{1}}}
+
+\newlength{\basespace}
+\setlength{\basespace}{5\baselineskip}
+
+
+%\usepackage{mdframed}
+%\mdfsetup{%
+%	innerleftmargin=0pt,%
+%	innerrightmargin=0pt,
+%	innertopmargin=0pt,
+%	innerbottommargin=0pt,
+%	hidealllines=true
+%}%end mdfsetup
+
+%
+%\makeatletter
+%\def\SetTotalwidth{\advance\linewidth by \@totalleftmargin
+%\@totalleftmargin=0pt}
+%\makeatother
+
+
+%\printanswers
+
+
+\begin{document}
+
+\subsection*{Comparing Counts and Measurements}
+
+A well-trained ichthyologist can distinguish among similar species of fishes with just a quick glance but learning to recognize differences among similar species takes practice.  Furthermore, ichthyologists can’t describe a new species of fish by saying, “They look different.”  Instead, fish identification and taxonomy has traditionally used a consistent set of counts and measurements that can be used to compare similar species to identify consistent differences between them. Here, you will learn some of the counts and measurements that you will use throughout the semester as you learn to identify different species of fishes.
+
+You have two different species at your table: \textit{Lepomis megalotis} (Longear Sunfish) and \textit{Lepomis cyanellus} (Green Sunfish).  Use the separate handout called “Anatomical features, and terms and methods of counting and measuring” as a guide to the different methods of counting or measuring important features. You should make counts and measurements on one species while your partner makes the same counts and measurements for the other species.  We’ll compile the data and see if there are consistent differences between them.
+
+By tradition, all counts are made on the left side of the fish.  That means the fish’s head should point to your left when you count scales.
+
+\bigskip
+\textsc{Fin ray counts:} Count the exact number of spines and rays for the following fins.
+
+\bigskip
+
+\begin{tabular}{ll}
+
+Dorsal Spines: & \rule{3cm}{0.4pt} \\[1.5em]
+
+Dorsal Rays: & \rule{3cm}{0.4pt} \\[1.5em]
+
+Anal Spines: & \rule{3cm}{0.4pt} \\[1.5em]
+
+Anal Rays: & \rule{3cm}{0.4pt} \\[1.5em]
+
+Pectoral Rays: & \rule{3cm}{0.4pt} \\
+
+\end{tabular}
+
+%\bigskip
+
+\newpage
+
+\textsc{Scale counts:} Count the exact number of scales for the following series.
+
+\bigskip
+
+\begin{tabular}{ll}
+
+Lateral Line Scales: & \rule{3cm}{0.4pt} \\[1.5em]
+
+Scales Below Lateral Line: & \rule{3cm}{0.4pt} \\[1.5em]
+
+Scales Above Lateral Line: & \rule{3cm}{0.4pt} \\[1.5em]
+
+Pored Lateral Line Scales: & \rule{3cm}{0.4pt} \\[1.5em]
+
+Cheek Scales: & \rule{3cm}{0.4pt} \\
+
+\end{tabular}
+
+\bigskip
+
+\textsc{Measurements and proportions:} Use a ruler and dividers to measure.
+
+\bigskip
+
+\begin{tabular}{L{7cm}l}
+
+Standard Length:	& 
+\rule{3cm}{0.4pt} \\[1.5em]
+
+Distance from tip of snout to front of dorsal fin (call this measurement A):		& 
+\rule{3cm}{0.4pt} \\[1.5em]
+
+Body depth at deepest point (call this measurement B): & \rule{3cm}{0.4pt} \\[1.5em]
+
+Which is greater, measurement A or 
+measurement B? & \rule{3cm}{0.4pt} \\[1.5em]
+
+Distance from tip of snout to front of eye (measurement C): & \rule{3cm}{0.4pt} \\[1.5em]
+
+Distance from back of of eye to rear edge of the dark ear flap (measurement D): & \rule{3cm}{0.4pt} \\[1.5em]
+
+Which is greater, measurement C or measurement D? & \rule{3cm}{0.4pt} \\
+
+\end{tabular}
+
+\bigskip
+
+\textsc{Other observed differences:} Place the two species side by side. You can also compare with the others at your table. Are there any apparently consistent differences that you can see but not necessarily measure?  For example, what about vertical bands? Any spots on any of the fins?  Differences in the relative size of the mouth or the eyes? Does one species seem to have a proportionately larger eye size than the other?  Make your notes below.
+\end{document}  
