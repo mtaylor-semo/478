@@ -1,0 +1,521 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[t]{beamer}
+
+%%%% HANDOUTS For online Uncomment the following four lines for handout
+%\documentclass[t,handout]{beamer}  %Use this for handouts.
+%\includeonlylecture{student}
+%\usepackage{handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
+
+
+%%% Including only some slides for students.
+%%% Uncomment the following line. For the slides,
+%%% use the labels shown below the command.
+
+%% For students, use \lecture{student}{student}
+%% For mine, use \lecture{instructor}{instructor}
+
+
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Biolinum O}
+\setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
+\setmonofont[Scale=MatchLowercase]{Linux Libertine Mono O} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+\graphicspath{%
+	{/Users/goby/Pictures/teach/478/lectures/}%
+	{/Users/goby/Pictures/teach/common/}} % set of paths to search for images
+
+\usepackage{amsmath,amssymb}
+
+%\usepackage{units}
+
+\usepackage{booktabs}
+\usepackage{multicol}
+%	\setlength{\columnsep=1em}
+
+\usepackage{textcomp}
+\usepackage{setspace}
+\usepackage{tikz}
+\tikzstyle{every picture}+=[remember picture,overlay]
+
+\mode<presentation>
+{
+	\usetheme{Lecture}
+	\setbeamercovered{invisible}
+	\setbeamertemplate{items}[square]
+}
+
+\usepackage{calc}
+\usepackage{hyperref}
+
+\newcommand\HiddenWord[1]{%
+	\alt<handout>{\rule{\widthof{#1}}{\fboxrule}}{#1}%
+}
+
+\begin{document}
+%\lecture{instructor}{instructor}
+%\lecture{student}{student}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{buoyancy_intro}}
+\begin{frame}[t,plain]
+
+\vspace{3\baselineskip}
+\hangpara\LARGE\hspace{9em}\textcolor{white}{How do fishes}\\%
+	\LARGE\hspace{9em}\textcolor{white}{control buoyancy?}
+\vskip0pt plus 1filll
+\tiny\textcolor{white!80!black}{School of fishes, Red Sea. Michael Aston, Flickr Creative Commons.}
+\end{frame}
+}
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{buoyancy_squalene}}
+\begin{frame}[b,plain]
+
+\hfill\tiny\textcolor{white!80!black}{\textit{Prionace glauca} (Blue Shark, Carcharhinidae: Carcharhiniformes). National Marine Fisheries Service, Wikimedia Commons.}
+
+\end{frame}
+}
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{buoyancy_head_fin_lift}}
+\begin{frame}[b,plain]
+
+\tiny\textcolor{white!80!black}{\textit{Aliopus vulpinus} (Thresher Shark, Alopiidae: Lamniformes). Raven\_Denmark, Flickr Creative Commons.}
+
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{buoyancy_reduce_tissue_density}}
+\begin{frame}[b,plain]{Bathypelagic fishes (and deeper) reduce the density and amount of heavy tissues.}
+
+\hfill\tiny\textcolor{white!20!black}{\textit{Psychrolutes phrictus} (Blob Sculpin, Psychrolutidae: Scorpaeniformes). NOAA, Wikimedia Commons.}
+
+\end{frame}
+}
+
+
+\begin{frame}[t]{A \highlight{physostomous} gas bladder connects to the gut for air exchange.}
+
+\vspace{\baselineskip}
+\centering
+\includegraphics[width=\textwidth]{buoyancy_physostomous_bladder}
+
+\begin{tikzpicture}
+	\draw [ultra thick] (-2.5,2.5) circle (0.4cm);
+	\draw [thick] (-4,0) -- (-2.7,2.2);
+	\node [below] at (-4,0) {\highlight{pneumatic duct}};
+	
+	\draw [->,thick] (-0.7,0) -- (-1.2,1);
+	\node [below] at (-0.7,0) {gut};
+	
+	\draw [->,thick] (2,0) -- (1.5,2.2);
+	\node [below] at (2,0) {gas bladder};
+	
+	\pause
+	\node [right,text width=4cm] at (-5.5,5.25){How is the bladder filled and emptied?};
+\end{tikzpicture}
+
+\end{frame}
+
+\begin{frame}[t]{A \highlight{physoclistous} gas bladder is sealed and separate from the gut.}
+
+\vspace{\baselineskip}
+\centering
+\includegraphics[width=\textwidth]{buoyancy_physoclistous_bladder}
+
+\begin{tikzpicture}
+	\node [right] at (-5.5,-0.5){How is the bladder filled and emptied?};
+\end{tikzpicture}
+
+\end{frame}
+
+\begin{frame}[c]{The \highlight{rete mirabile} and the \highlight{gas gland} are  used to fill both types of gas bladder.}
+
+\centering\includegraphics{buoyancy_rete_gas_gland_structure}
+
+\end{frame}
+%%
+\begin{frame}[t]{\highlight{Root effect} and \highlight{countercurrent exchange} processes fill the gas bladder.}
+
+\vspace{\baselineskip}
+\centering
+\includegraphics[width=0.8\textwidth]{buoyancy_rete_gas_gland_blank}
+
+\begin{tikzpicture}[%
+	textNode/.style={font=\footnotesize},%
+	scriptNode/.style={font=\scriptsize}]
+
+	\node [textNode, rotate=-90] at (5.1,4.4){gas bladder lumen};
+	\node [textNode, right, text width=1.4cm] at (4.6,1.5){cell of gas gland};
+	\draw [->,thick, above left] (4.6,1.5) -- (4.1,2.3);
+
+	% First pause for blood moving through vessel with HbO2/Hb
+	%\pause
+	\node [textNode, left] at (-4.9, 5.2){HbO$_2$};
+	\draw [->,thick] (-4.9, 5) -- (-4.3, 4.4);
+	\node [textNode, left] at (-4.9, 2.9){Hb};
+	\draw [->,thick] (-4.3, 3.4) -- (-4.9, 2.9);
+	
+	%Second pause for glycolysis
+	\pause
+	\node [scriptNode, left] at (3.1, 5.1) {glucose};
+	\node [scriptNode, left] at (3.1, 4.5) {lactic acid};
+	\node [scriptNode, rotate=-90,above] at (3.9,4.75){glycolysis};
+	\draw [->, thick] (3.1, 5.1) -- (3.9, 5.1);
+	\draw [->, thick] (3.9, 4.5) -- (3.1, 4.5);
+	
+	% Third pause for root effect
+	\pause
+	\node [scriptNode, right, text width=1cm] at (2.5, 3.25) {\highlight{Root effect}};	
+	\draw [->] (3.0, 4.4) .. controls (3.1,3.95) .. (3.0,3.5);
+
+	% Fourth pause to results of root effect
+	\pause
+	\node [textNode] at (2.5,3.75){HbO$_2$};
+	\node [textNode] at (2.5, 2.65){Hb + O$_2$};
+	\draw [->,thick] (2.5,3.52) -- (2.5,2.88);
+	
+	\draw [thick] (2.85, 2.65) circle (0.25cm); 
+	\draw [->,ultra thick] (3.1, 2.65) -- (5.3, 2.65);
+	\node [textNode, right] at (5.3, 2.65){O$_2$};
+	
+	% Fifth pause to begin CCE
+	\pause
+	\node [scriptNode, text width=2cm] at (-1.5, 3.85){\highlight{countercurrent exchange}};
+	\node [scriptNode] at (-3, 3.5){O$_2$};
+	\node [scriptNode] at (0, 3.5){lactic acid};
+	\draw [->, thick] (-3, 3.7) -- (-3, 4.2); 
+	\draw [->, thick] (0, 3.7) -- (0, 4.2); 
+	
+	% Last pause for concentrations
+	\pause
+	\node [textNode, text width=1.5cm] at (-3, 5.1) {pH = 7.8\\ pO$_2$ = 0.05};
+	\node [textNode, text width=1.5cm] at (0, 5.1) {pH = 7.3\\ pO$_2$ = 0.37};
+	\node [textNode, text width=1.5cm] at (-3, 2.7) {pH = 7.6\\ pO$_2$ = 0.06};
+	\node [textNode, text width=1.5cm] at (0, 2.7) {pH = 7.1\\ pO$_2$ = 0.39};
+	
+	
+\end{tikzpicture}
+
+\end{frame}
+
+\begin{frame}[c]{The \highlight{oval} has a muscular sphincter to control release of gas from the bladder.}
+\centering
+\includegraphics[width=0.75\textwidth]{buoyancy_oval}
+
+\end{frame}
+
+{
+	\usebackgroundtemplate{\includegraphics[width=\paperwidth]{thermoregulate_how}}
+	\begin{frame}[b,plain]
+	
+	\tiny\textcolor{white!80!black}{\textit{Thunnus orientalis} (Pacific Bluefin Tuna, Scombridae: Perciformes), aes256, Wikimedia Commons.}
+\end{frame}
+}
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{thermoregulate_teleost}}
+\begin{frame}[b,plain]{The dorsal aorta and pseudocardinal vein run along the midline of most teleost fishes.}
+
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{thermoregulate_heterothermic}}
+\begin{frame}[b,plain]{\highlight{Heterothermic} fishes use countercurrent exchange to elevate body temperature.}
+
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{osmoregulate_how}}
+\begin{frame}[b,plain]
+
+\tiny\textcolor{white!20!black}{\textit{Inimicus didactylus} (Demon Stinger, Synanceiidae: Scorpaeniformes), Bjoertvedt, Wikimedia Commons.}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{osmoregulate_euryhaline}}
+\begin{frame}[b,plain]{\textcolor{orange5}{Euryhaline} \textcolor{white}{fishes tolerate a wide range of salinity.}}
+
+\hfill\tiny\textcolor{white!80!black}{\textit{Epiplatys annulatus} (Clown Killifish, Synanceiidae: Scorpaeniformes), \copyright Hristo Hristov, \url{seriouslyfish.com}.}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{osmoregulate_stenohaline}}
+\begin{frame}[b,plain]{\textcolor{orange5}{Stenohaline} \textcolor{white}{fishes tolerate a narrow range of salinity.}}
+
+\hfill\tiny\textcolor{white!80!black}{\textit{Chrosomus cumberlandensis} (Blackside Dace, Cyprinidae: Cypriniformes), Dick Biggins, USFWS, Wikimedia Commons.}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{osmoregulate_osmoconformer}}
+\begin{frame}[b,plain]{The internal salinity of \highlight{osmoconformers} is about equal to seawater.}
+
+\hfill\tiny\textcolor{white}{\textit{Eptatretus stouti}? (Pacific Hagfish, Myxinidae: Myxiniformes), NOAA Photo Library, Flickr Creative Commons.}
+\end{frame}
+}
+
+\begin{frame}[c]{Plasma solute concentrations (mMol/L) of representative freshwater and marine fishes.}
+
+\centering\begin{tabular}{lrrrrr}
+\toprule
+Species	&	Na+	&	Ca2+	&	K+	&	Urea	&	Total Salts \\
+\midrule
+\textbf{Freshwater}	&	< 1	&	< 1	&	< 1	&		&	1--10 \\
+\hspace{1ex}Bass	&	120	&	3	&	3	&		&	 \\
+\hspace{1ex}Whitefish	&	141	&	3	&	4	&	1	&	 \\
+\hspace{1ex}Lamprey	&	120	&	2	&	3	&		&	270 \\
+\textbf{Marine}	&	\textasciitilde450	&	\textasciitilde20	&	10	&		&	1000 \\
+\hspace{1ex}Hagfish	&	549	&	5	&	11	&		&	1152 \\
+\hspace{1ex}Anglerfish	&	198	&	2	&	3	&		&	 \\
+\hspace{1ex}Moral eel	&	212	&	4	&	2	&		&	 \\
+\hspace{1ex}Dogfish	&	263	&	7	&	4	&	357	&	1007 \\
+\bottomrule
+\end{tabular}
+
+\end{frame}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{osmoregulate_sharks_urea}}
+\begin{frame}[b,plain]{\textcolor{white}{Elasmobranchs maintain osmotic balance with organic compounds like urea and TMAO.}}
+
+\hfill\tiny\textcolor{white!80!black}{\textit{Carcharhinus longimanus} (Oceanic Whitetip Shark, Carcharhinidae: Carcharhiniformes), Michael Aston, Flickr Creative Commons.}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{osmoregulate_rectal_gland}}
+\begin{frame}[b,plain]{Sharks use a \highlight{rectal gland} to eliminate excess salts.}
+
+\hfill\tiny\textcolor{white}{Rectal gland of Atlantic Sharpnose Shark. \copyright Andy Murch, \url{elasmodiver.com}. All Rights Reserved. Used with permission.}
+
+\end{frame}
+}
+
+%% Begin marine fish osmoregulation: Water and passive diffusion
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{osmoregulate_marine_fish_outline}}
+\begin{frame}[b,plain]{Marine fishes are \highlight{\HiddenWord{hypotonic}} relative to the environment.}
+
+\begin{tikzpicture}
+
+\draw [thick, dashed] (0, 1.5) -- (1, 1.5);
+\node [right] at (1, 1.5) {\small{passive diffusion}};
+\draw [thick] (0, 1) -- (1, 1);
+\node [right] at (1, 1) {\small{active transport}};
+
+\pause %% Water and salts
+\node [right, orange6] at (5.7, 6.1) {\footnotesize{H$_2$O}};
+\draw [->, thick, dashed, orange6] (5, 5.5) -- (5.7, 6.1);
+
+\node [right, orange6] at (5.7, 5.7) {\footnotesize{Na$^+$},\,Cl$^-$};
+\draw [->, thick, dashed, orange6] (5.7, 5.7) -- (5.2, 5.3);
+
+\pause  %% Drink Sea water
+\node [right, orange6] at (0, 4.5){seawater};
+\draw [->, thick, orange6] (1.7, 4.5) -- (3, 4.5);
+
+% Alpha Chloride
+%	\draw [->, thick] (4.9, 4) -- (5.9, 4.2);
+%	\node [right] at (5.8, 4.25) {\footnotesize{Na$^+$},\,Cl$^-$,\,NH$^-_4$};
+
+% Kidneys
+%	\draw [->, thick] (7.3, 3.8) -- (7.55, 2.65);
+%	\node [right] at (7.4, 2.5) {\footnotesize{Mg$^{2+}$},\,SO$^{2-}_4$};
+
+\end{tikzpicture}
+
+\end{frame}
+}
+
+%% Marine fish: alpha cloride cells
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{osmoregulate_marine_fish_outline}}
+\begin{frame}[b,plain]{\highlight{Alpha chloride cells} in the gills eliminate monovalent ions.}
+
+\begin{tikzpicture}
+
+\draw [thick, dashed] (0, 1.5) -- (1, 1.5);
+\node [right] at (1, 1.5) {\small{passive diffusion}};
+\draw [thick] (0, 1) -- (1, 1);
+\node [right] at (1, 1) {\small{active transport}};
+
+% \pause %% Water and salts
+\node [right] at (5.7, 6.1) {\footnotesize{H$_2$O}};
+\draw [->, thick, dashed] (5, 5.5) -- (5.7, 6.1);
+
+\node [right] at (5.7, 5.7) {\footnotesize{Na$^+$},\,Cl$^-$};
+\draw [->, thick, dashed] (5.7, 5.7) -- (5.2, 5.3);
+
+%\pause  %% Drink Sea water
+\node [right] at (0, 4.5){seawater};
+\draw [->, thick] (1.7, 4.5) -- (3, 4.5);
+
+% Alpha Chloride
+\draw [->, thick, orange6] (4.9, 4) -- (5.9, 4.2);
+\node [right] at (5.8, 4.25) {\highlight{\footnotesize{Na$^+$},\,Cl$^-$,\,NH$^-_4$}};
+
+% Kidneys
+%	\draw [->, thick] (7.3, 3.8) -- (7.55, 2.65);
+%	\node [right] at (7.4, 2.5) {\footnotesize{Mg$^{2+}$},\,SO$^{2-}_4$};
+
+\end{tikzpicture}
+
+\end{frame}
+}
+
+
+%% Marine fish: kidneys
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{osmoregulate_marine_fish_outline}}
+\begin{frame}[b,plain]{Kidneys excrete divalent ions.}
+
+\begin{tikzpicture}
+
+\draw [thick, dashed] (0, 1.5) -- (1, 1.5);
+\node [right] at (1, 1.5) {\small{passive diffusion}};
+\draw [thick] (0, 1) -- (1, 1);
+\node [right] at (1, 1) {\small{active transport}};
+
+% \pause %% Water and salts
+\node [right] at (5.7, 6.1) {\footnotesize{H$_2$O}};
+\draw [->, thick, dashed] (5, 5.5) -- (5.7, 6.1);
+
+\node [right] at (5.7, 5.7) {\footnotesize{Na$^+$},\,Cl$^-$};
+\draw [->, thick, dashed] (5.7, 5.7) -- (5.2, 5.3);
+
+%\pause  %% Drink Sea water
+\node [right] at (0, 4.5){seawater};
+\draw [->, thick] (1.7, 4.5) -- (3, 4.5);
+
+% Alpha Chloride
+\draw [->, thick] (4.9, 4) -- (5.9, 4.2);
+\node [right] at (5.8, 4.25) {\footnotesize{Na$^+$},\,Cl$^-$,\,NH$^-_4$};
+
+% Kidneys
+\draw [->, thick, orange6] (7.3, 3.8) -- (7.55, 2.65);
+\node [right, orange6] at (7.4, 2.5) {\footnotesize{Mg$^{2+}$},\,SO$^{2-}_4$};
+
+\end{tikzpicture}
+
+\end{frame}
+}
+
+%% Begin Osmoregulate Freshwater Fishes
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{osmoregulate_freshwater_fish_outline}}
+\begin{frame}[b,plain]{Freshwater fishes are \highlight{\HiddenWord{hypertonic}} relative to the environment.}
+
+\begin{tikzpicture}
+
+\draw [thick, dashed] (0, 1.5) -- (1, 1.5);
+\node [right] at (1, 1.5) {\small{passive diffusion}};
+\draw [thick] (0, 1) -- (1, 1);
+\node [right] at (1, 1) {\small{active transport}};
+
+\pause %% water and salts
+\node [right, orange6] at (5.8, 6.4) {\footnotesize{H$_2$O}};
+\draw [->, thick, dashed, orange6] (5.8, 6.3) -- (5.35, 5.45) ;
+
+\node [right, orange6] at (5.8, 6.0) {\footnotesize{Na$^+$}, Cl$^-$};
+\draw [->, thick, dashed, orange6] (5.4, 5.3) -- (5.9, 5.8) ;
+
+% Beta Chloride
+%	\draw [->, thick, orange6] (5.9, 3.85) -- (5.0, 4.1) ;
+%	\node [right] at (5.8, 3.85) {\footnotesize{Na$^+$},\,Cl$^-$,\,Ca$^{2+}$};
+
+% Kidneys
+%	\draw [->, thick] (7.3, 3.34) -- (7.55, 2.55);
+%	\node [right] at (7.4, 2.4) {\footnotesize{H$_2$O, salts}};
+
+\end{tikzpicture}
+\end{frame}
+}
+
+%%  Freshwater : Beta chloride cells
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{osmoregulate_freshwater_fish_outline}}
+\begin{frame}[b,plain]{\highlight{Beta chloride cells} import sodium and chloride ions.}
+
+\begin{tikzpicture}
+
+\draw [thick, dashed] (0, 1.5) -- (1, 1.5);
+\node [right] at (1, 1.5) {\small{passive diffusion}};
+\draw [thick] (0, 1) -- (1, 1);
+\node [right] at (1, 1) {\small{active transport}};
+
+% \pause %% Food and salts
+\node [right] at (5.8, 6.4) {\footnotesize{H$_2$O}};
+\draw [->, thick, dashed] (5.8, 6.3) -- (5.35, 5.45) ;
+
+\node [right] at (5.8, 6.0) {\footnotesize{Na$^+$}, Cl$^-$};
+\draw [->, thick, dashed] (5.4, 5.3) -- (5.9, 5.8) ;
+
+% Beta Chloride
+\draw [->, thick, orange6] (5.9, 3.85) -- (5.0, 4.1) ;
+\node [right, orange6] at (5.8, 3.85) {\footnotesize{Na$^+$},\,Cl$^-$,\,Ca$^{2+}$};
+
+% Kidneys
+%	\draw [->, thick] (7.3, 3.34) -- (7.55, 2.55);
+%	\node [right] at (7.4, 2.4) {\footnotesize{H$_2$O, salts}};
+
+\end{tikzpicture}
+\end{frame}
+}
+
+%%  Freshwater : Kidneys
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{osmoregulate_freshwater_fish_outline}}
+\begin{frame}[b,plain]{Kidneys resorb divalent ions.}
+
+\begin{tikzpicture}
+
+\draw [thick, dashed] (0, 1.5) -- (1, 1.5);
+\node [right] at (1, 1.5) {\small{passive diffusion}};
+\draw [thick] (0, 1) -- (1, 1);
+\node [right] at (1, 1) {\small{active transport}};
+
+% \pause %% Food and salts
+\node [right] at (5.8, 6.4) {\footnotesize{H$_2$O}};
+\draw [->, thick, dashed] (5.8, 6.3) -- (5.35, 5.45) ;
+
+\node [right] at (5.8, 6.0) {\footnotesize{Na$^+$}, Cl$^-$};
+\draw [->, thick, dashed] (5.4, 5.3) -- (5.9, 5.8) ;
+
+% Beta Chloride
+\draw [->, thick] (5.9, 3.85) -- (5.0, 4.1) ;
+\node [right] at (5.8, 3.85) {\footnotesize{Na$^+$},\,Cl$^-$,\,Ca$^{2+}$};
+
+% Kidneys
+\draw [->, thick, orange6] (7.3, 3.34) -- (7.55, 2.55);
+\node [right, orange6] at (7.4, 2.4) {\footnotesize{H$_2$O}};
+
+\end{tikzpicture}
+\end{frame}
+}
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{osmoregulate_euryhaline_fishes}}
+\begin{frame}[b,plain]{\textcolor{white}{How do euryhaline fishes adjust to changing salinities?}}
+
+\hfill\tiny\textcolor{white!80!black}{\textit{Neostethus lankesteri} (Phallostethidae: Atheriniformes), Mike Noren, Wikimedia Commons.}
+\end{frame}
+}
+
+\end{document}
