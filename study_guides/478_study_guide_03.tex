@@ -1,0 +1,106 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[nofonts, letterpaper]{tufte-handout}
+
+%\geometry{showframe} % display margins for debugging page layout
+
+\usepackage{graphicx} % allow embedded images
+  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+  \graphicspath{{img/}} % set of paths to search for images
+  
+\usepackage{fontspec}
+  \setmainfont[Ligatures=TeX,Numbers={Proportional}]{Linux Libertine O}
+  \setsansfont{Linux Biolinum O}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{multicol} % multiple column layout facilities
+%\usepackage{hyperref}
+%\usepackage{fancyvrb} % extended verbatim environments
+%  \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
+
+% Change the header to shift the title to the left side of the page. 
+% Replaced \quad with \hfill.  See \plaintitle in tufte-common.def
+{\fancyhead[RE,RO]{\scshape{\newlinetospace{\plaintitle}}\hfill\thepage}}
+
+\makeatletter
+% Paragraph indentation and separation for normal text
+\renewcommand{\@tufte@reset@par}{%
+  \setlength{\RaggedRightParindent}{1.0pc}%
+  \setlength{\JustifyingParindent}{1.0pc}%
+  \setlength{\parindent}{1pc}%
+  \setlength{\parskip}{0pt}%
+}
+\@tufte@reset@par
+
+% Paragraph indentation and separation for marginal text
+\renewcommand{\@tufte@margin@par}{%
+  \setlength{\RaggedRightParindent}{0pt}%
+  \setlength{\JustifyingParindent}{0.5pc}%
+  \setlength{\parindent}{0.5pc}%
+  \setlength{\parskip}{0pt}%
+}
+
+\makeatother
+
+\title{Study Guide 03}
+\author{Buoyancy, homeostasis, and osmoregulation}
+
+\date{} % without \date command, current date is supplied
+
+\begin{document}
+
+\maketitle	% this prints the handout title, author, and date
+
+%\printclassoptions
+
+\section{Vocabulary}\marginnote{\textbf{Study:} pgs. 68--70, 94--105.} 
+\vspace{-1\baselineskip}
+\begin{multicols}{2}
+squalene \\
+gas bladder \\
+physostomous bladder \\
+physoclistous bladder \\
+pneumatic duct \\
+rete mirabile \\
+gas gland \\
+Root effect \\
+countercurrent exchange \\
+oval \\
+stenohaline \\
+euryhaline \\
+osmoconformer \\
+osmoregulator \\
+hypotonic \\
+hypertonic \\
+rectal gland \\
+alpha chloride cells \\
+beta chloride cells
+\end{multicols}
+
+\section{Concepts}
+
+\begin{enumerate}
+	\item What are the mechanisms used by sharks to maintain position in the water column?
+
+	\item Why do deep-sea fishes ($>$1000 m) typically have very jelly-like bodies?
+
+	\item Describe the functional difference between physostomous and physoclistous swimbladders.  What are the adaptive advantages of a physoclistous bladder?
+
+	\item Diagram and explain how a physoclistous bladder is inflated and emptied. Be sure to include all of the key structures and physiological processes.
+
+	\item How do active fishes like scombrids maintain a core temperature several degrees higher than ambient?
+
+%	\item If high temperature reduces the P$_{50}$ of some hemoglobins, how do scombrids deal with the high metabolic demand of the muscles for oxygen during active swimming?
+
+	\item Explain the mechanism used by sharks to maintain osmotic equilibrium in a salt water environment. How do they get rid of excess Na$^+$?
+
+	\item What are some of the strategies that allow euryhaline fishes to cope with dramatic salinity changes?
+	
+	\item\label{osmotic_homeostasis} Explain how stenohaline freshwater and saltwater fishes maintain osmotic homeostasis.  Explain for water, monovalent ions (e.g., Na$^+$, Cl$^-$, K$^+$) and divalent ions (e.g., Ca$^{2+}$).  Include for each when passive diffusion is operating and when active transport is required, and the primary regions (e.g., gills, kidney) for entry and exit of water and ions.  Be able to explain and illustrate the movement of water and ions in or out of the fish.
+	
+	\item To answer question~\ref{osmotic_homeostasis}, be sure to understand the difference between hypertonic and hypotonic and which applies to freshwater and saltwater fishes relative to their environment.
+\end{enumerate}
+
+
+\end{document}
