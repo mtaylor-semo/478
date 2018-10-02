@@ -1,220 +1,253 @@
 %!TEX TS-program = lualatex
 %!TEX encoding = UTF-8 Unicode
 
-\documentclass[11pt]{article}
+\documentclass[11pt, hidelinks]{exam}
 \usepackage{graphicx}
-	\graphicspath{{/Users/goby/Pictures/teach/153/lab/}} % set of paths to search for images
+\graphicspath{{/Users/goby/Pictures/teach/434/handouts/}
+	{img/}} % set of paths to search for images
 
 \usepackage{geometry}
-\geometry{letterpaper}                   
+\geometry{letterpaper, left=1.5in, bottom=1in}                   
 %\geometry{landscape}                % Activate for for rotated page geometry
-%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
-\usepackage{amssymb}
+\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{amssymb, amsmath}
 \usepackage{mathtools}
-	\everymath{\displaystyle}
+\everymath{\displaystyle}
 
 \usepackage{fontspec}
-\setmainfont[Ligatures={Common}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{Linux Libertine O}
+\setmainfont[Ligatures={TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, BoldItalicFont={* BoldItalic}, Numbers={OldStyle}]{Linux Libertine O}
 \setsansfont[Scale=MatchLowercase,Ligatures=TeX]{Linux Biolinum O}
-\setmonofont[Scale=MatchLowercase]{Inconsolata}
+\setmonofont[Scale=MatchLowercase]{Linux Libertine Mono O}
 \usepackage{microtype}
 
-\usepackage{unicode-math}
-\setmathfont[Scale=MatchLowercase]{Asana-Math.otf}
-%\setmathfont{XITS Math}
+% This defines \amper for the fancy ampersand
+% to be used in the header. See
+% https://tex.stackexchange.com/a/58185/39194
+\usepackage{xspace}
+\newfontfamily\amperfont[Style=Alternate]{Linux Libertine O}    
+\makeatletter
+\DeclareRobustCommand{\amper}{{\amperfont\ifx\f@shape\scname\smaller[1.2]\fi\&}\xspace}
+\makeatother
 
 % To define fonts for particular uses within a document. For example, 
 % This sets the Libertine font to use tabular number format for tables.
-\newfontfamily{\tablenumbers}[Numbers={Monospaced}]{Linux Libertine O}
-\newfontfamily{\libertinedisplay}{Linux Libertine Display O}
-
+%\newfontfamily{\tablenumbers}[Numbers={Monospaced}]{Linux Libertine O}
+% \newfontfamily{\libertinedisplay}{Linux Libertine Display O}
 
 \usepackage{booktabs}
 \usepackage{multicol}
-%\usepackage{longtable}
+\usepackage[normalem]{ulem}
+
+\usepackage{longtable}
 %\usepackage{siunitx}
-%\usepackage[justification=raggedright, singlelinecheck=off]{caption}
-%\captionsetup{labelsep=period} % Removes colon following figure / table number.
-%\captionsetup{tablewithin=none}  % Sequential numbering of tables and figures instead of
-%\captionsetup{figurewithin=none} % resetting numbers within each chapter (Intro, M&M, etc.)
-%\captionsetup[table]{skip=0pt}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
 
-%\usepackage{array}
-%\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
-%\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
-%\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
-
-%\usepackage{enumitem}
-%\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{hyperref}
 %\usepackage{placeins} %PRovides \FloatBarrier to flush all floats before a certain point.
+\usepackage{hanging}
 
-\usepackage{titling}
-\setlength{\droptitle}{-60pt}
-\posttitle{\par\end{center}}
-\predate{}\postdate{}
+\usepackage{pdflscape}
 
-\newcommand{\VSpace}{\vspace{\baselineskip}}
+\usepackage[sc]{titlesec}
 
-\title{Families and Species of Missouri Fishes to Know}
-\author{ZO 478 / 678}
-\date{}                                           % Activate to display a given date or no date
+%% Commands for Exam class
+\renewcommand{\solutiontitle}{\noindent}
+\unframedsolutions
+\SolutionEmphasis{\bfseries}
+
+\renewcommand{\questionshook}{%
+	\setlength{\leftmargin}{-\leftskip}%
+}
+
+%Change \half command from 1/2 to .5
+\renewcommand*\half{.5}
+
+\pagestyle{headandfoot}
+\firstpageheader{\textsc{zo}\,478/678 Ichthyology}{}{}
+\runningheader{}{}{\footnotesize{pg. \thepage}}
+\footer{}{}{}
+\runningheadrule
+
+\newcommand*\AnswerBox[2]{%
+	\parbox[t][#1]{0.92\textwidth}{%
+		\begin{solution}#2\end{solution}}
+	%    \vspace*{\stretch{1}}
+}
+
+\newenvironment{AnswerPage}[1]
+{\begin{minipage}[t][#1]{0.92\textwidth}%
+		\begin{solution}}
+		{\end{solution}\end{minipage}
+	\vspace*{\stretch{1}}}
+
+\newlength{\basespace}
+\setlength{\basespace}{5\baselineskip}
+
+%\usepackage{mdframed}
+%\mdfsetup{%
+%	innerleftmargin=0pt,%
+%	innerrightmargin=0pt,
+%	innertopmargin=0pt,
+%	innerbottommargin=0pt,
+%	hidealllines=true
+%}%end mdfsetup
+
+%
+%\makeatletter
+%\def\SetTotalwidth{\advance\linewidth by \@totalleftmargin
+%\@totalleftmargin=0pt}
+%\makeatother
+
+
+%\printanswers
+
 
 \begin{document}
-\maketitle
+
+\subsection*{Fishes to Know}
 
 You must be able to sight identify in the lab the following 70 common species of Missouri fishes.  You must also be able to recognize and identify any fishes collected on our field trips but not listed below.  You must know the scientific name, the family, the class, and, as applicable, the subclass and division.  Common names will not be accepted on any practical or exam, not even for 
 partial credit.  Spelling will count.
 
 \noindent\begin{multicols}{2}
-Petromyzontidae\par
-	\quad\textit{Ichthyomyzon castaneous}\par
-	\quad\textit{Lampetra appendix}\par
-\vspace{1ex}
+Petromyzontidae\newline
+	\hspace*{1em}\textit{Ichthyomyzon castaneous}\newline
+	\hspace*{1em}\textit{Lampetra appendix}
 
-Acipenseridae\par
-	\quad\textit{Scaphirhynchus platorynchus}\par
-\vspace{1ex}
+Acipenseridae\newline
+	\hspace*{1em}\textit{Scaphirhynchus platorynchus}
 
-Polyodontidae\par
-	\quad\textit{Polyodon spathula}\par
-\vspace{1ex}
+Polyodontidae\newline
+	\hspace*{1em}\textit{Polyodon spathula}
 
-Lepisosteidae\par
-	\quad\textit{Lepisosteus osseus}\par
-	\quad\textit{Lepisosteus oculatus}\par
-\vspace{1ex}
+Lepisosteidae\newline
+	\hspace*{1em}\textit{Lepisosteus osseus}\newline
+	\hspace*{1em}\textit{Lepisosteus oculatus}
 
-Amiidae\par
-	\quad\textit{Amia calva}\par
-\vspace{1ex}
+Amiidae\newline
+	\hspace*{1em}\textit{Amia calva}
 
-Hiodontidae\par
-	\quad\textit{Hiodon alosoides}\par
-\vspace{1ex}
+Hiodontidae\newline
+	\hspace*{1em}\textit{Hiodon alosoides}
 
-Clupeidae\par
-	\quad\textit{Dorosoma cepedianum}\par
-	\quad\textit{Dorosoma petenense}\par
-\vspace{1ex}
-Cyprinidae\par
-	\quad\textit{Campostoma oligolepis}\par
-	\quad\textit{Campostoma pullum}\par
-	\quad\textit{Cyprinella galactura}\par
-	\quad\textit{Cyprinella lutrensa}\par
-	\quad\textit{Cyprinella venusta}\par
-	\quad\textit{Cyprinella whipplei}\par
-	\quad\textit{Cyprinus carpio}\par
-	\quad\textit{Luxilus chrysocephalus}\par
-	\quad\textit{Luxilus zonatus}\par
-\vspace{1ex}
-Cyprinidae (con‘t)\par
-	\quad\textit{Lythrurus umbratilus}\par
-	\quad\textit{Macrhybopsis aestivalis}\par
-	\quad\textit{Nocomis biguttatus}\par
-	\quad\textit{Notemigonus crysoleucas}\par
-	\quad\textit{Notropis amblops}\par
-	\quad\textit{Notropis atherinoides}\par
-	\quad\textit{Notropis boops}\par
-	\quad\textit{Notropis nubilus}\par
-	\quad\textit{Notropis rubellus}\par
-	\quad\textit{Notropis telescopus}\par
-	\quad\textit{Notropis texanus}\par
-	\quad\textit{Notropis volucellus / wickliffi}\par
-	\quad\textit{Phoxinus erythrogaster}\par
-	\quad\textit{Pimephales notatus}\par
-	\quad\textit{Semotilus atromaculatus}\par
-\vspace{1ex}
+Clupeidae\newline
+	\hspace*{1em}\textit{Dorosoma cepedianum}\newline
+	\hspace*{1em}\textit{Dorosoma petenense}
 
-Catostomidae\par
-	\quad\textit{Carpiodes carpio}\par
-	\quad\textit{Hypentelium nigricans}\par
-	\quad\textit{Moxostoma duquesnei}\par
-	\quad\textit{Moxostoma erythrurum}\par
-\vspace{1ex}
+Cyprinidae\newline
+	\hspace*{1em}\textit{Campostoma oligolepis}\newline
+	\hspace*{1em}\textit{Campostoma pullum}\newline
+	\hspace*{1em}\textit{Cyprinella galactura}\newline
+	\hspace*{1em}\textit{Cyprinella lutrensa}\newline
+	\hspace*{1em}\textit{Cyprinella venusta}\newline
+	\hspace*{1em}\textit{Cyprinella whipplei}\newline
+	\hspace*{1em}\textit{Cyprinus carpio}\newline
+	\hspace*{1em}\textit{Luxilus chrysocephalus}\newline
+	\hspace*{1em}\textit{Luxilus zonatus}\newline
+	\hspace*{1em}\textit{Lythrurus umbratilus}\newline
+	\hspace*{1em}\textit{Macrhybopsis aestivalis}\newline
+	\hspace*{1em}\textit{Nocomis biguttatus}\newline
+	\hspace*{1em}\textit{Notemigonus crysoleucas}\newline
+	\hspace*{1em}\textit{Notropis amblops}\newline
+	\hspace*{1em}\textit{Notropis atherinoides}\newline
+	\hspace*{1em}\textit{Notropis boops}
+	
+Cyprinidae (con’t)\newline
+	\hspace*{1em}\textit{Notropis nubilus}\newline
+	\hspace*{1em}\textit{Notropis rubellus}\newline
+	\hspace*{1em}\textit{Notropis telescopus}\newline
+	\hspace*{1em}\textit{Notropis texanus}\newline
+	\hspace*{1em}\textit{Notropis volucellus / wickliffi}\newline
+	\hspace*{1em}\textit{Phoxinus erythrogaster}\newline
+	\hspace*{1em}\textit{Pimephales notatus}\newline
+	\hspace*{1em}\textit{Semotilus atromaculatus}
 
-Ictaluridae\par
-	\quad\textit{Ameiurus natalis}\par
-	\quad\textit{Ictalurus furcatus}\par
-	\quad\textit{Ictalurus punctatus}\par
-	\quad\textit{Noturus exilis}\par
-	\quad\textit{Noturus nocturnus}\par
-\vspace{1ex}
+Catostomidae\newline
+	\hspace*{1em}\textit{Carpiodes carpio}\newline
+	\hspace*{1em}\textit{Hypentelium nigricans}\newline
+	\hspace*{1em}\textit{Moxostoma duquesnei}\newline
+	\hspace*{1em}\textit{Moxostoma erythrurum}
 
-Esocidae\par
-	\quad\textit{Esox americanus}\par
-\vspace{1ex}
+Ictaluridae\newline
+	\hspace*{1em}\textit{Ameiurus natalis}\newline
+	\hspace*{1em}\textit{Ictalurus furcatus}\newline
+	\hspace*{1em}\textit{Ictalurus punctatus}\newline
+	\hspace*{1em}\textit{Noturus exilis}\newline
+	\hspace*{1em}\textit{Noturus nocturnus}
 
-Salmonidae\par
-	\quad\textit{Oncorhynchus mykiss}\par
-\vspace{1ex}
+Esocidae\newline
+	\hspace*{1em}\textit{Esox americanus}
+	
 
-Aphredoderidae\par
-	\quad\textit{Aphredoderus sayanus}\par
-\vspace{1ex}
+Salmonidae\newline
+	\hspace*{1em}\textit{Oncorhynchus mykiss}
+	
+Aphredoderidae\newline
+	\hspace*{1em}\textit{Aphredoderus sayanus}
+	
+Fundulidae\newline
+	\hspace*{1em}\textit{Fundulus catenatus}\newline
+	\hspace*{1em}\textit{Fundulus notatus}\newline
+	\hspace*{1em}\textit{Fundulus olivaceus}
+	
 
-Fundulidae\par
-	\quad\textit{Fundulus catenatus}\par
-	\quad\textit{Fundulus notatus}\par
-	\quad\textit{Fundulus olivaceus}\par
-\vspace{1ex}
+Poeciliidae\newline
+	\hspace*{1em}\textit{Gambusia affinis}
+	
 
-Poeciliidae\par
-	\quad\textit{Gambusia affinis}\par
-\vspace{1ex}
+Atherinidae\newline
+	\hspace*{1em}\textit{Labidesthes sicculus}
 
-Atherinidae\par
-	\quad\textit{Labidesthes sicculus}\par
-\vspace{1ex}
+Cottidae\newline
+	\hspace*{1em}\textit{Cottus carolinae}
 
-Cottidae\par
-	\quad\textit{Cottus carolinae}\par
-\vspace{1ex}
+Moronidae (= Percichthyidae in Pflieger)\newline
+	\hspace*{1em}\textit{Morone chrysops}
 
-Moronidae (= Percichthyidae in Pflieger)\par
-	\quad\textit{Morone chrysops}\par
-\vspace{1ex}
+Elassomatidae\newline
+	\hspace*{1em}\textit{Elassoma zonatum}
 
-Elassomatidae\par
-	\quad\textit{Elassoma zonatum}\par
-\vspace{1ex}
+Centrarchidae\newline
+	\hspace*{1em}\textit{Ambloplites ariommus}\newline
+	\hspace*{1em}\textit{Lepomis cyanellus}\newline
+	\hspace*{1em}\textit{Lepomis gulosus}\newline
+	\hspace*{1em}\textit{Lepomis macrochirus}\newline
+	\hspace*{1em}\textit{Lepomis megalotis}\newline
+	\hspace*{1em}\textit{Micropterus dolomieu}
 
-Centrarchidae\par
-	\quad\textit{Ambloplites ariommus}\par
-	\quad\textit{Lepomis cyanellus}\par
-	\quad\textit{Lepomis gulosus}\par
-	\quad\textit{Lepomis macrochirus}\par
-	\quad\textit{Lepomis megalotis}\par
-	\quad\textit{Micropterus dolomieu}\par
-	\quad\textit{Micropterus punctulatus}\par
-	\quad\textit{Micropterus salmoides}\par
-	\quad\textit{Pomoxis annularis}\par
-	\quad\textit{Pomoxis nigromaculatus}\par
-\vspace{1ex}
+Centrarchidae (con’t)\newline
+	\hspace*{1em}\textit{Micropterus punctulatus}\newline
+	\hspace*{1em}\textit{Micropterus salmoides}\newline
+	\hspace*{1em}\textit{Pomoxis annularis}\newline
+	\hspace*{1em}\textit{Pomoxis nigromaculatus}
 
-Percidae\par
-	\quad\textit{Ammocrypta clara}\par
-	\quad\textit{Etheostoma caeruleum}\par
-	\quad\textit{Etheostoma spectabile}\par
-	\quad\textit{Etheostoma zonale}\par
-	\quad\textit{Percina caprodes}\par
-	\quad\textit{Percina sciera}\par
-\vspace{1ex}
+Percidae\newline
+	\hspace*{1em}\textit{Ammocrypta clara}\newline
+	\hspace*{1em}\textit{Etheostoma caeruleum}\newline
+	\hspace*{1em}\textit{Etheostoma spectabile}\newline
+	\hspace*{1em}\textit{Etheostoma zonale}\newline
+	\hspace*{1em}\textit{Percina caprodes}\newline
+	\hspace*{1em}\textit{Percina sciera}
 
-Sciaenidae\par
-	\quad\textit{Aplodinotus grunniens}
+Sciaenidae\newline
+	\hspace*{1em}\textit{Aplodinotus grunniens}
 \end{multicols}
 
-\subsection*{First lab practical (23 October)}
+\subsection*{First lab practical (26 September)}
 
 External and internal anatomy, plus all families shown here.  Keys will be provided for some but not all families.  Other species not listed above may be used to represent some families. Lecture material, as it relates to fish anatomy, including form and function, will be included on the practical.%\VSpace\VSpace
 
 
-\subsection*{Second lab practical (13 November)}
+\subsection*{Second lab practical (31 October)}
 
 Petromyzontidae through Catostomidae (38 species).  You must be able to sight recognize the species listed above.  You must also be able to use a key to identify species not listed above but that represent the families included on this practical. I may also ask questions related to to the form and function of the fishes used for the practical.%\VSpace\VSpace
 
 
-\subsection*{Final lab practical (11 December)}
+\subsection*{Final lab practical (5 December)}
 
 Comprehensive identification (no anatomy), with emphasis on Ictaluridae through Sciaenidae (32 species). You must be able to sight recognize the species listed above.  You must also be able to use a key to identify species not listed above but that represent any Missouri family.  I may also ask questions related to to the form and function of the fishes used for the practical.
 

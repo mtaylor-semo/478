@@ -1,0 +1,185 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt, hidelinks]{exam}
+\usepackage{graphicx}
+\graphicspath{{/Users/goby/Pictures/teach/434/handouts/}
+	{img/}} % set of paths to search for images
+
+\usepackage{geometry}
+\geometry{letterpaper, left=1.5in, bottom=1in}                   
+%\geometry{landscape}                % Activate for for rotated page geometry
+\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{amssymb, amsmath}
+\usepackage{mathtools}
+\everymath{\displaystyle}
+
+\usepackage{fontspec}
+\setmainfont[Ligatures={TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, BoldItalicFont={* BoldItalic}, Numbers={OldStyle}]{Linux Libertine O}
+\setsansfont[Scale=MatchLowercase,Ligatures=TeX]{Linux Biolinum O}
+\setmonofont[Scale=MatchLowercase]{Linux Libertine Mono O}
+\usepackage{microtype}
+
+% This defines \amper for the fancy ampersand
+% to be used in the header. See
+% https://tex.stackexchange.com/a/58185/39194
+\usepackage{xspace}
+\newfontfamily\amperfont[Style=Alternate]{Linux Libertine O}    
+\makeatletter
+\DeclareRobustCommand{\amper}{{\amperfont\ifx\f@shape\scname\smaller[1.2]\fi\&}\xspace}
+\makeatother
+
+% To define fonts for particular uses within a document. For example, 
+% This sets the Libertine font to use tabular number format for tables.
+%\newfontfamily{\tablenumbers}[Numbers={Monospaced}]{Linux Libertine O}
+% \newfontfamily{\libertinedisplay}{Linux Libertine Display O}
+
+\usepackage{booktabs}
+\usepackage{multicol}
+\usepackage[normalem]{ulem}
+
+\usepackage{calc}
+
+\usepackage{longtable}
+%\usepackage{siunitx}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+\usepackage{enumitem}
+\usepackage{hyperref}
+%\usepackage{placeins} %PRovides \FloatBarrier to flush all floats before a certain point.
+\usepackage{hanging}
+
+%\usepackage{pdflscape}
+
+%\usepackage[sc]{titlesec}
+
+\newlength\myindent
+\setlength{\myindent}{\widthof{Steps to get there:\,}}
+
+
+%% Commands for Exam class
+\renewcommand{\solutiontitle}{\noindent}
+\unframedsolutions
+\SolutionEmphasis{\bfseries}
+
+\renewcommand{\questionshook}{%
+	\setlength{\leftmargin}{-\leftskip}%
+}
+
+%Change \half command from 1/2 to .5
+\renewcommand*\half{.5}
+
+\pagestyle{headandfoot}
+\firstpageheader{\textsc{zo}\,478/678 Ichthyology}{}{}
+\runningheader{}{}{\footnotesize{pg. \thepage}}
+\footer{}{}{}
+\runningheadrule
+
+\newcommand*\AnswerBox[2]{%
+	\parbox[t][#1]{0.92\textwidth}{%
+		\begin{solution}#2\end{solution}}
+	%    \vspace*{\stretch{1}}
+}
+
+\newenvironment{AnswerPage}[1]
+{\begin{minipage}[t][#1]{0.92\textwidth}%
+		\begin{solution}}
+		{\end{solution}\end{minipage}
+	\vspace*{\stretch{1}}}
+
+\newlength{\basespace}
+\setlength{\basespace}{5\baselineskip}
+
+\begin{document}
+	
+	
+1. \textbf{Family Name}: \rule{3in}{0.4pt}\medskip
+
+Steps to get there: 
+\rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \\[1em] \hspace*{\myindent} 
+\rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}. \bigskip
+
+2. \textbf{Family Name}: \rule{3in}{0.4pt}\medskip
+
+Steps to get there: 
+\rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \\[1em] \hspace*{\myindent} 
+\rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}. \bigskip
+
+3. \textbf{Family Name}: \rule{3in}{0.4pt}\medskip
+
+Steps to get there: 
+\rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \\[1em] \hspace*{\myindent} 
+\rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}. \bigskip
+
+4. \textbf{Family Name}: \rule{3in}{0.4pt}\medskip
+
+Steps to get there: 
+\rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \\[1em] \hspace*{\myindent} 
+\rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}. \bigskip
+
+5. \textbf{Family Name}: \rule{3in}{0.4pt}\medskip
+
+Steps to get there: 
+\rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \\[1em] \hspace*{\myindent} 
+\rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}. \bigskip
+
+6. \textbf{Family Name}: \rule{3in}{0.4pt}\medskip
+
+Steps to get there: 
+\rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \\[1em] \hspace*{\myindent} 
+\rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}. \bigskip
+
+7. \textbf{Family Name}: \rule{3in}{0.4pt}\medskip
+
+Steps to get there: 
+\rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \\[1em] \hspace*{\myindent} 
+\rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}. \bigskip
+
+\newpage
+
+8. \textbf{Family Name}: \rule{3in}{0.4pt}\medskip
+
+Steps to get there: 
+\rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \\[1em] \hspace*{\myindent} 
+\rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}. \bigskip
+
+9. \textbf{Family Name}: \rule{3in}{0.4pt}\medskip
+
+Steps to get there: 
+\rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \\[1em] \hspace*{\myindent} 
+\rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}. \bigskip
+
+10. \textbf{Family Name}: \rule{3in}{0.4pt}\medskip
+
+Steps to get there: 
+\rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \\[1em] \hspace*{\myindent} 
+\rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}. \bigskip
+
+11. \textbf{Family Name}: \rule{3in}{0.4pt}\medskip
+
+Steps to get there: 
+\rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \\[1em] \hspace*{\myindent} 
+\rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}. \bigskip
+
+12. \textbf{Family Name}: \rule{3in}{0.4pt}\medskip
+
+Steps to get there: 
+\rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \\[1em] \hspace*{\myindent} 
+\rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}. \bigskip
+
+13. \textbf{Family Name}: \rule{3in}{0.4pt}\medskip
+
+Steps to get there: 
+\rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \\[1em] \hspace*{\myindent} 
+\rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}. \bigskip
+
+14. \textbf{Family Name}: \rule{3in}{0.4pt}\medskip
+
+Steps to get there: 
+\rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \\[1em] \hspace*{\myindent} 
+\rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}, \rule{0.75in}{0.4pt}. \bigskip
+
+\end{document}

@@ -1,15 +1,15 @@
 %!TEX TS-program = lualatex
 %!TEX encoding = UTF-8 Unicode
 
-\documentclass[11pt]{article}
+\documentclass[12pt]{article}
 %\usepackage{graphicx}
 %	\graphicspath{{/Users/goby/Pictures/teach/153/lab/}} % set of paths to search for images
 
 \usepackage{geometry}
 \geometry{letterpaper}                   
-\geometry{bottom=1in}
+\geometry{bottom=1in, left=1.5in}
 %\geometry{landscape}                % Activate for for rotated page geometry
-%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
 %\usepackage{amssymb}
 %\usepackage{mathtools}
 %	\everymath{\displaystyle}
@@ -17,9 +17,9 @@
 %\pagenumbering{gobble}
 
 \usepackage{fontspec}
-\setmainfont[Ligatures={Common}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{Linux Libertine O}
-\setsansfont[Scale=MatchLowercase,Ligatures=TeX]{Linux Biolinum O}
-\setmonofont[Scale=MatchLowercase]{Inconsolata}
+\setmainfont[Ligatures={Common,TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{Linux Libertine O}
+\setsansfont[Scale=MatchLowercase,Ligatures=TeX, Numbers=OldStyle]{Linux Biolinum O}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata}
 \usepackage{microtype}
 
 \usepackage{unicode-math}
@@ -33,6 +33,7 @@
 
 
 \usepackage{booktabs}
+%\usepackage{multicol}
 %\usepackage{tabularx}
 %\usepackage{longtable}
 %\usepackage{siunitx}
@@ -50,36 +51,43 @@
 \usepackage{enumitem}
 \usepackage{hyperref}
 %\usepackage{placeins} %PRovides \FloatBarrier to flush all floats before a certain point.
-\usepackage{hanging}
+%\usepackage{hanging}
+%\usepackage{color}
+%\usepackage{calc}
 
-\usepackage{titling}
-\setlength{\droptitle}{-60pt}
-\posttitle{\par\end{center}}
-\predate{}\postdate{}
+%\usepackage{titling}
+%\setlength{\droptitle}{-60pt}
+%\posttitle{\par\end{center}}
+%\predate{}\postdate{}
 
-%\usepackage{fancyhdr}
-%\fancyhf{}
-%\pagestyle{fancy}
-%\lhead{}
-%\chead{}
-%\rhead{Name: \rule{5cm}{0.4pt} }
-%\renewcommand{\headrulewidth}{0pt}
-
-\newcommand{\VSpace}{\vspace{\baselineskip}}
-\newcommand{\BigVSpace}{\vspace{2\baselineskip}}
+\usepackage[sc]{titlesec}
 
 
-\title{Ecological Life History Paper}
-\author{Outline of Requirements}
+\usepackage{fancyhdr}
+\fancyhf{}
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{\footnotesize pg. \thepage }
+\renewcommand{\headrulewidth}{0.4pt}
+
+\fancypagestyle{plain}{%
+	\fancyhf{}
+	\lhead{\textsc{zo} 478: Ichthyology}
+	\rhead{Ecological Life History Paper}
+	\renewcommand{\headrulewidth}{0pt}
+}
+
+%\newcommand{\VSpace}{\vspace{0.5\baselineskip}}
+%\newcommand{\BigVSpace}{\vspace{2\baselineskip}}
+
+\title{Annotated Bibliography Assignment}
+\author{Ichthyology}
 \date{}                                           % Activate to display a given date or no date
 
 \begin{document}
-\maketitle
-%\thispagestyle{fancy}
-\textbf{NOTE:} For 2016, remove point value for fish choice. Change the bibliography to an annotated bibliography. Change due date for annotated bib to a bit later in October. Make rubric/handout explaining what an annotated bibliography is.  Require they turn in the abstract of each paper, too, so I can see they are not plagiarizing the abstract for their annotations.
-
-\textbf{Of course}, this assumes I still do the ELH and not a Biotic Index report or something similar.
-
+%\maketitle
+\thispagestyle{plain}
 
 \begin{enumerate}
 	\item Prepare an “ecological life history” of a fish species that interests you. The following topics are typically covered in such a paper:
@@ -91,7 +99,7 @@
 	\item Fecundity, reproductive habits (time and place of spawning, spawning behavior, etc.)
 	\item Age and growth
 	\item Environmental requirements and tolerances (e.g. temperature, oxygen, depth, current, salinity, light, etc.)\\%
-		\textbf{OR}\\%
+		\textsc{\textbf{or}}\\%
 		History in relation to humans
 	\item Literature cited
 	\end{enumerate}
@@ -102,28 +110,42 @@
 
 	\item Use metric measurements.  Convert U.S. measurements (yards, acres, Fahrenheit, etc) to their appropriate metric counterparts (meters, hectares, Celsius, etc).
 
-	\item The paper must not exceed a maximum of 8 pages (excluding the literature cited, tables, and figures). Please double space and number all pages.
+	\item The paper must not exceed a maximum of eight double-spaced pages (excluding the literature cited, tables, and figures). Please number all pages.
 	
 	\item An electronic copy of the “Guide for Authors” from the Transactions of the American Fisheries Society will be available on the class website. Use this to check the correct format for presenting references in the text and literature cited section of your paper. Also check this guide for proper abbreviations of numbers, units, etc.
 	
 	\item Your literature cited section must conform to the following examples.
 	
-	\VSpace
+	\medskip
+	
 	\textsc{In-text citations:}
 	
 	When there is more than one citation for a particular statement, list them (1) chronologically, beginning with the oldest (with “in press” and “unpublished” sources at the end), and then (2) alphabetically within years (with citations containing “and” and “et al.” in alphabetical order).
-	\VSpace
+
+%	\smallskip
+	
 	(Roberts 1985; Johnson 1987; Berger, in press)\\
-	(Eldridge 1989; Smith 1992; Smith and Thomas 1992)\\
-	Exception: Group publications by the same author or authors together, even if this violates the rule about chronological listing:\\
+	(Eldridge 1989; Smith 1992; Smith and Thomas 1992)
+	
+%	\medskip
+	
+	Exception: Group publications by the same author or authors together, even if this violates the rule about chronological listing:
+	
+%	\smallskip
+	
 	(Roberts 1992, 1997; Smith 1996)
-	\VSpace
+	
+	\medskip
+	
 	If you want to use the author names as part of your sentence, include only the year of publication in parentheses:
-	\VSpace
+	
+%	\medskip
+	
 	Roberts (1985) stated that\dots \\
 	My results were similar to those of Smith and Thomas (1992).
 
-	\VSpace
+	\medskip
+	
 	\textsc{Literature Cited}
 		
 	The literature that you cite in your paper should be listed (1) alphabetically by authors’ last names (ignoring the word “and”) and then (2) chronologically, with items that are in press coming last.
@@ -133,7 +155,7 @@
 	Smith, R. C., and H. Thompson. 1995. Observations on\dots \\
 	Smith, R. C., and H. Thompson. 1997. Additional observations on\dots
 	
-	\VSpace
+	\medskip
 	\emph{Journals}
 	\begin{itemize}[label={}, leftmargin=1.5em, itemindent=-1.5em]
 		\item Hochachka, P. W. 1990. Scope for survival: a conceptual “mirror” to Fry’s scope for activity. Transactions of the American Fisheries Society 119:622-628.	
@@ -178,7 +200,7 @@
 	\end{itemize}
 
 	\item Tables: The basic structure of a table includes only three horizontal lines (no vertical lines, not a box). One of the three horizontal lines lies below the title for your table, one line lies below the column headings, and the final line lies below your last data row.  Remember that the title (including the number) of the table is given above the table (not below!) and briefly and concisely describes the table.  Also, make sure that your columns are headed correctly and that the units are indicated at the heading.  Below are good examples of correctly constructed tables.  Microsoft Word has good options for making proper tables but do not use its default settings. If you are unsure how to make proper tables, ask me.
-	\VSpace
+	\medskip
 	
 	Table 1.  Characteristics of four snail populations sampled at Nahant, MA on\\ 13 October 1985.
 	
@@ -193,36 +215,50 @@
 	\bottomrule
 	\end{tabular}	
 	
-	\VSpace
-	Table 2. Characteristics of antibiotic-producing \textit{Streptomyces.}
+	\smallskip
 	
-	\noindent\begin{tabular}{@{}L{1.65in}L{0.8in}L{0.8in}L{0.8in}L{0.8in}@{}}
-	\toprule
-	Determination & \textit{S. fluoricolor} & \textit{S. griseus} & \textit{S. coelicolor} & \textit{S. nocolor} \\
-	\midrule
-	Optimal temperature (°C)	&	$-$10	&	24	&	28	&	92 \\
-	Color of mycelium	&	Tan	&	Grey	&	Red	&	Purple \\
-	Antibiotic producted	&	Fluoricilinmycin	&	Streptomycin	&	Rhodomycin	&	Nomycin\\
-	Antibiotic yield (mg ml$^{-1}$)	&	4,108	&	78	&	119	&	0 \\
-	\bottomrule
-	\end{tabular}
+%	Table 2. Characteristics of antibiotic-producing \textit{Streptomyces.}
+%	
+%	\noindent\begin{tabular}{@{}L{1.65in}L{0.8in}L{0.8in}L{0.8in}L{0.8in}@{}}
+%	\toprule
+%	Determination & \textit{S. fluoricolor} & \textit{S. griseus} & \textit{S. coelicolor} & \textit{S. nocolor} \\
+%	\midrule
+%	Optimal temperature (°C)	&	$-$10	&	24	&	28	&	92 \\
+%	Color of mycelium	&	Tan	&	Grey	&	Red	&	Purple \\
+%	Antibiotic producted	&	Fluoricilinmycin	&	Streptomycin	&	Rhodomycin	&	Nomycin\\
+%	Antibiotic yield (mg ml$^{-1}$)	&	4,108	&	78	&	119	&	0 \\
+%	\bottomrule
+%	\end{tabular}
 
-	\VSpace
+	Table 2. Characteristics of antibiotic-producing \textit{Streptomyces.}
+
+\noindent\begin{tabular}{@{}L{1.75in}L{1in}L{1in}L{1in}@{}}
+	\toprule
+	Determination & \textit{S. fluoricolor} & \textit{S. griseus} & \textit{S. coelicolor} \\
+	\midrule
+	Optimal temperature (°C)	&	$-$10	&	24	&	28	\\
+	Color of mycelium	&	Tan	&	Grey	&	Red	\\
+	Antibiotic producted	&	Fluoricilinmycin	&	Streptomycin	&	Rhodomycin	\\
+	Antibiotic yield (mg ml$^{-1}$)	&	4,108	&	78	&	119	\\
+	\bottomrule
+\end{tabular}
+
+	\medskip
 	Note that tables are numbered in the order that they are referenced in your text.  The first table that you reference is Table 1 and should appear first.  The next table is Table 2 and should appear second, and so on.
 	
-	\item Figures: Like tables, figures are numbered in the order that they are referenced in your text.  Figure 1 should appear first, Figure 2, second, and so on.  Unlike tables, the figure legend appears below the figure, beginning with the figure number.  
+	\item Figures: figures are numbered in the order that they are referenced in your text.  Figure 1 should appear first, Figure 2, second, and so on.  Unlike tables, the figure legend appears below the figure, beginning with the figure number.  
 
 	\item Please edit your paper rigorously. I will grade your paper primarily on the basis of content, but I will also grade spelling, grammar, etc.
 
-	\item I will only accept copies uploaded to the drop box.  Do not submit your paper to me by e-mail.
+	\item Upload your final paper to the drop box.  %Do not submit your paper to me by e-mail.
 
-	\item Due Dates: all assignments are due at the beginning of class.  A penalty of 20\% of the total points will be assessed for each day beyond this deadline, for a maximum deduction of 40\% of the total value.  After 2 days late, the assignment will not be accepted and you will receive a score of zero.
+	\item Due Dates: all assignments are due at the beginning of class.  A penalty of 20\% of the total points will be assessed for each day beyond this deadline, for a maximum deduction of 40\% of the total value.  After two days late, the assignment will not be accepted and you will receive a score of zero.
 	
 	\begin{enumerate}[label=\alph*.]
-		\item Fish Choice: 18 September.
-		\item Bibliography / References List (20 minimum): 14 October.
-		\item Final Paper: 13 November.
-		\item Graduate Student Presentations Start: on or after 13 November.
+		\item Fish choice: 18 September.
+		\item Annotated bibliography (20 minimum): 29 October.
+		\item Final paper: 26 November.
+		\item Graduate / honors student presentations start on or after 10 December.
 	\end{enumerate}
 \end{enumerate}
 
