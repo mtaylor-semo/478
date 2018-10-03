@@ -1,0 +1,131 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt]{article}
+%\usepackage{graphicx}
+%	\graphicspath{{/Users/goby/Pictures/teach/153/lab/}} % set of paths to search for images
+
+\usepackage{geometry}
+\geometry{letterpaper}                   
+\geometry{bottom=1in, left=1.5in}
+%\geometry{landscape}                % Activate for for rotated page geometry
+\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+%\usepackage{amssymb}
+%\usepackage{mathtools}
+%	\everymath{\displaystyle}
+
+%\pagenumbering{gobble}
+
+\usepackage{fontspec}
+\setmainfont[Ligatures={Common,TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional, OldStyle}]{Linux Libertine O}
+\setsansfont[Scale=MatchLowercase,Ligatures=TeX, Numbers=OldStyle]{Linux Biolinum O}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata}
+\usepackage{microtype}
+
+% This defines \amper for the fancy ampersand
+% to be used in the header. See
+% https://tex.stackexchange.com/a/58185/39194
+\usepackage{xspace}
+\newfontfamily\amperfont[Style=Alternate]{Linux Libertine O}    
+\makeatletter
+\DeclareRobustCommand{\amper}{{\amperfont\ifx\f@shape\scname\smaller[1.2]\fi\&}\xspace}
+\makeatother
+
+\usepackage{unicode-math}
+\setmathfont[Scale=MatchLowercase]{Asana-Math.otf}
+%\setmathfont{XITS Math}
+
+% To define fonts for particular uses within a document. For example, 
+% This sets the Libertine font to use tabular number format for tables.
+%\newfontfamily{\tablenumbers}[Numbers={Monospaced}]{Linux Libertine O}
+%\newfontfamily{\libertinedisplay}{Linux Libertine Display O}
+
+
+%\usepackage{booktabs}
+%\usepackage{multicol}
+%\usepackage{tabularx}
+%\usepackage{longtable}
+%\usepackage{siunitx}
+%\usepackage[justification=raggedright, singlelinecheck=off]{caption}
+%\captionsetup{labelsep=period} % Removes colon following figure / table number.
+%\captionsetup{tablewithin=none}  % Sequential numbering of tables and figures instead of
+%\captionsetup{figurewithin=none} % resetting numbers within each chapter (Intro, M&M, etc.)
+%\captionsetup[table]{skip=0pt}
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+\usepackage{enumitem}
+%\usepackage{hyperref}
+%\usepackage{placeins} %PRovides \FloatBarrier to flush all floats before a certain point.
+%\usepackage{hanging}
+%\usepackage{color}
+%\usepackage{calc}
+
+%\usepackage{titling}
+%\setlength{\droptitle}{-60pt}
+%\posttitle{\par\end{center}}
+%\predate{}\postdate{}
+
+\usepackage[sc]{titlesec}
+
+
+\usepackage{fancyhdr}
+\fancyhf{}
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{\footnotesize pg. \thepage }
+\renewcommand{\headrulewidth}{0.4pt}
+
+\fancypagestyle{plain}{%
+	\fancyhf{}
+	\lhead{\textsc{zo} 478: Ichthyology}
+	\rhead{Annotated Bibliography}
+	\renewcommand{\headrulewidth}{0pt}
+}
+	
+
+\begin{document}
+%\maketitle
+\thispagestyle{plain}
+
+
+\subsection*{Annotated bibliography for your ecological life history paper (50 points)}
+
+Your ecological life history must be based on the scientific literature. This assignment is intended to get you to start searching the literature and summarizing the papers that you find. This will help you develop and write your life history report. 
+
+\subsubsection*{Requirements}
+
+\begin{enumerate}[leftmargin=*]
+
+\item You must have 10 unique scientific publications or technical reports. You must obtain copies of these papers because you will be required to upload the \textsc{pdf} files to the drop box along with your completed assignment.
+
+\item In the whole, the papers you choose should reflect your particular role on the plan development team. However, recognizing that this is a team effort, two of your annotated papers may be related to aspects of the plan outside of your role. I may allow more but you must explain to me first why. I will not count more than two annotated papers outside of your particular role if you do not have my permission in advance.
+
+\item You should coordinate with your team members. You may have no more than three citations \emph{total} in common among the bibliographies of \emph{all} team members. If you do have some common citations, your summaries must still be your own. If two team members feel that having more than three papers in common is necessary, you and your fellow team member must seek my permission and explain to me why. The best way to do this is to demonstrate that one of you will draw from one part of a paper while other other person draws from a different part of the paper. If in doubt, check with me.
+
+\item Each paper must be properly cited following a standard citation format (see below).  A typical citation format is Authors year. Title. Journal name volume number: page range. For example,
+
+Andrello, M, D. Mouillot, S. Somot, W. Thuiller, and S. Manel. 2014. Additive effects of climate change on connectivity between marine protected areas and larval supply to fished areas. Biodiversity Research 2014: 1–14.
+
+\item You must type a \emph{thorough} single-spaced one paragraph summary of each paper. Two or three sentences is not a paragraph. You must have a second paragraph that describes why that paper might be useful to your plan \emph{and} how you intend to use information from that paper in your plan. I imagine you should have about 2 citations and summaries per page. 
+
+\item Each summary is worth five points. This is a significant chunk of the total points for your plan so you should take this assignment seriously. I will.
+
+\end{enumerate}
+
+\subsubsection*{Other information}
+
+Your summary should focus on the results and discussion as they relate to your plan. Do not simply paraphrase or summarize the abstract. I will grade harshly if I suspect this is the case. Be professional. Read the paper thoroughly and summarize it appropriately. If you wish, during the first week of the assignment, you may send me one paper with your summary and intent. I will let you know if you are on the right track. You must do this early. I will not do this after Wednesday, 10 October, 5pm.
+
+\textsc{Due date:} Wednesday, 31 October, 5:00 pm. Upload your completed assignments and the \textsc{pdf} files to the drop box available on the course website. See the syllabus for information on late assignments.
+
+\vspace*{\baselineskip}
+
+Please let me know as soon as possible if you have any questions. If I missed an important detail, I need to let other students know as soon as possible.
+
+
+\end{document}  
