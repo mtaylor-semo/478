@@ -10,17 +10,21 @@
 \usepackage{fontspec}
 \def\mainfont{Linux Libertine O}
 \setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
-\setmonofont[Scale=MatchLowercase]{Inconsolata} 
-\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+%\setmonofont[Scale=MatchLowercase]{Linux Libertine Mono O} 
+%\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
 \usepackage{microtype}
 
 \usepackage{graphicx}
 	\graphicspath{%
 	{/Users/goby/Pictures/teach/478/exams/}}%
 
+
+% Used to get the last two digits of the year for the header below.
+\def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
+
 \pagestyle{headandfoot}
 %\firstpageheader{\bfseries{Ichthyology, Exam 1, F14}}{}{\bfseries{Name: \enspace \makebox[2.5in]{\hrulefill}}}
-\firstpageheader{\bfseries{Ichthyology, Lab Practical 1, F14}}{}{%
+\firstpageheader{\bfseries{Ichthyology, Lab Practical 1, \textsc{f}\short{\year}}}{}{%
 	\ifprintanswers\textbf{KEY}\else\bfseries{Name: \enspace \makebox[2.5in]{\hrulefill}}\fi}
 \runningheader{}{}{\small{pg. \thepage}}
 %\runningheadrule
