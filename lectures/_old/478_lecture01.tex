@@ -1,0 +1,317 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[t]{beamer}
+
+%%%% HANDOUTS For online Uncomment the following four lines for handout
+%\documentclass[t,handout]{beamer}  %Use this for handouts.
+%\usepackage{handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
+%	\setbeamercolor{background canvas}{bg=black!5}
+
+
+%%% Including only some slides for students.
+%%% Uncomment the following line. For the slides,
+%%% use the labels shown below the command.
+%\includeonlylecture{student}
+
+%% For students, use \lecture{student}{student}
+%% For mine, use \lecture{instructor}{instructor}
+
+
+%\usepackage{pgf,pgfpages}
+%\pgfpagesuselayout{4 on 1}[letterpaper,border shrink=5mm]
+
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Biolinum O}
+\setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
+\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/478/lectures/}%
+	{/Users/goby/Pictures/teach/common/}} % set of paths to search for images
+
+\usepackage{amsmath,amssymb}
+
+%\usepackage{units}
+
+\usepackage{booktabs}
+\usepackage{multicol}
+%	\setlength{\columnsep=1em}
+
+
+\usepackage{textcomp}
+\usepackage{setspace}
+\usepackage{tikz}
+	\tikzstyle{every picture}+=[remember picture,overlay]
+
+\mode<presentation>
+{
+  \usetheme{Lecture}
+  \setbeamercovered{invisible}
+  \setbeamertemplate{items}[square]
+}
+
+\begin{document}
+%\lecture{instructor}{instructor}
+%\lecture{student}{student}
+
+%% Intro
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{intro}}
+\begin{frame}[b,plain]
+	\hfill\tiny\textcolor{gray}{Chimaera by NOAA Ocean Explorer, Flickr Creative Commons.}
+\end{frame}
+}
+
+%% Contact Info
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{mike_fish}}
+\begin{frame}[t,plain]{I will be your host for this class.}
+%\large
+	\vspace{5ex}
+	\hangpara\hspace{17em} Mike Taylor
+
+	\hangpara\hspace{17em} RH 217
+
+	\hangpara\hspace{17em} mtaylor@semo.edu
+
+\end{frame}
+}
+
+%% Grades
+\begin{frame}[t,plain]{You earn your grade with }
+
+	\hangpara \highlight{Online assignments} @ 10 points, 
+
+	\hspace{2em} Given every third lecture.
+
+	\hangpara \highlight{Three exams} @ 100/125 points, 
+
+	\hangpara \highlight{Three lab practicals} @ 100 points,
+	
+	\hangpara \highlight{Ecological life history paper} @ 100 points,
+	
+	\hangpara \highlight{Presentation or evaluation} @10/50 points
+	
+	\hspace{2em} Grads will present their life history paper (50 points),
+	
+	\hspace{2em} Undergrads will evaluate (10 points).
+
+\end{frame}
+
+%% Ecological Life History Paper
+\begin{frame}[t,plain]{Each of you will write an \highlight{ecological life history paper. }}
+
+	\hangpara You choose your species.
+	
+	\hspace{2em} Research your choice in advance, and then choose wisely! 
+
+	\hangpara Your paper will cover ecology, taxonomy, and life history.
+
+	\hangpara \highlight{Due dates are}
+	
+	\hspace{2em} Fish choice: 18 September,
+	
+	\hspace{2em} Bibliography: 14 October,
+	
+	\hspace{2em} Paper: 13 November.
+	
+	\hangpara Graduate students will present in mid to late November.
+
+\end{frame}
+
+%% Field Trips
+\begin{frame}[t,plain]{We will take \highlight{three Saturday field trips.}}
+
+	\hangpara Ozark upland stream: 6 September (alternate 13 Sep). 
+	
+	\hangpara Lowland ditch: 27 Sep (alternate ?).
+
+	\hangpara Mississippi River: 4 Oct (alternate ?). 
+
+
+	\hangpara
+	
+	\hangpara The Ozark and Lowland trips will depart from campus at 8am.
+	
+	\hangpara You are \highlight{required} to participate on two trips for 25 points each.\\ If you attend all three trips, you earn 10  extra credit points.
+	
+\end{frame}
+
+%% Textbooks
+\begin{frame}[t,plain]{These two texts are \highlight{required} for this course.}
+\begin{multicols}{2}
+	\begin{center}
+		\includegraphics[width=0.9\columnwidth]{helfman_cover} \\
+		\includegraphics[width=0.9\columnwidth]{pflieger_cover} \\
+	\end{center}
+\end{multicols}
+\end{frame}
+
+%% Temporary for 2014
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{shit_happens}}
+\begin{frame}[b,plain]{}
+\hfill\tiny\textcolor{gray}{Shapes by Emmanuel. http://www.shapes.se}
+\end{frame}
+}
+
+%% Defining a fish
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{what_is_fish01}}
+\begin{frame}[t,plain]{What is a fish?}
+\end{frame}
+}
+
+
+\begin{frame}[t,plain]{A fish is\dots}
+
+	\hangpara A poikilothermic, aquatic chordate with appendages (when present) developed as fins, whose chief respiratory organs are gills, and whose body is usually covered with scales (Berra 2001).
+
+	\hangpara An aquatic vertebrate with gills and with limbs in the shape of fins (Nelson 2006)
+
+\end{frame}
+
+%% How many fishes are there?
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{mola}}
+\begin{frame}[b,plain]{\textcolor{white}{How many species of fishes are there?}}
+	\hfill\tiny\textcolor{gray}{\textit{Mola mola} by Ilse Reijs and Jan-Noud Hutten, Flickr Creative Commons.}
+\end{frame}
+}
+
+\begin{frame}[t,plain]{Fishes outnumber all other vertebrates combined.}
+\begin{multicols}{2}
+	\begin{center}
+		\includegraphics[width=0.75\columnwidth]{nelson_fishes_world} \\
+	\end{center}
+	
+	\columnbreak
+	
+	\hangpara 62 orders
+
+	\hangpara 515 families
+		
+	\hangpara 4494 genera
+		
+	\hangpara 27,977 species
+	
+	\hangpara 32,800 species listed in {\small\highlight{\url{fishbase.org}}}
+		
+\end{multicols}
+\end{frame}
+
+%% Why study fishes?
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{why_study_fishes}}
+\begin{frame}[t,plain]{Why should we study fishes?}
+\end{frame}
+}
+
+%% Classes of fishes
+\begin{frame}[t,plain]{Your text lists five classes of fishes. {\small See pages 4 and 231.}}
+	\hangpara{\small Domain Eukarya
+	
+	\hspace{1em} Kingdom Metazoa
+	
+	\hspace{2em} Phylum Chordata
+	
+	\hspace{3em} Subphylum Craniata}
+
+	\hspace{5em} Class Myxini (hagfishes)
+	
+	\hspace{4em} {\small Infraphylum Vertebrata}
+
+	\hspace{5em} Class Petromyzontida (lampreys)
+
+	\hspace{5em} Class Chondrichthys (sharks and rays)
+
+	\hspace{5em} Class Actinopterygii (ray-finned fishes)
+
+	\hspace{5em} Class Sarcopterygii (lobe-finned fishes and tetrapods)
+	
+	\hangpara\highlight{Does this classification mean that Myxini are not vertebrates?}
+	
+\end{frame}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{cyclostome_miRNA_tree}}
+\begin{frame}[b,plain]{Molecular evidences supports \highlight{monophyly} of hagfishes and lampreys.}
+	\hfill\textcolor{gray}{Heimberg et al. 2010. Proc. Natl. Acad. Sci. 107:  19379}
+\end{frame}
+}
+
+
+\begin{frame}[t,plain]{We will follow this classification scheme.}
+	\hangpara{\small Domain Eukarya
+	
+	\hspace{1em} Kingdom Metazoa
+	
+	\hspace{2em} Phylum Chordata
+	
+	\hspace{3em} Subphylum Craniata
+	
+	\hspace{4em} Infraphylum Vertebrata}
+
+	\hspace{5em} Superclass Cyclostomata (jawless vertebrates)
+
+	\hspace{6em} Class Myxini (hagfishes)
+
+	\hspace{6em} Class Petromyzontida (lampreys)
+
+	\hspace{5em} Superclass Gnathostomata (jawed vertebrates)
+
+	\hspace{6em} Class Chondrichthys (sharks and rays)
+
+	\hspace{6em} Class Actinopterygii (ray-finned fishes)
+
+	\hspace{6em} Class Sarcopterygii (lobe-finned fishes and tetrapods)
+	
+\end{frame}
+
+%% Classification levels
+\begin{frame}[t,plain]{You must know the suffixes for higher classification levels.}
+
+	\hangpara Order: \highlight{-iformes}
+	
+	\hspace{2em} Saccopharyngiformes
+	
+	\hspace{2em} saccopharyngiform (informal. Note change in capitalization.)
+
+	\hangpara Suborder: \highlight{-oidei}
+	
+	\hspace{2em} Anabantoidei
+	
+	\hspace{2em} anabantoid (informal)
+	
+	\hangpara Family: \highlight{-idae}
+	
+	\hspace{2em} Salmonidae
+	
+	\hspace{2em} salmonid (informal)
+	
+\end{frame}
+
+%% Look up the names
+\begin{frame}[t,plain]{Look up the names used in this course.}
+\begin{multicols}{2}
+	\begin{center}
+		\includegraphics[width=0.9\columnwidth]{gulper} \\
+		Saccopharyngiformes\\
+		\columnbreak
+		\includegraphics[width=0.9\columnwidth]{colisa_lalia} \\
+		anabantoid\\
+	\end{center}
+\end{multicols}
+	\vfilll
+	\tiny\textcolor{gray}{\textit{Eurypharynx pelecanoides} (left) by Claf Hong, Flickr Creative Commons.\hfill\textit{Colisa lalia} (right), public domain, Wikimedia Commons.}
+\end{frame}
+
+
+\end{document}
