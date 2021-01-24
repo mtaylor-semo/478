@@ -1,0 +1,435 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[t]{beamer}
+
+%%%% HANDOUTS For online Uncomment the following four lines for handout
+%\documentclass[t,handout]{beamer}  %Use this for handouts.
+%\includeonlylecture{student}
+%\usepackage{handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
+%	\setbeamercolor{background canvas}{bg=black!5}
+
+
+%%% Including only some slides for students.
+%%% Uncomment the following line. For the slides,
+%%% use the labels shown below the command.
+
+%% For students, use \lecture{student}{student}
+%% For mine, use \lecture{instructor}{instructor}
+
+
+%\usepackage{pgf,pgfpages}
+%\pgfpagesuselayout{4 on 1}[letterpaper,border shrink=5mm]
+
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Biolinum O}
+\setmainfont[Ligatures={Common,TeX}, Contextuals={NoAlternate}, Numbers={Proportional, OldStyle}]{\mainfont}
+\setsansfont[Ligatures={Common,TeX}, Scale=MatchLowercase, Numbers={Proportional,OldStyle}, BoldFont={* Bold}, ItalicFont={* Italic},]\mainfont
+
+\newfontface\lining[Numbers={Lining}]\mainfont
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/466/lectures/}%
+	{/Users/goby/Pictures/teach/163/common/}} % set of paths to search for images
+
+\usepackage{amsmath,amssymb}
+
+%\usepackage{units}
+
+\usepackage{booktabs}
+\usepackage{multicol}
+%	\setlength{\columnsep=1em}
+
+\usepackage{textcomp}
+\usepackage{setspace}
+\usepackage{tikz}
+	\tikzstyle{every picture}+=[remember picture,overlay]
+
+\mode<presentation>
+{
+  \usetheme{Lecture}
+  \setbeamercovered{invisible}
+  \setbeamertemplate{items}[square]
+}
+
+\usepackage{calc}
+\usepackage{hyperref}
+
+\newcommand\HiddenWord[1]{%
+	\alt<handout>{\rule{\widthof{#1}}{\fboxrule}}{#1}%
+}
+
+
+
+\begin{document}
+%\lecture{instructor}{instructor}
+%\lecture{student}{student}
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{ornithology_intro}}
+\begin{frame}[b,plain]
+	\tiny\textcolor{gray}{Rose Breasted Grosbeak by Paul VanDerWerf, Flickr Creative Commons.}
+\end{frame}
+}
+
+%% Contact Info
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{mike_snake} }
+\begin{frame}[t]
+	\large
+	\vspace{5ex}
+	\hangpara\hspace{17em} Dr.~Mike Taylor
+
+	\hangpara\hspace{17em} \textsc{rh} 217
+	
+	\hangpara \hspace{17em} Office hours via Zoom
+
+%	\hangpara\hspace{17em} \parbox{4cm}{\textsc{m}\,9--10, 11--12 \newline\textsc{t}\,10--11}
+
+	\hangpara\hspace{17em} mtaylor@semo.edu
+	
+%	\hangpara \hspace{17em} \includegraphics[width=0.4cm]{twitter_icon} \#\textsc{bi}163\textsc{taylor} %\\
+	%\hspace{17em} @MikeTaylor\textsc{semo}
+
+%	\hangpara \hspace{17em} \includegraphics[width=0.4cm]{twitter_icon} @\textsc{semo}Biology\\
+\end{frame}
+}
+
+%{
+%\usebackgroundtemplate{\includegraphics[width=\paperwidth]{woodcock}}
+%\begin{frame}[b,plain]{\textcolor{white}{I will be your mascot for this course.}}
+%	\tiny\textcolor{white}{Woodcock by Don, Flickr Creative Commons. \href{https://www.youtube.com/watch?v=bY436JiiCjg}{Link to Video} }
+%\end{frame}
+%}
+
+\lecture{instructor}{instructor}
+\begin{frame}{\highlight{Trigger alert.}}
+
+\hangpara Some of you may find the following images disturbing.
+
+\end{frame}
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{post_surgery_hematoma} }
+\begin{frame}[t]
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{pre_surgery_hematoma} }
+\begin{frame}[t]
+\end{frame}
+}
+%% Textbooks and Field Guides
+\begin{frame}[t,plain]{This textbook is \highlight{optional} for this course.}
+	\begin{center}
+		\vspace{-\baselineskip}
+		\includegraphics[height=0.8\textheight]{text_cover_lovette}
+	\end{center}
+\end{frame}
+
+\lecture{student}{student}
+\begin{frame}[t,plain]{You are \highlight{required} to have this field guide by 09 Feb}
+	\begin{center}
+		\vspace{-\baselineskip}
+		\includegraphics[height=0.8\textheight]{sibley_cover}
+	\end{center}
+\end{frame}
+
+%{
+%\usebackgroundtemplate{\includegraphics[width=\paperwidth]{field_guides}}
+%\begin{frame}[t,plain]{You are \highlight{required} to have this field guide by 09 Feb.}
+%\end{frame}
+%}
+%
+%% Grades
+\begin{frame}[t]{You \highlight{earn} your grade with}
+	\begin{center}\large\begin{tabular}{@{}lll@{}}
+	UG		&	Three 75-point exams 				& 	40\% \\
+			&	Two ca. 70-100 pt lab exams			&   30\% \\
+			&	Assignments							& 	30\% \\
+			&										&	\\
+	G / HC	&	Three 75-point exams 				& 	40\% \\
+			&	Two ca. 70-100 pt lab exams			&   30\% \\
+			&	Assignments					 		&	15\% \\
+			&	Hotspot Survey 						&	15\% \\
+		\end{tabular}
+	\end{center}
+\end{frame}
+
+%% Grades
+%\begin{frame}[t,plain]{You earn your grade with }
+%
+%	\hangpara \highlight{3 lecture exams} @ 100 points, 
+%
+%	\hspace{2em} \textasciitilde100–130 points for grad students,
+%
+%	\hangpara \highlight{3 lab practicals} @ 100 points, 
+%
+%	\hangpara \highlight{3–8 Field trip quizzes} @ 10-20 points,
+%	
+%	\hangpara \highlight{Proposals, Presentations and Evaluations}
+%	
+%	\hspace{2em} Grads write a proposal and give a presentation (170 points),
+%	
+%	\hspace{2em} Undergrads will evaluate proposals and presentations (120 points).
+%	
+%\end{frame}
+
+
+%% Field Trips
+\begin{frame}[t,plain]{We will take \highlight{several field trips} during Wednesday labs.}
+
+	\hangpara We will depart early. 
+	
+	\hangpara Sight and sound ID quizzes will be given on most field trips.
+	
+	\hangpara You must bring your field guide on each trip.
+
+	\hangpara Smart phones apps may aid identification. You must otherwise keep your phones off and away.
+
+	\hangpara I supply binoculars but you may use your own. 
+
+	\hangpara Dress appropriately.  We will go out in most weather conditions.
+		
+	\hangpara We may have 1–2 Saturday field trips.
+	
+\end{frame}
+
+\begin{frame}[t,plain]{Follow basic etiquette on field trips.}
+
+	\hangpara Bring snacks. We stop only for birds and gas. Haul out \highlight{all} trash.
+	
+	\hangpara No smoking.
+	
+%	\hangpara If you smoke, be mindful of others and haul out your butts.
+
+	\hangpara Cells phones (smart or dumb) must be off and away during quiz questions.
+
+	\hangpara Respect private property.
+	
+	\hangpara Speak quietly. Avoid sudden movements. Wear clothes with subdued colors.
+	
+	\hangpara Be on time. Do not dawdle.
+	
+	\hangpara Keep your focus on the birds.
+	
+\end{frame}
+
+{
+\begin{frame}{You must open a free eBird account at \href{https://ebird.org}{ebird.org.}}
+	\vspace{-\baselineskip}
+	\begin{center}
+		\includegraphics[width=\textwidth]{ebird_taylor}
+	\end{center}
+	
+	Download and use eBird Mobile (iOS, Android). May also use Merlin ID.
+%	
+\end{frame}
+}
+
+{
+\begin{frame}{All students must do these tasks.}
+
+\vspace{-\baselineskip}
+
+\hangpara Email me with your eBird user name. I will add you as a friend to the semo\_ornithology group account.
+
+\hangpara Submit at least four checklists each month from February through April (12 checklists). Must submit at least three birding hours each month (9 hours total). You can bird anywhere that is legal, including your yard.
+
+\hangpara Bird at least one hour during the \href{https://www.birdcount.org/}{Great Backyard Bird Count} (Feb~12-15).
+
+\hangpara Upload at least three media files (photo or audio).
+
+\hangpara Share every checklist with semo\_ornithology.
+
+\hangpara \href{https://support.ebird.org/en/support/solutions/articles/48000795623-ebird-rules-and-best-practices}{\highlight{Follow eBird best practices.}}
+
+\end{frame}
+}
+
+{
+\begin{frame}{All \highlight{grad} students must do these tasks.}
+
+\vspace{-\baselineskip}
+
+\hangpara Select an eBird hotspot, such as a conservation area, state park, or wildlife refuge. You may choose one in Cape county or close to where you live. Tell me by next Monday. First come, first serve.
+
+\hangpara Visit the chosen hotspot at least twice each in February, March, April, and once during first week of May.
+
+\hangpara Bird for at least one hour per visit (14 hours total). You may visit more often and bird longer. 
+
+% \hangpara Your hotspot visits count towards your total checklists and time.
+
+\hangpara Upload at least six media files (photo or audio) from the hotspot. At least one must be audio.
+
+\hangpara Submit a final report that details the bird species observed at the hotspot during the visits and how they changed. 
+
+\end{frame}
+}
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{birding_basics}}
+\begin{frame}[b,plain]
+	\tiny\textcolor{yellow}{Common Yellowthroat by Don McCullough, Flickr Creative Commons.}
+\end{frame}
+}
+
+\begin{frame}[b,plain]{Compare size and shape.}
+	\begin{center}
+		\includegraphics[height=0.8\textheight]{size_shape1}
+	\end{center}
+	\tiny Bird silhouettes from \href{http://allaboutbirds.com}{All About Birds, Cornell Lab of Ornithology}.
+\end{frame}
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{silhouettes_perched}}
+\begin{frame}[t,plain]{Many birds can be \textsc{id}'d by size, shape, and behavior.}
+
+	\vfilll
+	
+	\tiny\hfill\rotatebox{90}{Peterson \textit{A Field Guide to the Birds East of the Rockies.}}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{silhouettes_flight}}
+\begin{frame}[t,plain]{Many birds can be \textsc{id}'d by size, shape, and behavior.}
+
+	\vfilll
+	
+	\tiny\hfill{Peterson \textit{A Field Guide to the Birds East of the Rockies.}}
+\end{frame}
+}
+
+\begin{frame}[b,plain]{Compare proportions.}
+	\begin{center}
+		\includegraphics[height=0.8\textheight]{size_shape2}
+	\end{center}
+	\tiny Downy and Hairy Woodpecker heads from \href{http://allaboutbirds.com}{All About Birds, Cornell Lab of Ornithology}.
+\end{frame}
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{color_pattern3}}
+\begin{frame}[b,plain]{\hfill\textcolor{white}{Learn color and pattern.}}
+	\tiny\textcolor{white}{Prairie Warbler by Kenneth Cole Schneider, Flickr Creative Commons.}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{color_pattern4}}
+\begin{frame}[b,plain]{\hfill\textcolor{white}{Compare color and pattern.}}
+	\tiny\textcolor{white}{Magnolia Warbler by Bill Majoros, Flickr Creative Commons.}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{behavior1}}
+\begin{frame}[b,plain]{Learn behavior.}
+	\tiny\hfill\textcolor{white}{Brown Creeper by David Mitchell, Flickr Creative Commons.}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{behavior2}}
+\begin{frame}[b,plain]{\hfill\textcolor{white}{Compare behavior.}}
+	\tiny\textcolor{white}{White-Breasted Nuthatch by Matt MacGillivray, Flickr Creative Commons.}
+\end{frame}
+}
+
+{
+%\usebackgroundtemplate{\includegraphics[width=\paperwidth]{flight_pattern}}
+\begin{frame}[c,plain]{Learn flight behaviors.}
+	\includegraphics[width=\textwidth]{flight_pattern}
+\vskip0pt plus 1filll	
+	\hfill\tiny Bird flight patterns from \href{http://allaboutbirds.com}{All About Birds, Cornell Lab of Ornithology}.
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{range1_junco}}
+\begin{frame}[b,plain]{Learn habitat, range, and seasons.}
+	\tiny\hfill Dark-Eyed Junco by NatureServe, Flickr Creative Commons.
+\end{frame}
+}
+
+\begin{frame}[b,plain]
+	\begin{center}
+		\includegraphics[height=0.9\textheight]{range2_junco_map}
+	\end{center}
+\end{frame}
+
+%{
+%\usebackgroundtemplate{\includegraphics[width=\paperwidth]{know_your_penguins}}
+%\begin{frame}[b,plain]
+%\end{frame}
+%}
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{binoc_basics}}
+\begin{frame}[b,plain]
+	\tiny Birdwatcher by Daniele Zanni, Flickr Creative Commons.
+\end{frame}
+}
+
+% Binocs provided
+{
+\begin{frame}[t,plain]{Binoculars are provided for you.}
+
+
+\begin{multicols}{2}
+Nikon Action Extreme ATP 8$\times$40.
+
+\smallskip
+
+“8” is the magnification and the “40” is the diameter (in mm) of the objective.
+
+\smallskip
+
+Cost is about \$150.
+
+\smallskip
+
+This is about as cheap as you should go for first set of binoculars. Anything cheaper will be frustrating.
+
+\smallskip
+
+More info on course website.
+
+\columnbreak
+
+\includegraphics[width=0.45\textwidth]{nikon_binocs}
+
+\end{multicols}
+%\begin{columns}
+%\begin{column}[t]{0.4\textwidth}
+%
+%\end{column}
+%
+%\begin{column}{0.55\textwidth}
+%\includegraphics[width=\columnwidth]{nikon_binocs}
+%\end{column}
+%\end{columns}
+
+\end{frame}
+}
+
+%binoc parts
+{
+\begin{frame}[t,plain]{Know your binoculars.}
+
+\includegraphics[width=\textwidth]{binoc_parts}
+
+\end{frame}
+}
+
+
+\end{document}
