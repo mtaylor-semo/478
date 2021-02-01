@@ -1,0 +1,197 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt]{article}
+\usepackage{graphicx}
+	\graphicspath{{/Users/goby/Pictures/teach/466/lab/}} % set of paths to search for images
+%	\graphicspath{{img/}} % set of paths to search for images
+
+\usepackage{geometry}
+\geometry{letterpaper}                   
+\geometry{bottom=1in}
+%\geometry{landscape}                % Activate for for rotated page geometry
+\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+%\usepackage{amssymb}
+%\usepackage{mathtools}
+%	\everymath{\displaystyle}
+
+%\pagenumbering{gobble}
+
+\usepackage{fontspec}
+\setmainfont[Ligatures={Common,TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, BoldItalicFont={* BoldItalic}, Numbers={Proportional}]{Linux Libertine O}
+\setsansfont[Scale=MatchLowercase,Ligatures=TeX]{Linux Biolinum O}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata}
+\usepackage{microtype}
+
+\usepackage{unicode-math}
+\setmathfont[Scale=MatchLowercase]{Asana-Math.otf}
+%\setmathfont{XITS Math}
+
+% To define fonts for particular uses within a document. For example, 
+% This sets the Libertine font to use tabular number format for tables.
+%\newfontfamily{\tablenumbers}[Numbers={Monospaced}]{Linux Libertine O}
+%\newfontfamily{\libertinedisplay}{Linux Libertine Display O}
+
+
+\usepackage{booktabs}
+\usepackage{multicol}
+%\usepackage{longtable}
+%\usepackage{siunitx}
+%\usepackage[justification=raggedright, singlelinecheck=off]{caption}
+%\captionsetup{labelsep=period} % Removes colon following figure / table number.
+%\captionsetup{tablewithin=none}  % Sequential numbering of tables and figures instead of
+%\captionsetup{figurewithin=none} % resetting numbers within each chapter (Intro, M&M, etc.)
+%\captionsetup[table]{skip=0pt}
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+
+%\usepackage{pdfpages}
+
+\usepackage{enumitem}
+\setlist{leftmargin=*}
+\setlist[1]{labelindent=\parindent}
+
+\usepackage[hidelinks]{hyperref}
+%\usepackage{placeins} %PRovides \FloatBarrier to flush all floats before a certain point.
+
+\usepackage[sc]{titlesec}
+
+
+\usepackage{fancyhdr}
+\fancyhf{}
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{\footnotesize pg.~\thepage }
+\renewcommand{\headrulewidth}{0.4pt}
+
+\fancypagestyle{plain}{%
+	\fancyhf{}
+	\lhead{\textsc{bi}~466/666: Ornithology}
+	\rhead{Name: \enspace \makebox[2.5in]{\hrulefill}}
+	\renewcommand{\headrulewidth}{0pt}
+}
+
+
+\begin{document}
+\thispagestyle{plain}
+
+\subsection*{Real birders use four letter words!\footnote{Title stolen from South Bay Birders Unlimited.}}
+
+Birders have long used four-letter “alpha codes” as short-hand codes to record field observations on field sheets. The code birders adopted in based on the four- and six-letter codes standardized by the Bird Banding Laboratory for North American Birds. 
+
+The code is based on the official taxonomic names list published by the American Ornithological Society (\textsc{aos;} formerly, the American Ornithological Union). The \textsc{aos} maintains the \href{http://checklist.americanornithology.org/}{Checklist of North and Middle American Birds}, the official taxonomy for birds found in North and Central America, including the Bahama and Caribbean islands.
+
+The alpha code is fairly easy to learn, especially when converting official common names to the code. Converting the code to common names requires familiarity with the common names so is harder for beginning birders. 
+
+The four-letter alpha codes sometimes form easy to pronounce words that makes them easy to learn. The astute student will listen carefully on field trips, in case I mumble the alpha code during a field quiz.  
+
+\subsubsection*{Instructions}
+
+Read this handout carefully to understand the rules. Then, convert the 30 common names listed at the end of the handout to the correct four-letter alpha code. For each, tell the rule(s) used to derive the code (see below). If conflicts arise, tell which  strategy you used to resolve the conflict. You do not need to name Rule 0.
+
+This exercise will train you to convert common names to the alpha code. I will not expect you to convert alpha codes to common names, especially for uncommon birds.
+
+\subsubsection*{Rules}
+
+The code follows several rules originally proposed by Klimkiewicz and Robbins (1978, North American Bird Bander 3:16–25). Modifications were proposed by Pyle and DeSante (2003, North American Bird Bander 28:64–79).
+
+The code consists of seven rules, plus my Rule 0.  The rules are
+
+\begin{enumerate}
+\setcounter{enumi}{-1}
+\item Learn the \emph{official} common names! You must know the official names of the birds to apply the rules. The names given in your field guide are the official names, e.g., Northern Cardinal, not Cardinal.
+
+\item If the English name is a single word, use the
+first four letters; e.g., Canvasback, CANV.
+
+\item If the English name consists of two words, use
+the first two letters of the first word, followed by
+the first two letters of the last word; e.g.,
+Common Loon, COLO.
+
+\item If the English name consists of three words,use the first letter of the first word, the first letter of the second word, and the first two letters of the third word; e.g., American Tree Sparrow, ATSP.
+
+\item If the English name consists of three words and
+the first two are hyphenated, use rule 3; e.g.,
+Pied-billed Grebe, PBGR.
+
+\item If the English name consists of three words and the last two are hyphenated, use the reverse of rule three; e.g., Eastern Screech-Owl, EASO. [In other words,use the first two letters of the first word, the first letter of the second word, and the first letter of the third word.]
+
+\item If the English name consists of four words
+(with or without hypens), use the first letter of
+each word, e.g., Great Black-backed Gull,
+GBBG.
+
+\item If the English name consists of five words, treat
+it as four words [eliminating the fourth word first]; e.g., Puget Sound White-crowned Sparrow, PSWS. (This rule is not needed in our area and can be safely disregarded. I include it for completeness.)
+
+\end{enumerate}
+
+\subsubsection*{Name conflicts}
+
+The rules above work for \emph{most} common names. However, some birds have common names that give the same alpha code, such as Canada Goose and Cackling Goose. Two word names follow Rule 2, so both reduce to the same code, CAGO, which is unacceptable.
+
+The following modification strategies let you resolve conflicts for the most common cases in our area.  These strategies are not exhaustive. See the original publications for the complete modifications.
+
+For these strategies, letters refer to the words. A and a refer to the first word of the common name. B and b refer to the second word, C and c refer to the third word, and so on. Upper case letters refer to the first letter of the word. Lower case letters refer to the next consecutive letters.
+
+The strategies follow a specific order, called first order, second order, third order, and so on. First order strategies follow the rules given above. Higher orders follow when there is a conflict.
+
+Most of the conflicts in our area are for two word names that follow Rule 2. Follow down the list in order until the conflict is resolved.
+
+\begin{enumerate}[label={Order \arabic*:}]
+\item AaBb. Common Loon = COLO. This is the base Rule 2.
+
+\item AaaB. Canada Goose = CANG. Cackling Goose = CACG. Stop here if the conflict is resolved.
+
+\item ABbb. Northern Shoveler = NSHO. Northern Shrike = NSHR. Stop here if the conflict is resolved. Notice that the first two strategies results in NOSH and NORS, respectively, for both species. 
+
+\item Aaa*B. The asterisk means use the next \emph{non-conflicting} consonant (then vowel if consonant does not resolve the conflict). Barred Owl = BADO. Barn Owl = BANO. The final consonant for the first word resolves the conflict. 
+
+\end{enumerate}
+
+The strategies get more involved for conflicting names with three or more words but the same logic applies. For example, the second order strategy for a three-word name is ABbC. You only need to know the above strategies for two word names.
+
+\subsubsection*{Your turn}
+
+Submit a Word or PDF document with the alpha codes for the following list of 30 birds (arranged phylogenetically). Type the common name, an equal sign, and then the code; e.g., Common Loon = COLO.  Put one name per line.
+
+\begin{multicols}{2}
+Trumpeter Swan\\
+Tundra Swan\\
+Northern Pintail\\
+Hooded Merganser\\
+Turkey Vulture\\
+Red-tailed Hawk\\
+Greater Prairie-chicken\\
+Killdeer\\
+Ring-billed Gull\\
+White-winged Dove\\
+Eastern Whip-poor-will\\
+Belted Kingfisher\\
+Eastern Wood-pewee\\
+Blue Jay\\
+Horned Lark\\
+Bank Swallow\\
+Barn Swallow\\
+Tree Swallow\\
+Tufted Titmouse\\
+Northern Mockingbird\\
+Cedar Waxwing\\
+Black-and-white Warbler\\
+Blackburnian Warbler\\
+Blackpoll Warbler\\
+Cerulean Warbler\\
+Northern Waterthrush\\
+Dickcissel\\
+Nelson's Sharp-tailed Sparrow\\
+American Goldfinch\\
+Purple Finch
+\end{multicols}
+
+\end{document}  

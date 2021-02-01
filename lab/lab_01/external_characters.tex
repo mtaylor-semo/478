@@ -1,0 +1,193 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[10pt]{article}  
+\usepackage[left=0.75in,right=0.75in,top=1in,bottom=0.5in]{geometry} 
+\geometry{letterpaper}                   		% 
+\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\setlength{\parindent}{0pt}
+
+\usepackage{graphicx}
+\graphicspath{%
+	{/Users/goby/Pictures/teach/466/lab/}}
+	
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+%\defaultfontfeatures{Mapping=tex} % converts LaTeX specials (``quotes'' --- dashes etc.) to unicode
+\setmainfont[Ligatures={Common, TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+%\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+
+
+\usepackage[singlelinecheck=false]{caption}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+
+%\pagenumbering{gobble}
+%\usepackage{pdflscape}
+\usepackage{longtable}
+\usepackage[frenchlinks]{hyperref}
+\hypersetup{
+	frenchlinks=true,
+	pdfborder={0 0 0}}
+\usepackage{booktabs}
+%\usepackage{amssymb}
+%\usepackage{enumitem}
+%\setlist{noitemsep}
+%\setlist[description]{style=multiline, leftmargin=1.25cm, parsep=1ex}
+
+\usepackage[sc]{titlesec}
+
+\usepackage{fancyhdr}
+\fancyhf{}
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{\footnotesize pg.~\thepage }
+\renewcommand{\headrulewidth}{0.4pt}
+
+\fancypagestyle{plain}{%
+	\fancyhf{}
+	\lhead{\textsc{bi}~466/666: Ornithology}
+	\rhead{Name: \enspace \makebox[2.5in]{\hrulefill}}
+	\renewcommand{\headrulewidth}{0pt}
+}
+
+
+\begin{document}
+\thispagestyle{plain}
+%\begin{landscape}
+
+\subsection*{External characters\footnote{Adapted from Pettingill, O.S., Jr. \textit{Ornithology in Laboratory and Field,} 4th ed.}}
+
+Taxonomic groups such as orders and families can often be diagnosed by combinations of external characters, such as bill shape and type of foot.  This exercises introduces you to many of these characters. You \emph{must} learn these characters. Key terms that you must also learn are defined when needed.
+
+\subsubsection*{Instructions}
+
+ Read the description of each character type and then draw that character type. Examples are provided but you are not expected to make high quality illustrations. Do your best.
+ 
+ You can print this document and draw in the left column. You can draw on a separate sheet of paper but write the name of the character (e.g., crossed bill) next to your drawing.
+ 
+ You may use whatever resources you wish for examples of the character types. Text in \textsc{Small caps} are active links in the \textsc{pdf} file. Click on a link to go to that species's entry in Cornell's \href{https://www.allaboutbirds.org/}{All About Birds} guide. Skimming the photos on the \textsc{id} page will often show the specific character. In a few cases, links to specific photos are provided.
+ 
+ Upload photos or scans of your drawings to the Lab~1 drop box by the due date. 
+
+%\bigskip
+
+\begin{longtable}{@{}C{0.45\textwidth}L{0.45\textwidth}@{}}
+
+
+\toprule
+Illustration & Description \tabularnewline
+\midrule
+& \\
+\multicolumn{2}{L{0.9\textwidth}}{\textbf{Bill Characters.} Bill and beak are synonyms; bill is preferred. Many bird groups have distinctive bill sizes or shapes.} \\[2em]
+%
+
+\includegraphics[height=2.4cm]{./bill_long} & \textbf{Long:} the bill is decidedly longer than the head, as in the \href{https://www.allaboutbirds.org/guide/Least_Bittern/}{Least Bittern.}\\ [2.5cm]
+%
+\includegraphics[height=2.4cm]{bill_short} & \textbf{Short:} the bill is decidely shorter than the head, as in a \href{https://www.allaboutbirds.org/guide/Carolina_Chickadee}{Carolina Chickadee.} \\ [2.5cm]
+%
+& \textbf{Hooked:} the upper mandible is longer than the lower, and its tip is bent down over the tip of the lower, as in a hawk. Sometimes the upper mandible has a \textbf{nail-like hook} at its tip, as in a \href{https://www.allaboutbirds.org/guide/Mallard}{Mallard.}\\[2.5cm] 
+%
+& \textbf{Crossed:} the tips of the mandibles cross each other, as in a \href{https://www.allaboutbirds.org/guide/Red_Crossbill}{Red Crossbill}. \\[2.5cm]
+
+& \textbf{Compressed:} the bill for a good part of its length is higher than wide, as in a \href{https://www.allaboutbirds.org/guide/Belted_Kingfisher}{Belted Kingfisher} or \href{https://www.allaboutbirds.org/guide/Atlantic_Puffin}{Atlantic Puffin.} (Show both a lateral and a frontal view.)\\ [2.5cm]
+%
+& \textbf{Depressed:} the bill is wider than high, as in a \href{https://www.allaboutbirds.org/guide/Northern_Pintail}{Northern Pintail} and other ducks. (Show both a lateral and a frontal view.)\\ [2.5cm]
+%
+& \textbf{Stout:} the bill is conspicuously high and wide, as in a \href{https://www.allaboutbirds.org/guide/Ruffed_Grouse}{Ruffed Grouse.} (Show both a lateral and a dorsal view.)\\ [2.5cm]
+%
+& \textbf{Terete:} the bill is generally circular either in cross section, or when viewed anteriorly, as in a \href{https://www.allaboutbirds.org/guide/Ruby-throated_Hummingbird}{Ruby-throated Hummingbird.} (Show both a lateral and a frontal view.)\\ [2.5cm]
+%
+\includegraphics[height=2.4cm]{bill_straight} & \textbf{Straight:} the line along which the mandibles close (i.e., the commissure) is in line with the axis of the head, as in a \href{https://www.allaboutbirds.org/guide/Great_Blue_Heron}{Great Blue Heron.} \\ [2.5cm]
+%
+\includegraphics[height=2.4cm]{bill_recurved} & \textbf{Recurved:} the bill curves upward, as in a \href{https://www.allaboutbirds.org/guide/Marbled_Godwit#}{Marbled Godwit.}\\ [2.5cm]
+%
+& \textbf{Decurved:} the bill curves downward, as in the \href{https://www.allaboutbirds.org/guide/Brown_Creeper}{Brown Creeper} or a \href{https://www.allaboutbirds.org/guide/Long-billed_Curlew}{Long-billed Curlew.} \\ [2.5cm]
+%
+\includegraphics[height=2.4cm]{bill_bent}& \textbf{Bent:} the bill is deflected downward at an angle (usually deflected downward at the middle), as in the \href{https://ebird.org/species/grefla2}{American Flamingo.} \\ [2.5cm]
+%
+& \textbf{Swollen:} the sides of the mandibles are convex, as in a \href{https://www.allaboutbirds.org/guide/Summer_Tanager}{Summer Tanager.} (Show a dorsal view.)\\ [2.5cm]
+%
+& \textbf{Acute:} the bill tapers to a sharp point, as in the \href{https://www.allaboutbirds.org/guide/Yellow_Warbler/}{Yellow Warbler.}\\ [2.5cm]
+%
+& \textbf{Chisel-like:} the top of the bill is beveled, as in the \href{https://www.allaboutbirds.org/guide/Hairy_Woodpecker}{Hairy Woodpecker.} (Show both a lateral and a dorsal view.)\\ [2.5cm]
+%
+& \textbf{Toothed:} the upper mandibular tomium has a “tooth,” as falcons and \href{https://www.allaboutbirds.org/guide/Elegant_Trogon}{trogons.} You can see the tooth in this photo of a \href{https://macaulaylibrary.org/asset/273577511}{Prairie Falcon} or this photo of a \href{https://macaulaylibrary.org/asset/296208031}{Peregrine Falcon}. \textbf{Tomia} (singular: tomium) are the cutting edges of the upper and lower bill.\\ [2.5cm]
+%
+& \textbf{Serrate:} the bill has saw-like tomia, as in a \href{https://www.allaboutbirds.org/guide/Hooded_Merganser}{Hooded Merganser.} \\ [2.5cm]
+%
+\includegraphics[height=2.4cm]{bill_gibbous}& \textbf{Gibbous:} the bill has a pronounced hump, as in a \href{https://www.allaboutbirds.org/guide/Surf_Scoter}{Surf Scoter.}\\ [2.5cm]
+%
+& \textbf{Spatulate} or \textbf{spoon-shaped:} the bill is much widened, or depressed, toward the tip, as in the \href{https://www.allaboutbirds.org/guide/Northern_Shoveler}{Northern Shoveler.}\\ [2.5cm]
+%
+& \textbf{Notched:} the bill has a slight nick in the tomia of one or both mandibles. Most frequently, the notch occurs near the tip of the upper mandible, as in the \href{https://www.allaboutbirds.org/guide/browse/taxonomy/Turdidae}{thrushes.} You can see the slight notch near the tip of the upper mandible in this photo of an \href{https://macaulaylibrary.org/asset/290023681}{American Robin.}\\ [2.5cm]
+%
+& \textbf{Conical:} the bill has the shape of a cone, as in a \href{https://www.allaboutbirds.org/guide/American_Goldfinch}{American Goldfinch.} \\ [2.5cm]
+%
+& \textbf{Lamellate} or \textbf{sieve-billed:} the mandibles have just within their tomia a series of transverse tooth-like ridges, as in the \href{https://www.allaboutbirds.org/guide/browse/taxonomy/Anatidae}{swans, geese, and ducks.} See also the flamingos. The lamellae can be seen in the lower mandible of this \href{https://macaulaylibrary.org/asset/162682211}{Mute Swan.}\\ [2.5cm]
+%
+\includegraphics[height=3cm]{bill_angulated_commissure}& \textbf{Angulated commissure:} the commissure forms an angle at the point where the tomium proper meets the rictus, as in \href{https://www.allaboutbirds.org/guide/browse/taxonomy/Fringillidae}{grosbeaks and finches}, \href{https://www.allaboutbirds.org/guide/browse/taxonomy/Cardinalidae}{cardinals and buntings}, and \href{https://www.allaboutbirds.org/guide/browse/taxonomy/Passerellidae}{sparrows}. \smallskip 
+
+The \textbf{commissural point} is where the upper and lower mandibles meet posteriorly. Most of the tomium is hard. The \textbf{rictus} is the softer posterior part of the tomium near the commissural point.\\ [2.5cm]
+%
+\includegraphics[height=2.4cm]{bill_gular}& With \textbf{gular sac:} the chin, gular region, and jugulum are distended. In the \href{https://www.allaboutbirds.org/guide/browse/taxonomy/Pelecanidae}{pelicans}, the gular sac is conspicuous, outwardly membranous, and featherless. In the \href{https://www.allaboutbirds.org/guide/browse/taxonomy/Phalacrocoracidae}{cormorants}, it is inconspicuous and partially feathered.\\ [2.5cm]
+%
+\multicolumn{2}{L{0.9\textwidth}}{\textbf{Tail Characters.} Rectrices (singular: rectrix) are the main feathers of the tail. The rectrices can vary in length, giving the posterior margin of the tail distinct shapes.} \\[2em]
+%
+\includegraphics[height=2.4cm]{tail_square} & \textbf{Square:} the rectrices are all of the same length, as in the \href{https://www.allaboutbirds.org/guide/Sharp-shinned_Hawk}{Sharp-shinned Hawk.}\\ [2.5cm]
+%
+& \textbf{Rounded:} the rectrices shorten successively from the middle to the outside, in \emph{slight} gradations, as in the \href{https://www.allaboutbirds.org/guide/American_Crow}{American Crow.}\\ [2.5cm]
+%
+& \textbf{Graduated:} the rectrices shorten successively from the middle to the outside, in \emph{abrupt} gradations, as in a \href{https://www.allaboutbirds.org/guide/Yellow-billed_Cuckoo}{Yellow-billed Cuckoo.}\\ [2.5cm]
+%
+& \textbf{Pointed} or \textbf{acute:} the middle rectrices are much longer than the others, as in a \href{https://www.allaboutbirds.org/guide/Ring-necked_Pheasant}{Ring-necked Pheasant.}\\ [2.5cm]
+%
+& \textbf{Emarginate:} the rectrices increase in length from the middle to the outermost pair, in \emph{slight} gradiations, as in a \href{https://www.allaboutbirds.org/guide/Pine_Siskin}{Pine Siskin.}\\ [2.5cm]
+%
+& \textbf{Forked:} the rectrices increase in length successively from the middle to the outermost pair, in \emph{abrupt} gradations, as in a \href{https://www.allaboutbirds.org/guide/Least_Tern/}{Least Tern.}\\ [2.5cm]
+%
+\multicolumn{2}{L{0.9\textwidth}}{\textbf{Foot Characters.} Birds have four toes, numbered 1–4. Hold your right hand out, palm down. Extend your thumb and first three fingers. Fold your pinkie beneath your palm. These represent the four toes of a bird. The thumb is digit 1, called the \textbf{hallux}. The three fingers represent toes 2–4, with the ring finger being toe~4.} \\[2em]
+%
+\multicolumn{2}{L{0.9\textwidth}}{The position of the toes is important. In all birds the front toes are inserted on the metatarsus as the same level but the hallux varies in position.} \\[2em]
+%
+\includegraphics[height=2.4cm]{foot_incumbent} & \textbf{Incumbent:} the hallux is inserted on the metatarsus at the level of the other toes, as in an \href{https://www.allaboutbirds.org/guide/Eastern_Meadowlark}{Eastern Meadowlark.}\\ [2.5cm]
+%
+\includegraphics[height=2.4cm]{foot_elevated} & \textbf{:} the hallux is inserted so high on the metatarsus that its tip does not reach the ground, as in the \href{https://www.allaboutbirds.org/guide/Virginia_Rail/}{Virginia Rail.}\\ [2.5cm]
+%
+\multicolumn{2}{L{0.9\textwidth}}{Foot type is determined by toe arrangement and the function of the foot.} \\[2em]
+\includegraphics[height=2.4cm]{foot_anisodactyl} & \textbf{Anisodactyl:} the hallux is behind and the other three toes are in front, as in an \href{https://www.allaboutbirds.org/guide/American_Tree_Sparrow}{American Tree Sparrow.} \\ [2.5cm]
+%
+& \textbf{Syndactyl:} the third and fourth toes (outer and middle) are united for most of the length, as in the \href{https://www.allaboutbirds.org/guide/Belted_Kingfisher}{Belted Kingfisher.} \\ [2.5cm]
+%
+& \textbf{Zygodactyl:} the toes are arranged in pairs, the second and third toes in from, the fourth and hallux behind, as in the \href{https://www.allaboutbirds.org/guide/Red-bellied_Woodpecker/}{Red-bellied Woodpecker.} \\ [2.5cm]
+%
+& \textbf{Heterodactyl:} the toes are arranged in pairs, the third and fourth toes in front, the second and hallux behind, as in the \href{https://www.allaboutbirds.org/guide/Elegant_Trogon}{Elegant Trogon.} \\ [2.5cm]
+%
+& \textbf{Pamprodactyl:} all four toes are in front, the hallux being turned forward, as in a \href{https://www.allaboutbirds.org/guide/Chimney_Swift}{Chimney Swift.}\\ [2.5cm]
+%
+& \textbf{Raptorial:} the toes are deeply cleft, with large, strong sharply curved nails (talons), as in an \href{https://www.allaboutbirds.org/guide/Osprey}{Osprey.} \\ [2.5cm]
+%
+& \textbf{Semipalmate} or half-webbed: the anterior toes are joined part way by a small webbing, as in a \href{https://www.allaboutbirds.org/guide/Semipalmated_Plover}{Semipalmated Plover.} \\ [2.5cm]
+%
+& \textbf{Totipalmate} or fully webbed: all four toes are united by ample webs, as in a \href{https://www.allaboutbirds.org/guide/Double-crested_Cormorant}{Double-crested Cormorant.} \\ [2.5cm]
+%
+& \textbf{Palmate} or webbed: the front toes are united by ample webs, as in ducks and gulls. \\ [2.5cm]
+%
+& \textbf{Lobate} or lobed: a swimming foot with a series of lateral lobes on the toes. This photo of a \href{https://www.allaboutbirds.org/guide/Pied-billed_Grebe/media-browser/63919971}{Pied-billed Grebe} shows the lobed feet very well. Sometimes the foot may be palmate but the hallux may bear a lobe, as in a diving duck. \\ [2.5cm]
+%
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\bottomrule
+\end{longtable}
+%End small font size
+%\end{landscape}
+
+\end{document}  
