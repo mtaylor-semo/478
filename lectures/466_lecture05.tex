@@ -1,0 +1,341 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[t]{beamer}
+
+%%%% HANDOUTS For online Uncomment the following four lines for handout
+%\documentclass[t,handout]{beamer}  %Use this for handouts.
+%\includeonlylecture{student}
+%\usepackage{handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
+%	\setbeamercolor{background canvas}{bg=black!5}
+
+
+%%% Including only some slides for students.
+%%% Uncomment the following line. For the slides,
+%%% use the labels shown below the command.
+
+%% For students, use \lecture{student}{student}
+%% For mine, use \lecture{instructor}{instructor}
+
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Biolinum O}
+\setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional, OldStyle}]{\mainfont}
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/466/lectures/}}%
+%	{/Users/goby/Pictures/teach/common/}} % set of paths to search for images
+
+\usepackage{amsmath,amssymb}
+
+%\usepackage{units}
+
+\usepackage{booktabs}
+\usepackage{multicol}
+%	\setlength{\columnsep=1em}
+
+%\usepackage{textcomp}
+%\usepackage{setspace}
+\usepackage{tikz}
+	\tikzstyle{every picture}+=[remember picture,overlay]
+
+\mode<presentation>
+{
+  \usetheme{Lecture}
+  \setbeamercovered{invisible}
+  \setbeamertemplate{items}[square]
+}
+
+%\usepackage{calc}
+\usepackage{hyperref}
+
+
+\newcommand{\cornell}[1]{Fig.~#1~Lovette and Fitzpatrick, 2016. 3rd ed.}
+\begin{document}
+%\lecture{instructor}{instructor}
+
+\lecture{student}{student}
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{food_bee_eater_intro}}
+\begin{frame}[b,plain]{\textcolor{yellow}{Food and foraging}}
+	
+	\tinyfill{\href{https://commons.wikimedia.org/w/index.php?curid=20802692}{\textcolor{white}{European Bee-eater by Pierre Dalous, Wikimedia Commons, \ccbysa{3}}}} 
+\end{frame}
+}
+
+%% functional response
+\begin{frame}[t,plain]{\highlight{Functional response} describes how feeding rate changes with food availability.}
+
+	\vspace{-0.5\baselineskip}
+	\centering 
+	\includegraphics[height=0.8\textheight]{food_functional_response}
+	
+	\vfilll
+	
+	\tinyfill{\cornell{8.02}}
+\end{frame}
+
+%% Foraging process
+\begin{frame}[t,plain]{Birds use a variety of ecological and evolutionary foraging strategies.}
+
+	\vspace{-0.25\baselineskip}
+	\centering 
+	\includegraphics[height=0.78\textheight]{food_foraging_process}
+	
+	\vfilll
+	
+	\tinyfill{\cornell{8.08}}
+\end{frame}
+
+
+
+%% LEvy flight
+\begin{frame}[t,plain]{Large areas can be covered with combination of random and directed flight.}
+
+%	\vspace{-0.5\baselineskip}
+	\centering 
+	\includegraphics[width=\linewidth]{food_levy_flight}
+	
+	\medskip
+	
+	\reflectbox{\includegraphics[width=4cm]{food_black-browed_albatross}}
+	\vfilll
+	
+	\tiny Black-browed Albatross by 0ystercatcher, \href{https://www.flickr.com/photos/49828152@N00/9172107327}{Flickr}, \ccbyncsa{2} \tinyfill{\cornell{8.04}}
+\end{frame}
+
+
+
+%% Stable strategy
+\begin{frame}[t,plain]{Alternate foraging methods converge on \highlight{evolutionary stable strategy.}}
+
+%	\vspace{-0.5\baselineskip}
+	\centering 
+	\includegraphics[width=\linewidth]{food_finder_Scrounger}
+
+	\vfilll
+	
+	\tiny Scaly-breasted Munias \tinyfill{\cornell{8.07}}
+\end{frame}
+
+%% flush pursuit
+\begin{frame}[t,plain]{Some birds use \highlight{flush-pursuit foraging.}}
+
+%	\vspace{-0.5\baselineskip}
+	\begin{multicols}{2}
+	\includegraphics[width=\linewidth]{food_redstart_foraging_success}
+
+	\columnbreak
+
+	\includegraphics[width=\linewidth]{food_slate_throated_redstart}
+	\end{multicols}
+
+	\hangpara Our Northern Mockingbird uses this strategy (\href{https://www.youtube.com/watch?v=GF5xBvmeOjo}{video}).
+
+	\vfilll
+	
+	\tiny Slate-throated Redstart by Alan Schmierer \href{https://www.flickr.com/photos/8101022@N05/14107576517}{Flickr public domain.} \tinyfill{\cornell{8.10}}
+\end{frame}
+
+%% sit and wait
+\begin{frame}[t,plain]{Some birds \highlight{sit-and-wait.}}
+
+%	\vspace{-0.5\baselineskip}
+	\begin{multicols}{2}
+	\reflectbox{\includegraphics[width=\linewidth]{food_great_blue_heron}}
+
+	\columnbreak
+
+	\includegraphics[width=\linewidth]{food_red_shouldered_hawk}
+	\end{multicols}
+
+
+	\vfilll
+	
+	\tiny Great Blue Heron, \textsc{usfws} \href{https://www.flickr.com/photos/8101022@N05/14107576517}{Flickr public domain.} \hfill Red-shouldered Hawk, Charles Patrick Ewing,  \href{https://www.flickr.com/photos/132033298@N04/31366747854}{Flickr} \ccby{2}
+\end{frame}
+
+%% baiting
+\begin{frame}[t,plain]{Some birds use bait to attract prey.}
+
+%	\vspace{-0.5\baselineskip}
+	\includegraphics[width=\linewidth]{food_bait_tool}
+
+	\vfilll
+	
+	\tinyfill{\cornell{8.11}}
+\end{frame}
+
+%% Foraging risk
+
+\begin{frame}[t]{Foraging increases risk of becoming prey.}
+
+	\includegraphics[width=\linewidth]{food_innate_response}
+
+	\vspace{1.5\baselineskip}
+	
+	\centering
+	
+	\includegraphics[width=5cm]{food_black_capped_chickadee}
+	
+	\vfilll
+	
+	\tiny Black-capped Chickadee, DaPuglet \href{https://www.flickr.com/photos/43810158@N07/33349783941}{Flickr} \ccbysa{2} \tinyfill{\cornell{8.14}}
+
+\end{frame}
+
+%%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{food_capture}}
+\begin{frame}[b,plain]{Once found, food must be captured.}
+	
+	\tinyfill{\textcolor{white}{\cornell{8.18}}}
+\end{frame}
+}
+
+%%
+
+\begin{frame}[t]{Some species make and use tools to extract food.}
+
+	\vspace{-0.5\baselineskip}
+
+	\begin{multicols}{2}
+	\includegraphics[width=\linewidth]{food_tool_caledonia_crow}
+	
+	\columnbreak
+
+	\includegraphics[width=\linewidth]{food_tool_woodpecker_finch}
+	
+	\end{multicols}
+
+	\vfilll
+	
+	\tiny New Caledonia Crow Fig.~8.B4.01  
+	\tinyfill{\cornell{8.14}}
+
+\end{frame}
+
+%%
+
+\begin{frame}[t]{Rhynchokinesis is found in shorebirds and a few other groups.}
+
+\vspace{-0.5\baselineskip}
+
+\centering
+
+\includegraphics[height=0.78\textheight]{food_rhynchokinesis}
+
+\vfilll
+
+
+\tiny \href{https://www.youtube.com/watch?v=RggFFi2MMt0}{Link to video}\tinyfill{\cornell{8.22}}
+
+\end{frame}
+
+%% Woodpeckers
+\begin{frame}[t]{Woodpeckers have \emph{very} long tongues to extract food.}
+
+\begin{multicols}{2}
+\includegraphics[width=\linewidth]{food_woodpecker_hyoid}
+
+\columnbreak
+
+\href{https://macaulaylibrary.org/asset/225045361}{\includegraphics[width=\linewidth]{food_downy_sonogram}}\\
+\href{https://www.youtube.com/watch?v=bqBxbMWd8O0}{Why don't woodpeckers get headaches? (video)}
+
+\end{multicols}
+
+\vfilll
+
+\tinyfill{\cornell{8.23}}
+\end{frame}
+
+%% Tongues
+
+\begin{frame}[t]{Many species have specialized tongues.}
+
+\vspace{-0.5\baselineskip}
+
+\centering
+
+\includegraphics[height=0.85\textheight]{food_tongues}
+
+\vfilll
+
+\tinyfill{\cornell{8.24}}
+
+\end{frame}
+
+
+%% Bill morphology
+\begin{frame}[t]{Bill morphology often reflects specialized diet.}
+
+\vspace{-0.5\baselineskip}
+
+\begin{multicols}{2}
+\includegraphics[width=\linewidth]{food_red_crossbill}
+
+\columnbreak
+
+\includegraphics[width=\linewidth]{food_flamingo}
+
+\end{multicols}
+
+
+\vfilll
+
+\tiny Red Crossbill, Ryan Schain, \href{https://macaulaylibrary.org/asset/42506401}{Macaulay Library ML42506401.} \hfill Flamingo, Robert Claypool, \href{https://www.flickr.com/photos/35106989@N08/8058547935}{Flickr}, \ccby{2}
+\end{frame}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{food_kleptoparasitism}}
+\begin{frame}[b]
+	
+	\tiny \href{https://www.youtube.com/watch?v=zKzeMovBwL0}{Link to Video}\tinyfill{Magnificent Frigatebird by Kurt Bauschardt, \href{https://www.flickr.com/photos/48503330@N08/5662065683}{Flickr} \ccbysa{2}}
+\end{frame}
+}
+
+
+
+\begin{frame}[t]{Some birds mimic other birds to scare yet other birds.}
+
+\vspace{-\baselineskip}
+
+\begin{multicols}{2}
+\centering
+\includegraphics[width=\linewidth]{food_red_shouldered_hawk2}
+
+\columnbreak
+
+\includegraphics[width=\linewidth]{food_blue_jay}
+\end{multicols}
+
+\vfilll
+
+\tiny \textsc{rsha} by Charles Patrick Ewing \href{https://www.flickr.com/photos/132033298@N04/39669645164}{Flickr} \ccby{2} \hfill \href{https://www.youtube.com/watch?v=8gmVOMEhMj8}{Link to video} \hfill{Blue Jay by \href{https://www.flickr.com/photos/45964493@N04/5304330230}{Michael Baglole, Flickr} \ccbyncsa{2}}
+\end{frame}
+
+\begin{frame}[t]
+
+\centering
+\includegraphics[height=0.92\textheight]{food_dominance_guilds}
+
+\vfilll
+
+{\tinyfill{\cornell{8.B7.01}}}
+
+\begin{tikzpicture}
+\node at (-5, 9) [text width = 2cm] {\highlight{Dominance structure}};
+\node at (5, 9) [text width = 2cm] {\highlight{Foraging guilds}};
+\end{tikzpicture}
+
+
+\end{frame}
+
+
+\end{document}
+
