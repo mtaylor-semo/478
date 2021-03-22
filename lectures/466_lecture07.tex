@@ -1,0 +1,569 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[t]{beamer}
+
+%%%% HANDOUTS For online Uncomment the following four lines for handout
+%\documentclass[t,handout]{beamer}  %Use this for handouts.
+%\includeonlylecture{student}
+%\usepackage{handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
+%	\setbeamercolor{background canvas}{bg=black!5}
+
+
+%%% Including only some slides for students.
+%%% Uncomment the following line. For the slides,
+%%% use the labels shown below the command.
+
+%% For students, use \lecture{student}{student}
+%% For mine, use \lecture{instructor}{instructor}
+
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Biolinum O}
+\setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional, OldStyle}]{\mainfont}
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/466/lectures/}}%
+%	{/Users/goby/Pictures/teach/common/}} % set of paths to search for images
+
+\usepackage{amsmath,amssymb}
+
+%\usepackage{units}
+
+\usepackage{booktabs}
+\usepackage{multicol}
+%	\setlength{\columnsep=1em}
+
+%\usepackage{textcomp}
+%\usepackage{setspace}
+\usepackage{tikz}
+	\tikzstyle{every picture}+=[remember picture,overlay]
+\usetikzlibrary{calc}
+
+\mode<presentation>
+{
+  \usetheme{Lecture}
+  \setbeamercovered{invisible}
+  \setbeamertemplate{items}[square]
+}
+
+%\usepackage{calc}
+\usepackage{hyperref}
+
+
+\newcommand{\cornell}[1]{Fig.~#1~Lovette and Fitzpatrick, 2016. 3rd ed.}
+
+\newcommand{\backskip}{\vspace{-0.5\baselineskip}}
+
+\begin{document}
+%\lecture{instructor}{instructor}
+
+\lecture{student}{student}
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{vocals_singing_intro}}
+\begin{frame}[b,plain]
+	
+	\tinyfill \textcolor{white}{Marsh Wren by Still Vision, \href{https://www.flickr.com/photos/27286306@N07/7616501040}{Flickr}, \ccby{2}} 
+\end{frame}
+}
+
+%%
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{vocals_signals}}
+\begin{frame}[b,plain]{\highlight{Vocal signals} influence the behavior of others.}
+	
+	\tinyfill \textcolor{white}{House Sparrows, Mitch Surprenant, \href{https://www.flickr.com/photos/14236207@N04/2053598066}{Flickr}, \ccbyncsa{2}} 
+\end{frame}
+}
+
+%%
+
+\begin{frame}[t]{Sound is pressure vibrations that travel through a medium.}
+
+\includegraphics[width=\linewidth]{vocals_sound_wave}
+
+
+\end{frame}
+
+%%
+
+\begin{frame}[c]{\highlight{Frequency (Hz)} is the number of waves produced in a fixed time.}
+
+
+\begin{tikzpicture}
+\draw[x=1cm,y=1cm, ultra thick, blue, yshift=-0.25cm] 
+        (0,2) sin (1,3) cos (2,2) sin (3,1) cos (4,2)
+              sin (5,3) cos (6,2) sin (7,1) cos (8,2)
+              sin (9,3) cos (10,2) sin (11,1) cos (12,2);
+              
+\draw[x=0.5cm,y=1cm, ultra thick, blue] 
+        (1,-1) sin (2,0) cos (3,-1) sin (4,-2) cos (5,-1)
+               sin (6,0) cos (7,-1) sin (8,-2) cos (9,-1)
+               sin (10,0) cos (11,-1) sin (12,-2) cos (13,-1)
+               sin (14,0) cos (15,-1) sin (16,-2) cos (17,-1)
+               sin (18,0) cos (19,-1) sin (20,-2) cos (21,-1)
+               sin (22,0) cos (23,-1);
+               
+\draw[x=1cm, y=1cm, thick]
+		(1,-2.5) node [below] {\Large 0s} -- (1,3.25) ;
+\draw[x=1cm, y=1cm, thick]
+		(9,-2.5) node [below] {\Large 1s}-- (9,3.25);
+\end{tikzpicture}
+
+\end{frame}
+
+%%
+
+\begin{frame}{Birds hear a slightly narrower frequency range with \emph{much} better resolution.}
+
+%\backskip
+
+\includegraphics[width=\linewidth]{vocals_audiogram}
+
+%\begin{tikzpicture}[yshift=0.5cm]
+%
+%\draw (6,0) -- (6,6.67) node [above, yshift=6pt] {Frequency (kHz)};
+%\foreach \y in {0,1,...,20}
+%	\draw (5.9, \y/3) -- (6.1,\y/3);
+%\foreach \y in {0,2,...,21}
+%	\draw (6,\y/3) -- (6,\y/3) node [right] {\y};
+%
+%\draw (7.1,5) -- (7.5,5) node [right] {15 kHz};
+%\draw (7.1,0.02) -- (7.5,0.02) node [right] {20 Hz};
+%\draw [<->] (7.3,0.09) -- (7.3,4.93) node [midway, right] {Most humans};
+%
+%\draw (4.5,1.67) node [left] {5 khz} -- (4.9,1.67);
+%\draw (4.5,0.33) node [left] {1 khz} -- (4.9,0.33);
+%\draw [<->] (4.7,0.40) -- (4.7,1.6) node [midway, left] {Most birds};
+%
+%\end{tikzpicture}
+
+\end{frame}
+
+%%
+
+\begin{frame}{\highlight{Spectrograms} are visual representations of sound.}
+%\backskip
+
+\includegraphics[width=0.95\linewidth]{vocals_spectrogram_chickadee}
+
+\vfilll
+
+\tiny \href{https://youtu.be/baCamXF-610}{Audio} \hfill \cornell{10.02}
+\end{frame}
+
+%%
+
+\begin{frame}{Single-frequency notes sound whistle-like. Added harmonics add harsh buzz.}
+
+%\backskip
+
+
+\includegraphics[width=\linewidth]{vocals_clear_buzzy}
+
+\vfilll
+
+\tiny \href{https://youtu.be/m5hHwTl8-Zo}{White-throated Sparrow} \quad \href{https://youtu.be/oNKb8rIYCoQ}{Black-capped Chickadee} \hfill \cornell{10.03, 10.07}
+\end{frame}
+
+%%
+
+
+\begin{frame}{Tics, taps, and other “sharp” sounds appear as vertical lines.}
+%\backskip
+
+\centering
+\noindent \includegraphics[width=0.88\linewidth]{vocals_woodpecker_taps}
+
+\vfilll
+
+\tiny \href{https://youtu.be/ygT-Nk_eyJQ}{Downy Woodpecker (top)} \quad \href{https://youtu.be/GHwtWug4998}{Hairy Woodpecker (bottom)}\hfill \cornell{10.04}
+\end{frame}
+
+%%
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{vocals_notes_phrases}}
+\begin{frame}[b,plain]
+
+
+	\tiny \href{https://youtu.be/alpYJ6M7XYk}{Common Yellowthroat} \quad \href{https://youtu.be/6dj6rBncpkY}{Half speed} \textcolor{white}{\cornell{10.05}} 
+\end{frame}
+}
+
+%%
+
+\begin{frame}{A song can consist of many distinct phrases.}
+\centering
+
+\includegraphics[height=0.83\textheight]{vocals_pacific_wren_song}
+
+\vfilll
+
+\tiny \href{https://youtu.be/xHymewtefgk}{Pacific Wren} \quad \href{https://youtu.be/lUpax9rI3-s}{Half speed}
+\hfill \cornell{10.06}
+\end{frame}
+
+%%
+
+{\setbeamercolor{background canvas}{bg=black}
+\begin{frame}{Superb Lyrebird}
+\href{https://www.youtube.com/watch?v=VjE0Kdfos4Y}{%
+\includegraphics[width=\linewidth]{vocals_superb_lyrebird}}
+
+\vfilll
+
+\tinyfill \textcolor{white}{Superb Lyrebird by Alex Maisey}
+\end{frame}
+}
+
+\begin{frame}{The \highlight{syrinx} enables birds to make complex vocalizations.}
+
+\backskip
+
+\begin{multicols}{2}
+
+\centering
+\noindent \includegraphics[width=0.9\linewidth]{vocals_syrinx_structure}
+
+\columnbreak
+
+\includegraphics[width=0.95\linewidth]{vocals_cardinal_throat}
+
+\end{multicols}
+
+\vfilll
+
+\tiny \cornell{10.25} \hfill \href{https://academy.allaboutbirds.org/wood-thrush-singing/}{Wood Thrush} \hfill \href{https://www.youtube.com/watch?v=o0mATRdzZSc}{Hermit Thrush}\hfill Riede et al.~2006. P\textsc{nas} 103:5543.
+\end{frame}
+
+%%
+
+\begin{frame}{\highlight{Oscine} songbirds have additional musculature on the syrinx compared to “non-songbirds.”}
+
+\backskip
+\centering
+\includegraphics[height=0.78\textheight]{vocals_syrinx_oscine_suboscine}
+
+\vfilll
+
+\tiny \href{https://youtu.be/cOi35DdUNS4}{Eastern Wood-Pewee}
+\quad
+\href{https://macaulaylibrary.org/asset/112641}{Scott's Oriole} 
+\hfill 
+\href{https://meetings.ami.org/2018/project/syrinx-musculature-compared-in-oscine-vs-suboscine-passerines/}{Illustration \textcopyright\,Sarah Mientka, Assoc.~Medical Illustrators, 2018.}
+\end{frame}
+
+%%
+
+\begin{frame}{Nearly all birds vocalize.}
+
+\begin{multicols}{2}
+
+\hangpara \highlight{Calls} are relatively short and simple.
+
+\hangpara \highlight{Songs} are often loud and sometimes complex.
+
+\hangpara \highlight{Non-vocal} sounds just that.
+
+\columnbreak
+
+
+\noindent \includegraphics[width=\linewidth]{vocals_bluejay_calling}
+\end{multicols}
+
+\vfilll
+
+\tinyfill \href{https://www.flickr.com/photos/98774255@N00/5925119364}{Panting Blue Jay, Indiana Ivy Nature Photography, Flickr, \ccby{2}}
+
+\end{frame}
+
+
+\begin{frame}{Songs or calls?}
+
+\begin{multicols}{3}
+
+\noindent\reflectbox{\includegraphics[width=\linewidth]{vocals_icterid_cogr}}
+
+\tiny\href{https://www.flickr.com/photos/43581314@N08/33973682813}{Tim Sackton, Flickr, \ccbysa{2}}
+
+\columnbreak
+
+\noindent\includegraphics[width=\linewidth]{vocals_icterid_rwbl}
+
+\centering
+
+\href{https://www.flickr.com/photos/122259497@N03/14022247867}{nature80020, Flickr, \ccby{2}}
+\columnbreak
+
+
+\noindent\includegraphics[width=\linewidth]{vocals_icterid_oror}
+
+\hfill \href{https://www.flickr.com/photos/10017367@N03/5611912358}{Dan Pancamo, Flickr, \ccbysa{2}}
+
+
+\end{multicols}
+
+
+\vfilll
+
+\tiny \href{https://macaulaylibrary.org/asset/133330}{Common Grackle}
+\hfill
+\href{https://macaulaylibrary.org/asset/314523871}{Red-winged Blackbird}
+\hfill
+\href{https://macaulaylibrary.org/asset/94445}{Orchard Oriole}
+\end{frame}
+
+%%
+
+\begin{frame}{Calls serve a variety of social functions.}
+
+\hangpara \href{https://youtu.be/oNKb8rIYCoQ}{\highlight{Contact calls}} calls keep the group in contact.
+
+\hangpara \href{https://youtu.be/j-2vQ5mg2vo}{\highlight{Agression calls} occur between individuals of same or different sex.}
+
+\hangpara \href{https://youtu.be/l_w_3AbkuV0?t=46}{\highlight{Alarm calls}} warn others of potential danger.
+
+\hangpara \highlight{Begging calls} of nestlings and fledglings.
+
+\end{frame}
+
+%%
+
+\begin{frame}{Most birds have a few to many \highlight{song types.}}
+
+\backskip
+
+\centering
+
+\includegraphics[height=0.85\textheight]{vocals_song_types}
+
+\vfilll
+
+\tiny \href{https://youtu.be/pdMrd5-vbf4}{Common Nightingale} 
+\quad 
+\href{https://youtu.be/erdU5AIYbNk}{Brown Thrasher}
+\hfill
+\cornell{10.11}
+
+\end{frame}
+
+
+%%
+
+\begin{frame}{Singing behaviors worth remark.}
+
+\begin{multicols}{2}
+\hangpara \href{https://www.youtube.com/watch?v=r6_LYIdYxz4}{\highlight{Dawn chorus}}\\[1ex]
+\hspace{1em}\href{https://academy.allaboutbirds.org/peterson-field-guide-to-bird-sounds/?speciesCode=sumtan\&species=Summer\%20Tanager\%20-\%20Piranga\%20rubra}{Dawn vs day songs}
+
+\hangpara \highlight{Duets}\\[1ex]
+\hspace{1em}\href{https://academy.allaboutbirds.org/peterson-field-guide-to-bird-sounds/?speciesCode=placha\&species=Plain\%20Chachalaca\%20-\%20Ortalis\%20vetula}{Plain Chachalaca}\\
+\hspace{1em}\href{https://macaulaylibrary.org/asset/28907}{Buff-breasted Wren (3:36)}
+
+\hangpara \href{}{\highlight{Flight songs}}\\[1ex]
+\hspace{1em}\href{https://youtu.be/9pcvhDKDKv4}{Eurasian Sky Lark}\\
+\hspace{1em}\href{https://macaulaylibrary.org/asset/239370861}{Bobolink}\\
+
+\hangpara \highlight{Mimicry}\\[1ex]
+\hspace{1em} \href{https://macaulaylibrary.org/asset/243816281}{Northern Mockingbird}
+
+\columnbreak
+
+\centering
+\noindent \includegraphics[width=0.85\linewidth]{vocals_bobolink}
+
+\end{multicols}
+
+\vfilll
+
+\tinyfill \href{https://commons.wikimedia.org/w/index.php?curid=26015716}{Bobolink, Andrea Westmoreland, Wikimedia, \ccbysa{2}}
+
+
+\end{frame}
+%%
+\begin{frame}{Some birds produce \highlight{non-vocal} sounds.}
+
+\begin{multicols}{2}
+
+Most are used for courtship or territory.
+
+\hangpara Woodpecker drumming
+
+\hangpara \href{https://www.youtube.com/watch?v=2MIoXh_ORMw}{Palm Cockatoo drumming}
+
+\hangpara \href{https://www.youtube.com/watch?v=9BrJghW-WEk}{Wing beats}
+
+\hangpara \href{https://youtu.be/-_1pyFEYptI}{Wing and tail feathers}
+
+\columnbreak
+
+\centering
+
+\noindent \reflectbox{\includegraphics[width=0.9\linewidth]{vocals_nonvocal_rugr}}
+
+\smallskip
+
+\noindent\includegraphics[width=0.9\linewidth]{vocals_nonvocal_wisn}
+
+\end{multicols}
+
+\vfilll
+
+\tiny \href{https://www.youtube.com/watch?v=tSHjhCN6NC0}{Club-tailed Manakin} 
+\hfill
+\href{https://www.flickr.com/photos/80223459@N05/15116108746}{Ruffed Grouse, YellowstoneNPS, Flickr, \textsc{cc-pdm 1.0}}
+\hfill
+\href{https://www.flickr.com/photos/22170893@N06/11635736575}{Wilson's Snipe, Gregory Smith, Flickr, \ccbysa{2}}
+
+\end{frame}
+
+%%
+
+\begin{frame}{Songs are innate in a few species of birds.}
+
+\includegraphics[width=\linewidth]{vocals_song_innate}
+
+\vfilll
+
+\tinyfill \cornell{10.18}
+\end{frame}
+
+%%
+
+\begin{frame}{Songs are learned by most species of birds.}
+\includegraphics[width=\linewidth]{vocals_song_learned}
+
+\hangpara Most birds learn during a \highlight{sensitive period.}\\ Some species are \highlight{open-ended learners.}
+
+\vfilll
+
+\tinyfill \cornell{10.16}
+\end{frame}
+
+%%
+
+\begin{frame}{Birds learn through exposure and practice.}
+
+\includegraphics[width=\linewidth]{vocals_practice}
+
+\vfilll
+
+\tiny \href{https://youtu.be/gVYpcFAcpLo}{Bewick's Wren practice} 
+\quad
+\href{https://youtu.be/bCQVNalg93Y}{Adult} \hfill  \cornell{10.17}
+\end{frame}
+
+%%
+
+\begin{frame}{Adult birds switch to local dialects.}
+\backskip
+
+\centering
+
+\includegraphics[height=0.85\textheight]{vocals_dialect_switching}
+
+\vfilll
+
+\tiny \href{https://youtu.be/q7P3LX0V1DQ}{Adult}\quad\href{https://youtu.be/lP7sfF9mzCU}{Neighbor} \hfill \cornell{0.19}
+\end{frame}
+
+%%
+
+\begin{frame}{Some birds share song types among neighbors.}
+\centering
+\includegraphics[height=0.8\textheight]{vocals_shared_songtypes}
+
+\vfilll
+
+\tinyfill \cornell{10.20}
+\end{frame}
+
+%%
+
+\begin{frame}{Territorial males are more aggressive toward strangers.}
+
+\backskip
+\centering 
+\includegraphics[height=0.85\textheight]{vocals_stranger_respond}
+
+\vfilll
+
+\tinyfill \cornell{10.28}
+\end{frame}
+
+%%
+\tikzset{
+    hyperlink node/.style={
+        alias=sourcenode,
+        append after command={
+            let     \p1 = (sourcenode.north west),
+                \p2=(sourcenode.south east),
+                \n1={\x2-\x1},
+                \n2={\y1-\y2} in
+            node [inner sep=0pt, outer sep=0pt,anchor=north west,at=(\p1)] {\href{#1}{\XeTeXLinkBox{\phantom{\rule{\n1}{\n2}}}}}
+                    %xelatex needs \XeTeXLinkBox, won't create a link unless it
+                    %finds text --- rules don't work without \XeTeXLinkBox.
+                    %Still builds correctly with pdflatex and lualatex
+        }
+    }
+}
+
+
+\begin{frame}{Territorial males might use different song types for different functions.}
+
+\includegraphics[width=\linewidth]{vocals_song_type_function}
+
+%\begin{tikzpicture}
+%\draw [ultra thick] (0,0) rectangle (4,4) node [draw, inner sep=2ex,hyperlink node=https://youtu.be/A8LLDqycato] {};
+
+\tikz \node (rect) at (4.9,1.9) [draw, ultra thin, black, minimum width=4.2cm, minimum height=1.8cm, inner sep=2ex,hyperlink node=https://youtu.be/A8LLDqycato] {};
+
+\tikz \node (rect) at (10,2.4) [draw, ultra thin, minimum width=3.8cm, minimum height=1.8cm, inner sep=2ex,hyperlink node=https://youtu.be/acxCsZxX0vo] {};
+%\end{tikzpicture}
+
+
+
+\vfilll
+
+\tiny \href{https://youtu.be/A8LLDqycato}{Chestnut-sided Warbler attraction} \quad \href{https://youtu.be/acxCsZxX0vo}{aggression} \hfill \cornell{10.34}
+
+\end{frame}
+
+%%
+
+\begin{frame}{Local ecological processes can cause local dialects to form.}
+
+\backskip
+
+\includegraphics[width=\linewidth]{vocals_local_dialects}
+
+\vfilll
+
+\tinyfill \cornell{10.31}
+\end{frame}
+
+%%
+
+\begin{frame}{Regional dialects may suggest distinct species.}
+
+%\backskip
+
+\includegraphics[width=\linewidth]{vocals_regional_dialect}
+
+\vfilll
+
+\tiny \href{https://youtu.be/DHckNi-A8w8}{Marsh Wren western} 
+\quad \href{https://youtu.be/cBEQStYB1xI}{eastern}
+\hfill
+\cornell{10.32}
+
+\end{frame}
+\end{document}
+
+

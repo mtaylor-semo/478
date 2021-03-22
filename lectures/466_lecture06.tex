@@ -1,0 +1,575 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[t]{beamer}
+
+%%%% HANDOUTS For online Uncomment the following four lines for handout
+%\documentclass[t,handout]{beamer}  %Use this for handouts.
+%\includeonlylecture{student}
+%\usepackage{handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
+%	\setbeamercolor{background canvas}{bg=black!5}
+
+
+%%% Including only some slides for students.
+%%% Uncomment the following line. For the slides,
+%%% use the labels shown below the command.
+
+%% For students, use \lecture{student}{student}
+%% For mine, use \lecture{instructor}{instructor}
+
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Biolinum O}
+\setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional, OldStyle}]{\mainfont}
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/466/lectures/}}%
+%	{/Users/goby/Pictures/teach/common/}} % set of paths to search for images
+
+\usepackage{amsmath,amssymb}
+
+%\usepackage{units}
+
+\usepackage{booktabs}
+\usepackage{multicol}
+%	\setlength{\columnsep=1em}
+
+%\usepackage{textcomp}
+%\usepackage{setspace}
+\usepackage{tikz}
+	\tikzstyle{every picture}+=[remember picture,overlay]
+
+\mode<presentation>
+{
+  \usetheme{Lecture}
+  \setbeamercovered{invisible}
+  \setbeamertemplate{items}[square]
+}
+
+%\usepackage{calc}
+\usepackage{hyperref}
+
+
+\newcommand{\cornell}[1]{Fig.~#1~Lovette and Fitzpatrick, 2016. 3rd ed.}
+
+\newcommand{\backskip}{\vspace{-0.5\baselineskip}}
+
+\begin{document}
+%\lecture{instructor}{instructor}
+
+\lecture{student}{student}
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{mating_intro}}
+\begin{frame}[b,plain]
+	
+	\tinyfill \textcolor{white}{White-throated Kingfisher by Akshay Charegaonkar, \href{https://www.flickr.com/photos/27286306@N07/7616501040}{Flickr}, \ccbyncsa{2}} 
+\end{frame}
+}
+
+%%
+
+\begin{frame}[t]{Overview of mating and mating systems}
+
+\begin{multicols}{2}
+\hangpara Territories for breeding
+
+\hangpara Choosing a mate\\
+	\quad Female choice \\
+	\quad Male choice?
+
+\hangpara Attracting a mate
+
+\hangpara Mating systems
+
+\columnbreak
+
+\noindent\includegraphics[width=\linewidth]{mating_snail_kites}
+
+\end{multicols}
+
+\vfilll
+
+\tinyfill \href{https://www.flickr.com/photos/66020093@N03/27898298881}{Snail Kites, Andy Morfew, Flickr, \ccby{2}}
+\end{frame}
+
+%%
+
+\begin{frame}[t]{\highlight{Resource-based territories} are defended for mating, nesting, and feeding.}
+
+\vspace{-0.5\baselineskip}
+\begin{multicols}{2}
+\centering
+\noindent\includegraphics[width=0.7\linewidth]{mating_northern_goshawk}
+
+%\hangpara Size depends on resource needs of birds and habitat quality.
+
+%\hangpara May be defended by one or both sexes.
+
+\columnbreak
+
+\noindent\includegraphics[width=\linewidth]{mating_territory_resource}
+\end{multicols}
+
+\vfilll
+
+\tiny Northern Goshawk, Norbert Kenntner, \href{https://commons.wikimedia.org/wiki/File:Northern_Goshawk_ad_M2.jpg}{Wikimedia}, \ccbysa{3} \hfill \cornell{9.26}
+
+\end{frame}
+
+%%
+
+\begin{frame}[t]{\highlight{Mating territories} are defended for mating and nesting.}
+
+\vspace{-0.5\baselineskip}
+
+\centering
+\includegraphics[width=0.93\linewidth]{mating_territory_mating}
+
+\vfilll
+
+\tinyfill \cornell{9.17}
+
+\end{frame}
+
+%%
+
+\begin{frame}[t]{\highlight{Nesting territories} are defended for nesting.}
+
+\vspace{-0.5\baselineskip}
+
+\centering
+
+\includegraphics[width=\linewidth]{mating_territory_nesting}
+
+\vfilll
+
+\tinyfill \href{https://www.flickr.com/photos/27345927@N07/4542373073}{Gannets by russellstreet, Flickr}, \ccbysa{2}
+
+\end{frame}
+
+%%
+
+\begin{frame}[t]{\highlight{Lek territories} are defended for mating.}
+\vspace{-0.5\baselineskip}
+
+\begin{multicols}{2}
+
+\noindent\includegraphics[width=\linewidth]{mating_lek_grouse}
+
+\hangpara Some lekking species have \highlight{exploded leks.}
+
+\columnbreak
+
+\noindent\includegraphics[width=\linewidth]{mating_territory_lek}
+
+\end{multicols}
+
+\vfilll
+
+\tiny \href{https://www.flickr.com/photos/54430347@N04/6948123054}{Greater Sage-Grouse, \textsc{usfws, pacific southwest}, Flickr}, \ccby{2} \hfill \href{https://en.wikipedia.org/wiki/File:Lek-diagram.jpg}{Sadi Carnot, Wikimedia}, \ccbysa{3}
+
+\end{frame}
+
+\begin{frame}[t]{\highlight{Floaters} move in if a territory-holder disappears.}
+\vspace{-0.5\baselineskip}
+\begin{multicols}{2}
+
+\noindent\includegraphics[width=\linewidth]{mating_territory_floaters}
+
+\vfilll
+
+{\tiny
+Above: Zack and Stutchbury 1992. Behaviour 123:194.\\
+Right, top: Sergio et al.~2009. J.~Anim.~Ecol.~78:109.\\
+Right, bottom: \href{https://commons.wikimedia.org/wiki/File:Black_kite_(Milvus_migrans_migrans)_in_flight.jpg}{Black Kite, Charles Sharp, \ccbysa{4}}\\
+}
+
+\columnbreak
+
+\noindent\includegraphics[width=\linewidth]{mating_floater_age_groups}
+
+\noindent\includegraphics[width=\linewidth]{mating_floater_black_kite}
+
+\end{multicols}
+\end{frame}
+
+%%
+
+\begin{frame}[t]{Why are females choosy about their mates?}
+
+\begin{multicols}{2}
+
+\hangpara \highlight{Genetic benefits}
+
+\hangpara \quad Sexy sons
+
+\hangpara \quad Good genes
+
+\columnbreak
+
+\highlight{Material benefits}
+
+\end{multicols}
+
+\hangpara These hypotheses stem from \highlight{sexual conflict} between males and females.
+
+\end{frame}
+
+%%
+
+\begin{frame}[t]{\highlight{Sexy sons:} females choose best males so their sons have increased chance of reproductive success.}
+
+\vspace{-0.5\baselineskip}
+\centering
+\includegraphics[width=0.85\linewidth]{mating_rwbl_male_female}
+
+\vfilll
+
+\tinyfill Original source unknown.
+
+\end{frame}
+
+%%
+
+\begin{frame}[t]{\highlight{Good genes:} females choose best males so their offspring .}
+
+\vspace{-0.5\baselineskip}
+\centering
+\includegraphics[width=\linewidth]{mating_good_genes_rnph}
+
+\vfilll
+
+\tinyfill \href{https://www.flickr.com/photos/36542741@N03/4454127334}{Ring-necked Pheasant, Hiyashi Haka, Flickr, \ccbyncsa{2}}
+
+\end{frame}
+
+%%
+
+\begin{frame}[t]{\highlight{Honest indicators} tell female about male's ability to provide material resources.}
+\vspace{-0.5\baselineskip}
+\centering
+\includegraphics[width=\linewidth]{mating_hofi_honest_indicator}
+
+\vfilll
+
+\tiny \href{https://www.flickr.com/photos/28156071@N00/4104955050}{Don DeBold, Flickr, \ccby{2}} \hfill \href{https://www.audubon.org/news/house-finch-or-purple-finch-heres-how-tell-them-apart}{Michele Black, Audubon Photography}
+
+
+\end{frame}
+
+%%
+
+\lecture{instructor}{instructor}
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{mating_vogelkop_bowerbird}}
+\begin{frame}[b,plain]
+	
+	\tinyfill \textcolor{white}{ \href{https://macaulaylibrary.org/asset/188495711}{Vogelkop Bowerbird, \textcopyright\,Arco Huang, Macaulay Library \textsc{ml188495711}}} 
+\end{frame}
+}
+
+%%
+
+\lecture{student}{student}
+
+\begin{frame}[t]{Do males choose among females?}
+
+\vspace{-0.5\baselineskip}
+\includegraphics[width=\linewidth]{mating_male_choice_epfl}
+
+\hangpara \hfill Males prefer females with white foreheads.
+
+\vfilll
+
+\tinyfill \cornell{9.06}
+
+\end{frame}
+
+%%
+
+\begin{frame}[t]
+
+
+\begin{multicols}{2}
+
+\noindent\includegraphics[width=\linewidth]{mating_uv_blue_tit_design}
+
+\columnbreak
+
+\centering
+\noindent\includegraphics[width=0.9\linewidth]{mating_uv_tit_preference}
+\end{multicols}
+
+\vfilll
+
+\tiny Withgott 2000.~Bioscience 50:854. \hfill Hunt et al.~1999. Anim.~Behav.~58:809.
+\end{frame}
+
+%%
+
+\begin{frame}[t]{Males attract mates with exaggerated \highlight{secondary sexual traits.}}
+
+\vspace{-0.5\baselineskip}
+\includegraphics[width=\linewidth]{mating_satin_bowerbird}
+
+\vfilll
+
+\tinyfill \cornell{9.B1.02}
+
+\end{frame}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{mating_frigatebird_display}}
+\begin{frame}[b,plain]{Ornaments, displays, and vocalizations can all be used to attract females.}
+	
+	\vfilll
+	
+	\tiny \colorbox{black!40!lime}{\href{https://commons.wikimedia.org/wiki/File:Male_greater_frigate_bird_displaying.jpg}{Greater Frigatebird, Charles Sharp, Wikimedia, \ccbysa{3}} \href{https://www.youtube.com/watch?v=RbVJD7R_VzU}{Link to Video}}
+\end{frame}
+}
+
+%%
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{mating_flame_bowerbird}}
+\begin{frame}[b,plain]
+	
+	\vfilll
+	
+	\tinyfill \colorbox{brown}{\href{https://macaulaylibrary.org/asset/185096241}{Flame Bowerbird, Chris Wiley, \textcopyright\,Macaulay Library, \textsc{ml185096241}} \href{https://www.youtube.com/watch?v=1XkPeN3AWIE}{Link to Video}}
+\end{frame}
+}
+
+%%
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{mating_bird_of_paradise}}
+\begin{frame}[b,plain]
+	
+	\vfilll
+	
+	\tinyfill  \textcolor{white}{\href{https://www.macaulaylibrary.org/2017/06/30/dance-moves-support-evidence-for-new-bird-of-paradise-species/}{Vogelkop Lophorina, \textcopyright\,Tim Laman, Macaulay Library, \textsc{ml62128001}} \href{https://www.youtube.com/watch?v=rX40mBb8bkU}{Link to Video}}
+\end{frame}
+}
+
+%%
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{mating_blue_manakin}}
+\begin{frame}[b,plain]
+	
+	\vfilll
+	
+	\tiny  \textcolor{black}{\href{https://macaulaylibrary.org/asset/45272931}{Swallow-tailed Manakin, \textcopyright\,Nigel Voaden, Macaulay Library, \textsc{ml45272931}} \href{https://www.youtube.com/watch?v=1zxJPQlFFTI}{Link to Video}}
+\end{frame}
+}
+
+%%
+
+\begin{frame}[t]{Birds have a wide range of \highlight{mating systems.}}
+
+\vspace{-0.5\baselineskip}
+
+
+\includegraphics[width=\linewidth]{mating_systems}
+
+\vfilll
+
+\tinyfill \cornell{9.B5.01}
+
+\end{frame}
+
+%%
+
+\begin{frame}[t]{Mating system categories (for reference only).}
+
+{\raggedbottom
+\begin{multicols}{3}
+
+\textbf{Social Monogamy}
+
+\vspace{0.5\baselineskip}
+
+\highlight{mate guarding}
+
+mate assistance
+
+female enforced
+
+\columnbreak
+
+\textbf{Polyandry}
+
+\vspace{0.5\baselineskip}
+
+sequential 
+
+male enforced
+
+convenience
+
+material benefits
+
+fertility insurance
+
+genetic benefits
+
+\columnbreak
+
+\textbf{Polygyny}
+
+\vspace{0.5\baselineskip}
+
+deception based
+
+female defense
+
+\highlight{resource defense}
+
+\highlight{lek}
+
+\end{multicols}}
+
+\end{frame}
+
+%%
+
+\begin{frame}[t]{True \highlight{genetic monogamy} is rare.}
+\vspace{-0.5\baselineskip}
+\centering
+
+\includegraphics[height=0.85\textheight]{mating_genetic_monogamy}
+
+\vfilll
+\tinyfill \cornell{9.13}
+\end{frame}
+
+%%
+
+\begin{frame}[t]{About 90\% of all species have \highlight{extra-pair copulations.}}
+
+\backskip
+
+\includegraphics[width=\linewidth]{mating_epc_eabl}
+
+\vfilll
+
+\tinyfill \href{https://www.flickr.com/photos/bugbait/7973909138}{Eastern Bluebird \textcopyright\,Larry McGahey, Flickr.}
+
+\end{frame}
+
+%%
+
+\begin{frame}[t]{Males may \highlight{mate guard} to prevent female \textsc{epc.}}
+
+\backskip
+\centering
+\includegraphics[width=0.95\linewidth]{mating_mate_guarding}
+
+\vfilll
+
+\tiny Seychelles Warbler \hfill \cornell{9.12}
+\end{frame}
+
+%%
+
+\begin{frame}[t]{\highlight{Polyandry} might evolve when territory space is limited.}
+\backskip
+
+\includegraphics[width=\linewidth]{mating_polyandry_galapagos_hawk}
+
+\vfilll
+
+\tinyfill Galapagos Hawks, photographer unknown.
+\end{frame}
+
+%%
+
+\begin{frame}[t]{\highlight{Sequential polyandry} allows females to mate more often.}
+
+\backskip
+
+\includegraphics[width=\linewidth]{mating_sequential_polyandry}
+
+\vfilll
+
+\tinyfill Red-necked Phalarope, photographer unknown.
+\end{frame}
+
+%%
+
+\begin{frame}[t]{Polyandry can result from \highlight{forced copulations.}}
+
+\backskip
+
+\includegraphics[width=\linewidth]{mating_forced_copulation}
+
+\vfilll
+
+\tinyfill \cornell{9.23}
+\end{frame}
+
+%%
+
+\begin{frame}[t]{Females may be able to retain male choice.}
+
+\backskip
+
+\begin{multicols}{2}
+\centering
+
+\noindent\includegraphics[width=0.78\linewidth]{mating_stiff_tailed_duck}
+
+\columnbreak
+
+\noindent \includegraphics[width=\linewidth]{mating_interomittant_organs}
+
+\vfilll
+
+\tinyfill McCracken et al.~2001.~Nature 413: 128\newline 
+\tinyfill Brennan et al.`2007.~PLoS ONE 2(5):e418. 
+
+\end{multicols}
+
+\end{frame}
+
+
+%% Female RWBL prefer to mate with unmated male (no female in territory.
+%% But, they will chose a mated male if a nest is already over water,
+%% which is safer.
+\begin{frame}[t]{\highlight{Resource-defense polygyny} may occur when males defend high-quality habitat.}
+\backskip
+\centering
+\includegraphics[height=0.77\textheight]{mating_polygyny_rwbl}
+
+\vfilll
+
+\tiny See Pribil and Searcy 2001.~Proc.~R.~Soc.~Lond.~268:1643. \hfill \href{https://i0.wp.com/auduboncnc.org/wp-content/uploads/2018/06/Redwinged-blackbird-nest.jpg?ssl=1}{\textcopyright\,Audubon Community Nature Center}
+\end{frame}
+
+%%
+
+\begin{frame}[t]{\highlight{Leks} are aggregations of males that engage in competitive mating displays. }
+
+\backskip
+
+\includegraphics[width=\linewidth]{mating_lek_lpch}
+
+\backskip
+\hangpara \highlight{Exploded leks} are diffuse. Males might not be within sight of each other.
+\vfilll
+
+\tiny \href{https://www.youtube.com/watch?v=OPzDtTyzGIg}{Link to Video} \hfill \href{https://photofeathers.wordpress.com/tag/lesser-prairie-chicken-festival/}{Lesser Prairie-Chicken, \textcopyright\,Linda Rockwell}
+
+\end{frame}
+
+%%
+
+
+\end{document}
+
+
