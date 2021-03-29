@@ -1,0 +1,234 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt]{article}  
+\usepackage[left=1in,right=1in,top=1in,bottom=0.5in]{geometry} 
+\geometry{letterpaper}                   		% 
+\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\setlength{\parindent}{0pt}
+
+\usepackage{graphicx}
+\graphicspath{%
+	{/Users/goby/Pictures/teach/466/lab/}}
+	
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+%\defaultfontfeatures{Mapping=tex} % converts LaTeX specials (``quotes'' --- dashes etc.) to unicode
+\setmainfont[Ligatures={Common, TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional, OldStyle}]{\mainfont}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+%\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+
+
+\usepackage[singlelinecheck=false]{caption}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+
+%\pagenumbering{gobble}
+%\usepackage{pdflscape}
+\usepackage{longtable}
+\usepackage[frenchlinks]{hyperref}
+\hypersetup{
+%	frenchlinks=true,
+	pdfborder={0 0 0}}
+\usepackage{booktabs}
+\usepackage{multicol}
+%\usepackage{amssymb}
+\usepackage{enumitem}
+\setlist{leftmargin=*}
+\setlist[1]{labelindent=\parindent}
+
+%\setlist{noitemsep}
+%\setlist[description]{style=multiline, leftmargin=1.25cm, parsep=1ex}
+
+\usepackage[sc]{titlesec}
+
+\usepackage{fancyhdr}
+\fancyhf{}
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{\footnotesize pg.~\thepage }
+\renewcommand{\headrulewidth}{0.4pt}
+
+\fancypagestyle{plain}{%
+	\fancyhf{}
+	\lhead{\textsc{bi}~466/666: Ornithology}
+	\rhead{Name: \enspace \makebox[2.5in]{\hrulefill}}
+	\renewcommand{\headrulewidth}{0pt}
+}
+
+
+\begin{document}
+\thispagestyle{plain}
+%\begin{landscape}
+
+\section*{Exploring the ebird database}
+
+This exercise will show you how to use the eBird database to address question related to the annual phenology of typical Missouri birds. Phenology is the study of natural cycles in the life history of organisms. 
+
+\textsc{Note:} eBird divides each month into four weeks. Week~1 is days 1–7, week~2 is days 8–14, week~3 is days 15–21, and week~4 is the remaining days of the month. 
+
+\subsection*{Part 1. Frequency graphs (10 pts)}
+
+\begin{enumerate}
+\item Go to \url{http://ebird.org}.
+
+\item Click the “Explore Data” tab, then “Bar Charts.”
+
+
+\item From the area labeled “Select a region:” choose “United States > Missouri” then “Entire Region.” Click “Continue” near the bottom.
+
+\item Find Tree Swallow and click on the Line Graph icon \raisebox{-3pt}{\includegraphics[height=12pt]{ebird_line_graph_icon}}.
+
+\item Click “Change species.”
+
+\item Add Carolina Wren and Dark-eyed Junco. You can use the 4-letter banding codes. You must click the full name of each species as it is presented. Be sure all three species have a blue checkmark, then click “Continue.”
+
+\item Hit ``Print screen'' on your keyboard or use a screen capture tool to capture the frequency graph. \label{capture_step}
+
+On Macintosh, you can press Command-Shift-4, then select just the graph. The image will be saved on your desktop as “Screen Shot $\dots$, where “$\dots$” is the date and time of the screen capture. Sorry, I don't know how to do something similar on \textsc{pc}s.
+
+If you capture the entire screen, you \emph{must} crop the capture down to just the frequency graph  to include in your assignment. The Interwebs will be full of helpful advice if you don't know how to do this.
+
+%\begin{enumerate}
+%\item After you hit ``Print screen'', open Paint
+%
+%\item Click ``Paste''. You should see the whole screen shot appear.
+%
+%
+%\item Make sure the ``Select'' tool is highlighted and select only the
+%graph by moving the cursor to draw a box around the graph. Once the
+%square is around the graph, right click and choose ``Crop''. The screen
+%should now \emph{only} show the graph.
+%
+%\item Save \textgreater{} save image to a location on your computer where
+%you can find it again.
+
+The graph you paste into your assignment should look \textbf{{exactly}}
+like the one below (nothing more, nothing less), except that your
+species are different.
+
+\includegraphics[width=3in]{ebird_crow_frequencies}
+
+%\item In a word document, click on the ``Insert'' tab \textgreater{} Click on
+%``Picture'' and navigate to where you saved your graph in the previous
+%step. Choose the image you want, click ``Insert''.
+
+
+%\end{enumerate}
+
+\item Click on the button labeled ``Change location.'' Change the region to all of Florida. 
+Continue. Repeat step~\ref{capture_step} and paste this figure below the first figure.
+
+\end{enumerate}
+
+\subsection*{Part 2. Interpret the data (20 pts)}
+
+Use the graphs you made in Part~1 to answer the following questions.
+Assume that data are accurate representations of trends; avoid using
+“human error,” in any capacity, as an explanation for trends in
+figures.
+
+\begin{enumerate}
+\item What is represented on the y-axis? What does this metric mean, how is it defined? How does this differ from abundance? What metric is on the x-axis?\label{question_first}
+
+\item Given your answer to question~\ref{question_first}, explain what the lines on your graphs
+represent. What general information does this figure provide you about
+each species? (What relationship, or trend, is being shown? Do not
+explain the trends for each species.)
+
+\item \textbf{Consider only the figure with data from Missouri:} Use the
+information in the figure as well as your Sibley Field Guide to describe
+how this figure relates to the \emph{phenology} of each of the three
+species shown. Write a separate paragraph for each species.
+Are there changes in frequency? If yes, why? What causes these changes
+in frequency? If no, why not? Be as detailed as possible in your
+explanations for changes, or the lack thereof, in the frequency of each
+species, this will require you to use your field guide or other sources
+for additional information.
+
+\item \textbf{Compare the trends from Missouri with Florida}: The axes in
+both graphs represent the same things, yet the trend lines for each
+species are different depending on the state. Compare the trend line for
+each species in Missouri vs. Florida. What do the similarities tell you
+about the species' phenology and geographic distribution? What do the
+differences tell you about the species' phenology and geographic
+distribution? Provide your answer as separate paragraphs for each
+species. You may also use your field guide for additional information.
+
+%\item \textbf{Best places to bird near campus?} In eBird, under the Explore
+%Data tab, click on ``Explore Hotspots''. Use this page to give me the
+%names of two \emph{specific} locations near Cape Girardeau that are
+%considered birding ``hotspots''.
+
+\end{enumerate}
+
+\subsection*{Part 3. Phenology of arrival and departure (20 pts)}
+
+
+\begin{enumerate}
+\item You are preparing for a field season studying the breeding behavior
+of American Redstarts in Cape Girardeau County. However, as this is your
+first year in Cape Girardeau you need to know when you should be ready
+to start monitoring breeding behavior---this requires knowledge of the
+average arrival date of American Redstarts in Cape Girardeau County. Set
+the eBird database for American Redstarts in Cape Girardeau County. Change the date to Spring Migration for the past five years. \emph{Do not count the current year. American Redstarts haven't arrived yet.} List
+the week of first arrival and the week of peak arrival for American Redstarts in Cape Girardeau County.  
+
+You can hover your cursor over the graph will show you the “Week starting on...” and the date. The date shown will be the first day of the eBird week. The graph will reflect the average of the five years.
+
+Repeat for the fall migration for the past five years. This will tell you the length of your field season.
+
+
+\item Use the eBird database for spring migration to determine
+whether Blackpoll Warbler have exhibited variation in migration
+phenology, in terms of arrival date, in Missouri (entire region) over the past~70 years.
+Has there been a change in arrival date over time? Explain your findings
+and provide a hypothesis to explain any change detected (if applicable).
+As part of your answer, record the earliest arrival date for this
+species for the following time periods (you will need to create a table
+in your assignment similar to the one below):
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+Time period & Arrival date\tabularnewline
+\midrule
+\endhead
+& \tabularnewline[-6pt]
+1950–1952 & \rule{2cm}{0.4pt}\tabularnewline[0.5em]
+1965–1970 & \rule{2cm}{0.4pt}\tabularnewline[0.5em]
+1975–1980 & \rule{2cm}{0.4pt}\tabularnewline[0.5em]
+1981–1985 & \rule{2cm}{0.4pt}\tabularnewline[0.5em]
+1986–1990 & \rule{2cm}{0.4pt}\tabularnewline[0.5em]
+1991–1995 & \rule{2cm}{0.4pt}\tabularnewline[0.5em]
+1996–2000 & \rule{2cm}{0.4pt}\tabularnewline[0.5em]
+2001–2005 & \rule{2cm}{0.4pt}\tabularnewline[0.5em]
+2006–2010 & \rule{2cm}{0.4pt}\tabularnewline[0.5em]
+2011–2016 & \rule{2cm}{0.4pt}\tabularnewline[0.5em]
+2017–2020 & \rule{2cm}{0.4pt}\tabularnewline
+\bottomrule
+\end{longtable}
+
+%\item Use the eBird database to create a new figure, similar to that made
+%in Part I, for 3 new species of birds. The 3 species must be from the
+%{same family}; one must be a year-round resident in MO, one a breeding
+%resident (only) in MO, and one a winter resident (only) in MO.
+%
+%Use the information in the figure you created as well as your Sibley
+%Field Guide to describe how this figure relates to the \emph{phenology}
+%of each of the three species shown (you should write a separate
+%paragraph for each species). Be as detailed as possible in your
+%explanations for changes, or the lack thereof, in the frequency of each
+%species. You must include information on where each species might be
+%found when not residing in MO as well as times of arrival and departure
+%from MO where applicable.
+\end{enumerate}
+
+
+\end{document}  
