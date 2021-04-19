@@ -1,0 +1,301 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[t]{beamer}
+
+%%%% HANDOUTS For online Uncomment the following four lines for handout
+%\documentclass[t,handout]{beamer}  %Use this for handouts.
+%\includeonlylecture{student}
+%\usepackage{handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
+%	\setbeamercolor{background canvas}{bg=black!5}
+
+
+%%% Including only some slides for students.
+%%% Uncomment the following line. For the slides,
+%%% use the labels shown below the command.
+
+%% For students, use \lecture{student}{student}
+%% For mine, use \lecture{instructor}{instructor}
+
+
+%\usepackage{pgf,pgfpages}
+%\pgfpagesuselayout{4 on 1}[letterpaper,border shrink=5mm]
+
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Biolinum O}
+\setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/466/lectures/}%
+	{img/}%
+	{/Users/goby/Pictures/teach/common/}} % set of paths to search for images
+
+\usepackage{amsmath,amssymb}
+
+%\usepackage{units}
+
+\usepackage{booktabs}
+\usepackage{multicol}
+%	\setlength{\columnsep=1em}
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+%\usepackage{textcomp}
+%\usepackage{setspace}
+%\usepackage{tikz}
+%	\tikzstyle{every picture}+=[remember picture,overlay]
+
+\mode<presentation>
+{
+  \usetheme{Lecture}
+  \setbeamercovered{invisible}
+  \setbeamertemplate{items}[square]
+}
+
+\usepackage{calc}
+\usepackage{hyperref}
+
+\newcommand\HiddenWord[1]{%
+	\alt<handout>{\rule{\widthof{#1}}{\fboxrule}}{#1}%
+}
+
+\newcommand\imagecredit[1]{%
+	\vskip0pt plus 1filll \tiny #1}%
+	
+
+\begin{document}
+
+
+\lecture{instructor}{instructor}
+
+{
+\begin{frame}[t,plain]{Grassland bird richness increases with habitat area.}
+	\centering
+		\includegraphics[width=0.85\textwidth]{grassland_fragment_size}
+
+	\imagecredit{\hfill Herkert 1994. Ecol. Appl. 4: 461.}
+\end{frame}
+}
+
+\lecture{student}{student}
+
+{
+\begin{frame}[t,plain]{Island bird richness increases with island area.}
+	\centering
+		\includegraphics[height=0.85\textheight]{island_species_area}
+
+	\imagecredit{\hfill Fig. 20–6 of textbook.}
+\end{frame}
+}
+
+{
+\begin{frame}[t,plain]{A model of island biogeography provides a framework for conservation management.}
+	\centering
+		\includegraphics[height=0.8\textheight]{island_biogeography_model}
+
+	\imagecredit{\hfill Fig. 20–5 of textbook.}
+\end{frame}
+}
+
+
+{
+
+\begin{frame}[t,plain]{Global forest cover is decreasing, especially in SE Asia.}
+	\begin{center}
+		\includegraphics[width=1\textwidth]{forest_global_loss}
+	\end{center}	
+	\imagecredit{Global Forest Watch}
+\end{frame}
+}
+
+{
+\begin{frame}[t,plain]{The U.S. was heavily deforested in the late 1800s.}
+	\begin{center}
+		\includegraphics[width=1\textwidth]{forest_land_trends}
+	\end{center}	
+	\imagecredit{U.S. Forest Service.}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{forest_us} }
+\begin{frame}[t,plain]{Forest density in the U.S. remains greatly decreased}
+	\imagecredit{\hfill NASA Earth Observatory.}
+\end{frame}
+}
+
+%% Carolina Parakeet, Ivory-billed Woodpecker by James St. John, Wikimedia Commons
+%% Passenger Pigeon, Cornell University Museum, Flickr CC
+%% Bachman's Warbler Louis Agassiz Fuertest, public domain
+
+%Kirtland's Warbler, USFWS, FCC
+% Distribution map, Thayerbirding.com
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{extinct_birds} }
+\begin{frame}[t,plain]{}
+\imagecredit{\textcolor{white}{Wikimedia Commons, Cornell University.}}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{kirtlands_warbler} }
+\begin{frame}[t,plain]{}
+\imagecredit{US Fish \& Wildlife Service, Flickr Creative Commons.}
+\end{frame}
+}
+
+\begin{frame}[t,plain]{Kirtland's Warbler requires specific breeding habitat.}
+	\begin{center}
+		\includegraphics[height=0.8\textheight]{kirtlands_warbler_distribution}
+	\end{center}	
+
+	\imagecredit{\hfill Stolen from \url{Thayersoftware.com}.}
+\end{frame}
+
+%% Flying flicker against blue sky is Jamie Chaves, FCC
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{bosque_del_apache} }
+\begin{frame}[t,plain]{}
+	\imagecredit{\hfill\textcolor{white}{Gail Diane Yovanovich, National Wildlife Refuge Association.}}
+\end{frame}
+}
+
+\lecture{instructor}{instructor}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{reserve_design_1} }
+\begin{frame}[t,plain]{}
+	\imagecredit{Fig. 21–13 of textbook.}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{reserve_design_2} }
+\begin{frame}[t,plain]{}
+	\imagecredit{Fig. 21–13 of textbook.}
+\end{frame}
+}
+
+\lecture{student}{student}
+
+\begin{frame}[t,plain]{Songbird fledging success increases in larger fragments.}
+	\begin{center}
+		\includegraphics[width=1\textwidth]{forest_edge_fledging_success}
+	\end{center}	
+
+	\imagecredit{\hfill Fig. 21–19 of textbook.}
+\end{frame}
+
+\begin{frame}[t,plain]{Nest parasitism decreases with increased forest cover.}
+	\begin{center}
+		\includegraphics[width=1\textwidth]{forest_parasitism}
+	\end{center}	
+
+	\imagecredit{\hfill Fig. 21–18 of textbook.}
+\end{frame}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{scrub_jay} }
+\begin{frame}[t,plain]{}
+	\imagecredit{\textcolor{white}{Andrea Westmoreland, Flickr Creative Commons.}}
+\end{frame}
+}
+
+\begin{frame}[t,plain]{The Florida Scrub-Jay distribution forms a metapopulation.}
+	\centering
+		\includegraphics[height=0.8\textheight]{scrub_jay_distribution}
+
+	\imagecredit{\hfill Fig. 21–14 of textbook.}
+\end{frame}
+
+
+\begin{frame}[t,plain]{Florida Scrub-Jay habitat requires burn management.}
+	\centering
+		\includegraphics[height=0.8\textheight]{scrub_jay_life_table}
+
+	\imagecredit{\hfill U.S. Fish \& Wildlife Service.}
+\end{frame}
+
+\begin{frame}[t,plain]{PVA shows 40 or more territories are needed to sustain a population.}
+	\centering
+		\includegraphics[height=0.8\textheight]{scrub_jay_pva}
+
+	\imagecredit{\hfill Fig. 21–15 of textbook.}
+\end{frame}
+
+\begin{frame}[t,plain]{Unsuitable habitat forces jays to disperse greater distances.}
+	\begin{center}
+		\begin{tabular}{@{}L{5cm}C{2.5cm}C{2.5cm}@{}}
+		\toprule
+		\vfill Habitat Type 	&	Normal Dispersal Distance (km)	&	Maximum Dispersal Distance (km) \\
+		\midrule
+		Breeding pair dispersal & 0 & \textemdash \\
+		Open water	&	2	&	2 \\
+		Urban areas	&	2	&	2  \\
+		Dense pine forest	&	2	&	3  \\
+		Unbroken, open pasture	&	3	&	7  \\
+		Cropland	&	3	&	7  \\
+		Densely wooded suburbs	&	5	&	8  \\
+		Suburbs with few trees	&	5	&	13  \\
+		Broken pasture, fence rows	&	8	&	24  \\
+		Overgrown scrub 	&	8	&	24  \\
+		\bottomrule
+		\end{tabular}
+	\end{center}
+	\imagecredit{\hfill U.S. Fish \& Wildlife Service.}
+\end{frame}
+
+\begin{frame}[t,plain]{Patch dynamics across landscape mosaics increases diversity.}
+	\centering
+		\includegraphics[width=1\textwidth]{forest_mosaic}
+
+	\imagecredit{\hfill Fig. 21–23 of textbook.}
+\end{frame}
+
+\begin{frame}[t,plain]{Clear-cutting and regeneration creates a diverse landscape.}
+	\centering
+		\includegraphics[width=0.9\textwidth]{forest_mosaic_clearcut}
+
+	\imagecredit{\hfill\copyright Nature Education.}
+\end{frame}
+
+\begin{frame}[t,plain]{Landscape mosaics contain an array of habitat types.}
+	\centering
+		\includegraphics[width=1\textwidth]{landscape_mosaic}
+
+	\imagecredit{\hfill Federal Interagency Stream Restoration Working Group. 1998.}
+\end{frame}
+
+\begin{frame}[t,plain]{Landscape mosaics increases bird diversity.}
+	\centering
+		\includegraphics[height=0.85\textheight]{landscape_mosaic_bird_community}
+
+	\imagecredit{\hfill Mabry et al. 2010. Forest Ecol. Manage. 260: 42.}
+\end{frame}
+
+
+\begin{frame}[t,plain]{Migratory birds require global conservation networks.}
+	\centering
+		\includegraphics[height=0.85\textheight]{important_bird_areas}
+
+	\imagecredit{\hfill Fig. 21–25 of textbook.}
+\end{frame}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{western_shorebird_network} }
+\begin{frame}[t,plain]{The Western Hemisphere Shorebird Reserve network targets wetland birds.}
+\end{frame}
+}
+
+
+
+\end{document}
