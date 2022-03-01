@@ -1,0 +1,56 @@
+% Page 1
+1. Long bill. Little Blue Heron
+2. Short bill. Carolina Chickadee
+3. Hooked bill. Mississippi Kite
+4. Crossed bill. Red Crossbill
+5. Compressed bill. Atlantic Puffin
+
+% Page 2
+6. Depressed bill. Northern Pintail
+7. Stout bill. Greater Prairie Chicken
+8. Terete bill. Ruby-throated Hummingbird
+9. Straight bill. Yellow-crowned Night-Heron
+10. Recurved bill. American Avocet
+11. Decurved bill. Carolina Wren and Long-billed Curlew
+12. Bent bill. American Flamingo
+
+% Page 3
+13. Swollen bill. Summer Tanager
+14. Acute bill. Blackburnian Warbler
+15. Chisel-like bill. Yellow-bellied Sapsucker
+16. Toothed bill. American Kestrel
+17. Serrate bill. Hooded Merganser
+18. Gibbous bill. Surf Scoter
+19. Spatulate bill. Northern Shoveler
+
+% Page 4
+20. Notched bill. Wood Thrush and American Robin
+21. Conical bill. American Goldfinch
+22. Lamellate bill. Lesser Scaup
+23. Angulated commissure. Rose-breasted Grosbeak
+24. Gular sac. American White Pelican
+
+% Page 5
+25. Square tail. Sharp-shinned Hawk
+26. Rounded tail. American Crow
+27. Graduated tail. Yellow-billed Cuckoo
+28. Pointed tail. Ring-necked Pheasant
+29. Emarginate tail. Purple Finch
+30. Forked tail. Barn Swallow
+
+% Page 6
+31. Incumbent hallux. Yellow-headed Blackbird
+32. Elevated hallux. Wild Turkey
+33. Anisodactyl toes. Northern Mockingbird
+34. Syndactyl toes. Belted Kingfisher
+35. Zygodactyl toes. Red-bellied Woodpecker
+36. Heterodactyl toes. Elegant Trogon
+
+% Page 7
+37. Pamprodactyl toes. Chimney Swift
+38. Raptorial toes. Red-tailed Hawk
+39. Semipalmated webbing. Semi-palmated Plover (photo) and mystery plover
+40. Totipalmate webbing. Double-crested Cormorant
+41. Palmate webbing. Mallard (hybrid)
+42. Lobate toes. American Coot
+
