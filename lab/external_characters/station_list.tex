@@ -1,0 +1,104 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt]{article}
+
+\usepackage{geometry}
+\geometry{letterpaper}                   
+\geometry{margin=0.5in}
+\usepackage[parfill]{parskip}    % Activate to begin paragraphs 
+\pagenumbering{gobble}
+
+\usepackage{fontspec}
+\setmainfont[Ligatures={Common,TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, BoldItalicFont={* BoldItalic}, Numbers={Proportional}]{Linux Libertine O}
+\setsansfont[Scale=MatchLowercase,Ligatures=TeX]{Linux Biolinum O}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata}
+\usepackage{microtype}
+
+\usepackage{multicol}
+
+
+\usepackage{enumitem}
+\setlist{leftmargin=*}
+\setlist[1]{labelindent=\parindent}
+
+
+\begin{document}
+\thispagestyle{empty}
+
+\setlength\columnsep{1.5cm}
+\fontsize{18}{24}\selectfont 
+\begin{multicols}{2}
+\begin{enumerate}[itemsep=1cm]
+% Page 1
+\item Long bill.\newline Little Blue Heron
+\item Short bill.\newline Carolina Chickadee
+\item Hooked bill.\newline Mississippi Kite
+\item Crossed bill.\newline Red Crossbill
+\item Compressed bill.\newline Atlantic Puffin
+%\end{enumerate}
+
+%\begin{enumerate}[resume, itemsep=1cm]
+% Page 2
+\item Depressed bill.\newline Northern Pintail
+\item Stout bill.\newline Greater Prairie Chicken
+\item Terete bill.\newline Ruby-throated Hummingbird
+\item Straight bill.\newline Yellow-crowned Night-Heron
+\item Recurved bill.\newline American Avocet
+\item Decurved~bill. Carolina~Wren~\& \newline Long-billed Curlew
+\item Bent bill. \newline American Flamingo
+%\end{enumerate}
+
+%\begin{enumerate}[resume, itemsep=1cm]
+% Page 3
+\item Swollen bill. \newline Summer Tanager
+\item Acute bill.\newline  Blackburnian Warbler
+\item Chisel-like bill. \newline Yellow-bellied Sapsucker
+\item Toothed bill. \newline American Kestrel
+\item Serrate bill. \newline Hooded Merganser
+\item Gibbous bill. \newline Surf Scoter
+\item Spatulate bill.\newline  Northern Shoveler
+%\end{enumerate}
+
+%\begin{enumerate}[resume, itemsep=1cm]
+% Page 4
+\item Notched~bill. Wood~Thrush~\& American Robin
+\item Conical bill. \newline American Goldfinch
+\item Lamellate bill. \newline Lesser Scaup
+\item Angulated commissure. \newline Rose-breasted Grosbeak
+\item Gular sac. \newline American White Pelican
+%\end{enumerate}
+
+%\begin{enumerate}[resume, itemsep=1cm]
+% Page 5
+\item Square tail. \newline Sharp-shinned Hawk
+\item Rounded tail. \newline American Crow
+\item Graduated tail. \newline Yellow-billed Cuckoo
+\item Pointed tail. \newline Ring-necked Pheasant
+\item Emarginate tail. \newline Purple Finch
+\item Forked tail. \newline Barn Swallow
+%\end{enumerate}
+
+%\begin{enumerate}[resume, itemsep=1cm]
+% Page 6
+\item Incumbent hallux. \newline Yellow-headed Blackbird
+\item Elevated hallux. \newline Wild Turkey
+\item Anisodactyl toes. \newline Northern Mockingbird
+\item Syndactyl toes. \newline Belted Kingfisher
+\item Zygodactyl toes. \newline Red-bellied Woodpecker
+\item Heterodactyl toes. \newline Elegant Trogon
+%\end{enumerate}
+
+%\begin{enumerate}[resume, itemsep=1cm]
+% Page 7
+\item Pamprodactyl toes. \newline Chimney Swift
+\item Raptorial toes. \newline Red-tailed Hawk
+\item Semipalmated~webbing. Photo~\& mystery plover%\newline Semipalmated Plover (photo) and mystery plover
+\item Totipalmate webbing. \newline Double-crested Cormorant
+\item Palmate webbing. \newline Mallard (hybrid)
+\item Lobate toes. \newline American Coot
+\end{enumerate}
+
+\end{multicols}
+
+\end{document}  
