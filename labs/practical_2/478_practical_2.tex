@@ -4,19 +4,21 @@
 \documentclass[11pt]{exam}
 \usepackage[left=1in,right=0.75in,top=1in]{geometry}     
 
-%\printanswers
+\printanswers
 
 
 \usepackage{fontspec}
 \def\mainfont{Linux Libertine O}
-\setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
-\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+\setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={OldStyle, Proportional}]{\mainfont}
 \setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
 \usepackage{microtype}
 
+% Used to get the last two digits of the year for the header below.
+\def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
+
 \pagestyle{headandfoot}
 %\firstpageheader{\bfseries{Ichthyology, Exam 1, F14}}{}{\bfseries{Name: \enspace \makebox[2.5in]{\hrulefill}}}
-\firstpageheader{\bfseries{Ichthyology, Lab Practical 2, F14}}{}{%
+\firstpageheader{\bfseries{Ichthyology, Lab Practical 2, \textsc{f}\short{\year}}}{}{%
 	\ifprintanswers\textbf{KEY}\else\bfseries{Name: \enspace \makebox[2.5in]{\hrulefill}}\fi}
 \runningheader{}{}{\small{pg. \thepage}}
 %\runningheadrule
