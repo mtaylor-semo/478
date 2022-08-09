@@ -1,13 +1,13 @@
 %!TEX TS-program = lualatex
 %!TEX encoding = UTF-8 Unicode
 
-\documentclass[t]{beamer}
+%\documentclass[t]{beamer}
 
 %%%% HANDOUTS For online Uncomment the following four lines for handout
-%\documentclass[t,handout]{beamer}  %Use this for handouts.
-%\includeonlylecture{student}
-%\usepackage{handoutWithNotes}
-%\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
+\documentclass[t,handout]{beamer}  %Use this for handouts.
+\includeonlylecture{student}
+\usepackage{handoutWithNotes}
+\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
 
 
 %% For students, use \lecture{student}{student}
@@ -68,7 +68,7 @@
 	\vspace{5ex}
 	\hangpara\hspace{17em} Mike Taylor
 
-	\hangpara\hspace{17em} RH 217
+	\hangpara\hspace{17em} RH~217
 
 	\hangpara\hspace{17em} mtaylor@semo.edu
 
@@ -76,21 +76,23 @@
 }
 
 %% Grades
-\begin{frame}[t,plain]{You earn your grade with }
+\begin{frame}[t]{You \highlight{earn} your grade with}
+	\begin{center}\large\begin{tabular}{@{}lll@{}}
+	UG		&	Three 75-point exams 				& 	50\% \\
+			&	Lab \& other assignments 			& 	40\% \\
+			&	Life history paper 					& 	10\% \\
+			&										&	\\
+	G / HC	&	Three $\geq$ 75-point exams 		& 	50\% \\
+			&	Lab \& other assignments 			& 	40\% \\
+			&	Life history paper \& presentation 	&	10\% \\
+	\end{tabular}
+	\end{center}
 
-	\hangpara \highlight{Online assignments} @ 10 points, 
+	\vspace{1.5\baselineskip}
 
-	\hspace{2em} Given approximately every second lecture.
-
-	\hangpara \highlight{Three exams} @ 100/125 points, 
-
-	\hangpara \highlight{Three lab practicals} @ 100 points,
+	\hspace{2em} Grads /Honors will present their life history paper (50 points),
 	
-	\hangpara \highlight{Ecological life history paper} @ 100 points,
-	
-	\hangpara \highlight{Presentation or evaluation} @10/50 points
-	
-	\hspace{2em} Grads will present their life history paper (50 points),
+	\vspace{\baselineskip}
 	
 	\hspace{2em} Undergrads will evaluate (10 points).
 
@@ -111,38 +113,37 @@
 	
 	\hspace{2em} Bibliography: 17 October,
 	
-	\hspace{2em} Paper: 14 November.
+	\hspace{2em} Paper: 21 November.
 	
 	\hangpara Graduate students will present during final exam period.
 
 \end{frame}
 
-%% Field Trips
-\begin{frame}[t,plain]{We will take \highlight{three Saturday field trips.}}
-
-	\hangpara Ozark upland stream: TBD %6 September (alternate 13 Sep). 
-	
-	\hangpara Lowland ditch: TBD %27 Sep (alternate ?).
-
-	\hangpara Mississippi River: TBD %4 Oct (alternate ?). 
-
-
-	\hangpara
-	
-	\hangpara The Ozark and Lowland trips will depart from campus at 8am. Return times unknown.
-	
-	\hangpara You are \highlight{required} to participate on two trips for 25 points each.\\ If you attend all three trips, you earn 10  extra credit points.
-	
-\end{frame}
-
+%%% Field Trips
+%\begin{frame}[t,plain]{We will take \highlight{three Saturday field trips.}}
+%
+%	\hangpara Ozark upland stream: TBD %6 September (alternate 13 Sep). 
+%	
+%	\hangpara Lowland ditch: TBD %27 Sep (alternate ?).
+%
+%	\hangpara Mississippi River: TBD %4 Oct (alternate ?). 
+%
+%
+%	\hangpara
+%	
+%	\hangpara The Ozark and Lowland trips will depart from campus at 8am. Return times unknown.
+%	
+%	\hangpara You are \highlight{required} to participate on two trips for 25 points each.\\ If you attend all three trips, you earn 10  extra credit points.
+%	
+%\end{frame}
+%
 %% Textbooks
-\begin{frame}[t,plain]{These two texts are for this course.}
-\begin{multicols}{2}
-	\begin{center}
-		\includegraphics[width=0.9\columnwidth]{helfman_cover} \\
-		\includegraphics[width=0.9\columnwidth]{pflieger_cover} \\
-	\end{center}
-\end{multicols}
+\begin{frame}[t,plain]{This textbook is optional for this course.}
+%\begin{multicols}{2}
+	\centering
+		\includegraphics[height=0.82\textheight]{helfman_cover} 
+%		\includegraphics[width=0.9\columnwidth]{pflieger_cover} \\
+%\end{multicols}
 \end{frame}
 
 
@@ -173,20 +174,20 @@
 \begin{frame}[t,plain]{Fishes outnumber all other vertebrates combined.}
 \begin{multicols}{2}
 	\begin{center}
-		\includegraphics[width=0.75\columnwidth]{nelson_fishes_world} \\
+		\includegraphics[width=0.75\columnwidth]{nelson_fishes_world_latest} \\
 	\end{center}
 	
 	\columnbreak
 	
-	\hangpara 62 orders
+	\hangpara 85 orders
 
-	\hangpara 515 families
+	\hangpara 536 families
 		
-	\hangpara 4494 genera
+	\hangpara 5,228 genera (\textit{Eschmeyer's,} 2022)
 		
-	\hangpara 27,977 species
+	\hangpara 32,000–36,000+ species
 	
-	\hangpara 34,000 species listed in {\small\highlight{\url{fishbase.org}}}
+	\hangpara 34,800 species listed in {\small\highlight{\url{fishbase.org}}}
 		
 \end{multicols}
 \end{frame}
