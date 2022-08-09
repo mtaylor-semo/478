@@ -1,0 +1,97 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[10pt, twoside]{article}
+
+\usepackage[left=1.2in,right=0.7in,top=0.8in,bottom=0.9in]{geometry} 
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\setlength{\parindent}{0pt}
+\pagenumbering{gobble}
+
+\usepackage[singlelinecheck=false]{caption}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\defaultfontfeatures{Mapping=tex-text} % converts LaTeX specials (``quotes'' --- dashes etc.) to unicode
+\setmainfont[Ligatures={Common}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{pdflscape}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{enumitem}
+
+\newlength{\mylength}
+\settowidth{\mylength}{\small{7.}}
+
+\begin{document}
+\begin{landscape}
+{\small%
+\begin{longtable}[l]{@{}L{5cm}|C{1.6cm}|C{1.6cm}|C{1.6cm}|C{1.6cm}|C{1.6cm}|C{1.6cm}|C{1.6cm}|C{1.6cm}|C{1.6cm}|@{}}
+\caption*{\textbf{ZO 478/678: Student presentations.}}\\
+\toprule
+Content Areas & C.\,Rankin & J.\,Hughes & D.\,Kleinberg & B.\,Westfall & M.\,Randall & K.\,Lambert & M.\,Hughes & A.\,Yount & J.\,Studdard\\ 
+\midrule
+\endfirsthead
+\toprule
+Content Areas & Rankin & JHughes & Kleinberg & Westfall & Randall & Lambert & MHughes & Yount & Studdard\\ 
+\midrule
+\endhead
+%% Row 1
+\textbf{Clarity, logic  and organization:}\par%
+\vspace{-0.5\baselineskip}
+\begin{enumerate}[itemsep=-0.25\baselineskip,align=left, leftmargin=*]
+\item Title and author,
+\item Distribution and range,
+\item Taxonomy,
+\item Food and feeding,
+\item Reproduction,
+\item Age and growth,
+\item Environmental requirements, \emph{or}
+Human relationships,
+\item Summary / Conclusion.
+\end{enumerate}&%
+& & & & & & & &\\[-1em]
+\midrule
+%% Row 2
+\textbf{Quality of slides:}\par%
+\vspace{-0.5\baselineskip}
+\begin{enumerate}[itemsep=-0.25\baselineskip,align=left, leftmargin=*]
+\item $\leq$ 6 Sentences per slide and $\leq$ 6 words per sentence, not including citations, %
+\item Citation included, \par%
+\item No spelling or grammatical errors,\par%
+\item Figures / tables were legible.\end{enumerate}&%
+& & & & & & & &\\[-1em]
+\midrule
+%% Row 3
+\textbf{Delivery pace and style:}\par%
+\vspace{-0.5\baselineskip}
+\begin{enumerate}[itemsep=-0.25\baselineskip,align=left, leftmargin=*]
+\item Presentation lasted 15 minutes leaving 5 minutes for questions, \par%
+\item Student’s voice was clear, \par%
+\item Student had correct, precise pronunciation of terms,\par%
+\item Student used slides as a guide: added more information than on slides.\end{enumerate}&%
+& & & & & & & &\\[-1em]
+\midrule
+%% Row 4
+\textbf{Response to questions:}\par%
+\vspace{-0.5\baselineskip}
+\begin{enumerate}[itemsep=-0.25\baselineskip,align=left, leftmargin=*]
+\item Student was able to answer questions with depth and clarity.\end{enumerate}&%
+& & & & & & & &\\[-1em]
+\midrule
+\textbf{Total Score} & & & & & & & & & \\[2em]
+\bottomrule
+\end{longtable}
+}%End small font size
+
+\end{landscape}
+\end{document}
