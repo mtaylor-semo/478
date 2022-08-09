@@ -1,27 +1,30 @@
 %!TEX TS-program = lualatex
 %!TEX encoding = UTF-8 Unicode
 
-\documentclass[nofonts, letterpaper]{tufte-handout}
+\documentclass[letterpaper]{tufte-handout}
 
 %\geometry{showframe} % display margins for debugging page layout
 
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures={Common,TeX}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={OldStyle}]{\mainfont}
+\setsansfont[Scale=MatchLowercase, Numbers={OldStyle}]{Linux Biolinum O} 
+\setmonofont{Linux Libertine O}
+\usepackage{microtype}
+
 \usepackage{graphicx} % allow embedded images
   \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
-  \graphicspath{{img/}} % set of paths to search for images
-  
-\usepackage{fontspec}
-  \setmainfont[Ligatures=TeX,Numbers={Proportional}]{Linux Libertine O}
-  \setsansfont{Linux Biolinum O}
-\usepackage{microtype}
-\usepackage{enumitem}
+  \graphicspath{{/Users/goby/Documents/teach/434/lectures/}} % set of paths to search for images
+
+\usepackage{amsmath}  % extended mathematics
+\usepackage{booktabs} % book-quality tables
+\usepackage{units}    % non-stacked fractions and better unit spacing
 \usepackage{multicol} % multiple column layout facilities
-%\usepackage{hyperref}
 %\usepackage{fancyvrb} % extended verbatim environments
 %  \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
 
-% Change the header to shift the title to the left side of the page. 
-% Replaced \quad with \hfill.  See \plaintitle in tufte-common.def
-{\fancyhead[RE,RO]{\scshape{\newlinetospace{\plaintitle}}\hfill\thepage}}
+\usepackage{enumitem}
+\usepackage{mhchem}
 
 \makeatletter
 % Paragraph indentation and separation for normal text
@@ -40,13 +43,18 @@
   \setlength{\parindent}{0.5pc}%
   \setlength{\parskip}{0pt}%
 }
-
 \makeatother
 
-\title{Study Guide 01}
-\author{The Science of Ichthyology; Form and Function}
+% Set up the spacing using fontspec features
+   \renewcommand\allcapsspacing[1]{{\addfontfeatures{LetterSpace=15}#1}}
+   \renewcommand\smallcapsspacing[1]{{\addfontfeatures{LetterSpace=10}#1}}
+
+\title{{\scshape zo} 478/678 Study Guide 01}
 
 \date{} % without \date command, current date is supplied
+
+%\newcommand\lecturefileA{478_lecture01_instructor}
+%\newcommand\lecturefileB{478_lecture02_instructor}
 
 \begin{document}
 
@@ -60,7 +68,7 @@ The\marginnote{The pages listed below are recommended reading from Helfman to su
 	\noindent \textbf{Study:} Pgs. 3--9, 15--16, 111--118, 126.\\
 	
 	\smallskip
-	\noindent \textbf{Required:} Webb, P. 1984. Form and function in fish swimming. Scientific American 251: 72--82. I will hand out the Webb paper in class but I will not discuss it in lecture. You are responsible for studying this paper on your own. Use the questions below as a guide.} study guides will help you learn the material.  Each study guide contains vocabulary to learn and a series of questions based on the lectures and the assigned reading from the textbook.  The guides may also contain information to supplement the lecture.  Read the study guides in advance of lecture to get familiar with the day's topic. Bring the study guide to class to see the vocabulary and questions in context of the lecture discussion.  This will help you recall the information during your regular study. I will not collect your answers to study guide questions.
+	\noindent \textbf{Required:} Webb, P. 1984. Form and function in fish swimming. Scientific American 251: 72--82. I will hand out the Webb paper in class but I will not discuss it in lecture. You are responsible for studying this paper on your own. Use the questions below as a guide. We will cover swimming in Lecture 02.} study guides will help you learn the material.  Each study guide contains vocabulary to learn and a series of questions based on the lectures and the assigned reading from the textbook.  The guides may also contain information to supplement the lecture.  Read the study guides in advance of lecture to get familiar with the day's topic. Bring the study guide to class to see the vocabulary and questions in context of the lecture discussion.  This will help you recall the information during your regular study. I will not collect your answers to study guide questions.
 
 \section{Vocabulary}
 The vocabulary lists terms from each lecture that you learn and be able to apply in a broader context.  I will use the terms in lectures and on exams. If you do not know the terms, you may not understand the lecture or be able to answer an exam question. I expect you to use the proper vocabulary in your answers to questions on exams and assignments.  Use the terms as you learn the material.  I may not cover all terms in class or do so only in passing.  I expect that you will learn them by reading your textbook and using the terms in the context of the course material.
@@ -111,7 +119,7 @@ isocercal tail
 You should \emph{write} clear and concise answers to each question in this section.  The questions are not necessarily independent.  Think broadly across lectures to see ``the big picture.''  Study guide questions may be used as a basis for short answer or essay exam questions. I may also write exam and assignment questions that do not appear on the study guides. These are guides, not exhaustive test banks.
 
 \begin{enumerate}
-	\item Know the proper suffixes for order, suborder, and family.
+	\item Know the proper suffixes for order, suborder, and family. Use them properly in formal and informal contexts.
 
 	\item What are the five classes that comprise living “fishes”?\sidenote{Table 1.1 of your text gives a slightly different classification scheme. Recent molecular evidence supports the arrangement I presented in lecture. You will later learn other classes of fishes that have only fossil representatives.}
 
