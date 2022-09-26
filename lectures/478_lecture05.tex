@@ -1,0 +1,204 @@
+ %!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\label{key}\documentclass[t]{beamer}
+
+%%%% HANDOUTS For online Uncomment the following four lines for handout
+%\documentclass[t,handout]{beamer}  %Use this for handouts.
+%\includeonlylecture{student}
+%\usepackage{handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
+%	\setbeamercolor{background canvas}{bg=black!5}
+
+
+%%% Including only some slides for students.
+%%% Uncomment the following line. For the slides,
+%%% use the labels shown below the command.
+
+%% For students, use \lecture{student}{student}
+%% For mine, use \lecture{instructor}{instructor}
+
+
+%\usepackage{pgf,pgfpages}
+%\pgfpagesuselayout{4 on 1}[letterpaper,border shrink=5mm]
+
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Biolinum O}
+\setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/478/lectures/}%
+	{/Users/goby/Pictures/teach/common/}} % set of paths to search for images
+
+\usepackage{amsmath,amssymb}
+
+%\usepackage{units}
+
+\usepackage{booktabs}
+\usepackage{multicol}
+%	\setlength{\columnsep=1em}
+
+\usepackage{textcomp}
+\usepackage{setspace}
+\usepackage{tikz}
+	\tikzstyle{every picture}+=[remember picture,overlay]
+
+\mode<presentation>
+{
+  \usetheme{Lecture}
+  \setbeamercovered{invisible}
+  \setbeamertemplate{items}[default]
+}
+
+\usepackage{calc}
+\usepackage{hyperref}
+
+
+\begin{document}
+%\lecture{instructor}{instructor}
+%\lecture{student}{student}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{sensory_how}}
+\begin{frame}
+
+\vfill
+
+\tinyfill\textcolor{white}{Carcharhiniformes: Carcharhinidae: \textit{Galeocerdo cuvier,} \href{https://commons.wikimedia.org/w/index.php?curid=7737291}{Albert kok, \ccbysa{3.0}.}}
+
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{sensory_mechanoreception}}
+\begin{frame}[t]{Fishes use \highlight{mechanoreception} to detect vibrations via \highlight{sensory hair cells}.}
+
+
+\vfilll
+
+\tinyfill Figs.~6.1 \& 6.2 \textcopyright\,Helfman et al.~2009
+
+\end{frame}
+}
+
+
+\begin{frame}[t]{Fishes can have superficial and canal \highlight{neuromasts.}}
+
+\includegraphics[width=\linewidth]{sensory_neuromasts}
+
+\end{frame}
+
+
+\begin{frame}[t]{Placement of lateralis system reduces interference from fins, maximizes signal from environment.}
+
+\includegraphics[width=\linewidth]{sensory_lateralis_placement}
+
+\vfilll
+
+\tinyfill Fig.~10.7 Moyle and Cech, Jr.~2004
+\end{frame}
+
+
+\begin{frame}[t]{\highlight{Otoliths} (ear stones) in the inner ear aid hearing and balance.}
+
+\vspace{-\baselineskip}
+\begin{multicols}{2}
+
+\includegraphics[width=0.9\linewidth]{sensory_sound}
+
+\columnbreak
+
+The \highlight{lapillus} otolith used primary for balance. The \highlight{sagitta} and \highlight{astericus} used primarily for hearing.
+
+\vspace{3\baselineskip}
+
+Swimbladder amplifies sound.
+
+\vspace{3\baselineskip}
+
+\highlight{Weberian apparatus} composed of bony ossicles that transfer sound to inner ear of otophysan fishes.
+
+\end{multicols}
+
+\end{frame}
+
+\lecture{instructor}{instructor}
+{
+\setbeamercolor{background canvas}{bg=black}
+\begin{frame}
+\centering
+
+\includegraphics[height=0.9\textheight]{sensory_coryphaenoides_inner_ear}
+
+\vfilll
+
+\tiny \textcolor{white}{Brain and inner ears, Gadiformes: Macrouridae: \textit{Coryphaenoides armata} \hfill A.~Popper, Laboratory of Bioacoustics, Univ.~Maryland}
+\end{frame}
+}
+
+{
+\setbeamercolor{background canvas}{bg=black}
+\begin{frame}
+\centering
+
+\includegraphics[height=0.9\textheight]{sensory_left_ear}
+
+\vfilll
+
+\tiny \textcolor{white}{Left ear, Gadiformes: Moridae: \textit{Antimora rostrata} \hfill A.~Popper, Laboratory of Bioacoustics, Univ.~Maryland}
+\end{frame}
+}
+
+
+{
+\setbeamercolor{background canvas}{bg=black}
+\begin{frame}
+\centering
+
+\includegraphics[height=0.9\textheight]{sensory_right_ear}
+
+\vfilll
+
+\tiny \textcolor{white}{Right ear, Gadiformes: Moridae: \textit{Antimora rostrata} \hfill A.~Popper, Laboratory of Bioacoustics, Univ.~Maryland}
+\end{frame}
+}
+
+
+
+
+\lecture{student}{student}
+
+\begin{frame}[t,plain]{Fishes use \highlight{chemoreception} to find food and habitat, detect predators, and communicate with conspecifics.}
+
+\vspace{-0.5\baselineskip}
+
+\begin{multicols}{2}
+
+\includegraphics[width=0.9\linewidth]{sensory_olfaction}
+
+\reflectbox{\includegraphics[width=0.9\linewidth]{sensory_barbels}}
+
+\columnbreak
+
+\highlight{Olfaction:} olfactory gland in nostrils detects chemical cues in the water.
+
+\vspace{5\baselineskip}
+
+\highlight{Gustation:} taste receptor cells and buds can occur in the mouth, lips, barbels, skin, and fins.
+\end{multicols}
+
+
+\vfilll
+
+\tiny Top: Lagler et al.~1977 \hfill Bottom: Perciformes: Mullidae: \textit{Upeneichthys lineatus,} \href{https://www.flickr.com/photos/71925535@N03/33984018120}{John Turnbull, \ccbyncsa{2.0}} 
+
+
+\end{frame}
+
+
+\end{document}
