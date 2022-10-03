@@ -1,7 +1,7 @@
  %!TEX TS-program = lualatex
 %!TEX encoding = UTF-8 Unicode
 
-\label{key}\documentclass[t]{beamer}
+\documentclass[t]{beamer}
 
 %%%% HANDOUTS For online Uncomment the following four lines for handout
 %\documentclass[t,handout]{beamer}  %Use this for handouts.
@@ -40,6 +40,11 @@
 %\usepackage{units}
 
 \usepackage{booktabs}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
 \usepackage{multicol}
 %	\setlength{\columnsep=1em}
 
@@ -200,6 +205,18 @@ Swimbladder amplifies sound.
 \end{frame}
 
 %
+
+\begin{frame}[t]{Ostariophysan fishes produce a substance (\highlight{schreckstoff}) that triggers alarm response in other individuals.}
+\centering
+\includegraphics[height=0.75\textheight]{sensory_schreckstoff_response}
+
+\vfilll
+
+\tiny Gonorhynchiformes, Cypriniformes, Siluriformes, Gymnotiformes, Characiformes \hfill Mathuru et al.~2012, Curr Biol 22: 538
+\end{frame}
+
+
+%
 {
 \usebackgroundtemplate{\includegraphics[width=\paperwidth]{sensory_ampullary}}
 \begin{frame}[t]{\highlight{Ampullary receptors} passively detect electrical signals.}
@@ -267,6 +284,10 @@ What physiological process do you think is used to build-up high O\textsubscript
 
 \end{multicols}
 
+\vfilll
+
+\tinyfill Collin~2018, Clin.~Exp.~Optom.~101: 624
+
 \end{frame}
 
 %
@@ -308,6 +329,116 @@ Environment can affect visual mate choice.
 
 \end{multicols}
 
+\end{frame}
+
+%
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{misc_intro}}
+\begin{frame}
+
+\vfill
+
+\tinyfill\textcolor{white}{Holocentriformes: Holocentridae: \textit{Sargocentron xantherythrum,} \href{https://en.wikipedia.org/wiki/File:Red_Fish_at_Papah\%C4\%81naumoku\%C4\%81kea_(cropped).jpg}{James Watt/NOAA, Public Domain.}}
+
+\end{frame}
+}
+
+\begin{frame}[t]{Migration is long-term movements that affect ecology.}
+
+\vspace{-\baselineskip}
+
+\begin{multicols}{2}
+
+\includegraphics[width=\linewidth]{migration_tuna}
+
+Feeding
+
+\columnbreak
+
+\includegraphics[width=\linewidth]{migration_salmon}
+
+Spawning
+
+
+%\vspace{8\baselineskip}
+
+
+\end{multicols}
+
+\vfilll
+
+\tiny Top: \href{https://www.fisheries.noaa.gov/feature-story/how-we-safeguard-atlantic-tunas}{Jeff Muir/NOAA, Public Domain} \hfill Bottom: \href{https://www.fws.gov/media/coho-and-sockeye-migration-russian-river}{Ryan Hagerty/USFWS, Public Domain}
+\end{frame}
+
+%
+
+\begin{frame}[t]{\highlight{Diadromy} is the movement of fishes between fresh and salt water.}
+
+\vspace{-\baselineskip}
+
+\begin{multicols}{2}
+
+\includegraphics[width=\linewidth]{diadromy_eel}
+
+\reflectbox{\includegraphics[width=\linewidth]{diadromy_salmon}}
+
+\columnbreak
+
+\highlight{Catadromy:} fresh- to saltwater to spawn.
+
+\highlight{Anadromy:} salt- to freshwater to spawn.
+
+\highlight{Amphidromy:} either way, \emph{not} to spawn.
+
+\vspace{\baselineskip}
+
+\includegraphics[width=\linewidth]{diadromy_lentipes}\\
+\tiny \textit{Lentipes concolor} \href{http://hbs.bishopmuseum.org/waipio/Critter\%20pages/lentipes.html}{Bishop Museum, Hawaii.}  \href{https://www.youtube.com/watch?v=mmwM7dwtvKA}{Link to video} 
+
+\end{multicols}
+
+
+\vfilll
+
+\tiny Top left: European Eel, \href{https://commons.wikimedia.org/wiki/File:Anguilla-anguilla_1.jpg}{Dmitriy Konstantinov \ccbysa{3.0}} \hfill Bottom left:  \href{https://www.fisheries.noaa.gov/species/sockeye-salmon}{\textit{Oncorhynchus nerka}, NOAA Fisheries, Public Domain}
+
+\end{frame}
+
+%
+
+\begin{frame}[t]{Fishes aggregate in unorganized \highlight{shoals} or organized, polarized \highlight{schools.}}
+
+\vspace{-\baselineskip}
+
+\begin{multicols}{2}
+
+\includegraphics[width=\linewidth]{shoaling_shoal2}\\
+Shoal
+
+\columnbreak
+
+\includegraphics[width=0.96\linewidth]{shoaling_baitball}\\
+School
+
+
+%\reflectbox{\includegraphics[width=0.96\linewidth]{shoaling_school_jacks}}
+
+\end{multicols}
+
+\vspace{\baselineskip}
+
+\begin{tabular}{L{0.465\textwidth}L{0.4\textwidth}}
+Hydrodynamic efficiency & Predator avoidance \tabularnewline
+
+Foraging efficiency & Reproductive efficiency \tabularnewline
+
+\end{tabular}
+
+\vfilll
+
+C4%81kea_(cropped).jpg
+\tiny Right:  \href{https://www.flickr.com/photos/42988059@N02/6868820995/in/album-72157629279028961/}{\textcopyright\,Critidoc, Flickr} \hfill Left: \href{https://en.wikipedia.org/wiki/File:Red_Fish_at_Papah\%C4\%81naumoku\%}{James Watt } %\href{https://oceanexplorer.noaa.gov/explorations/17cuba-reefs/logs/may30/may30.html}{NOAA Ocean Explorer} 
 \end{frame}
 
 
