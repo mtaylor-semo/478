@@ -5,23 +5,23 @@
 
 %\geometry{showframe} % display margins for debugging page layout
 
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures={Common,TeX}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={OldStyle,Proportional}]{\mainfont}
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
 \usepackage{graphicx} % allow embedded images
   \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
-  \graphicspath{{img/}} % set of paths to search for images
-  
-\usepackage{fontspec}
-  \setmainfont[Ligatures=TeX,Numbers={Proportional}]{Linux Libertine O}
-  \setsansfont{Linux Biolinum O}
-\usepackage{microtype}
-\usepackage{enumitem}
+  \graphicspath{	{/Users/goby/teach/163/lectures/}} % set of paths to search for images
+\usepackage{amsmath}  % extended mathematics
+\usepackage{booktabs} % book-quality tables
+\usepackage{units}    % non-stacked fractions and better unit spacing
 \usepackage{multicol} % multiple column layout facilities
-%\usepackage{hyperref}
 %\usepackage{fancyvrb} % extended verbatim environments
 %  \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
 
-% Change the header to shift the title to the left side of the page. 
-% Replaced \quad with \hfill.  See \plaintitle in tufte-common.def
-{\fancyhead[RE,RO]{\scshape{\newlinetospace{\plaintitle}}\hfill\thepage}}
+\usepackage{enumitem}
 
 \makeatletter
 % Paragraph indentation and separation for normal text
@@ -40,11 +40,16 @@
   \setlength{\parindent}{0.5pc}%
   \setlength{\parskip}{0pt}%
 }
-
 \makeatother
 
-\title{Study Guide 09}
-\author{General Ecology of Fishes}
+% Set up the spacing using fontspec features
+   \renewcommand\allcapsspacing[1]{{\addfontfeatures{LetterSpace=15}#1}}
+   \renewcommand\smallcapsspacing[1]{{\addfontfeatures{LetterSpace=10}#1}}
+
+
+\title{{\scshape zo} 478 Study Guide 09}
+
+%\author{}
 
 \date{} % without \date command, current date is supplied
 
@@ -52,38 +57,58 @@
 
 \maketitle	% this prints the handout title, author, and date
 
+\section*{Assemblage structure of coral reef fishes.}
 %\printclassoptions
 
-\section{Vocabulary}\marginnote{\textbf{Study:} pgs. 239 (Freshwater Fishes), 348--354, 492--495, 529 (Populations), 536--544.} 
+\section{Vocabulary}\marginnote{\textbf{Read:} pgs. 542-549.} 
 \vspace{-1\baselineskip}
 \begin{multicols}{2}
-population \\
-assemblage \\
-community \\
-niche \\
-fundamental niche \\
-realized niche \\
-guild \\
-competition \\
-resource partitioning \\
-character displacement \\
-predator \\
-prey
+recruitment \\
+pre-recruitment processes \\
+post-recruitment processes \\
+competition hypothesis \\
+lottery hypothesis \\
+recruitment limitation hypothesis \\
+predation hypothesis 
+%priority effect
 \end{multicols}
 
 \section{Concepts}
 
 \begin{enumerate}
-	\item Describe the different mechanisms or “filters” that ultimately determine which species of fishes occur at a given locality.  Provide an example of each, and then explain how each contributes to the observed assemblage or community.
+%	\item What is the ``stochastic-deterministic debate''? How does this relate to diversity of coral reef fishes?
 
-	\item Explain the difference between a population, an assemblage, and a community.
+	\item What is recruitment?
+	
+	\item Based on the recommended reading from your text and Figure 24.9, explain how pre-recruitment and post-recruitment processes\sidenote{Pre-recruitment processes affect the ability of new individuals to recruit into the coral reef community. Post-recruitment processes modify the number of new recruits after they have transformed from the larval stage and settled onto the reef.} may contribute to the assemblage of coral reef fishes.
+	
+	\item Explain each of the four specific hypotheses that have been proposed to explain the structure of reef communities.  Which (separately or in combination) do you think is the most likely explanation?  Justify your answer.
 
-	\item Explain the difference between a fundamental niche, a realized niche, and a guild.   
-
-	\item Explain how interspecific competition can lead to character displacement.
-
-	\item Describe how intraspecific competition can lead to fluctuations in population size.  What effect might population size fluctuations have on the overall assemblage?  Why?
-
+	\item Briefly describe each of the general observations about reef fish communities that were considered as the above hypotheses were developed in lecture.
+	
+	\item Which of the four hypotheses we discussed in class could be considered pre-recruitment processes? Which hypotheses could be considered post-recruitment processes?
+	
+	\item Which of the four hypotheses we discussed in class could be considered stochastic (random)?  Which could be considered deterministic (not random)?
+	
+	\item \textbf{I put a supplementary figure online for this lecture. The arrangement of the grid in the supplementary figure and the table below (e.g., intense competition w/ modified recruitment, weak competition with modified post-recruitment) corresponds to the name of the hypotheses shown below and in the final slide of this lecture.}
+	
+	\vspace*{\baselineskip}
+	
+	
+	\begin{tabular}{lll}
+	\toprule
+	& \multicolumn{2}{c}{Competition} \tabularnewline
+	\cmidrule(lr){2-3}
+	Post-recruitment & Intense	& Weak \tabularnewline
+	\midrule
+	Modified & Competition & Lottery \tabularnewline
+	Not modified & Recruitment limitation & Predation \tabularnewline
+	\bottomrule
+	\end{tabular}
+	
+%	\item What is the priority effect? How does it affect larval recruitment? How does the priority effect fit into the ``stochastic-deterministic'' continuum?
+	
 \end{enumerate}
+
 
 \end{document}

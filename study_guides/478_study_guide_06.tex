@@ -1,27 +1,27 @@
 %!TEX TS-program = lualatex
 %!TEX encoding = UTF-8 Unicode
 
-\documentclass[nofonts, letterpaper]{tufte-handout}
+\documentclass[letterpaper]{tufte-handout}
 
 %\geometry{showframe} % display margins for debugging page layout
 
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures={Common,TeX}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={OldStyle,Proportional}]{\mainfont}
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
 \usepackage{graphicx} % allow embedded images
   \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
-  \graphicspath{{img/}} % set of paths to search for images
-  
-\usepackage{fontspec}
-  \setmainfont[Ligatures=TeX,Numbers={Proportional}]{Linux Libertine O}
-  \setsansfont{Linux Biolinum O}
-\usepackage{microtype}
-\usepackage{enumitem}
+  \graphicspath{	{/Users/goby/teach/163/lectures/}} % set of paths to search for images
+\usepackage{amsmath}  % extended mathematics
+\usepackage{booktabs} % book-quality tables
+\usepackage{units}    % non-stacked fractions and better unit spacing
 \usepackage{multicol} % multiple column layout facilities
-%\usepackage{hyperref}
 %\usepackage{fancyvrb} % extended verbatim environments
 %  \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
 
-% Change the header to shift the title to the left side of the page. 
-% Replaced \quad with \hfill.  See \plaintitle in tufte-common.def
-{\fancyhead[RE,RO]{\scshape{\newlinetospace{\plaintitle}}\hfill\thepage}}
+\usepackage{enumitem}
 
 \makeatletter
 % Paragraph indentation and separation for normal text
@@ -40,11 +40,16 @@
   \setlength{\parindent}{0.5pc}%
   \setlength{\parskip}{0pt}%
 }
-
 \makeatother
 
-\title{Study Guide 06}
-\author{Evolutionary History and Trends; Jawless Fishes; Chondrichthyes}
+% Set up the spacing using fontspec features
+   \renewcommand\allcapsspacing[1]{{\addfontfeatures{LetterSpace=15}#1}}
+   \renewcommand\smallcapsspacing[1]{{\addfontfeatures{LetterSpace=10}#1}}
+
+
+\title{{\scshape zo} 478 Study Guide 06}
+
+%\author{}
 
 \date{} % without \date command, current date is supplied
 
@@ -52,13 +57,15 @@
 
 \maketitle	% this prints the handout title, author, and date
 
+\section*{Classification: Myxini – Chondrichthys.}
+
 %\printclassoptions
 
 \section{Vocabulary}\marginnote{\textbf{Study:} Chapters 2, 11; pages pgs 197--200, 205--229.} \marginnote{$^1$ Both Agnatha and Osteichthys are commonly seen and sometimes still used (incorrectly) in the literature.} \marginnote{† indicates extinct taxon.}
 \vspace{-1\baselineskip}
 \begin{multicols}{2}
-monophyletic \\
-paraphyletic \\
+%monophyletic \\
+%paraphyletic \\
 Cyclostomata \\
 Chondrichthyes \\
 Actinoptergyii \\

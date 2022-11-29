@@ -5,23 +5,23 @@
 
 %\geometry{showframe} % display margins for debugging page layout
 
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures={Common,TeX}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={OldStyle,Proportional}]{\mainfont}
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
 \usepackage{graphicx} % allow embedded images
   \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
-  \graphicspath{{img/}} % set of paths to search for images
-  
-\usepackage{fontspec}
-  \setmainfont[Ligatures=TeX,Numbers={Proportional}]{Linux Libertine O}
-  \setsansfont{Linux Biolinum O}
-\usepackage{microtype}
-\usepackage{enumitem}
+  \graphicspath{	{/Users/goby/teach/163/lectures/}} % set of paths to search for images
+\usepackage{amsmath}  % extended mathematics
+\usepackage{booktabs} % book-quality tables
+\usepackage{units}    % non-stacked fractions and better unit spacing
 \usepackage{multicol} % multiple column layout facilities
-%\usepackage{hyperref}
 %\usepackage{fancyvrb} % extended verbatim environments
 %  \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
 
-% Change the header to shift the title to the left side of the page. 
-% Replaced \quad with \hfill.  See \plaintitle in tufte-common.def
-{\fancyhead[RE,RO]{\scshape{\newlinetospace{\plaintitle}}\hfill\thepage}}
+\usepackage{enumitem}
 
 \makeatletter
 % Paragraph indentation and separation for normal text
@@ -42,8 +42,14 @@
 }
 \makeatother
 
-\title{Study Guide 08}
-\author{Neoptergyii, Miscellaneous Orders}
+% Set up the spacing using fontspec features
+   \renewcommand\allcapsspacing[1]{{\addfontfeatures{LetterSpace=15}#1}}
+   \renewcommand\smallcapsspacing[1]{{\addfontfeatures{LetterSpace=10}#1}}
+
+
+\title{{\scshape zo} 478 Study Guide 08}
+
+%\author{}
 
 \date{} % without \date command, current date is supplied
 
@@ -51,38 +57,55 @@
 
 \maketitle	% this prints the handout title, author, and date
 
+\section*{General ecology of fishes; ecology of freshwater fishes.}
+
 %\printclassoptions
 
-\section{Vocabulary}\marginnote{\textbf{Study:} pgs. 255--258, 261--263, 268--274, 291-292, 300--303. Skim through chapter 15 to get a feel for the diversity of spiny-rayed fishes. I do not have time in this course to cover the full diversity, unfortunately.} 
+\section{Vocabulary}\marginnote{\textbf{Study:} pgs. 239 (Freshwater Fishes), 348--354, 492--495, 529 (Populations), 536--544, Schlosser 1987.} 
 \vspace{-1\baselineskip}
 \begin{multicols}{2}
-Neoptergyii \\
-Division Teleostei \\
-Otophysans \\
-Cypriniformes \\
-Siluriformes \\
-Perciformes
+population \\
+assemblage \\
+community \\
+niche \\
+fundamental niche \\
+realized niche \\
+guild \\
+competition \\
+resource partitioning \\
+character displacement \\
+predator \\
+prey \\
+stream order \\
+stream gradient \\
+predator-prey interactions
 \end{multicols}
 
 \section{Concepts}
 
 \begin{enumerate}
-	\item Name the three groups that compose the Neopterygii.
+	\item Describe the different mechanisms or “filters” that ultimately determine which species of fishes occur at a given locality.  Provide an example of each, and then explain how each contributes to the observed assemblage or community.
 
-	\item Know the entire phylogeny of fishes down to the Division Teleostei.  Be able to fill in blanks on a provided phylogeny, and be able to insert a few missing branches into the proper position.  You need to be able to label and position the classes, subclasses, the ostracoderns, and the two orders that are sister to the Division Teleostei.\sidenote{A phylogeny and blank practice tree is available to you online.}
+	\item Explain the difference between a population, an assemblage, and a community.
 
-	\item Given a systematic level, you should be able to name the important groups within that systematic level, such as the two subclasses that make up the Class Sarcopterygii, or the three groups that comprise the Subclass Neoptergyii.  Conversely, I can ask you to name the higher systematic level, given a list of groups within that level, such as identifying the subclass that is formed by the Lepisosteiformes, Amiiformes and the Division Teleostei.
+	\item Explain the difference between a fundamental niche, a realized niche, and a guild.   
 
-	\item What internal anatomical characters related to sound reception unite the Cypriniformes and Siluriformes?  What is the name of this group?  What are the other two orders listed in class that belong this group? Refer back to Study Guide 08.\sidenote{Read also pages 269--274.}
+	\item Explain how interspecific competition can lead to character displacement.
 
-	\item What is the largest order of fishes in the world?  What is the largest family?  What is the largest family of fishes in Missouri?
-
-	\item What is the largest order of teleost fishes?  Is this order monophyletic?  What characters can generally distinguish this order?
-
-	\item What are the scientific names for the eight largest families of fishes within the Perciformes?  In total, approximately how many fishes are represented by these eight families?  
-
-	\item Name the five perciform families that have Missouri representatives.  Which one is the largest in Missouri (in the US for that matter).
-
+	\item Describe how intraspecific competition can lead to fluctuations in population size.  What effect might population size fluctuations have on the overall assemblage?  Why?
+	
+	\item What’s the difference between biotic and abiotic factors when discussing any aspect of ecology?  Provide some specific examples.
+	
+	\item How do stream gradient and stream order influence an assemblage of freshwater fishes?  Think broadly.  Consider all of the topics we discussed in class: temperature, water flow, substrate, community complexity, etc.
+	
+	\item What is the major determinant of fish assemblages in temperate freshwaters, environmental factors or biological interactions?  Which specific factors or interactions?  Can these change in different zones in a river or a lake?  What about tropical regions?
+	
+	\item Given a large temperate watershed, how would you expect a first or second order stream to differ from a fifth or sixth order stream?  What would be the dominant groups of fishes?  What are the relative effects of environment and species interactions?
+	
+	\item What specific processes allow for the coexistence of a large number of minnows or darters in an Ozark stream? Provide a reasonable example.
+		
+	\item Carefully read the paper handed out in class (also posted with slides for this lecture).\sidenote{Schlosser, I.J. 1987. A conceptual framework for fish communities in small warmwater streams. pp. 17--24. In: Matthews, W.J. and D.C. Heins (eds). \textit{Community and Evolutionary Ecology of North American Stream Fishes}. Univ. Oklahoma Press, Norman, OK.} Study the entire paper but concentrate on the section called “The Conceptual Framework.” Relate this paper to our discussion of stream order and stream gradient, plus the relevant information from the assigned textbook reading. You must read the entire paper because it provide the evidence Schlosser uses to build the conceptual framework.
+%
 \end{enumerate}
 
 \end{document}

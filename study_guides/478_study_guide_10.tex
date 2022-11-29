@@ -5,23 +5,23 @@
 
 %\geometry{showframe} % display margins for debugging page layout
 
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures={Common,TeX}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={OldStyle,Proportional}]{\mainfont}
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
 \usepackage{graphicx} % allow embedded images
   \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
-  \graphicspath{{img/}} % set of paths to search for images
-  
-\usepackage{fontspec}
-  \setmainfont[Ligatures=TeX,Numbers={Proportional}]{Linux Libertine O}
-  \setsansfont{Linux Biolinum O}
-\usepackage{microtype}
-\usepackage{enumitem}
+  \graphicspath{	{/Users/goby/teach/163/lectures/}} % set of paths to search for images
+\usepackage{amsmath}  % extended mathematics
+\usepackage{booktabs} % book-quality tables
+\usepackage{units}    % non-stacked fractions and better unit spacing
 \usepackage{multicol} % multiple column layout facilities
-%\usepackage{hyperref}
 %\usepackage{fancyvrb} % extended verbatim environments
 %  \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
 
-% Change the header to shift the title to the left side of the page. 
-% Replaced \quad with \hfill.  See \plaintitle in tufte-common.def
-{\fancyhead[RE,RO]{\scshape{\newlinetospace{\plaintitle}}\hfill\thepage}}
+\usepackage{enumitem}
 
 \makeatletter
 % Paragraph indentation and separation for normal text
@@ -40,45 +40,80 @@
   \setlength{\parindent}{0.5pc}%
   \setlength{\parskip}{0pt}%
 }
-
 \makeatother
 
-\title{Study Guide 10}
-\author{Ecology of Freshwater Fishes}
+% Set up the spacing using fontspec features
+   \renewcommand\allcapsspacing[1]{{\addfontfeatures{LetterSpace=15}#1}}
+   \renewcommand\smallcapsspacing[1]{{\addfontfeatures{LetterSpace=10}#1}}
 
-\date{} % without \date command, current date is supplied
+
+\title{{\scshape zo} 478 Study Guide 10}
+
+%\author{}
+
+\date{} % without \date comma nd, current date is supplied
 
 \begin{document}
 
 \maketitle	% this prints the handout title, author, and date
 
+\section*{Adaptations to “extreme” conditions}
+
 %\printclassoptions
 
-\section{Vocabulary}\marginnote{\textbf{Study:} 539--542; Schlosser 1987.} 
+\section{Vocabulary}\marginnote{\textbf{Study:} pgs. 393--401, 405--410, 417--419..} 
 \vspace{-1\baselineskip}
 \begin{multicols}{2}
-slope of the land \\
-stream order \\
-stream gradient \\
-predator-prey interactions \\
-resource partitioning \\
-competition
+mesopelagic \\
+bathypelagic \\
+benthopelagic \\
+evolutionary convergence \\
+tropical submergence \\
+%hypogean \\
+%troglobite \\
+Antarctic convergence \\
+antifreeze glycoproteins
+glomeruli 
 \end{multicols}
 
 \section{Concepts}
 
 \begin{enumerate}
-	\item What’s the difference between biotic and abiotic factors when discussing any aspect of ecology?  Provide some specific examples.
+	\item What characteristics would you use to distinguish between mesopelagic and bathypelagic fishes?  (e.g., musculature, eye size, etc).  Why do these characteristics differ between mesopelagic and bathypelagic fishes?
 
-	\item How do stream gradient and stream order influence an assemblage of freshwater fishes?  Think broadly.  Consider all of the topics we discussed in class: temperature, water flow, substrate, community complexity, etc.
+	\item List some of the environmental parameters of the deep-sea environment and specific adaptations that have allowed fishes to live in this habitat.
 
-	\item What is the major determinant of fish assemblages in temperate freshwaters, environmental factors or biological interactions?  Which specific factors or interactions?  Can these change in different zones in a river or a lake?  What about tropical regions?
+	\item How does the swim bladder and rete mirabile differ between a deep-sea species and a closely related shallow-water species?
 
-	\item Given a large temperate watershed, how would you expect a first or second order stream to differ from a fifth or sixth order stream?  What would be the dominant groups of fishes?  What are the relative effects of environment and species interactions?
+	\item Describe specific adaptations that allow fishes to take advantage of limited prey in the deep sea.
 
-	\item What specific processes allow for the coexistence of a large number of minnows or darters in an Ozark stream? Provide a reasonable example.
+	\item What are the uses of bioluminescence by deep-sea fishes?  Provide specific examples.
+
+	\item Why do many mesopelagic fishes have ventral photophores?  Why do many mesopelagic fishes have countershading?
+
+	\item Why do many mesopelagic fishes make nightly migrations to the epipelagic region?  How does this relate to the productivity of the epipelagic region? Your overall answer should address something more than “to feed.”  Relate it to productivity of the region.  
+
+%	\item The epipelagic and benthopelagic (benthic region of the open ocean) contain the highest productivity, compared to the lower productivity of the intervening water column (e.g., mesopelagic and bathypelagic).  What accounts for the increase in productivity at the benthopelagic region?  Think broadly: account for \emph{all} sources of trophic input.
+
+	\item The deep-sea is the largest habitat on earth.  What are the specific difficulties that a fish must overcome to be successful as an inhabitant of this vast volume?  What adaptations do they have to be successful?  Explain.
 	
-	\item Carefully read the paper handed out in class.\sidenote{Schlosser, I.J. 1987. A conceptual framework for fish communities in small warmwater streams. pp. 17--24. In: Matthews, W.J. and D.C. Heins (eds). \textit{Community and Evolutionary Ecology of North American Stream Fishes}. Univ. Oklahoma Press, Norman, OK.} Study the entire paper but concentrate on the section called “The Conceptual Framework.” Relate this paper to our discussion of stream order and stream gradient, plus the relevant information from the assigned textbook reading. You must read the entire paper because it provide the evidence Schlosser uses to build the conceptual framework.
+%	\item Explain sexual parasitism in ceratioid anglerfishes.
+
+%	\item Explain how loosejaws use red light to search for prey when they can’t actually see red light.
+
+	\item Explain the evolutionary convergence of troglobitic\sidenote{Adapted to permanant life in caves.} fishes and bathypelagic fishes.  What are the similar environmental factors and how have each group of fishes adapted?
+
+	\item How have troglobitic fishes adapted to the low productivity of the cave environment?
+
+	\item Explain how the grotto sculpin in Perry County appears to represent an adaptive transition from a surface habitat to the cave habitat?  What morphological and physiological changes are occurring?
+
+	\item Polar fishes live at or near freezing temperatures of sea water.  What adaptations prevent fishes from freezing?
+
+	\item Which polar fishes lack glomeruli and why?
+
+	\item How can some polar fishes survive without hemoglobin?  What adaptions are necessary?  Explain how each contributes to oxygen uptake or distribution in fishes without hemoglobin.
+
+	\item All notothenioids lack a swim bladder, but some species have achieved neutral buoyancy.  Explain how they have achieved neutrality.  Why is this important?
 
 \end{enumerate}
 
