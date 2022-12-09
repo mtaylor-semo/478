@@ -1,0 +1,283 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt]{exam}
+\usepackage[left=1in,right=0.75in,top=1in]{geometry}     
+
+%\printanswers
+
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional, OldStyle}]{\mainfont}
+%\setmonofont[Scale=MatchLowercase]{Linux Libertine Mono O} 
+%\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/478/exams/}}%
+
+
+% Used to get the last two digits of the year for the header below.
+\def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
+
+\pagestyle{headandfoot}
+%\firstpageheader{\bfseries{Ichthyology, Exam 1, F14}}{}{\bfseries{Name: \enspace \makebox[2.5in]{\hrulefill}}}
+\firstpageheader{Ichthyology, lab practical 2, \textsc{f}\short{\year}}{}{%
+	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
+\runningheader{}{}{\small{pg. \thepage}}
+%\runningheadrule
+
+\footer{}{}{}%{\makebox[0.75in]{\hrulefill}}
+\extrafootheight{-0.5in}
+
+\usepackage{multicol}
+\usepackage{booktabs}
+
+%% Remove comment %% to print answer key.
+\unframedsolutions
+\renewcommand{\solutiontitle}{}
+\SolutionEmphasis{\bfseries}
+
+%% Create a Matching question format
+\newcommand*\Matching[1]{
+\ifprintanswers
+	\textbf{#1}
+\else
+	\rule{2.1in}{0.4pt}
+\fi
+}
+\newlength\matchlena
+\newlength\matchlenb
+\settowidth\matchlena{\rule{2.1in}{0pt}}
+\newcommand\MatchQuestion[2]{%
+	\setlength\matchlenb{\linewidth}
+	\addtolength\matchlenb{-\matchlena}
+	\parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}}
+
+\pointname{}
+
+\newcommand{\station}[1]{\fullwidth{\textbf{Station~#1}}}
+
+\begin{document}
+
+\begin{questions}
+
+\fullwidth{Each question is worth 2 points, including extra credit questions (labeled \textsc{ec}). I don't grade for spelling errors if I can identify the word you write but you may lose a point for each especially bad spelling error. \emph{Be sure to write your answer in the blank that corresponds to the question number.}}
+%\vspace{-2\baselineskip}
+
+\vspace{2\baselineskip}
+
+\begin{multicols}{2}
+% 1
+%\question\MatchQuestion{Sciaenidae}{}
+%\vspace{2\baselineskip}
+
+%2
+%\question\MatchQuestion{Bottom Rover}{}
+%\vspace{2\baselineskip}
+
+% 1
+%\station{1}
+%\question\MatchQuestion{Precaudal (Amia)}{}
+\question\MatchQuestion{Petromyzontida}{}
+\vspace{2\baselineskip}
+
+%2
+\question\MatchQuestion{Petromyzontiformes}{}
+\vspace{2\baselineskip}
+
+%3
+\question\MatchQuestion{Myxini}{}
+\vspace{2\baselineskip}
+
+%4
+\question\MatchQuestion{Myxiniformes}{}
+\vspace{2\baselineskip}
+
+%5
+\question\MatchQuestion{teeth or barbels}{}
+\vspace{2\baselineskip}
+
+%6ec
+\question[\textsc{ec}]\MatchQuestion{Hagfish}{}
+\vspace{2\baselineskip}
+
+%\station{2}
+%7
+\question\MatchQuestion{Characiformes}{}
+\vspace{2\baselineskip}
+
+%8
+\question\MatchQuestion{Siluriformes}{}
+\vspace{2\baselineskip}
+
+%9
+\question\MatchQuestion{Otophysi}{}
+\vspace{2\baselineskip}
+
+%10
+\question\MatchQuestion{Weberian apparatus/ossicles}{}
+\vspace{2\baselineskip}
+
+% Station 3
+%11
+\question\MatchQuestion{Pleuronectiformes}{}
+\vspace{2\baselineskip}
+
+%12
+\question\MatchQuestion{Tetraodontiformes}{}
+\vspace{2\baselineskip}
+
+%13
+\question\MatchQuestion{Teleostei}{}
+\vspace{2\baselineskip}
+
+% Station 4
+%14
+\question\MatchQuestion{Esociformes}{}
+\vspace{2\baselineskip}
+
+%15
+\question\MatchQuestion{Beloniformes}{}
+\vspace{2\baselineskip}
+
+%16
+\question\MatchQuestion{Lie-in-wait/ambush}{}
+\vspace{2\baselineskip}
+
+% Station 5
+%17
+\question\MatchQuestion{Stomiiformes}{}
+\vspace{2\baselineskip}
+
+%18
+\question\MatchQuestion{Myctophiformes}{}
+\vspace{2\baselineskip}
+
+%19
+\question\MatchQuestion{Mesopelagic}{}
+\vspace{2\baselineskip}
+
+% Station 6
+%20
+\question\MatchQuestion{Anguiliformes}{}
+\vspace{2\baselineskip}
+
+%21ec
+\question[\textsc{ec}]\MatchQuestion{Muraenidae}{}
+\vspace{2\baselineskip}
+
+%22
+\question\MatchQuestion{Elopiformes}{}
+\vspace{2\baselineskip}
+
+%23
+\question\MatchQuestion{Leptocephalus larvae}{}
+\vspace{2\baselineskip}
+
+%24ec
+\question[\textsc{ec}]\MatchQuestion{Eel-like}{}
+\vspace{2\baselineskip}
+
+%\newpage
+
+%Station 7
+%25
+\question\MatchQuestion{Chondrichthys}{}
+\vspace{2\baselineskip}
+
+%26
+\question\MatchQuestion{Holocephali}{}
+\vspace{2\baselineskip}
+
+%27
+\question\MatchQuestion{Chimaeriformes}{}
+\vspace{2\baselineskip}
+
+% Station 8
+%28
+\question\MatchQuestion{Chondrostei}{}
+\vspace{2\baselineskip}
+
+%29
+\question\MatchQuestion{Acipenseriformes}{}
+\vspace{2\baselineskip}
+%
+%30
+\question\MatchQuestion{Neopterygii}{}
+\vspace{2\baselineskip}
+
+%31
+\question\MatchQuestion{Amiiformes}{}
+\vspace{2\baselineskip}
+
+% Station 9
+%32
+\question\MatchQuestion{Selachii}{}
+\vspace{2\baselineskip}
+
+%33
+\question\MatchQuestion{Carcharhiformes}{}
+\vspace{2\baselineskip}
+
+%34
+\question\MatchQuestion{Batoidea}{}
+%\vspace{2\baselineskip}
+
+\columnbreak
+
+%35
+\question\MatchQuestion{Torpediniformes}{}
+\vspace{2\baselineskip}
+
+%Station 10
+%36
+\question\MatchQuestion{Mugiliformes}{}
+\vspace{2\baselineskip}
+
+%37
+\question\MatchQuestion{Atheriniformes}{}
+\vspace{2\baselineskip}
+
+%38
+\question\MatchQuestion{Cyprinodontiformes}{}
+\vspace{2\baselineskip}
+
+%Station 11
+%39
+\question\MatchQuestion{Batrachoidiformes}{}
+\vspace{2\baselineskip}
+
+%40
+\question\MatchQuestion{Lophiformes}{}
+\vspace{2\baselineskip}
+
+% Station 12
+%41
+\question\MatchQuestion{Actinopterygii}{}
+\vspace{2\baselineskip}
+
+%42
+\question\MatchQuestion{Percopsiformes}{}
+\vspace{2\baselineskip}
+
+%43
+\question\MatchQuestion{Anus at throat}{}
+\vspace{2\baselineskip}
+
+%44
+\question[\textsc{ec}]\MatchQuestion{Any}{}
+\vspace{2\baselineskip}
+
+%%45
+\question\MatchQuestion{Sarcoptergyii}{}
+%\vspace{2\baselineskip}
+
+
+
+\end{multicols}
+
+\end{questions}
+\end{document}
