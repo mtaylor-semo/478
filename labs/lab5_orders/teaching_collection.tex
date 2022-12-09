@@ -1,0 +1,234 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt, hidelinks]{exam}
+\usepackage{graphicx}
+\graphicspath{{/Users/goby/Pictures/teach/434/handouts/}
+	{img/}} % set of paths to search for images
+
+\usepackage{geometry}
+\geometry{letterpaper, left=1.5in, bottom=1in}                   
+%\geometry{landscape}                % Activate for for rotated page geometry
+\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{amssymb, amsmath}
+\usepackage{mathtools}
+\everymath{\displaystyle}
+
+\usepackage{fontspec}
+\setmainfont[Ligatures={TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, BoldItalicFont={* BoldItalic}, Numbers={OldStyle}]{Linux Libertine O}
+\setsansfont[Scale=MatchLowercase,Ligatures=TeX]{Linux Biolinum O}
+\setmonofont[Scale=MatchLowercase]{Linux Libertine Mono O}
+\usepackage{microtype}
+
+% This defines \amper for the fancy ampersand
+% to be used in the header. See
+% https://tex.stackexchange.com/a/58185/39194
+\usepackage{xspace}
+\newfontfamily\amperfont[Style=Alternate]{Linux Libertine O}    
+\makeatletter
+\DeclareRobustCommand{\amper}{{\amperfont\ifx\f@shape\scname\smaller[1.2]\fi\&}\xspace}
+\makeatother
+
+% To define fonts for particular uses within a document. For example, 
+% This sets the Libertine font to use tabular number format for tables.
+%\newfontfamily{\tablenumbers}[Numbers={Monospaced}]{Linux Libertine O}
+% \newfontfamily{\libertinedisplay}{Linux Libertine Display O}
+
+\usepackage{booktabs}
+\usepackage{multicol}
+\usepackage[normalem]{ulem}
+
+\usepackage{longtable}
+%\usepackage{siunitx}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+\usepackage{enumitem}
+\usepackage{hyperref}
+%\usepackage{placeins} %PRovides \FloatBarrier to flush all floats before a certain point.
+\usepackage{hanging}
+
+\usepackage[sc]{titlesec}
+
+\pagestyle{headandfoot}
+\firstpageheader{\textsc{zo}\,478/678 Ichthyology}{}{Representative Families of the World}
+\runningheader{}{}{\footnotesize{pg.~\thepage}}
+\footer{}{}{}
+\runningheadrule
+
+\newcommand{\onedent}{\hspace*{1em}}
+\newcommand{\twodent}{\hspace*{2em}}
+\newcommand{\thrdent}{\hspace*{3em}}
+
+\begin{document}
+
+\noindent\begin{multicols}{2}
+
+
+\textbf{\textsc{ Class Myxini}} \\
+\onedent Myxiniformes\\
+\twodent Myxinidae (1)
+
+\textbf{\textsc{Class Petromyzontida}}\\
+\onedent Petromyzontiformes \\
+\twodent Petromyzontidae (2)
+
+\textbf{\textsc{Class Chondrichthys}}\\
+\textbf{Subclass Holocephali} \\
+\onedent Chimaeriformes \\
+\twodent Chimaeridae (3)
+
+\textbf{Subclass Elasmobranchii}\\
+\hspace*{0.33em}\textbf{Division Neoselachii\footnote{Not required to know}}\\
+\hspace*{0.67em}\textbf{Subdivision Selachii }\\
+\onedent Carcharhiniformes \\
+\twodent Scyliorhinidae (4) \\
+\twodent Carcharhinidae (5) \\
+\onedent Squaliformes \\
+\twodent Dalatiidae (6)
+
+\hspace*{0.67em}\textbf{Subdivision Batoidea}\\
+\onedent Torpediniformes \\
+\twodent Torpedinidae (7) \\
+\onedent Rajiformes \\
+\twodent Rajidae (8) \\
+\onedent Myliobatiformes \\
+\twodent Dasyatidae (9)
+
+\textbf{\textsc{Class Actinopterygii}}\\
+\textbf{Subclass Chondrostei} \\
+\onedent Acipenseriformes\\ 
+\twodent Polyodontidae (10)
+
+\textbf{Subclass Neopterygii}\\
+\onedent Lepisosteiformes \\
+\twodent Lepisosteidae (11) \\
+\onedent Amiiformes\\
+\twodent Amiidae (12)\\
+\columnbreak
+
+\textbf{\textsc{Class Actinopterygii} (con't)}\\
+\textbf{Subclass Neopterygii (con't)}\\
+\hspace*{0.67em}\textbf{Division Teleostei}\\
+\onedent Hiodontiformes\\
+\twodent Hiodontidae (13)\\
+\onedent Osteoglossiformes\\
+\twodent Ignore if no spm (14)\\
+\onedent Elopiformes\\
+\twodent Elopidae (15)\\
+\onedent Anguilliformes\\
+%Muraenoidei\\
+\twodent Muraenidae (16)\\
+%Congroidei\\
+\twodent Ophichthyidae (17)\\
+\onedent Clupeiformes\\
+\twodent Engraulidae (18)\\
+\twodent Clupeidae (19)\\
+\onedent Cypriniformes\\
+\twodent Cyprinidae (20)\\
+\twodent Catostomidae (21)\\
+\onedent Characiformes\\
+\twodent Characidae (22)\\
+\onedent Siluriformes\\
+\twodent Loricariidae (23)\\
+\twodent Bagridae (24)\\
+\onedent Gymnotiformes\\
+\twodent ignore if no spm (25)\\
+\onedent Esociformes\\
+\twodent Esocidae (26)\\
+\twodent Umbridae (27)\\
+\onedent Salmoniformes\\
+\twodent Salmonidae (28)\\
+\onedent Stomiiformes\\
+%Gonostomatoidei\\
+\twodent Gonostomatidae (29)\\
+\twodent Sternoptychidae (30)\\
+%Phosichthyoidei\\
+\twodent Stomiidae (31)\\
+\onedent Aulopiformes\\
+\twodent Notosudidae (32)\\
+\onedent Myctophiformes\\
+\twodent Myctophidae (33)\\ 
+\onedent Percopsiformes\\
+\twodent Aphredoderidae (34)\\
+\twodent Amblyopsidae (35)\\
+
+\textbf{Subclass Neopterygii (con't)}\\
+\hspace*{0.67em}\textbf{Division Teleostei (con't)}\\
+\onedent Gadiformes\\
+\twodent Macrouridae (36)\\
+\twodent Gadidae (37)\\
+\onedent Batrachoidiformes\\
+\twodent Batrachoididae (38)\\
+\onedent Lophiiformes\\
+%Antennarioidei\\
+\twodent Antennariidae (39)\\
+%Ogcocephalioidei\\
+\twodent Ogcocephalidae (40)\\
+\onedent Mugiliformes\\
+\twodent Mugilidae (41)\\
+\onedent Atheriniformes\\
+\twodent Atherinidae (42)\\
+\onedent Beloniformes\\
+\twodent Exoceotidae (43)\\
+\twodent Belonidae (44)\\
+\onedent Cyprinodontiformes\\
+\twodent Fundulidae (45)\\
+\twodent Poeciliidae (46)\\
+\onedent Gasterosteiformes\\
+%Gasterosteoidei\\
+\twodent Gasterosteidae (47)\\
+%Syngnathoidei\\
+\twodent Syngnathidae (48)\\
+\onedent Scorpaeniformes\\
+%Scorpaenoidei\\
+\twodent Scorpaenidae (49)\\
+\twodent Triglidae (50)\\
+%Cottoidei\\
+\twodent Cottidae (51)\\
+\textbf{Subclass Neopterygii (con't)}\\
+\hspace*{0.67em}\textbf{Division Teleostei (con't)}\\
+\onedent Perciformes\\
+%Percoidei\\
+\twodent Moronidae (52)\\
+\twodent Echeneidae (53)\\
+\twodent Carangidae (54)\\
+\twodent Sciaenidae (55)\\
+%Elassomatoidei\\
+\twodent Elassomatidae (56)\\
+%Labroidei\\
+\twodent Cichlidae (57)\\
+\twodent Pomacentridae (58)\\
+%Trachinoidei\\
+\twodent Uranoscopidae (59)\\
+%Blennioidei\\
+\twodent Blennidae (60)\\
+%Gobiesocoidei\\
+\twodent Gobiesocidae (61)\\
+%Gobioidei\\
+\twodent Gobiidae (62)\\
+%Scombroidei\\
+\twodent Scombridae (63)\\
+%Stromateoidei\\
+\twodent Stromateidae (64)\\
+%Anabantoidei\\
+\twodent Osphronemidae (65)\\
+\onedent Pleuronectiformes\\
+\twodent Pleuronectidae (66)\\
+\twodent Paralichthyidae (67)\\
+\twodent Achiridae (68)\\
+\onedent Tetraodontiformes\\
+%Balistoidei\\
+\twodent Monacanthidae (69)\\
+%Tetraodontoidei\\
+\twodent Tetraodontidae (70)\\
+\twodent Diodontidae (71)
+
+\textbf{\textsc{Class Sarcopterygii}}\\
+No specimens, unfortunately
+
+\end{multicols}
+
+\end{document}  

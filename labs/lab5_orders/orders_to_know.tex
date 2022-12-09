@@ -1,0 +1,273 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt, hidelinks]{exam}
+\usepackage{graphicx}
+\graphicspath{{/Users/goby/Pictures/teach/434/handouts/}
+	{img/}} % set of paths to search for images
+
+\usepackage{geometry}
+\geometry{letterpaper, left=1.5in, bottom=1in}                   
+%\geometry{landscape}                % Activate for for rotated page geometry
+\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{amssymb, amsmath}
+\usepackage{mathtools}
+\everymath{\displaystyle}
+
+\usepackage{fontspec}
+\setmainfont[Ligatures={TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, BoldItalicFont={* BoldItalic}, Numbers={OldStyle}]{Linux Libertine O}
+\setsansfont[Scale=MatchLowercase,Ligatures=TeX]{Linux Biolinum O}
+\setmonofont[Scale=MatchLowercase]{Linux Libertine Mono O}
+\usepackage{microtype}
+
+% This defines \amper for the fancy ampersand
+% to be used in the header. See
+% https://tex.stackexchange.com/a/58185/39194
+\usepackage{xspace}
+\newfontfamily\amperfont[Style=Alternate]{Linux Libertine O}    
+\makeatletter
+\DeclareRobustCommand{\amper}{{\amperfont\ifx\f@shape\scname\smaller[1.2]\fi\&}\xspace}
+\makeatother
+
+% To define fonts for particular uses within a document. For example, 
+% This sets the Libertine font to use tabular number format for tables.
+%\newfontfamily{\tablenumbers}[Numbers={Monospaced}]{Linux Libertine O}
+% \newfontfamily{\libertinedisplay}{Linux Libertine Display O}
+
+\usepackage{booktabs}
+\usepackage{multicol}
+\usepackage[normalem]{ulem}
+
+\usepackage{longtable}
+%\usepackage{siunitx}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+\usepackage{enumitem}
+\usepackage{hyperref}
+%\usepackage{placeins} %PRovides \FloatBarrier to flush all floats before a certain point.
+\usepackage{hanging}
+
+\usepackage[sc]{titlesec}
+
+\pagestyle{headandfoot}
+\firstpageheader{\textsc{zo}\,478/678 Ichthyology}{}{Representative Orders of the World}
+\runningheader{}{}{\footnotesize{pg.~\thepage}}
+\footer{}{}{}
+\runningheadrule
+
+\usepackage{etoolbox}
+\patchcmd{\quote}{\rightmargin}{\leftmargin 1em \rightmargin}{}{}
+
+
+\begin{document}
+
+The following combination of characters will allow you to
+diagnose the various specimens in the teaching collection and on
+laboratory practicals. Although some characters will diagnose any
+species within a group (such as order), some groups can only be
+diagnosed by characters not readily viewed in a class setting. However,
+the characters provided below work for most species in the group or for
+this class. Characters marked with an asterisk (*) are reliable only for taxa in this
+teaching collection. Some families are included for information only. 
+
+The number after the order or family corresponds to the number
+on the jar lid of the specimen (if the specimen is in a jar).
+
+You are responsible for knowing all taxonomic levels given from class down to order, including  divisions (except where noted) and subdivisions, 
+
+\textbf{\textsc{Class Myxini}}
+
+
+\begin{quote}
+\textbf{Myxiniformes (1)}: eel-like, no paired fins. 3 pairs of barbels
+around mouth, 4 rows of teeth on tongue.
+\end{quote}
+
+\textbf{\textsc{Class Petromyzontida}}
+
+\begin{quote}
+\textbf{Petromyzontiformes (2)}: eel-like, no paired fins. Teeth on oral
+disc and tongue, 7 pairs of gill openings, single medial nostril.
+\end{quote}
+
+\textbf{\textsc{Class Chondrichthys}}
+
+\textbf{Subclass Holocephali}
+
+\begin{quote}
+\textbf{Chimaeriformes (3)}: rat-tail body,large head and pectoral fins,
+no spiracle, large plate-like teeth, no placoid scales.
+\end{quote}
+
+\textbf{Subclass Elasmobranchii}
+
+\textbf{Division Neoselachii} — \textit{You are not required to know this division but you must know the two subdivisions within it.}
+
+\textbf{Subdivision Selachii }
+
+\begin{quote}
+\textbf{Carcharhiniformes (4,5)}: two dorsal fins without spines, anal
+fin present. Spiracles usually absent. Scyliorhinidae (4): cat-like
+eyes, spiracle \emph{present}. Carcharhinidae (5): eyes not cat-like,
+spiracles absent.
+
+\textbf{Squaliformes (6)}: two dorsal fins with or without spines, anal
+fin absent. Spiracles present.
+
+Dalatiidae: luminous organs present, appear as black dots on ventral
+surface.
+\end{quote}
+
+\textbf{Subdivision Batoidea}
+
+\begin{quote}
+\textbf{Torpediniformes (7)}: Soft and loose skin, eyes small or absent.
+Well-developed caudal fin. 0-2 dorsal fins.
+
+\textbf{Rajiformes (8)}: Skin tough, often with rows of spines (modified
+placoid scales). Caudal fin absent to moderately developed. 0-2 dorsal
+fins.
+
+\textbf{Myliobatiformes (9)}: large spine on caudal fin forms stinging
+spine*.
+\end{quote}
+
+\textbf{\textsc{Class Actinopterygii}}
+
+\textbf{Subclass Chondrostei}
+
+\begin{quote}
+\textbf{Acipenseriformes (10)}: Body covered in five rows of bony scutes
+(large, heavy scales) and four barbels anterior to mouth
+\emph{\textbf{or}} large paddle-like snout and without bony scutes.
+Heterocercal tail in all extant species. Polyodontidae (10) and
+Acipenseridae (sturgeons, no number but in green tub).
+\end{quote}
+
+\textbf{Subclass Neopterygii}
+
+
+\begin{quote}
+\textbf{Lepisosteiformes (11):} Elongated lie-in-wait / ambush predator
+body form, ganoid scales, elongated jaws with sharp teeth.
+
+\textbf{Amiiformes (12)}: Large median gular plate, located between arms
+of lower jaw.
+\end{quote}
+
+\textbf{Division Teleostei}
+
+\textbf{Subdivision Osteoglossomorpha} — \textit{“Osteoglosso-” means “bony tongue.”}
+
+\begin{quote}
+\textbf{Hiodontiformes (13)}: Teeth on bony tongues.*
+\end{quote}
+
+\textbf{Subdivision Elopomorpha} — \textit{This subdivision shares a homology of \textbf{leptocephalus larvae.} Here includes only Elopiformes and Anguilliformes.}
+
+\begin{quote}
+\textbf{Elopiformes} \textbf{(15)}: gular plate, slender body with
+abdominal pelvic fins, wide gill openings, deeply forked caudal fin.
+
+\textbf{Anguilliformes (16,17)}: eel-like bodies, lack pelvic fins,
+pectorals sometimes absent. Dorsal and anal fins confluent with caudal
+fin (all run together). Muraenidae (16): Pectoral fins absent.
+Ophichthyidae (17): Pectoral fins present
+\end{quote}
+
+\textit{The remaining orders fall into various divisions and other groups that you do not need to know except for the series Otophysi.}
+
+\begin{quote}
+\textbf{Clupeiformes (19)}: Silvery, slim (laterally compressed) body,
+with smal scutes along midline of abdomen.
+\end{quote}
+
+\textbf{Series Otophysi} — \textit{The Cyprinformes, Characiformes, and Siluriformes (plus Gymnotiformes, not included here) all share the homology of the Weberian apparatus for sound detection (see lecture). I referred to these orders in lecture as the otophysan fishes.  }
+
+\begin{quote}
+\textbf{Cyprinformes (20, 21)}: Mouth toothless, well-developed
+pharyngeal teeth, cycloid scales, no adipose fin, head scaleless. Upper
+jaw protractile (can be extended). Cyprinidae (20): minnows and shiners;
+Catostomidae (21): suckers.
+
+\textbf{Characiformes (22)}: Teeth well-developed, adipose fin is
+present. Upper jaw not protractile.
+
+\textbf{Siluriformes: (23, 24)}: Adipose fin usually present. Up to
+three pairs of barbels: 1 nasal (upper lip), 1 maxillar (corners of the
+mouth), 1 mental (chin); nasal or mental barbels occasionally lost.
+Usually scaleless, although some have bony armor. Loricariidae (23;
+adipose fin absent*), Bagridae (24).
+
+\textbf{Esociformes (26)}: Adipose fin absent, fine scales, maxilla
+without teeth but forms the gape of the mouth. Lie-in-wait / ambush
+predator body form.
+
+\textbf{Salmoniformes (28)}: Adipose fin present, fine scales*,
+rover-predator body form.
+
+\textbf{Stomiiformes (29, 30, 31)}: Sharp elongated or bristle-like
+teeth, adipose fin present, ventral rows of photophores.
+
+\textbf{Myctophiformes (33)}: Weakly toothed, none elongated or
+bristle-like. Adipose fin present, scattered photophores on body. Larger
+luminescent organs often found on head or caudal peduncle.
+
+\textbf{Percopsiformes} \textbf{(34)}: Anus located at throat.
+
+\textbf{Gadiformes (36, 37)}: Pelvics, if present, usually thoracic or
+jugular, chin barbel present*, long dorsal and anal fins. Macrouridae
+(36), Gadidae (37).
+
+\textbf{Batrachoidiformes (38)}: large head, eyes somewhat dorsally
+placed, jugular pelvics, scaleless.
+
+\textbf{Lophiiformes (39, 40)}: illicium and esca present ("fishing rod and lure") on top of head. Pelvic fins, if
+present, in advance of pectoral fins. Antennariidae (39), Ogcocephalidae
+(40; extreme dorsoventral flattening).
+
+\textbf{Mugiliformes (41)}: Two dorsal fins, widely separated; spines
+restricted to first dorsal fin. Mouth terminal. Pectoral fins very high
+on body, pelvic fins abdominal.
+
+\textbf{Atheriniformes (42)}: Two dorsal fins, not as widely separated
+as Mugiliformes, flexible spines in first dorsal fin, one spine in
+second dorsal. Pectoral fins high on body, pelvics abdominal. Mouth
+tends to be supraterminal to superior.
+
+\textbf{Beloniformes (43, 44)}: Single dorsal fin. Pectoral fins high on
+body, pelvics abdominal. Terminal mouth. Pectoral fins (and sometimes
+pelvic fins) greatly enlarged \emph{\textbf{or}} elongated, gar-like
+body. Exoceotidae (43), Belonidae (44).
+
+\textbf{Cyprinodontiformes (45, 46)}: Single dorsal fin not as high on
+body as previous three orders, pelvics abdominal, mouth supraterminal to
+superior. Fundulidae (45), Poeciliidae (46).
+
+\textbf{Gasterosteiformes (47, 48)}: Body usually with rings or plates
+of armor. Mouth usually small. Gasterosteidae (47), Syngnathidae (48).
+
+\textbf{Scorpaeniformes (49, 51)}: Suborbital bony stay. Body often
+spiny or with bony plates. Caudal fin usually rounded. Scorpaenidae
+(49), Cottidae (51).
+
+\textbf{Perciformes (55, 58, 60)}: Two dorsal fins present, first
+spinous, second with at least some rays although spines may be present.
+Dorsal fins either continuous or separate. Pelvics usually with one
+spine. Pectoral fins laterally placed, pelvics thoracic, occasionally
+jugular. Sciaenidae (55), Pomacentridae (58), Blennidae (60).%, Osphronemidae (65).
+
+\textbf{Pleuronectiformes (66)}: Both eyes on one side of body. Body is
+\emph{not} dorsoventrally flattened. It is laterally compressed and laying on one side.
+
+\textbf{Tetraodontiformes (69, 71)}: Jaws fused, four teeth. Body rigid
+or otherwise inflexible (much of skeleton is fused or otherwise
+reduced). Skin typically covered in tough scales or sharp spines.
+Monacanthidae (69), Diodontidae (71).
+\end{quote}
+
+
+\end{document}  
