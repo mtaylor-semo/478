@@ -1,0 +1,92 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[t]{beamer}
+
+%%%% HANDOUTS For online Uncomment the following four lines for handout
+%\documentclass[t,handout]{beamer}  %Use this for handouts.
+%\usepackage{handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
+%	\setbeamercolor{background canvas}{bg=black!5}
+
+
+%%% Including only some slides for students.
+%%% Uncomment the following line. For the slides,
+%%% use the labels shown below the command.
+%\includeonlylecture{student}
+
+%% For students, use \lecture{student}{student}
+%% For mine, use \lecture{instructor}{instructor}
+
+
+%\usepackage{pgf,pgfpages}
+%\pgfpagesuselayout{4 on 1}[letterpaper,border shrink=5mm]
+
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Biolinum O}
+\setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/466/fg/}%
+	{img/}%
+	{/Users/goby/Pictures/teach/common/}} % set of paths to search for images
+
+\usepackage{amsmath,amssymb}
+
+%\usepackage{units}
+
+\usepackage{booktabs}
+\usepackage{multicol}
+%	\setlength{\columnsep=1em}
+
+\usepackage{textcomp}
+\usepackage{setspace}
+\usepackage{tikz}
+	\tikzstyle{every picture}+=[remember picture,overlay]
+
+\mode<presentation>
+{
+  \usetheme{Lecture}
+  \setbeamercovered{invisible}
+  \setbeamertemplate{items}[square]
+}
+
+\usepackage{calc}
+\usepackage{hyperref}
+
+\newcommand\HiddenWord[1]{%
+	\alt<handout>{\rule{\widthof{#1}}{\fboxrule}}{#1}%
+}
+
+\newcommand\imagecredit[1]{%
+	\vskip0pt plus 1filll \tiny #1}%
+	
+
+\begin{document}
+
+{\setbeamercolor{background canvas}{bg=black}
+\begin{frame}[t,plain]{\textcolor{white}{This female will soon arrive for the summer.}}
+	\centering
+		\includegraphics[height=0.8\textheight]{fg_suta}
+
+	\imagecredit{\hfill\textcolor{white}{Gonzalo Zepeda Martínez, Wikimedia Commons, \ccbysa{4.0}.}}
+\end{frame}
+}
+
+
+{\setbeamercolor{background canvas}{bg=black}
+\begin{frame}[t,plain]{\textcolor{white}{This male is resident all year.}}
+	\centering
+		\includegraphics[height=0.8\textheight]{fg_hofi}
+
+	\imagecredit{\hfill\textcolor{white}{\textcopyright\,Martina Nordstrand, Macaulay Library}}
+\end{frame}
+}
+
+
+\end{document}
