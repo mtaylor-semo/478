@@ -1,0 +1,21 @@
+Wiki
+
+Class Aves (Includes Archaeopteryx and Confuciusornis)
+
+Subclass Neornithes (modern birds; excludes archaeopteryx and Confusiusornis)
+
+Infraclass Neognathae
+  Superorder Galloanseres
+    Order Galliformes
+    Order Anseriformes
+  Superorder Neoaves
+    Clade Passerea
+      Many orders
+    Clade Columbea
+      A few orders
+
+Infraclass Palaeognathae
+  Order Tinamiformes
+  Group Ratites
+
+

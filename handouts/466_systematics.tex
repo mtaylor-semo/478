@@ -1,0 +1,170 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[10pt]{article}
+%\usepackage{graphicx}
+%	\graphicspath{{/Users/goby/Pictures/teach/153/lab/}} % set of paths to search for images
+
+\usepackage{geometry}
+\geometry{letterpaper}                   
+\geometry{bottom=1in, right=0.75in}
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+%\usepackage{amssymb}
+%\usepackage{mathtools}
+%	\everymath{\displaystyle}
+
+\setlength\parindent{0pt}
+
+%\pagenumbering{gobble}
+
+\usepackage{fontspec}
+\setmainfont[Ligatures={Common,TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional, OldStyle}]{Linux Libertine O}
+\setsansfont[Scale=MatchLowercase,Ligatures=TeX]{Linux Biolinum O}
+\usepackage{microtype}
+
+\usepackage{unicode-math}
+\setmathfont[Scale=MatchLowercase]{Asana-Math.otf}
+%\setmathfont{XITS Math}
+
+% To define fonts for particular uses within a document. For example, 
+% This sets the Libertine font to use tabular number format for tables.
+%\newfontfamily{\tablenumbers}[Numbers={Monospaced}]{Linux Libertine O}
+%\newfontfamily{\libertinedisplay}{Linux Libertine Display O}
+
+
+%\usepackage{booktabs}
+\usepackage{multicol}
+%\usepackage{tabularx}
+%\usepackage{longtable}
+%\usepackage{siunitx}
+%\usepackage[justification=raggedright, singlelinecheck=off]{caption}
+%\captionsetup{labelsep=period} % Removes colon following figure / table number.
+%\captionsetup{tablewithin=none}  % Sequential numbering of tables and figures instead of
+%\captionsetup{figurewithin=none} % resetting numbers within each chapter (Intro, M&M, etc.)
+%\captionsetup[table]{skip=0pt}
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+\usepackage{enumitem}
+\usepackage{hyperref}
+%\usepackage{placeins} %PRovides \FloatBarrier to flush all floats before a certain point.
+\usepackage{hanging}
+\usepackage{color}
+\usepackage{calc}
+
+\usepackage[sc]{titlesec}
+
+%\usepackage{titling}
+%\setlength{\droptitle}{-60pt}
+%\posttitle{\par\end{center}}
+%\predate{}\postdate{}
+
+\usepackage{fancyhdr}
+\fancyhf{}
+\pagestyle{fancy}
+\setlength{\headheight}{13.6pt}
+\lhead{}
+\chead{}
+\rhead{\footnotesize pg.~\thepage }
+\renewcommand{\headrulewidth}{0.4pt}
+
+\fancypagestyle{plain}{%
+	\fancyhf{}
+	\lhead{\textsc{bi}~466/666: Ornithology}
+	\rhead{Name: \enspace \makebox[2.5in]{\hrulefill}}
+	\renewcommand{\headrulewidth}{0pt}
+}
+
+\newcommand{\VSpace}{\vspace{0.5\baselineskip}}
+%\newcommand{\BigVSpace}{\vspace{2\baselineskip}}
+
+%% Use this for paragraph indent
+\newlength\hanglength
+\newlength\onelength
+\setlength\onelength{\widthof{1}}
+
+%% Amount to add
+\newlength\mylength
+\setlength\mylength{1.5em}
+
+\newcommand*{\resetparindent}{\setlength{\parindent}{0pt}}
+\newcommand*\resethanglength{\setlength{\hanglength}{0pt}}
+\newcommand*{\growparindent}{\addtolength{\parindent}{\mylength}}
+\newcommand*{\reduceparindent}{\addtolength{\parindent}{-1\mylength}}
+\newcommand*{\growhanglength}{%
+	\setlength{\hanglength}{\parindent}%
+	\addtolength{\hanglength}{\mylength}
+}%growhanglength
+\newcommand*{\birdfam}[1]{\textsc{#1}}
+\newcommand*{\birdorder}[1]{\textbf{\textsc{#1}}}
+
+\newlength\orderlength
+\setlength{\orderlength}{\widthof{Order }}
+
+\title{Simple classification of select avian families of North Ameria}
+\date{}                                           % Activate to display a given date or no date
+
+\newenvironment{hangingpars}[1][1.2em]{%
+	\everypar{\hangafter=1\hangindent=#1}}{\par}
+
+\begin{document}
+%\maketitle
+\thispagestyle{plain}
+
+\subsection*{Simple classification of select avian families of North America}
+
+
+\subsubsection*{Class Aves, including \textit{Archaeopteryx} and \textit{Confuciusornis}}
+%\addtolength{\parindent}{\onelength}
+
+
+Subclass Neornithes (modern birds; excludes \textit{Archaeopteryx} and \textit{Confusiusornis})
+
+\growparindent
+Infraclass Neognathae
+
+  \growparindent
+  Superorder Galloanseres
+
+\growparindent
+
+    Order Galliformes
+    
+    
+    Order Anseriformes
+
+	\reduceparindent
+	
+  Superorder Neoaves
+  
+  \growparindent
+  
+    Clade Passerea
+    
+    \growparindent
+      Many orders
+      
+    \reduceparindent
+     
+    Clade Columbea
+
+	\growparindent
+	
+      A few orders
+
+\resetparindent
+Infraclass Palaeognathae
+
+  \growparindent
+  Order Tinamiformes
+
+  Group Ratites
+
+
+\resetparindent
+
+\end{document}  
