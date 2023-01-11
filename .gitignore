@@ -13,6 +13,9 @@
 .*.lb
 *.pdf
 
+## ZO 466 wave files
+*.wav
+
 ## Intermediate documents:
 *.dvi
 *.xdv
