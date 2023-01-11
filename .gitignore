@@ -15,6 +15,9 @@
 
 ## ZO 466 wave files
 *.wav
+_current_semester/
+466_videos
+support_files/
 
 ## Intermediate documents:
 *.dvi
