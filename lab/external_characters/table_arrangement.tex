@@ -1,0 +1,130 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[10pt]{article}  
+\usepackage[left=0.75in,right=0.75in,top=1in,bottom=0.5in]{geometry} 
+\geometry{letterpaper}                   		% 
+\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\setlength{\parindent}{0pt}
+
+
+\newif\ifprintkey
+%\printkeytrue  % Instructor version with specimen location
+\printkeyfalse % For student version
+\newcommand{\PrintKey}[1]{\ifprintkey{\textbf{#1}}\fi}
+
+
+\usepackage{graphicx}
+\graphicspath{%
+	{/Users/goby/Pictures/teach/466/lab/}}
+	
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+%\defaultfontfeatures{Mapping=tex} % converts LaTeX specials (``quotes'' --- dashes etc.) to unicode
+\setmainfont[Ligatures={Common, TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+%\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+
+
+\usepackage[singlelinecheck=false]{caption}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+
+%\pagenumbering{gobble}
+\usepackage{enumitem}
+\usepackage{multicol}
+%\setlist{noitemsep}
+%\setlist[description]{style=multiline, leftmargin=1.25cm, parsep=1ex}
+
+
+\begin{document}
+%\thispagestyle{plain}
+
+\begin{multicols}{2}
+
+
+Table 1
+\begin{enumerate}
+% Page 1
+\item  Long bill. Little Blue Heron
+\item  Short bill. Carolina Chickadee
+\item  Hooked bill. Mississippi Kite
+\item  Crossed bill. Red Crossbill
+\item  Compressed bill. Atlantic Puffin
+\end{enumerate}
+
+% Page 2
+Table 2
+\begin{enumerate}[resume]
+\item  Depressed bill. Northern Pintail
+\item  Stout bill. Greater Prairie Chicken
+\item  Terete bill. Ruby-throated Hummingbird
+\item  Straight bill. Yellow-crowned Night-Heron
+\item  Recurved bill. American Avocet
+\item  Decurved bill. Carolina Wren and Long-billed Curlew
+\item  Bent bill. American Flamingo
+\end{enumerate}
+
+% Page 3 
+Table 3
+\begin{enumerate}[resume]
+\item  Swollen bill. Summer Tanager
+\item  Acute bill. Blackburnian Warbler
+\item  Chisel-like bill. Yellow-bellied Sapsucker
+\item  Toothed bill. American Kestrel
+\item  Serrate bill. Hooded Merganser
+\item  Gibbous bill. Surf Scoter
+\item  Spatulate bill. Northern Shoveler
+\end{enumerate}
+
+% Page 4
+Table 4
+\begin{enumerate}[resume]
+\item Notched bill. Wood Thrush and American Robin
+\item Conical bill. American Goldfinch
+\item Lamellate bill. Lesser Scaup
+\item Angulated commissure. Rose-breasted Grosbeak
+\item Gular sac. American White Pelican
+\end{enumerate}
+
+% Page 5
+Table 5
+\begin{enumerate}[resume]
+\item \item  Square tail. Sharp-shinned Hawk
+\item  Rounded tail. American Crow
+\item  Graduated tail. Yellow-billed Cuckoo
+\item  Pointed tail. Ring-necked Pheasant
+\item  Emarginate tail. Purple Finch
+\item  Forked tail. Barn Swallow
+\end{enumerate}
+
+% Page 6
+Table 6
+\begin{enumerate}[resume]
+\item \item  Incumbent hallux. Yellow-headed Blackbird
+\item  Elevated hallux. Wild Turkey
+\item  Anisodactyl toes. Northern Mockingbird
+\item  Syndactyl toes. Belted Kingfisher
+\item  Zygodactyl toes. Red-bellied Woodpecker
+\item  Heterodactyl toes. Elegant Trogon
+\end{enumerate}
+
+% Page 7
+Table 7
+\begin{enumerate}[resume]
+\item Pamprodactyl toes. Chimney Swift
+\item  Raptorial toes. Red-tailed Hawk
+\item  Semipalmated webbing. Semi-palmated Plover (photo) and mystery plover
+\item  Totipalmate webbing. Double-crested Cormorant
+\item  Palmate webbing. Mallard (hybrid)
+\item  Lobate toes. American Coot
+\end{enumerate}
+
+\end{multicols}
+\end{document}  
