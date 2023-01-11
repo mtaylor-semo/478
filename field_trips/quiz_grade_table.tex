@@ -1,0 +1,130 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt]{article}
+%\usepackage{graphicx}
+%	\graphicspath{{/Users/goby/Pictures/teach/153/lab/}} % set of paths to search for images
+
+\usepackage{geometry}
+\geometry{letterpaper}                   
+\geometry{left=0.5in, right=0.5in, bottom=1.5in}
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+%\usepackage{amssymb}
+%\usepackage{mathtools}
+%	\everymath{\displaystyle}
+
+%\pagenumbering{gobble}
+%\usepackage{pdflscape}
+
+\usepackage{pdflscape}
+
+\usepackage{fontspec}
+\setmainfont[Ligatures={Common}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{Linux Libertine O}
+\setsansfont[Scale=MatchLowercase,Ligatures=TeX]{Linux Biolinum O}
+\usepackage{microtype}
+
+\usepackage{unicode-math}
+\setmathfont[Scale=MatchLowercase]{Asana-Math.otf}
+%\setmathfont{XITS Math}
+
+% To define fonts for particular uses within a document. For example, 
+% This sets the Libertine font to use tabular number format for tables.
+%\newfontfamily{\tablenumbers}[Numbers={Monospaced}]{Linux Libertine O}
+%\newfontfamily{\libertinedisplay}{Linux Libertine Display O}
+
+
+\usepackage{booktabs}
+\usepackage{multicol}
+
+\usepackage{array}
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}b{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+\usepackage{enumitem}
+
+\usepackage{fancyhdr}
+\fancyhf{}
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{Ornithology Field Trip Quiz }
+\renewcommand{\headrulewidth}{0pt}
+
+\newcommand{\VSpace}{\vspace{\baselineskip}}
+\newcommand{\BigVSpace}{\vspace{2\baselineskip}}
+
+\begin{document}
+\begin{landscape}
+
+\noindent Field Trip Date: \rule{2in}{0.4pt}\hfill Field Trip Location: \rule{2.9in}{0.4pt} \hfill \VSpace
+
+\noindent\begin{tabular}{@{}b{1.5in}|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|m{0.5in}|@{}}
+\toprule
+Name	&	Q1 & Q2 & Q3 & Q4 & Q5 & Q6 & Q7 & Q8 & Q9 & Q10 & Q11 & Q12 & Q13 & Q14 & Q15 & Total \\
+\hline
+Kaitlyn Barnett &	& & & & & & & & & & & & & & & \\[1ex]
+\hline
+Tyler Benning &	& & & & & & & & & & & & & & & \\[1ex]
+\hline
+Tyler Blankenship &	& & & & & & & & & & & & & & & \\[1ex]
+\hline
+Taylor Brant &	& & & & & & & & & & & & & & & \\[1ex]
+\hline
+Jake Cadwell (G) &	& & & & & & & & & & & & & & & \\[1ex]
+\hline
+Aline Da Rocha (G) &	& & & & & & & & & & & & & & & \\[1ex]
+\hline
+Kendyl Hornback &	& & & & & & & & & & & & & & & \\[1ex]
+\hline
+Nick Nighswander (G) &	& & & & & & & & & & & & & & & \\[1ex]
+\hline
+Jennie Paul (G) &	& & & & & & & & & & & & & & & \\[1ex]
+\hline
+Caleb Stewart &	& & & & & & & & & & & & & & & \\[1ex]
+\hline
+Jonathan Twyman (G) &	& & & & & & & & & & & & & & & \\[1ex]
+\hline
+Ryan Vogt &	& & & & & & & & & & & & & & & \\[1ex]
+\hline
+Mason Westernman &	& & & & & & & & & & & & & & & \\[1ex]
+\hline
+Jamie Wiseman  &	& & & & & & & & & & & & & & & \\[1ex]
+\bottomrule
+\end{tabular}
+
+\VSpace
+
+\noindent Answers 
+
+\noindent\begin{multicols}{3}%
+\begin{enumerate}[itemsep=3.1ex]
+	\item \rule{2.25in}{0.4pt}
+	\item \rule{2.25in}{0.4pt}
+	\item \rule{2.25in}{0.4pt}
+	\item \rule{2.25in}{0.4pt}
+	\item \rule{2.25in}{0.4pt}
+\end{enumerate}
+\columnbreak
+\begin{enumerate}[resume, itemsep=3.1ex]
+	\item \rule{2.25in}{0.4pt}
+	\item \rule{2.25in}{0.4pt}
+	\item \rule{2.25in}{0.4pt}
+	\item \rule{2.25in}{0.4pt}
+	\item \rule{2.25in}{0.4pt}
+\end{enumerate}
+\columnbreak
+\begin{enumerate}[resume, itemsep=3.1ex]
+	\item \rule{2.25in}{0.4pt}
+	\item \rule{2.25in}{0.4pt}
+	\item \rule{2.25in}{0.4pt}
+	\item \rule{2.25in}{0.4pt}
+	\item \rule{2.25in}{0.4pt}
+\end{enumerate}
+\end{multicols}
+
+\end{landscape}
+
+\end{document}  
