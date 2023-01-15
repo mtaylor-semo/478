@@ -7,7 +7,7 @@
 
 \usepackage{geometry}
 \geometry{letterpaper}                   
-\geometry{bottom=1in, right=0.75in}
+\geometry{bottom=1in, left=0.8in, right=0.8in}
 %\geometry{landscape}                % Activate for for rotated page geometry
 %\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
 %\usepackage{amssymb}
@@ -93,7 +93,7 @@
 
 %% Amount to add
 \newlength\mylength
-\setlength\mylength{1.5em}
+\setlength\mylength{0.75em}
 
 \newcommand*{\resetparindent}{\setlength{\parindent}{0pt}}
 \newcommand*\resethanglength{\setlength{\hanglength}{0pt}}
@@ -112,26 +112,27 @@
 \title{Simple classification of select avian families of Missouri}
 \date{}                                           % Activate to display a given date or no date
 
-\newenvironment{hangingpars}[1][1.2em]{%
-	\everypar{\hangafter=1\hangindent=#1}}{\par}
+%\newenvironment{hangingpars}[1][1.2em]{%
+%	\everypar{\hangafter=1\hangindent=#1}}{\par}
 
 \begin{document}
 %\maketitle
 \thispagestyle{plain}
 
-\subsection*{Simple classification of select avian families of North America}
+\subsection*{Simple classification of select avian families of Missouri}
 
 The listed families in the infraclass Neognathae have representative species in Missouri for at least part of the year. \textbf{You must know order and families for families in bold.} These are common families we are likely to see.
 
 \subsubsection*{Class Aves, including \textit{Archaeopteryx} and \textit{Confuciusornis}}
 %\addtolength{\parindent}{\onelength}
 
-\begin{spacing}{1.35}
-
 Subclass Neornithes (all modern birds; excludes \textit{Archaeopteryx} and \textit{Confusiusornis})
 
 
-\growparindent
+\begin{multicols}{2}
+
+\begin{spacing}{1.35}
+
 Infraclass Palaeognathae
 
   \growparindent
@@ -195,6 +196,8 @@ Superorder Neoaves
 
 
     \reduceparindent
+    
+    \reduceparindent
 
     Clade Passerea
     
@@ -213,9 +216,9 @@ Superorder Neoaves
     		
     		Family Caprimulgidae (nightjars)
     		
-    		Family Apodidae (swifts)
+    		Family \textbf{Apodidae} (swifts)
     		
-    		Family Trochilidae (hummingbirds)
+    		Family \textbf{Trochilidae} (hummingbirds)
     		
     	\reduceparindent
     	
@@ -223,7 +226,7 @@ Superorder Neoaves
     	
     	\growparindent
     	
-    		Family \textbf{Rallidae} (rails, gallinules, coots)
+    		Family \textbf{Rallidae} (rails, coots)
     		
     		Family Gruidae (cranes)
     		
@@ -239,7 +242,7 @@ Superorder Neoaves
     		
     		Family \textbf{Scolopacidae} (sandpipers)
     		
-    		Family Laridae (gulls and terns)
+    		Family \textbf{Laridae} (gulls and terns)
     		
     	\reduceparindent
     	
@@ -248,14 +251,13 @@ Superorder Neoaves
     		\growparindent
     		
     		Family Gaviidae (loons)
-      
-\reduceparindent  \newpage
-      
+\columnbreak
+
+	\reduceparindent
+	
 	\reduceparindent
       
-	Superorder Neoaves (con't)
-      
-	\growparindent
+%	\growparindent
       
     Clade Passeria (con't)
       
@@ -333,7 +335,7 @@ Superorder Neoaves
 	  	
 	  \reduceparindent
 	  
-	  Order Passiformes (most birds in Missouri are in this order)
+	  Order Passiformes (most birds belong to this order)
 	  
 	  \growparindent
 	  
@@ -359,6 +361,12 @@ Superorder Neoaves
 	  	
 	  	Family Polioptilidae (gnathcatchers)
 	  	
+	  \reduceparindent
+	  
+	  Order Passiformes (con't)
+	  
+	  	\growparindent
+
 	  	Family \textbf{Troglodytidae} (wrens)
 	  	
 	  	Family \textbf{Sturnidae} (starlings)
@@ -369,42 +377,50 @@ Superorder Neoaves
 	  	
 	  	Family Bombycillidae (waxwings)
 	  	
-	  \reduceparindent
-	  
-	  Order Passiformes (con't)
-	  
-	  	\growparindent
-
 	  	Family \textbf{Passeridae} (Old World sparrows)
 	  	
 	  	Family Motacillidae (pipits)
 	  	
+	  	\reduceparindent
 	  	Family \textbf{Fringillidae} (finches)
 	  	
 	  	Family Calcariidae (longspurs)
 	  	
-	  	Family \textbf{Passerellidae} (New World sparrows; your field guide uses Emberizidae)
+	  	Family \textbf{Passerellidae} (New World sparrows)
 	  	
-	  	Family Icteriidae (Yellow-breasted Chat; note spelling: Icter\textbf{ii}dae)
+	  	Family Icteriidae (Yellow-breasted Chat)
 	  	
-	  	Family \textbf{Icteridae} (orioles, blackbirds, grackles; note spelling: Icter\textbf{i}dae)
+	  	Family \textbf{Icteridae} (orioles, blackbirds, grackles)
 	  	
 	  	Family \textbf{Parulidae} (New World warblers)
 	  	
 	  	Family \textbf{Cardinalidae} (cardinals and allies)
 	  	
-	  	Family \textbf{Thraupidae} (tanagers; field guide uses Cardinalidae, in part)
-	  	
-	  	
-      
-      
+	  	Family \textbf{Thraupidae} (tanagers)
      
 \resetparindent
-
-
-\resetparindent
-
+      
 \end{spacing}
+
+\end{multicols}
+
+\subsubsection*{Notes}
+
+Your field guide placed birds of the family Passerellidae in the older family Emberizidae.
+
+Your field guide placed birds of the family Thraupidae in the Cardinalidae. 
+
+Place close attention to the spelling differenc between Icter\textbf{ii}dae (Yellow-breasted Chat) and Icter\textbf{i}dae (orioles, blackbirds, and grackles).
+
+
+\bigskip
+
+Higher classification (down to clades Columbea and Passerea) follows Jarvis et~al.~2014. Whole-genome analyses resolve early branches in the tree of life of modern birds. Science 346: 1320.
+
+\bigskip
+
+Systematic arrangement of order and families follows the eBird/Clements Checklist, 2022 update.\newline \url{https://www.birds.cornell.edu/clementschecklist/updateindex/october-2022/}
+
 
 
 \end{document}  
