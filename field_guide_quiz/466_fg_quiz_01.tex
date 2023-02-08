@@ -1,0 +1,112 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[t]{beamer}
+
+%%%% HANDOUTS For online Uncomment the following four lines for handout
+%\documentclass[t,handout]{beamer}  %Use this for handouts.
+%\usepackage{handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
+%	\setbeamercolor{background canvas}{bg=black!5}
+
+
+%%% Including only some slides for students.
+%%% Uncomment the following line. For the slides,
+%%% use the labels shown below the command.
+%\includeonlylecture{student}
+
+%% For students, use \lecture{student}{student}
+%% For mine, use \lecture{instructor}{instructor}
+
+
+%\usepackage{pgf,pgfpages}
+%\pgfpagesuselayout{4 on 1}[letterpaper,border shrink=5mm]
+
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Biolinum O}
+\setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/466/fg/}%
+	{img/}%
+	{/Users/goby/Pictures/teach/common/}} % set of paths to search for images
+
+\usepackage{amsmath,amssymb}
+
+%\usepackage{units}
+
+\usepackage{booktabs}
+\usepackage{multicol}
+%	\setlength{\columnsep=1em}
+
+\usepackage{textcomp}
+\usepackage{setspace}
+\usepackage{tikz}
+	\tikzstyle{every picture}+=[remember picture,overlay]
+
+\mode<presentation>
+{
+  \usetheme{Lecture}
+  \setbeamercovered{invisible}
+  \setbeamertemplate{items}[square]
+}
+
+\usepackage{calc}
+\usepackage{hyperref}
+
+\newcommand\HiddenWord[1]{%
+	\alt<handout>{\rule{\widthof{#1}}{\fboxrule}}{#1}%
+}
+
+\newcommand\imagecredit[1]{%
+	\vskip0pt plus 1filll \tiny #1}%
+	
+
+\begin{document}
+
+\begin{frame}{Field guide quiz instructions}
+
+\vspace{-\baselineskip}
+
+\hangpara You have five minutes to identify the bird and write down your answer.
+
+\hangpara Do not make assumptions about its distribution or seasonal occurrence. 
+%For example, do not assume in occurs in Missouri during the winter. 
+
+\hangpara I will answer two questions during the five minutes. Each question 
+must be asked by a different student. %You may not coordinate the questions.
+
+\hangpara Think carefully about the question you may want to ask; will the answer help you narrow down the information you need to identify the bird?
+
+\hangpara For some quizzes, I will tell you the group the bird belongs to so you can quickly narrow down your search. I may not be as helpful for future quizzes. Get familiar with your guide!!!!11one!
+
+
+\end{frame}
+
+
+{\setbeamercolor{background canvas}{bg=black}
+\begin{frame}[t,plain]{\textcolor{white}{This group begins on pages 12–13.}}
+	\centering
+		\includegraphics[width=0.95\linewidth]{fg_rndu}
+
+	\imagecredit{\hfill\textcolor{white}{Linda Tanner, Flickr, \ccby{2.0}.}}
+\end{frame}
+}
+
+
+{\setbeamercolor{background canvas}{bg=black}
+\begin{frame}[t,plain]{\textcolor{white}{Page 2 this time$\dots$}}
+	\centering
+		\includegraphics[height=0.85\textheight]{fg_rogo}
+
+	\imagecredit{\hfill\textcolor{white}{Kaaren Perry, Flickr, \ccby{2.0}}}
+\end{frame}
+}
+
+
+\end{document}
