@@ -1,13 +1,13 @@
 %!TEX TS-program = lualatex
 %!TEX encoding = UTF-8 Unicode
 
-%\documentclass[t]{beamer}
+\documentclass[t]{beamer}
 
 %%%% HANDOUTS For online Uncomment the following four lines for handout
-\documentclass[t,handout]{beamer}  %Use this for handouts.
-\includeonlylecture{student}
-\usepackage{handoutWithNotes}
-\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
+%\documentclass[t,handout]{beamer}  %Use this for handouts.
+%\includeonlylecture{student}
+%\usepackage{handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
 %	\setbeamercolor{background canvas}{bg=black!5}
 
 
@@ -135,7 +135,7 @@
 }
 
 
-\begin{frame}{You must learn these major taxa of Neornithes}
+\begin{frame}{You must learn these major taxa of Neornithes.}
 
 
 \begin{forest} mytree
@@ -164,7 +164,7 @@
 
 \lecture{instructor}{instructor}
 
-\begin{frame}{You must learn these major taxa of Neornithes}
+\begin{frame}{You must learn these major taxa of Neornithes.}
 
 \begin{forest} mytree
 [[, l sep=+1.7cm, edge label = {node [xshift=-0.8cm, text width = 1.5cm] {\footnotesize Subclass Neornithes}}
@@ -203,7 +203,7 @@
 
 \lecture{instructor}{instructor}
 
-\begin{frame}{You must learn these major taxa of Neornithes}
+\begin{frame}{You must learn these major taxa of Neornithes.}
 
 \begin{forest} mytree
 [[, l sep=+1.7cm, edge label = {node [xshift=-0.8cm, text width = 1.5cm] {\footnotesize Subclass Neornithes}}
@@ -252,7 +252,7 @@
 
 \lecture{instructor}{instructor}
 
-\begin{frame}{You must learn these major taxa of Neornithes}
+\begin{frame}{You must learn these major taxa of Neornithes.}
 
 \begin{forest} mytree
 [[, l sep=+1.7cm, edge label = {node [xshift=-0.8cm, text width = 1.5cm] {\footnotesize Subclass Neornithes}}
@@ -266,7 +266,7 @@
 		]
 		[, name=galloanseres, edge label = {node [text width=2cm, midway, xshift=1.1cm] {\footnotesize \highlight{Superorder Galloanseres}}}
 			[\sshighlight{Order\\ Galliformes}, align=left]
-			[\sshighlight{Order\\ Anseriformesa}, align=left]
+			[\sshighlight{Order\\ Anseriformes}, align=left]
 		]
 	]
 	[,name=paleognathae, edge label = {node [text width=1.75cm, midway, xshift=1cm] {\footnotesize Infraclass Paleognathae}}
@@ -288,5 +288,60 @@
 \end{frame}
 }
 
+\lecture{instructor}{instructor}
+
+\begin{frame}{You must learn these major taxa of Neornithes.}
+
+\begin{forest} mytree
+[[, l sep=+1.7cm, edge label = {node [xshift=-0.8cm, text width = 1.5cm] {\footnotesize Subclass Neornithes}}
+	[,name=neognathae, edge label = {node [text width=2cm, midway, xshift=1.1cm] {\footnotesize Infraclass Neognathae}}
+		[, name=neoaves, edge label = {node [text width=2cm, midway, xshift=1.1cm] {\footnotesize Superorder Neoaves}}
+			[,l-=1cm
+				[\sshighlight{Clade\\ Passerea}, align=left]
+				[\sshighlight{Clade\\ Columbimorphae}, align=left]
+			]
+			[\sshighlight{Clade\\ Mirandornithes}, align=left]
+		]
+		[, name=galloanseres, edge label = {node [text width=2cm, midway, xshift=1.1cm] {\footnotesize Superorder Galloanseres}}
+			[Order\\ Galliformes, align=left]
+			[Order\\ Anseriformes, align=left]
+		]
+	]
+	[,name=paleognathae, edge label = {node [text width=1.75cm, midway, xshift=1cm] {\footnotesize Infraclass Paleognathae}}
+		[Tinamous\\ and “Ratites”, align=left]
+		%[Grade\\ “Ratites”, align=left]
+	]
+]]
+\end{forest}
+
+\end{frame}
+
+
+\lecture{student}{student}
+
+\begin{frame}[t]{Mirandornithes contains the flamingos and grebes.}
+\centering
+\includegraphics[height=0.82\textheight]{taxonomy_mirandornithes}
+
+\vfilll
+
+\tinyfill \textcopyright\,\href{https://www.deviantart.com/gredinia/art/Bird-cladistic-Mirandornithes-diversity-698780401}{Gredinia, Deviant Art}
+\end{frame}
+
+\begin{frame}[t]{Columbimorphae contains the doves.}
+\centering
+\includegraphics[height=0.82\textheight]{taxonomy_columbimorphae}
+
+\vfilll
+
+\tinyfill \textcopyright\,\href{https://www.deviantart.com/gredinia/art/Bird-cladistic-Columbimorphae-diversity-705097984}{Gredinia, Deviant Art}
+\end{frame}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{taxonomy_passerea}}
+\begin{frame}[b,plain]
+	\tiny\hfill Jarvis et al. 2014. Science 346: 1320.
+\end{frame}
+}
 
 \end{document}
