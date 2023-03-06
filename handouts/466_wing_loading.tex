@@ -1,0 +1,197 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt, addpoints, hidelinks]{exam}
+
+%\printanswers
+
+\usepackage{fontspec}
+\setmainfont[Ligatures={TeX, Common}, BoldFont={* Bold}, ItalicFont={* Italic}, BoldItalicFont={* BoldItalic}, Numbers={OldStyle,Proportional}]{Linux Libertine O}
+\setsansfont[Scale=MatchLowercase,Ligatures={TeX,Common}, Numbers={OldStyle,Proportional}]{Linux Biolinum O}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata}
+\usepackage{microtype}
+
+\usepackage{geometry}
+\geometry{letterpaper, bottom=1in}                   
+%\geometry{landscape}                % Activate for for rotated page geometry
+\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{mathtools}
+%\everymath{\displaystyle}
+
+
+\usepackage{unicode-math}
+\setmathfont[Scale=MatchLowercase, Numbers=Lining]{Asana Math}
+%\setmathfont[Scale=MatchLowercase]{XITS Math}
+
+% To define fonts for particular uses within a document. For example, 
+% This sets the Libertine font to use tabular number format for tables.
+\newfontfamily{\tablenumbers}[Numbers={Monospaced}]{Linux Libertine O}
+\newfontfamily{\libertinedisplay}{Linux Libertine Display O}
+
+
+\usepackage{graphicx}
+\graphicspath{{/Users/goby/Pictures/teach/300/exercises/}
+	{img/}} % set of paths to search for images
+
+
+
+\usepackage{booktabs}
+%\usepackage{longtable}
+%\usepackage{siunitx}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+\usepackage{multicol}
+
+\usepackage{siunitx}
+
+\usepackage{enumitem}
+\setlist{leftmargin=*}
+\setlist[1]{labelindent=\parindent}
+\setlist[enumerate]{label=\textsc{\alph*}., ref=\textsc{\alph*}}
+
+
+\usepackage[sc]{titlesec}
+
+\renewcommand{\solutiontitle}{\noindent}
+\unframedsolutions
+\SolutionEmphasis{\bfseries}
+
+\renewcommand{\questionshook}{%
+	\setlength{\leftmargin}{-\leftskip}%
+}
+
+\makeatletter
+\def\SetTotalwidth{\advance\linewidth by \@totalleftmargin
+	\@totalleftmargin=0pt}
+\makeatother
+
+
+\pagestyle{headandfoot}
+\firstpageheader{BI 466: Ornithology}{}{\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
+\runningheader{}{}{\footnotesize{pg. \thepage}}
+\footer{}{}{}
+\runningheadrule
+
+\newcommand*\AnswerBox[2]{%
+	\parbox[t][#1]{0.92\textwidth}{%
+		\begin{solution}#2\end{solution}}
+	\vspace{\stretch{1}}
+}
+
+\newenvironment{AnswerPage}[1]
+{\begin{minipage}[t][#1]{0.92\textwidth}%
+		\begin{solution}}
+		{\end{solution}\end{minipage}
+	\vspace{\stretch{1}}}
+
+\newlength{\basespace}
+\setlength{\basespace}{5\baselineskip}
+
+\makeatletter
+\DeclareTextCommand{\textprime}{\encodingdefault}{%
+  \mbox{$\m@th'\kern-\scriptspace$}% 
+}
+\makeatother
+
+\begin{document}
+%\thispagestyle{firstpage}
+
+\subsection*{Wing loading and foraging in Wandering Albatross (\numpoints\ points)}
+
+
+Dr.~Henri Weimerskirch and his many colleages have studied the Wandering Albatross \textit{(Diomedea exulans)} of the Crozat Islands in the southern Indian Ocean (46°22\textprime{}\,S~latitude). Some of their results suggest that young birds of both sexes and adult females tend to forage north of the islands. Adult males tend to forage at south of the islands (closer to the south pole). The scientists hypothesized that wing loading differences between the adult sexes might explain this pattern. 
+
+\includegraphics[width=\textwidth]{foraging_area}
+
+\textit{Birds with higher wing loads must fly faster or soar in higher wind speeds to maintain flight.}
+
+Below are data for Wandering Albatross for fledging and adult birds, for both sexes. Use the data to calculate wing loading.
+
+
+\subsubsection*{Data and analysis}
+
+Wing loading is calculated as,
+
+\vspace{-\baselineskip}
+
+\[ \mathrm{wing~loading} = \frac{\mathrm{mass} \times G}{\mathrm{wing~area}},\]
+
+where $G$ is gravitational force. On earth, $G =$~\qty[mode=math]{9.81}{\newton\meter^2}. Aspect ratio (not necessarily relevant right now, but good for practice) is calculated as,
+
+\[ \mathrm{aspect~ratio} = \frac{\mathrm{(wing~span)}^2}{\mathrm{wing~area}}.\]
+
+
+In the table below, mass is given in \unit{kg}, wing area is given in \unit{\meter^2}, and wing span is given in \unit{\meter}.
+
+Calculate wing loading and aspect ratio of complete the table.
+
+\begin{tabular}{@{}llrrrr@{}}
+\toprule
+Stage & Sex & Mass (kg) & Wing area (\unit{\meter^2}) & Wing span (\unit{\meter}) \\
+\midrule
+Fledging	&	F	&	$9.29$ & $0.686$	&	$3.24$ & 	\\
+Fledging		&	M 	&	$10.48$ &	$0.711$ &	$3.32$ & 	\\
+Adult	&	F	&	$7.84$ & $0.686$	& $3.24$	& 	\\
+Adult		&	M 	& $9.44$	& $0.711$	& $3.32$	& 	\\
+\bottomrule
+\end{tabular}
+
+\bigskip
+
+\begin{questions}
+
+\question[6]
+Use the data above to complete the following table.
+
+
+\begin{tabular}{@{}llcc@{}}
+\toprule
+Stage & Sex & Wing loading & Aspect ratio \\
+\midrule
+& & &  \\[0.5em]
+Fledging	&	F	&
+\ifprintanswers\textbf{132.84}\else\rule{1in}{0.4pt}\fi	&
+\ifprintanswers\textbf{15.3}\else\rule{1in}{0.4pt}\fi	\\[2em]
+Fledging		&	M &
+\ifprintanswers\textbf{144.6}\else\rule{1in}{0.4pt}\fi	&
+\ifprintanswers\textbf{15.5}\else\rule{1in}{0.4pt}\fi		\\[2em]
+Adult	&	F	&
+\ifprintanswers\textbf{112.1.0}\else\rule{1in}{0.4pt}\fi	&
+\ifprintanswers\textbf{15.3}\else\rule{1in}{0.4pt}\fi		\\[2em]
+Adult		&	M 	&
+\ifprintanswers\textbf{130.2}\else\rule{1in}{0.4pt}\fi	&
+\ifprintanswers\textbf{15.5}\else\rule{1in}{0.4pt}\fi		\\
+\bottomrule
+\end{tabular}
+
+
+\question[3] Describe how wing loading differs between fledging and adults. How would you explain this trend?
+
+\AnswerBox{0.1\textheight}{Younger birds have larger body mass because their were being fed by their parents. They will burn that off as they grow to adults.}
+
+\question[2] Describe how wing loading differs between sexes. Describe the general trend, considering fledging and adults. (I'm open to suggestions for better wording here.)
+
+\AnswerBox{0.1\textheight}{Females tend to have smaller wing loads than males.}
+
+\question[2] Describe how aspect ratio differs between fledging and adults. Describe the general trend, considering fledging and adults.
+
+\AnswerBox{0.1\textheight}{It does not change. Fledglings and adults have the same aspect ratio.}
+
+\question[2] Describe how aspect ratio differs between sexes. 
+
+\AnswerBox{0.1\textheight}{Males have slightly larger aspect ratios.}
+
+\question[5]
+Propose a hypothesis to explain why larger and older adult males tend to forage south of (above) 46°S latitude but fledglings and adult females tend to forage north of 46°S.
+
+Wandering Albatross are weak flappers. They lock their wings into place and soar for days, flapping very infrequently. \textsc{Hint:} reread (or read for the first time) the first page.
+
+\AnswerBox{0.4\textheight}{Wind speeds tend to average higher at higher latitudes, providing the lift that birds with larger wing loads need for soaring.}
+
+\end{questions}
+\end{document}  
