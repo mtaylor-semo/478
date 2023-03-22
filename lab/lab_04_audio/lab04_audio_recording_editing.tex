@@ -1,0 +1,168 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt]{article}  
+\usepackage[left=1in,right=1in,top=1in,bottom=0.5in]{geometry} 
+\geometry{letterpaper}                   		% 
+\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\setlength{\parindent}{0pt}
+
+\usepackage{graphicx}
+\graphicspath{%
+	{/Users/goby/Pictures/teach/466/lab/}}
+	
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+%\defaultfontfeatures{Mapping=tex} % converts LaTeX specials (``quotes'' --- dashes etc.) to unicode
+\setmainfont[Ligatures={Common, TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional, OldStyle}]{\mainfont}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+%\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+
+
+\usepackage[singlelinecheck=false]{caption}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+
+%\pagenumbering{gobble}
+%\usepackage{pdflscape}
+\usepackage{longtable}
+\usepackage[frenchlinks]{hyperref}
+\hypersetup{
+%	frenchlinks=true,
+	pdfborder={0 0 0}}
+\usepackage{booktabs}
+\usepackage{multicol}
+%\usepackage{amssymb}
+\usepackage{enumitem}
+\setlist{leftmargin=*}
+\setlist[1]{labelindent=\parindent}
+
+%\setlist{noitemsep}
+%\setlist[description]{style=multiline, leftmargin=1.25cm, parsep=1ex}
+
+\usepackage[sc]{titlesec}
+
+\usepackage{fancyhdr}
+\fancyhf{}
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{\footnotesize pg.~\thepage }
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength\headheight{15pt}
+
+\fancypagestyle{plain}{%
+	\fancyhf{}
+	\lhead{\textsc{bi}~466/666: Ornithology}
+	\rhead{Name: \enspace \makebox[2.5in]{\hrulefill}}
+	\renewcommand{\headrulewidth}{0pt}
+}
+
+\newcommand{\ios}{i\textsc{os}}
+
+\begin{document}
+\thispagestyle{plain}
+%\begin{landscape}
+
+\section*{Recording bird vocalizations}
+
+This exercise will show you how to record bird vocalizations and edit them for upload into eBird.  Part~1 will help you set up for recording and editing. Part~2 will teach you to edit a sound file I provide for you. Part~3 will have you go outside, record at least one vocalization as part of an eBird checklist, edit the file, and upload it to your eBird checklist.
+
+All links in this document are live so you can click on them to visit the linked site. You will also find the links on the course website for this lab
+
+
+\subsection*{Part 1. get the software}
+
+\subsubsection*{Smartphone apps}
+
+I presume for this exercise you will use a smart phone to make audio recordings. Your phone will need to have a \emph{good} app intended to make reasonably high quality recordings in \textsc{wave} format. You can use a handheld portable recorder as long as it records \textsc{wave} files at a quality suitable for upload to eBird.
+
+Macaulay Library has recommendations for \ios{} and Android apps. The apps are free but offer unneeded (for this exercise) in-app purchases. Download and use the app that feels “best” to you for your device. I use Voice Record Pro on \ios. 
+
+Links:\quad \href{https://www.macaulaylibrary.org/resources/setting-up-recording-apps/setting-up-recording-apps-for-ios-devices/}{iOS}
+\qquad
+\href{https://www.macaulaylibrary.org/resources/setting-up-recording-apps/setting-up-recording-apps-for-android-devices/}{Android}
+
+Macaulay Library also provides some general tips on recording with a smartphone. Read the entire page \emph{carefully} because you must set up the app up correctly to make suitable recordings.
+
+Link: \href{https://support.ebird.org/en/support/solutions/articles/48001064305-smartphone-recording-tips}{Smartphone recording tips}
+
+\subsubsection*{Editing software}
+
+Several programs are available for editing sound recordings. You need to be able to open and save \textsc{wave} files, trim the start and end of your recordings, normalize to -3 db, and in some cases insert silence (such as between a vocalization and your voice announcement).
+
+Macaulay Library has tutorials written for four editing programs. The programs are available for Mac, \textsc{pc,} and in some cases Linux. I recommend trying Ocenaudio first but Audacity has been around for a long time. Audition is a commercial Adobe product. I have not yet tried WavePad. Pick one and work through the tutorial. You can use the audio file I provide for you in the next section. 
+
+The tutorials will make sense after you read the audio preparation and upload guidelines linked in the next section.
+
+Link: \href{https://www.macaulaylibrary.org/resources/audio-editing-tutorials/}{Audio editing tutorials}
+
+Link: \href{https://www.macaulaylibrary.org/resources/why-wav/}{Why \textsc{wave (.wav) files?}}
+
+\subsection*{Part 2. edit a recording (15 pts)}
+
+Go to the course website, click on the Lab 04 Recordings link for this week's module. Download and save the recording that has been assigned to you. Use this recording to work through the tutorial for the software you chose in Part~1 and to complete this part of the exericse. (You can download files assigned to fellow students but only upload the edited file assigned to you.)
+
+eBird and Macaulay Library have specific recommendations the format of your audio files. Read the audio preparation and upload guidelines before editing your file.
+
+Link: \href{https://support.ebird.org/en/support/solutions/articles/48001064341-audio-preparation-and-upload-guidelines}{Audio preparation and upload guidelines}
+
+The recording assigned to you are raw field recordings for local birds. Edit and normalize the recording following the preparation guidelines above, including the proper normalization for the bird and the announcement. Insert the proper amount of silence between the bird vocals and the voice announcement.  
+
+Upload your edited recording to the drop box provided for this exercise. \emph{Do not upload your edited recording to eBird.}
+
+
+\subsection*{Part 3. make and edit a recording (25 pts)}
+
+First, go out birding. Report your results in a eBird checklist. Record at least one bird vocalization. It can be a song, a call (or both), or non-vocalization such as woodpecker drumming. The recording must have at least 30 seconds of bird vocalization. Longer is better.
+
+You can record any local species. Northern Cardinals, Carolina Wrens, and Northern Mockingbirds are loud and sing often so may be good candidates for your first recording attempts. For fun, but not required, check eBird's Illustrated Checklist for the county or hotspot where you bird. Try to record a species not yet recorded. (For Bollinger County, good luck with that although most hotspots still need recordings.)
+
+Your recording must
+\begin{itemize}
+\item be at least 30 seconds of bird vocalization (or suitable non-vocalization such as woodpecker drumming or American Woodcock courtship flights),
+
+\item include a voice announcement,
+
+\item meet all other guidelines for upload to eBird.
+\end{itemize}
+
+Your voice announcement must include at least the
+
+\begin{itemize}
+\item name of species (if known),
+\item date and time of recording,
+\item approximate location (e.g., southern Bollinger County, west side of <hot spot>, etc. You do not have to be exact or super specific), and
+\item approximate weather conditions (e.g., sunny, partly cloudy, estimate of temperature, wind direction and estimate of speed; do your best).
+\end{itemize}
+
+Remember that your recordings may be used for research so the more information you provide, the more valuable your recording might be. Additional comments about approximate distance to bird, distance of bird above ground, behavior of bird, etc., can be helpful.
+
+Link: \href{https://support.ebird.org/en/support/solutions/articles/48001064298-sound-recording-tips}{Sound recording tips}
+
+Link: \href{https://www.macaulaylibrary.org/resources/audio-recording-gear/}{Once you're addicted to recording$\dots$}
+
+\subsubsection*{For your information: portable recorders}
+
+\emph{You are not required to use a portable recorder for this exercise.}
+
+You can use a hand-held recording device like those pictured below, if you have one. The Zoom H1n, below left (around \$100 online), is lightweight and easy to carry. It uses a microSD card which requires an included adapter to fit most SD card readers. The Zoom H4n Pro recorder, below right (around \$210 online) is a bit bulkier but has \textsc{xlr} jacks to use with higher quality microphones in case you want to upgrade in the future. Several companies make quality recorders of similar price. If you think you want to purchase a recorder like one of these, do some research and find one that suits your needs and pocketbook.
+
+\begin{center}
+\includegraphics[width=0.75\linewidth]{portable_recording_devices}
+\end{center}
+
+\subsection*{Bonus: spectrogram apps}
+
+You may find a need (or just a desire) to view spectrograms in the field. The Earbirding blog by Nathan Pieplow has some recommendations for iOS and Android. I have both SpectrumView and SpectroPro on my iOS phone. I've never used them for recording.
+
+Link: \href{https://earbirding.com/blog/archives/5394}{Earbirding spectrogram phone apps}
+
+
+\end{document}  

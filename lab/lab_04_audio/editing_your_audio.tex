@@ -1,0 +1,257 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt]{article}  
+\usepackage[left=1in,right=1in,top=1in,bottom=0.8in]{geometry} 
+\geometry{letterpaper}                   		% 
+\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\setlength{\parindent}{0pt}
+
+\usepackage{graphicx}
+\graphicspath{%
+	{/Users/goby/Pictures/teach/466/lab/}}
+	
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+%\defaultfontfeatures{Mapping=tex} % converts LaTeX specials (``quotes'' --- dashes etc.) to unicode
+\setmainfont[Ligatures={Common, TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+%\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+
+
+\usepackage[singlelinecheck=false]{caption}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+
+%\pagenumbering{gobble}
+%\usepackage{pdflscape}
+\usepackage{longtable}
+\usepackage[frenchlinks]{hyperref}
+\hypersetup{
+%	frenchlinks=true,
+	pdfborder={0 0 0}}
+\usepackage{booktabs}
+\usepackage{multicol}
+%\usepackage{amssymb}
+\usepackage{enumitem}
+\setlist{leftmargin=*}
+\setlist[1]{labelindent=\parindent}
+
+%\setlist{noitemsep}
+%\setlist[description]{style=multiline, leftmargin=1.25cm, parsep=1ex}
+
+\usepackage[sc]{titlesec}
+
+\usepackage{fancyhdr}
+\fancyhf{}
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{\footnotesize pg.~\thepage }
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength\headheight{15pt}
+
+\fancypagestyle{plain}{%
+	\fancyhf{}
+	\lhead{\textsc{bi}~466/666: Ornithology}
+	\rhead{Name: \enspace \makebox[2.5in]{\hrulefill}}
+	\renewcommand{\headrulewidth}{0pt}
+}
+
+\newcommand{\ios}{i\textsc{os}}
+
+\begin{document}
+\thispagestyle{plain}
+%\begin{landscape}
+
+\subsection*{Part 1. software and setup}
+
+You will use high-quality, open source (free) software called ocenaudio to edit your audio recordings. You can download the latest version of the software for Macintosh, PC, and linux systems from \url{https://ocenaudio.com}.
+
+After you download and install the software, open the software, then choose ocenaudio > Preferences (Macintosh) or Edit > Preferences (PC/Linux) to open the preferences pane. You will change certain default settings to make editing easier.
+
+\subsubsection*{Key Bindings}
+
+Preferences > Key Bindings
+
+
+Key bindings are shortcuts that allow you to quickly perform specific tasks without hunting through the menus. They are very handing when editing many files over time.
+
+
+Use the filter to find the choices below. Typically, one or two words will be sufficient. Then, click double-click on the letter or combinations of symbols and letters/numbers (or blank space) below the "Key" column to change to the recommended value.
+
+Move cursor to begin: B\newline
+Move cursor to end: E\newline
+Zoom Selection: G (for Go to selection)\newline
+Zoom Out Full: F\newline
+Normalize\ldots: N\newline
+Highpass filter: H\newline
+Silence: S
+
+
+\subsubsection*{Other Preferences}
+
+Preferences > Spectrogram
+
+Number of Bins: 1024\newline
+Window Type: Hann\newline
+Window Size: 100\%\newline
+Dynamic Range: 100 dB
+
+Color scheme: Color (you can try other color schemes, but Color and Grayscale (not linear grayscale) are the best representation of frequency and volume.)
+
+\vspace{\baselineskip}
+
+Preferences > Sound
+
+Look for the section called "Playback Device/Options." Be sure that "Scroll view to follow playhead" and "Play head follows cursor and selections" are checked. You'll probably use "Built-in Output (2 channels)" for sound output but it may be different depending on your computer set up.
+
+
+
+\subsection*{Part 2: editing}
+
+These instructions follow the \href{https://support.ebird.org/en/support/solutions/articles/48001064341}{“best practices”} guidelines from the Cornell Lab of Ornithology. You should \emph{always} follow their best practices for uploading your audio recordings to eBird.
+
+
+I use the keyboard shortcuts given above when appropriate. I give the menu equivalent in parenthesis afterwards. If there is not a shortcut, I give only the menu option.
+
+"cmd/ctrl" indicates the command or control key on your keyboard, depending on whether you use a Mac or PC/linux computer. Press and hold the cmd/ctrl key, and the letter key at the same time. I show upper case letters but you do not have to hold the shift key down unless specified. For example, cmd/ctrl-Z and cmd/ctrl-z give the same result.
+
+
+Remember that cmd/ctrl-Z (Edit > Undo) is your friend. Press those keys to Undo any editing mistakes.
+
+
+\subsubsection*{Open your audio file}
+
+Go to the Canvas course page. Open this week's module and find the “Student Audio Recordings” page. Click on the bird name next to your name to download and save the file(s) to your computer.
+
+Make note of the folder where you save the file! Open that folder.
+
+
+Drag and drop your WAV file into the "Drop files here" field in Ocenaudio.
+
+Press cmd/ctrl-3 (View > Waveform \& Spectral View) to show both Waveform and Spectral views.
+
+
+\subsubsection*{Noise reduction}
+
+The first step is to remove low frequency noise that is not (usually) part of the bird's vocal range. We'll reduce the volume of frequencies below 250 Hz. This helps reduce wind, traffic, and other low-frequency background noise. If you record a bird such as an owl that has lower frequency calls, you should lower the filter to 200 or even 100 Hz.
+
+You apply a Highpass Filter to filter out the low frequency sounds (only higher frequencies may pass through to the final audio).
+
+Press cmd/ctrl-A to select the entire recording.
+
+Press H (Effects > Filter > Highpass Filter\ldots) to filter the low frequencies.
+
+Be sure the Highpass tab is selected.
+
+Move the slider to set the Passband Limit to as close to 250 Hz as possible without going over. (On my laptop, I can set it to 248 Hz.) Set the Rolloff to 60 dB/decade (don't ask, I don't know). The larger the dB value, the more gentle the roll off of the low frequencies. You don't want the roll off to be too sharp because it doesn't sound natural.
+
+Leave Passband Atenuation [sic] at 3 dB. 
+
+\textsc{Note:} You can click the Gear icon at the bottom of the dialog box, then choose "Save Preset\ldots" to save your filter. Give it a name like "Highpass 250" and save it. If you ever change settings, you can quickly return to your commonly used settings. For example, I have a Highpass 250, Highpass 200, and Highpass 100.
+
+
+\subsubsection*{Trim the recording}
+
+Find the first instance of your bird vocalization (e.g., the first song or call). Select an area around it and press G (lower case is fine) to Goto the selection (or choose View > Zoom > Zoom Selection from the menu bar).
+
+Click at the start of the vocalization in the Spectral View (lower panel). Note the approximate time (bottom of lower panel) the vocalization begins. 
+
+Click again in the Spectral View panel up to 3 seconds before the start of your first vocalization. For example, if your bird's first song or call is at 5.2 seconds, click at 2.2 seconds. 
+
+You will discard all of the audio before that time.
+
+Click, hold and drag to the start of the audio recording to select all of the audio to delete. Press the Delete key to delete it. The first vocalization should begin at about the 3 second mark.
+
+Find the last instance of the bird vocalization before your voice announcement.
+
+Again, calculate up to 3 seconds after the end of the last vocal. Click, hold and drag to a touch before the start of your voice announcement.
+
+Press S (Generate > Silence) to insert a silent gap between the final vocalization and your voice announcement. Enter "1" into the "Seconds" field. If the field says "Samples", then click the "Seconds" radio button to switch to seconds. This step inserts one second of audio silence between the bird and your voice announcement.
+
+\subsubsection*{Normalize your recording}
+
+Click and hold in the silence gap you just created. Drag left the start of the audio to select the entire segment of bird vocalzation. 
+
+Press N (Effects > Amplitude > Normalize\ldots) to normalize the volume of your recording. Do not include your voice announcement in the selection.
+
+Be sure the "Decibels" radio button is chosen in the "Gain Unit" area (click it if not), and then enter "$-$3" (include the negative sign!) in the dB field. 
+
+Save the preset as "Normalize $-$3 dB" 
+
+Press the "Apply" button.
+
+Notice the audio in the Spectral View panel becomes brighter and the waveform in the Waveform panel (upper panel) becomes larger. 
+
+Before you normalize your voice announcement, delete your name. Select the part of the audio where you state your name, then press the Delete key.
+
+Click again in your silence gap but select to the end of the file at the end of your voice announcement (after you have deleted your name). 
+
+Press N again to normalize but this time normalize to $-$10 dB. Save the present as "Normalize $-$10 dB."
+
+You should always normalize your bird vocalizations to $-$3 dB and your voice announcement to $-$10 dB. Your voice will sound too loud if you normalize it to $-$3 dB.
+
+For most audio, this is all you need to do. 
+
+\subsubsection*{Save a \emph{copy} of the file}
+
+Save a \emph{copy} of the file so that you keep an original, unmodified version of the entire audio. 
+
+Press cmd/ctrl-shift-S (File > Save As\ldots) to save a copy. Always save the file as WAV, not mp3. WAV saves uncompressed audio, which maintains its original sound quality. Mp3 compresses the file so sacrifies quality and introduces digital noise, reducing its value for science.
+
+Give the file a unique name. I typically use the 4-letter banding code, a number, and a location, separated by underscores.  For example, if I recorded a Northern Mockingbird on campus, I would save the file as:
+
+nomo1\_semo.wav
+
+I then rename the original file "nomo1\_semo\_orig.wav" so that I know it is the original file.  
+
+You may use whatever naming scheme you want but I suggest you try to develop a consistent scheme.
+
+If I made a recording of a second Northern Mockingbird during the same checklist (or the same bird awhile later), I would save the edited recording as "nomo2\_semo.wav."  I restart the numbering at 1 when I edit audio for a different checklist.
+
+\subsubsection*{Combining separate recordings of the same bird}
+
+If you make multiple recordings in sequence of the same bird, you should combine them into a single file for upload into eBird. For example, say I start to record an American Robin singing about 50 meters away from me. I may record 30-60 seconds of audio, stop the recording, and try to carefully approach about 5-10 m closer. I record another 30-60 seconds, stop the recording, then approach closer. I get two more minutes of audio, and then the robin flies away so I make my voice announcement.
+
+Edit each file separately as described above. Normalize each to $-$3 dB but normalize each file independently of the others. As you get closer to the bird, the volume of the recording will naturally be louder (you should also adjust the gain of your recorder) so each needs to be normalized separately.
+
+Be sure to insert one second of silence between the file bird vocalization and your voice announcement. Normalize your announcement to $-$10 dB.
+
+After you have edited each file, go to the first recording, press E to jump to the end of the recording, then press S and insert one second of silence. 
+
+Choose your second recording, and press cmd/ctrl-A to select the entire recording. Copy the audio (cmd/ctrl-C or Edit > Copy). Return to your first file, then paste (cmd/ctrl-V or Edit > Paste) the second recording at the end of the first recording. Repeat these steps until you have merged all of your audio recordings into one recording. Be sure you have a one second gap between each pasted segment as well as before your voice announcement.
+
+I use the same naming scheme described above except that I use a, b, c, etc. to distinguish the original audio reordings. For example, if I made two sequential recordings of the same Northern Mockingbird, I would name the merged file "nomo1\_semo.wav" and the two original recordings "nomo1a\_semo\_orig.wav" and "nomo1b\_semo\_orig.wav."
+
+\textsc{Note:} Do not merge recordings of different birds (e.g., two different mockingbirds) or non-sequential audio of the same bird. If I record the Northern Mockingbird, then record an American Robin, then return to the Northern Mockingbird, save the NOMO recordings as two separate files. Only merge files recorded sequentially while your focus has been entirely on that one bird.``
+
+
+\subsubsection*{File organization}
+
+If you delve into the world of recording (and why wouldn't you?), you should organize your files in a way that makes sense to you.  Here is my file organization. The names are folders.
+
+bird\_songs\newline
+\hspace*{1em}2021\newline
+\hspace*{1em}2022 (new folder for each year)\newline
+\hspace*{2em}2022\_01\newline
+\hspace*{2em}2022\_02\newline
+\hspace*{2em}2022\_03 (new folder for each month)\newline
+\hspace*{3em}2022\_03\_01\newline
+\hspace*{3em}2022\_03\_06 (new folder for each day with audio)\newline
+\hspace*{4em}2022\_03\_06\_0614\newline
+\hspace*{4em}2022\_03\_06\_0638 (last four digits are the start time of the checklist)
+        
+I have an "orig" folder inside each checklist folder. I put the original, unedited audio (file names that end with "\_orig") into this folder to keep them separate from the edited files.
+
+This works for me. For example, If I want to find a file to use as examples for you to learn or for field quizzes, I can search for my best quality audio in Macaulay Library (where your pictures and recordings actually go when you upload them to eBird). I find the date and time of the recording, then drill down my folder hierarchy to find the original and uploaded recordings. Again, you should organize your files in a system that works best for you.
+
+
+
+\end{document}  
