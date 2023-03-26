@@ -1,0 +1,270 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[t]{beamer}
+
+%%%% HANDOUTS For online Uncomment the following four lines for handout
+%\documentclass[t,handout]{beamer}  %Use this for handouts.
+%\includeonlylecture{student}
+%\usepackage{handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
+%	\setbeamercolor{background canvas}{bg=black!5}
+
+
+%%% Including only some slides for students.
+%%% Uncomment the following line. For the slides,
+%%% use the labels shown below the command.
+%\includeonlylecture{student}
+
+%% For students, use \lecture{student}{student}
+%% For mine, use \lecture{instructor}{instructor}
+
+
+%\usepackage{pgf,pgfpages}
+%\pgfpagesuselayout{4 on 1}[letterpaper,border shrink=5mm]
+
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Biolinum O}
+\setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
+\setmonofont[Scale=MatchLowercase]{Linux Libertine Mono O} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/466/lectures/}%
+	{img/}}%
+%	{/Users/goby/Pictures/teach/common/}} % set of paths to search for images
+
+%\usepackage{amsmath,amssymb}
+
+%\usepackage{units}
+
+%\usepackage{booktabs}
+\usepackage{multicol}
+%	\setlength{\columnsep=1em}
+
+%\usepackage{textcomp}
+%\usepackage{setspace}
+\usepackage{tikz}
+%	\tikzstyle{every picture}+=[remember picture,overlay]
+
+\usepackage{forest}
+\usetikzlibrary{trees}
+\tikzstyle{block} = [rectangle, draw, fill=white, rounded corners, minimum size=2em]
+\tikzstyle{branch} = [thick, draw]
+
+%\usetikzlibrary{positioning, backgrounds}
+
+
+\forestset{
+	every leaf node/.style={
+		if n children=0{#1}{}
+	},
+	every tree node/.style={
+		if n children=0{}{#1}
+	},
+	mytree/.style={
+		for tree={
+			font=\footnotesize\selectfont,
+			edge path={
+				\noexpand\path [draw, thick, \forestoption{edge}] (!u.parent anchor) |- (.child anchor)\forestoption{edge label};
+			},
+			every tree node={draw=none,inner sep=0, outer sep=0, minimum size=0},
+			%every leaf node/.style={align=left},
+			grow'=0,
+			parent anchor=east, 
+			child anchor=west,
+			anchor=west,
+			l = 2cm,
+			%l sep=1.5cm,
+			s sep=0mm,
+			draw=none,
+			if n children=0{tier=word}{}
+		}
+	}
+}
+
+\mode<presentation>
+{
+  \usetheme{Lecture}
+  \setbeamercovered{invisible}
+  \setbeamertemplate{items}[square]
+}
+
+%\usepackage{calc}
+\usepackage{hyperref}
+
+% shortstack needed to highlight across \\ line break.
+\newcommand\sshighlight[1]{%
+	\highlight{\shortstack[l]{#1}}%
+}
+
+\newcommand{\backoneline}{\vspace{-\baselineskip}}
+
+\begin{document}
+
+
+\lecture{student}{student}
+
+\begin{frame}{You must learn these major taxa of Neornithes.}
+
+
+\begin{forest} mytree
+[[, l sep=+1.7cm, edge label = {node [xshift=-0.8cm, text width = 1.5cm] {\footnotesize Subclass Neornithes}}
+	[,name=neognathae, edge label = {node [text width=2cm, midway, xshift=1.1cm] {\footnotesize Infraclass Neognathae}}
+		[, name=neoaves, edge label = {node [text width=2cm, midway, xshift=1.1cm] {\footnotesize Superorder Neoaves}}
+			[,l-=1cm
+				[Clade\\ Passerea, align=left]
+				[\sshighlight{Clade\\ Columbimorphae}, align=left]
+			]
+			[\sshighlight{Clade\\ Mirandornithes}, align=left]
+		]
+		[, name=galloanseres, edge label = {node [text width=2cm, midway, xshift=1.1cm] {\footnotesize Superorder Galloanseres}}
+			[Order\\ Galliformes, align=left]
+			[Order\\ Anseriformes, align=left]
+		]
+	]
+	[,name=paleognathae, edge label = {node [text width=1.75cm, midway, xshift=1cm] {\footnotesize Infraclass Paleognathae}}
+		[Tinamous\\ and “Ratites”, align=left]
+		%[Grade\\ “Ratites”, align=left]
+	]
+]]
+\end{forest}
+
+\end{frame}
+
+\begin{frame}[t]{Mirandornithes has two orders, Phoenicopteriformes (flamingos) and \highlight{Podicipediformes} (grebes).}
+\centering
+\includegraphics[height=0.78\textheight]{taxonomy_mirandornithes}
+
+\vfilll
+
+\tinyfill \textcopyright\,\href{https://www.deviantart.com/gredinia/art/Bird-cladistic-Mirandornithes-diversity-698780401}{Gredinia, Deviant Art}
+\end{frame}
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{pied_billed_grebe}}
+\begin{frame}[b,plain]{\textcolor{white}{All Podicipediformes are in the family Podicipedidae (grebes).}}
+	\tiny \textcolor{white}{Pied-Billed Grebe by Tom Talbott, Flickr Creative Commons.}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{taxonomy_podicipedidae}}
+\begin{frame}[b]
+
+
+	\tinyfill \textcolor{white}{Pied-Billed Grebe by  \href{https://macaulaylibrary.org/asset/218667151}{Brad Imhoff, Macaulay Library \textsc{ml218667151}}}
+\end{frame}
+}
+
+
+\begin{frame}[t]{Columbimorphae contains the doves and pigeons.}
+\centering
+\includegraphics[height=0.82\textheight]{taxonomy_columbimorphae}
+
+\vfilll
+
+\tinyfill \textcopyright\,\href{https://www.deviantart.com/gredinia/art/Bird-cladistic-Columbimorphae-diversity-705097984}{Gredinia, Deviant Art}
+\end{frame}
+
+
+%{
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{mourning_dove}}
+\begin{frame}[b,plain]{\textcolor{white}{Columbiformes has one family, \textcolor{orange4}{Columbidae.}}}
+	\tiny\hfill Mourning Dove by Jeff Bryant, Flickr Creative Commons.
+\end{frame}
+}
+
+\begin{frame}[t]{Four species of Columbidae are found in Missouri.}
+\vspace{-0.5\baselineskip}
+\centering
+\includegraphics[width=0.9\textwidth]{taxonomy_columbidae}
+
+\vfilll
+
+\tiny \href{https://macaulaylibrary.org/asset/45325741}{Eurasian Collared-Dove by Jesse Amesbury}\hfill \href{https://macaulaylibrary.org/asset/50824121}{Mourning Dove by Nancy Christensen}. \hfill \href{https://macaulaylibrary.org/asset/61674401}{Rock Pigeon by Luke Seitz.}  All from Macaulay Library.
+\end{frame}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{coot_chicks}}
+\begin{frame}[b,plain]{\hfill\textcolor{white}{Everything else belongs to Passerea.}}
+	\tiny\textcolor{white}{American Coot by Mike Baird, Flickr Creative Commons.}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{taxonomy_passerea}}
+{	\tikzstyle{every picture}+=[remember picture,overlay]
+\definecolor{orange5}{HTML}{F16913}
+\begin{frame}[b, plain]
+
+\begin{tikzpicture}
+
+\draw [white, fill=white] (5,0.5) rectangle (12,1.1);
+
+\onslide*<2>{\draw[ultra thick, orange5] (0.8,2.1) rectangle (5.0,2.9) node (placeholder){};
+\draw [->, orange5, ultra thick] (7,2.5) -- (5.1, 2.5);}
+
+
+\end{tikzpicture}
+	\tiny\hfill Jarvis et al. 2014. Science 346: 1320.
+\end{frame}
+}}
+
+\begin{frame}[t]{Caprimulgiformes: Caprimulgidae — nightjars.}
+\includegraphics[width=\textwidth]{taxonomy_caprimulgidae}
+
+\hangpara Very short, depressed, wide bills with long rictal bristles. Long, slender wings. Small, weak feet.
+
+\hangpara Common Nighthawk active during day, Eastern Whip-poor-will and Chuck-will's-widow during night so more often heard than seen.
+
+\vfilll
+
+\tiny \href{https://macaulaylibrary.org/asset/64516111}{Common Nighthawk, Ronnie d'Entremont, ML64516111} \hfill \href{https://www.allaboutbirds.org/guide/Common_Nighthawk/photo-gallery/466538}{Video} \hfill \href{https://macaulaylibrary.org/asset/120753651}{Eastern Whip-poor-will, Tony Dvorak, ML120753651}
+\end{frame}
+
+\begin{frame}[t]{Caprimulgiformes: Apodidae — Chimney Swift}
+
+\vspace{-\baselineskip}
+
+\begin{multicols}{2}
+\includegraphics[width=\linewidth]{taxonomy_apodidae}
+
+\columnbreak
+
+\highlight{Pamprodactyl feet} (four toes pointed forward), lacks rictal bristles. Otherwise, similar to Caprimulgidae except dark gray and smaller. 
+
+\vspace{\baselineskip}
+
+Most often seen in flight. Stiff wing beats give the \textit{illusion} of alternating flaps. Listen for high-pitched twitter calls on campus.
+\end{multicols}
+
+\vfilll
+
+\tiny \href{https://macaulaylibrary.org/asset/232676411}{Chimney Swift, Caleb Putnam, ML232676411} \qquad  \href{https://www.allaboutbirds.org/guide/Chimney_Swift/photo-gallery/440546}{Video}
+
+\end{frame}
+
+\begin{frame}[t]{Caprimulgiformes: Trochilidae — Hummingbirds}
+\vspace{-0.5\baselineskip}
+
+%\centering
+
+\includegraphics[width=\textwidth]{taxonomy_trochilidae}
+
+\hangpara Very small birds (smallest of all birds). Long, terete bills, usually straight or decurved. Weak feet. Most have iridescent feathers, Males usually with brilliant gorget. Only birds capable of hovering and flying backwards.
+
+\vfilll
+
+\tiny \href{https://macaulaylibrary.org/asset/97947051}{Ruby-throated Hummingbird male, Brian Kulvete, ML97947051} \hfill  \href{https://macaulaylibrary.org/asset/268051161}{Ruby-throated Hummingbird female, German Garcia, ML268051161}
+
+\end{frame}
+
+\end{document}
