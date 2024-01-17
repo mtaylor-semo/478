@@ -1,0 +1,209 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[t]{beamer}
+
+%%%% HANDOUTS For online Uncomment the following four lines for handout
+%\documentclass[t,handout]{beamer}  %Use this for handouts.
+%\includeonlylecture{student}
+%\usepackage{handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
+
+
+%%% Including only some slides for students.
+%%% Uncomment the following line. For the slides,
+%%% use the labels shown below the command.
+
+%% For students, use \lecture{student}{student}
+%% For mine, use \lecture{instructor}{instructor}
+
+
+%\usepackage{pgf,pgfpages}
+%\pgfpagesuselayout{4 on 1}[letterpaper,border shrink=5mm]
+
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Biolinum O}
+\setmainfont[Ligatures={Common,TeX}, Contextuals={NoAlternate}, Numbers={Proportional, OldStyle}]{\mainfont}
+\setsansfont[Ligatures={Common,TeX}, Scale=MatchLowercase, Numbers={Proportional,OldStyle}, BoldFont={* Bold}, ItalicFont={* Italic},]\mainfont
+
+\newfontface\lining[Numbers={Lining}]\mainfont
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/466/lectures/}%
+	{/Users/goby/Pictures/teach/466/handouts/}} % set of paths to search for images
+
+\usepackage{amsmath,amssymb}
+
+%\usepackage{units}
+
+\usepackage{booktabs}
+\usepackage{multicol}
+%	\setlength{\columnsep=1em}
+
+\usepackage{textcomp}
+\usepackage{setspace}
+\usepackage{tikz}
+	\tikzstyle{every picture}+=[remember picture,overlay]
+
+\mode<presentation>
+{
+  \usetheme{Lecture}
+  \setbeamercovered{invisible}
+  \setbeamertemplate{items}[square]
+}
+
+\usepackage{calc}
+\usepackage{hyperref}
+
+\newcommand\HiddenWord[1]{%
+	\alt<handout>{\rule{\widthof{#1}}{\fboxrule}}{#1}%
+}
+
+
+
+\begin{document}
+%\lecture{instructor}{instructor}
+%\lecture{student}{student}
+
+
+\lecture{student}{student}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{ornithology_intro}}
+\begin{frame}[b,plain]
+	\tiny\textcolor{gray}{Rose Breasted Grosbeak by Paul VanDerWerf, Flickr Creative Commons.}
+\end{frame}
+}
+
+
+{
+\begin{frame}{You must open a free eBird account at \href{https://ebird.org}{ebird.org.}}
+	\vspace{-\baselineskip}
+	\begin{center}
+		\includegraphics[width=\textwidth]{ebird_taylor}
+	\end{center}
+	
+	Download and use eBird Mobile (iOS, Android). May also use Merlin ID.
+	
+	\highlight{Watch the tutorial videos on our Canvas page.}
+%	
+\end{frame}
+}
+
+{
+\begin{frame}{All students must do these tasks.}
+
+\vspace{-\baselineskip}
+
+\hangpara Email me with your eBird user name. I will add you as a friend to the semo\_ornithology group account.
+
+\hangpara Participate in the campus eBird project. See the separate handout for details.
+
+\hangpara Bird at least 30 minutes during the \href{https://www.birdcount.org/}{Great Backyard Bird Count} (Feb~16-19). This is a separate requirement from above.
+
+\hangpara Share every checklist you do for this class with semo\_ornithology.
+
+\hangpara \href{https://support.ebird.org/en/support/solutions/articles/48000795623-ebird-rules-and-best-practices}{\highlight{Follow eBird best practices. (link)}}
+
+\end{frame}
+}
+
+\begin{frame}%{Station map for campus eBird project.}
+\vspace{-\baselineskip}
+\rotatebox{-90}{\includegraphics[height=\linewidth]{campus_ebird_map_trimmed}}
+\end{frame}
+
+{
+\begin{frame}{All \highlight{grad and honors} students must do these tasks.}
+
+\vspace{-\baselineskip}
+
+\hangpara Select an eBird hotspot, such as a conservation area, state park, or wildlife refuge. You may choose one in Cape county or close to where you live. Tell me your eBird chosen hotspot by the end of January. First come, first serve.
+
+\hangpara Visit your chosen hotspot at least two hours each in February, March, April, and one hour during first week of May. You may bird longer.
+
+\hangpara Checklists must follow eBird best practices (see links in Canvas). 
+
+% \hangpara Your hotspot visits count towards your total checklists and time.
+
+\hangpara Upload at least four media files (photo or audio) from the hotspot. At least one must be audio.
+
+\hangpara Submit a final report that details the bird species observed at the hotspot during the visits and how they changed during the semester. 
+
+\end{frame}
+}
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{binoc_basics}}
+\begin{frame}[b,plain]
+	\tiny Birdwatcher by Daniele Zanni, Flickr Creative Commons.
+\end{frame}
+}
+
+% Binocs provided
+{
+\begin{frame}[t,plain]{Binoculars are provided for you.}
+
+
+\begin{multicols}{2}
+Nikon Action Extreme ATP 8$\times$40.
+
+\smallskip
+
+“8” is the magnification and the “40” is the diameter (in mm) of the objective.
+
+\smallskip
+
+Cost is about \$150.
+
+\smallskip
+
+This is about as cheap as you should go for first set of binoculars. Anything cheaper will be frustrating.
+
+\smallskip
+
+More info on course website.
+
+\columnbreak
+
+\includegraphics[width=0.45\textwidth]{nikon_binocs}
+
+\end{multicols}
+%\begin{columns}
+%\begin{column}[t]{0.4\textwidth}
+%
+%\end{column}
+%
+%\begin{column}{0.55\textwidth}
+%\includegraphics[width=\columnwidth]{nikon_binocs}
+%\end{column}
+%\end{columns}
+
+\end{frame}
+}
+
+%binoc parts
+{
+\begin{frame}[t,plain]{Know your binoculars.}
+
+\includegraphics[width=\textwidth]{binoc_parts}
+
+\end{frame}
+}
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{bird_for_binocs}}
+\begin{frame}
+
+\vfilll
+
+\tinyfill \href{https://www.flickr.com/photos/36436392@N05/3373117530}{Photo by Phonton, \ccbync{2.0}}
+\end{frame}
+}
+
+\end{document}
