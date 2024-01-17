@@ -92,7 +92,7 @@ Zoom Selection: G (for Go to selection)\newline
 Zoom Out Full: F\newline
 Normalize\ldots: N\newline
 Highpass filter: H\newline
-Silence: S
+Generate Silence: S (will appear as Silence under Generate Menu)
 
 
 \subsubsection*{Other Preferences}
@@ -129,7 +129,7 @@ Remember that cmd/ctrl-Z (Edit > Undo) is your friend. Press those keys to Undo 
 
 \subsubsection*{Open your audio file}
 
-Go to the Canvas course page. Open this week's module and find the “Student Audio Recordings” page. Click on the bird name next to your name to download and save the file(s) to your computer.
+Go to the Canvas course page. Open this week's module and find the “Lab: audio recordings for editing” page. Click on the bird name next to your name to download and save the file(s) to your computer.
 
 Make note of the folder where you save the file! Open that folder.
 
@@ -151,7 +151,9 @@ Press H (Effects > Filter > Highpass Filter\ldots) to filter the low frequencies
 
 Be sure the Highpass tab is selected.
 
-Move the slider to set the Passband Limit to as close to 250 Hz as possible without going over. (On my laptop, I can set it to 248 Hz.) Set the Rolloff to 60 dB/decade (don't ask, I don't know). The larger the dB value, the more gentle the roll off of the low frequencies. You don't want the roll off to be too sharp because it doesn't sound natural.
+Move the slider to set the Passband Limit to as close to 250 Hz as possible without going over. (On my laptop, I can set it to 248 Hz.) Set the Rolloff to 60~dB/decade. Rolloff determines how quickly the filtered frequencies decrease in volumne. Higher dBs causes the volume do decrease more quickly. Don't exceed 60~db/decade or the roll off will not sound natural.
+
+%(Rolloff reflects how quickly the volume decreases for the filtered frequencies. 60~dB/decade is equivalent to third order rolloff.). 
 
 Leave Passband Atenuation [sic] at 3 dB. 
 
