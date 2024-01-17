@@ -9,8 +9,8 @@
 
 
 \newif\ifprintkey
-\printkeytrue  % Instructor version with specimen location
-%\printkeyfalse % For student version
+%\printkeytrue  % Instructor version with specimen location
+\printkeyfalse % For student version
 \newcommand{\PrintKey}[1]{\ifprintkey{\textbf{#1}}\fi}
 
 \usepackage{graphicx}
@@ -65,7 +65,13 @@
 \fancypagestyle{plain}{%
 	\fancyhf{}
 	\lhead{\textsc{bi}~466/666: Ornithology}
-	\rhead{Name: \enspace \makebox[2.5in]{\hrulefill}}
+	\rhead{%
+		\ifprintkey
+			\textbf{KEY}
+		\else
+			Name: \enspace \makebox[2.5in]{\hrulefill}
+		\fi
+		}
 	\renewcommand{\headrulewidth}{0pt}
 }
 
@@ -110,7 +116,7 @@ Illustration & Description \tabularnewline
 
 %
 \PrintKey{\textbf{Carolina Chickadee\newline Cab 4, Drawer 2}}%\includegraphics[height=2.4cm]{bill_short} 
-& \textbf{Short:}\marginnote{(2)} the bill is decidely shorter than the head, as in a \href{https://www.allaboutbirds.org/guide/Carolina_Chickadee}{Carolina Chickadee.} \\ [2.5cm]
+& \textbf{Short:}\marginnote{(2)} the bill is decidedly shorter than the head, as in a \href{https://www.allaboutbirds.org/guide/Carolina_Chickadee}{Carolina Chickadee.} \\ [2.5cm]
 %
 \PrintKey{\textbf{Mississippi Kite \newline Cab2, Drawer 6 \newline Mallard Hen \newline Cab 1, Drawer 5}}& 
 \textbf{Hooked:}\marginnote{(3)} the upper mandible is longer than the lower, and its tip is bent down over the tip of the lower, as in a \textsc{Mississippi Kite.} Sometimes the upper mandible has a \textbf{nail-like hook} at its tip, as in a \textsc{Mallard.} %\href{https://www.allaboutbirds.org/guide/Mallard}{Mallard.}
