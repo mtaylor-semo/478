@@ -1,0 +1,612 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[t]{beamer}
+
+%%%% HANDOUTS For online Uncomment the following four lines for handout
+%\documentclass[t,handout]{beamer}  %Use this for handouts.
+%\includeonlylecture{student}
+%\usepackage{handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
+
+
+%%% Including only some slides for students.
+%%% Uncomment the following line. For the slides,
+%%% use the labels shown below the command.
+
+%% For students, use \lecture{student}{student}
+%% For mine, use \lecture{instructor}{instructor}
+
+
+%\usepackage{pgf,pgfpages}
+%\pgfpagesuselayout{4 on 1}[letterpaper,border shrink=5mm]
+
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Biolinum O}
+\setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/466/lectures/}}%
+%	{/Users/goby/Pictures/teach/common/}} % set of paths to search for images
+
+\usepackage{amsmath,amssymb}
+
+%\usepackage{units}
+
+\usepackage{booktabs}
+\usepackage{multicol}
+%	\setlength{\columnsep=1em}
+
+\usepackage{textcomp}
+\usepackage{setspace}
+\usepackage{tikz}
+	\tikzstyle{every picture}+=[remember picture,overlay]
+
+\mode<presentation>
+{
+  \usetheme{Lecture}
+  \setbeamercovered{invisible}
+  \setbeamertemplate{items}[square]
+}
+
+\usepackage{calc}
+\usepackage{hyperref}
+
+\newcommand\HiddenWord[1]{%
+	\alt<handout>{\rule{\widthof{#1}}{\fboxrule}}{#1}%
+}
+
+
+
+\begin{document}
+%\lecture{instructor}{instructor}
+
+\lecture{student}{student}
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{what_is_a_bird_carolina_wren}}
+\begin{frame}[b,plain]
+	\tiny\hspace{4em}\textcolor{white}{Carolina Wren by Ken Slade, Flickr Creative Commons.}
+\end{frame}
+}
+
+%{
+%\usebackgroundtemplate{\includegraphics[width=\paperwidth]{intro_how_many_species}}
+%\begin{frame}[b,plain]{How many species of birds\dots}
+%	\hfill\tiny\textcolor{white}{Limpkin and young by Mark Vance, Flickr Creative Commons.}
+%\end{frame}
+%}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{intro_how_many_species}}
+\begin{frame}[t,plain]
+%	\begin{tikzpicture}
+%		\node at (12.4,-9.3) [left] {\tiny\textcolor{white}{Brown Thrasher \copyright Dustin Siegel, All Rights Reserved. Used with permission.}};
+%	\end{tikzpicture}
+	\vspace{7em}
+	
+%	\pause
+	\hangpara\Large\hspace{14em}\textcolor{white}{41 orders}
+
+	\hangpara\Large\hspace{14em}\textcolor{white}{249 families}
+	
+%	\hangpara\Large\hspace{14em}\textcolor{white}{??? genera}
+	
+	\hangpara\Large\hspace{14em}\textcolor{white}{\textasciitilde10,906 species}
+
+\vfilll
+
+\tinyfill \textcolor{white}{Brown Thrasher \copyright Dustin Siegel, All Rights Reserved. Used with permission.}
+
+\end{frame}
+}
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{intro_form_function}}
+\begin{frame}[b,plain]{The \highlight{form} of the bird is tied to it’s ecological \highlight{function.}}
+	\hfill\tiny Scissor-tailed Flycatcher by Ken Slade, Flickr Creative Commons.
+\end{frame}
+}
+
+
+
+%Wings
+{
+\begin{frame}[c,plain]{High-speed soaring birds have long, narrow wings.}
+	\centering
+	\includegraphics[width=\textwidth]{wings_albatross}\par
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{wings_albatross_flight}}
+\begin{frame}[b,plain]
+	\tiny Laysan Albatross by Dick Daniels, Wikimedia Commons.
+\end{frame}
+}
+
+{
+\begin{frame}[c,plain]{Low-speed soaring birds have broad, slotted wings.}
+	\centering
+	\includegraphics[width=0.9\textwidth]{wings_buteo}\par
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{wings_vulture_flight}}
+\begin{frame}[b,plain]
+	\tiny\textcolor{white}{Turkey Vulture by Tatiana Gettleman, Flickr Creative Commons.}
+\end{frame}
+}
+
+
+{
+\begin{frame}[c,plain]{Fast birds in open areas have shorter, pointed wings.}
+	\centering
+	\includegraphics[width=0.9\textwidth]{wings_falcon}\par
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{wings_peregrine_flight}}
+\begin{frame}[b,plain]
+	\tiny\hspace{10em}\textcolor{white}{Juvenile Peregrine Falcon (?) by Magnus Manske, Wikimedia Commons.}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{wings_mourning_dove}}
+\begin{frame}[b,plain]
+	\tiny\textcolor{white}{Mourning Dove \copyright Stephen Ramirez, All Rights Reserved. Used with permission.}
+	\vspace{6ex}
+\end{frame}
+}
+
+
+{
+\begin{frame}[c,plain]{Many birds have short, rounded wings.}
+	\centering
+	\includegraphics[width=0.5\textwidth]{wings_songbird}\par
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{wings_warbler_flight}}
+\begin{frame}[b,plain]
+	\tiny\hspace{8em}\textcolor{white}{Yellow-rumped Warbler by Jack Sutton, Flickr Creative Commons.}
+\end{frame}
+}
+
+%% Feet
+%\lecture{student}{student}
+{
+\begin{frame}[c,plain]{What is this type of foot used for?}
+	\centering
+	\includegraphics[height=0.7\textheight]{foot_perching}\par
+\end{frame}
+}
+
+\lecture{instructor}{instructor}
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{foot_perching_bananaquits}}
+\begin{frame}[b,plain]
+	\hfill\tiny\textcolor{white}{Bananaquits by Leon-bojarzcuk, Wikimedia Commons.}
+\end{frame}
+}
+
+\lecture{student}{student}
+{
+\begin{frame}[c,plain]{What type of habitat does this bird use?}
+	\centering
+	\includegraphics[height=0.7\textheight]{foot_webbed}\par
+\end{frame}
+}
+
+\lecture{instructor}{instructor}
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{foot_ringnecked_duck}}
+\begin{frame}[b,plain]
+	\tiny\textcolor{white}{Ring-necked Duck by Rick Leche, Flickr Creative Commons.}
+\end{frame}
+}
+
+\lecture{student}{student}
+{
+\begin{frame}[c,plain]{What type of habitat does this bird use?}
+	\centering
+	\includegraphics[height=0.7\textheight]{foot_heron}\par
+\end{frame}
+}
+
+\lecture{instructor}{instructor}
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{foot_wading_birds}}
+\begin{frame}[b,plain]
+	\tiny\textcolor{black}{Wading birds by Anita Gould, Flickr Creative Commons.}
+\end{frame}
+}
+
+\lecture{instructor}{instructor}
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{foot_african_jacana}}
+\begin{frame}[b,plain]
+	\tiny\textcolor{white}{African Jacana by Arno Meintjes, Flickr Creative Commons.\hfill\href{http://www.youtube.com/watch?v=yVMOZhpVK2g}{Video}}
+\end{frame}
+}
+
+\lecture{student}{student}
+{
+\begin{frame}[c,plain]{What type of habitat does this bird use?}
+	\centering
+	\includegraphics[height=0.7\textheight]{foot_ptarmigan}\par
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{foot_ptarmigan_photo}}
+\begin{frame}[b,plain]
+	\hfill\tiny\textcolor{white}{Arnstein Rønning, Wikimedia Commons.}
+\end{frame}
+}
+
+\lecture{instructor}{instructor}
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{foot_whitetail_ptarmigan}}
+\begin{frame}[b,plain]
+	\tiny\textcolor{black}{White-tailed Ptarmigan by USFWS, Flickr Creative Commons.}
+\end{frame}
+}
+
+\lecture{student}{student}
+{
+\begin{frame}[c,plain]{What type of bill does this bird have?}
+	\centering
+	\includegraphics[height=0.7\textheight]{foot_talons}\par
+\end{frame}
+}
+
+\lecture{instructor}{instructor}
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{foot_osprey_with_fish}}
+\begin{frame}[b,plain]
+	\tiny\hfill\textcolor{white}{Osprey by Matt Shiffler Photography, Flickr Creative Commons.}
+\end{frame}
+}
+
+\lecture{student}{student}
+{
+\begin{frame}[t,plain]{What differences do you see among these shorebirds?}
+	\centering
+	\includegraphics[width=\textwidth]{feeding_shorebird_silhouettes}\par
+\end{frame}
+}
+
+{
+\begin{frame}[t,plain]{Shorebirds feed on different types of prey.}
+	\begin{center}
+	\includegraphics[width=\textwidth]{feeding_shorebird_feeding}\end{center}
+\vskip0pt plus 1filll
+
+\hfill\tiny\href{https://www.youtube.com/watch?v=56eU3KLIKZo}{Video}
+\end{frame}
+}
+
+
+%%% Take a break
+%\lecture{instructor}{instructor}
+%{
+%\usebackgroundtemplate{\includegraphics[width=\paperwidth]{break_parrot}}
+%\begin{frame}[b,plain]
+%	\hfill\tiny\textcolor{white}{Rosy-faced Lovebird by Cassidy McDonald, Flickr Creative Commons.}
+%\end{frame}
+%}
+
+%% Begin Evolutionary History
+\lecture{student}{student}
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{anchiornis_dinosaur}}
+\begin{frame}[b,plain]
+	\tiny\textit{Anchiornis huxleyi}
+\end{frame}
+}
+
+\lecture{instructor}{instructor}
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{test1}}
+\begin{frame}[b,plain]
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{test2}}
+\begin{frame}[b,plain]
+\end{frame}
+}
+
+\lecture{student}{student}
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{thomas_huxley}}
+\begin{frame}[b,plain]
+	\hfill\tiny\textcolor{white}{Wikimedia Commons (public domain)}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{compare_skulls}}
+\begin{frame}[t,plain]{Birds and reptiles have a \highlight{single occipital condyle.}}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{compare_ears}}
+\begin{frame}[t,plain]{Birds and reptiles have a \highlight{single middle ear bone.}}
+\end{frame}
+}
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{compare_jaws}}
+\begin{frame}[t,plain]{Birds and reptiles have \highlight{similar jaw structures.}}
+\end{frame}
+}
+
+%\lecture{instructor}{instructor}
+%\begin{frame}[t,plain]{\highlight{Study} pages 26–27 for other shared characters.}
+%	\begin{center}
+%		\includegraphics[height=0.7\textheight]{text_cover}
+%	\end{center}
+%\end{frame}
+
+\lecture{student}{student}
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{archaeopteryx_lithographica}}
+\begin{frame}[t,plain]
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{compare_archaeopteryx}}
+\begin{frame}[t,plain]
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{sinosauropteryx_fossil}}
+\begin{frame}[t,plain]{\textcolor{white}{\textit{Sinosauropteryx}, a theropod dinosaur, had filamentous feathers.}}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{dilong}}
+\begin{frame}[t,plain]
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{yutyrannus_feathers}}
+\begin{frame}[b,plain]
+\hfill\tiny\textcolor{white}{Xu et al. 2012. Nature 484: 92.}
+\end{frame}
+}
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{yutyrannus_drawing}}
+\begin{frame}[t,plain]{\textcolor{white}{A group of \textit{Yutyrannus}, with other theropods and pterosaurs.} }
+\end{frame}
+}
+
+%\lecture{instructor}{instructor}
+%{
+%\usebackgroundtemplate{\includegraphics[width=\paperwidth]{yutyrannus_phylogeny}}
+%\begin{frame}[b,plain]
+%\hfill\tiny Xu et al. 2012. Nature 484: 92.
+%\end{frame}
+%}
+%
+%\lecture{student}{student}
+%{
+%\usebackgroundtemplate{\includegraphics[width=\paperwidth]{microraptor_fossil}}
+%\begin{frame}[b,plain]{\textcolor{white}{\textit{Microraptor gui} had flight-like feathers on wings \emph{and} legs but still had long, bony tail.}}
+%\hfill\tiny\textcolor{white}{\textit{Microraptor gui}, Wikimedia Commons}
+%\end{frame}
+%}
+%
+%{
+%\usebackgroundtemplate{\includegraphics[width=\paperwidth]{microraptor_flight}}
+%\begin{frame}[b,plain]
+%\tiny\hfill\textit{Microraptor gui} drawing \copyright Portia Sloan.
+%\end{frame}
+%}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{confuciusornis_fossil}}
+\begin{frame}[b,plain]{\textcolor{white}{\textit{Confuciusornis} had short bird-like tail.}}
+\hfill\tiny\textcolor{white}{\textit{Confuciusornis}, Wikimedia Commons}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{confuciusornis_drawing}}
+\begin{frame}[b,plain]
+%\tiny\hfill\textit{Microraptor gui} drawing \copyright Portia Sloan.
+\end{frame}
+}
+
+{
+\begin{frame}[b,plain]
+\begin{center}
+	\includegraphics[width=\textwidth]{dinosaur_soft_tissue}
+\end{center}
+\vfill
+\tiny\hfill Schweitzer et al. 2007. Science 316: 277.
+\end{frame}
+}
+
+{
+\begin{frame}[b,plain]
+	\hspace{-1em}\includegraphics[height=0.9\textheight]{dinosaur_genetics}
+\vskip0pt plus 1fill
+
+\tiny\hfill Schweitzer et al. 2009. Science 324: 626.
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{dinosaur_phylogeny}}
+\begin{frame}[b,plain]
+\tiny Futuyma 2005. \textit{Evolution}, Sinauer.
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{theropod_phylogeny}}
+\begin{frame}[b,plain]{\highlight{Plumulaceous} feathers evolved in basal theropods. \highlight{Pennaceous} feathers evolved later in maniraptorans.}
+
+\begin{tikzpicture}
+	\node at (12.4,0.1) [left] {\tiny Zimmer 2011. \textit{The Tangled Bank}, Roberts and Co.};
+%	\pause\node at (-0.1,0.17) [right] {\small See also Fig. 2-10 of your text.};
+	\node at (3.5,1.2)[left] {\normalsize Avialae};
+	\node at (2.55,4.25)[left]{\normalsize Maniraptora};
+%	\node at (12.4,7.6)[gray,left]{See also Fig. 2–10 of your text.};
+\end{tikzpicture}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{theropod_phylogeny2}}
+\begin{frame}[b,plain]
+%\tiny Futuyma 2005. \textit{Evolution}, Sinauer Assoc.
+\end{frame}
+}
+
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{body_size_theropod}}
+\begin{frame}[b,plain]{Avialae were much smaller than other Saurischians.}
+	\tiny Benson et al. 2014. PLoS Biology 12(5): e1001853
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{body_size_mesozoic}}
+\begin{frame}[b,plain]{Body size decrease occurred in the early Cretaceous}
+	\tiny Benson et al. 2014. PLoS Biology 12(5): e1001853
+\end{frame}
+}
+%
+%{
+%\usebackgroundtemplate{\includegraphics[width=\paperwidth]{phylo_size_reduction}}
+%\begin{frame}[b,plain]
+%\begin{tikzpicture}
+%	\node at (12.4,0.1) [left] {\tiny Lee et al. 2014. Science 345: 562.};
+%	\node at (6.9,2.5)[right]{\small Maniraptora};
+%	\draw [very thick,->] (6.9,2.5) -- (4.75,3.5);
+%	\node at (11.1,8.75){\scriptsize Avialae};
+%\end{tikzpicture}
+%\end{frame}
+%}
+%
+%{
+%\usebackgroundtemplate{\includegraphics[width=\paperwidth]{phylo_skeletal_rate}}
+%\begin{frame}[b,plain]
+%\begin{tikzpicture}
+%	\node at (12.4,0.1) [left] {\tiny Lee et al. 2014. Science 345: 562.};
+%	\node at (5.9,3.25)[right]{\small Maniraptora};
+%	\draw [very thick,->] (5.9,3.25) -- (4.6,3.9);
+%\end{tikzpicture}
+%\end{frame}
+%}
+
+%{
+%\usebackgroundtemplate{\includegraphics[width=\paperwidth]{digit_phylogeny_blank}}
+%\begin{frame}[t,plain]
+%
+%	\vspace{6em}
+%	
+%	\hangpara Now it's your turn to identify \\ some evolutionary trends.
+%
+%	\vspace{3em}
+%	
+%	\pause\hangpara What trends did you identify?
+%	
+%	\vskip0pt plus 1filll
+%	
+%	\tiny\hfill palaeos.com
+%\end{frame}
+%}
+
+\lecture{instructor}{instructor}
+{
+\begin{frame}[t,plain]
+	\begin{center}
+		\includegraphics[height = 0.9\textheight]{digit_phylogeny}
+	\end{center}
+	
+	\vskip0pt plus 1filll
+	
+	\tiny\hfill palaeos.com
+\end{frame}
+}
+
+%\lecture{instructor}{instructor}
+%\begin{frame}[t,plain]{Take a break.}
+%	\begin{center}
+%		\includegraphics[height=0.85\textheight]{xkcd}
+%	\end{center}
+%\end{frame}
+%
+
+%\lecture{student}{student}
+%{
+%\usebackgroundtemplate{\includegraphics[width=\paperwidth]{phylo_modern_birds}}
+%\begin{frame}[b,plain]
+%\begin{tikzpicture}
+%	\node at (12.4,0.1) [left] {\tiny Jarvis et al. 2014. Science 346: 1320.};
+%	\pause\draw [very thick,color=blue6] (-0.2,0.7) rectangle (7,6.5);
+%%	\draw [very thick,color=green7] (-0.2,0.7) rectangle (1.75,3.5);
+%\end{tikzpicture}
+%
+%\end{frame}
+%}
+
+%\usebackgroundtemplate{\includegraphics[width=\paperwidth]{phylogeny_radiation}}
+\begin{frame}[t,plain]{Birds underwent an \highlight{adaptive radiation} about 20 Ma.}
+
+\vspace{-\baselineskip}
+
+\centering
+\includegraphics[width=0.9\linewidth]{phylogeny_radiation}\par
+
+
+\vfilll
+
+\tiny \hfill Oliveros~et~al.~2019. PNAS~116:7916.
+\end{frame}
+%}
+
+%\usebackgroundtemplate{\includegraphics[width=\paperwidth]{phylogeny_radiation}}
+\begin{frame}[t,plain]{Biogeographic realms are based on distribution of modern birds.}
+
+\vspace{-\baselineskip}
+
+%\centering
+\includegraphics[width=\linewidth]{biogeographic_realms}\par
+
+
+\vfilll
+
+\tiny \hfill Fig.~2.16, \emph{Handbook of Bird Biology.}
+\end{frame}
+%}
+
+%{
+%\usebackgroundtemplate{\includegraphics[width=\paperwidth]{phylo_modern_birds_major_groups}}
+%\begin{frame}[t,plain]{You must learn these major groups of Neornithes.}
+%\end{frame}
+%}
+
+\end{document}
+
