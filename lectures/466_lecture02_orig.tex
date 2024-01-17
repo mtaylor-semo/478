@@ -8,6 +8,7 @@
 %\includeonlylecture{student}
 %\usepackage{handoutWithNotes}
 %\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
+%	\setbeamercolor{background canvas}{bg=black!5}
 
 
 %%% Including only some slides for students.
@@ -84,23 +85,23 @@
 {
 \usebackgroundtemplate{\includegraphics[width=\paperwidth]{intro_how_many_species}}
 \begin{frame}[t,plain]
-%	\begin{tikzpicture}
-%		\node at (12.4,-9.3) [left] {\tiny\textcolor{white}{Brown Thrasher \copyright Dustin Siegel, All Rights Reserved. Used with permission.}};
-%	\end{tikzpicture}
+	\begin{tikzpicture}
+		\node at (12.4,-9.3) [left] {\tiny\textcolor{white}{Brown Thrasher \copyright Dustin Siegel, All Rights Reserved. Used with permission.}};
+	\end{tikzpicture}
 	\vspace{7em}
 	
-%	\pause
-	\hangpara\Large\hspace{14em}\textcolor{white}{41 orders}
+	\pause
+	\hangpara\Large\hspace{14em}\textcolor{white}{23 orders}
 
-	\hangpara\Large\hspace{14em}\textcolor{white}{249 families}
+	\hangpara\Large\hspace{14em}\textcolor{white}{142 families}
 	
-%	\hangpara\Large\hspace{14em}\textcolor{white}{??? genera}
+	\hangpara\Large\hspace{14em}\textcolor{white}{2,057 genera}
 	
-	\hangpara\Large\hspace{14em}\textcolor{white}{\textasciitilde10,906 species}
+	\hangpara\Large\hspace{14em}\textcolor{white}{\textasciitilde10,000 species}
 
-\vfilll
-
-\tinyfill \textcolor{white}{Brown Thrasher \copyright Dustin Siegel, All Rights Reserved. Used with permission.}
+%\vskip0pt plus 1filll
+	
+%	\hfill\tiny\textcolor{white}{Brown Thrasher \copyright Dustin Siegel, All Rights Reserved. Used with permission.}
 
 \end{frame}
 }
@@ -397,28 +398,28 @@
 \end{frame}
 }
 
-%\lecture{instructor}{instructor}
-%{
-%\usebackgroundtemplate{\includegraphics[width=\paperwidth]{yutyrannus_phylogeny}}
-%\begin{frame}[b,plain]
-%\hfill\tiny Xu et al. 2012. Nature 484: 92.
-%\end{frame}
-%}
-%
-%\lecture{student}{student}
-%{
-%\usebackgroundtemplate{\includegraphics[width=\paperwidth]{microraptor_fossil}}
-%\begin{frame}[b,plain]{\textcolor{white}{\textit{Microraptor gui} had flight-like feathers on wings \emph{and} legs but still had long, bony tail.}}
-%\hfill\tiny\textcolor{white}{\textit{Microraptor gui}, Wikimedia Commons}
-%\end{frame}
-%}
-%
-%{
-%\usebackgroundtemplate{\includegraphics[width=\paperwidth]{microraptor_flight}}
-%\begin{frame}[b,plain]
-%\tiny\hfill\textit{Microraptor gui} drawing \copyright Portia Sloan.
-%\end{frame}
-%}
+\lecture{instructor}{instructor}
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{yutyrannus_phylogeny}}
+\begin{frame}[b,plain]
+\hfill\tiny Xu et al. 2012. Nature 484: 92.
+\end{frame}
+}
+
+\lecture{student}{student}
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{microraptor_fossil}}
+\begin{frame}[b,plain]{\textcolor{white}{\textit{Microraptor gui} had flight-like feathers on wings \emph{and} legs but still had long, bony tail.}}
+\hfill\tiny\textcolor{white}{\textit{Microraptor gui}, Wikimedia Commons}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{microraptor_flight}}
+\begin{frame}[b,plain]
+\tiny\hfill\textit{Microraptor gui} drawing \copyright Portia Sloan.
+\end{frame}
+}
 
 {
 \usebackgroundtemplate{\includegraphics[width=\paperwidth]{confuciusornis_fossil}}
@@ -496,47 +497,47 @@
 	\tiny Benson et al. 2014. PLoS Biology 12(5): e1001853
 \end{frame}
 }
-%
-%{
-%\usebackgroundtemplate{\includegraphics[width=\paperwidth]{phylo_size_reduction}}
-%\begin{frame}[b,plain]
-%\begin{tikzpicture}
-%	\node at (12.4,0.1) [left] {\tiny Lee et al. 2014. Science 345: 562.};
-%	\node at (6.9,2.5)[right]{\small Maniraptora};
-%	\draw [very thick,->] (6.9,2.5) -- (4.75,3.5);
-%	\node at (11.1,8.75){\scriptsize Avialae};
-%\end{tikzpicture}
-%\end{frame}
-%}
-%
-%{
-%\usebackgroundtemplate{\includegraphics[width=\paperwidth]{phylo_skeletal_rate}}
-%\begin{frame}[b,plain]
-%\begin{tikzpicture}
-%	\node at (12.4,0.1) [left] {\tiny Lee et al. 2014. Science 345: 562.};
-%	\node at (5.9,3.25)[right]{\small Maniraptora};
-%	\draw [very thick,->] (5.9,3.25) -- (4.6,3.9);
-%\end{tikzpicture}
-%\end{frame}
-%}
 
-%{
-%\usebackgroundtemplate{\includegraphics[width=\paperwidth]{digit_phylogeny_blank}}
-%\begin{frame}[t,plain]
-%
-%	\vspace{6em}
-%	
-%	\hangpara Now it's your turn to identify \\ some evolutionary trends.
-%
-%	\vspace{3em}
-%	
-%	\pause\hangpara What trends did you identify?
-%	
-%	\vskip0pt plus 1filll
-%	
-%	\tiny\hfill palaeos.com
-%\end{frame}
-%}
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{phylo_size_reduction}}
+\begin{frame}[b,plain]
+\begin{tikzpicture}
+	\node at (12.4,0.1) [left] {\tiny Lee et al. 2014. Science 345: 562.};
+	\node at (6.9,2.5)[right]{\small Maniraptora};
+	\draw [very thick,->] (6.9,2.5) -- (4.75,3.5);
+	\node at (11.1,8.75){\scriptsize Avialae};
+\end{tikzpicture}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{phylo_skeletal_rate}}
+\begin{frame}[b,plain]
+\begin{tikzpicture}
+	\node at (12.4,0.1) [left] {\tiny Lee et al. 2014. Science 345: 562.};
+	\node at (5.9,3.25)[right]{\small Maniraptora};
+	\draw [very thick,->] (5.9,3.25) -- (4.6,3.9);
+\end{tikzpicture}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{digit_phylogeny_blank}}
+\begin{frame}[t,plain]
+
+	\vspace{6em}
+	
+	\hangpara Now it's your turn to identify \\ some evolutionary trends.
+
+	\vspace{3em}
+	
+	\pause\hangpara What trends did you identify?
+	
+	\vskip0pt plus 1filll
+	
+	\tiny\hfill palaeos.com
+\end{frame}
+}
 
 \lecture{instructor}{instructor}
 {
