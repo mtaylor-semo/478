@@ -1,0 +1,191 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt]{article}
+
+%\printanswers
+
+\usepackage{fontspec}
+\setmainfont[Ligatures={TeX, Common}, BoldFont={* Bold}, ItalicFont={* Italic}, BoldItalicFont={* BoldItalic}, Numbers={OldStyle,Proportional}]{Linux Libertine O}
+\setsansfont[Scale=MatchLowercase,Ligatures={TeX,Common}, Numbers={OldStyle,Proportional}]{Linux Biolinum O}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata}
+\usepackage{microtype}
+
+\usepackage{geometry}
+\geometry{letterpaper, bottom=1in}                   
+%\geometry{landscape}                % Activate for for rotated page geometry
+\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{mathtools}
+%\everymath{\displaystyle}
+
+
+\usepackage{unicode-math}
+\setmathfont[Scale=MatchLowercase, Numbers=Lining]{Asana Math}
+%\setmathfont[Scale=MatchLowercase]{XITS Math}
+
+% To define fonts for particular uses within a document. For example, 
+% This sets the Libertine font to use tabular number format for tables.
+\newfontfamily{\tablenumbers}[Numbers={Monospaced}]{Linux Libertine O}
+\newfontfamily{\libertinedisplay}{Linux Libertine Display O}
+
+
+\usepackage{graphicx}
+\graphicspath{{/Users/goby/Pictures/teach/466/handouts/}
+	{img/}} % set of paths to search for images
+
+
+
+\usepackage{booktabs}
+%\usepackage{longtable}
+%\usepackage{siunitx}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+\usepackage{multicol}
+
+\usepackage{siunitx}
+
+\usepackage{enumitem}
+\setlist{leftmargin=*}
+\setlist[1]{labelindent=\parindent}
+\setlist[enumerate]{label=\textbf{\arabic*}.}
+
+
+\usepackage[sc]{titlesec}
+
+
+\makeatletter
+\def\SetTotalwidth{\advance\linewidth by \@totalleftmargin
+	\@totalleftmargin=0pt}
+\makeatother
+
+\usepackage{fancyhdr}
+\fancyhf{}
+\pagestyle{fancy}
+\setlength{\headheight}{13.6pt}
+\lhead{}
+\chead{}
+\rhead{\footnotesize pg.~\thepage }
+\renewcommand{\headrulewidth}{0.4pt}
+
+\fancypagestyle{plain}{%
+	\fancyhf{}
+	\lhead{\textsc{bi}~466/666: Ornithology}
+	\rhead{Name: \enspace \makebox[2.5in]{\hrulefill}}
+	\renewcommand{\headrulewidth}{0pt}
+}
+
+\begin{document}
+\thispagestyle{plain}
+
+\subsection*{Campus eBird assignment (60\ points)}
+
+\textbf{Read these instructions carefully and follow them closely.}
+
+\textit{This is a new assignment. If some information is unclear to you, please ask for help so that you do not do something wrong and so that I can improve the wording.}
+
+This assignment begins Sunday, 21 January, and ends Saturday, 20 April. Your final checklist must be submitted by the end of the day on 20 April. You must submit one checklist per week, except for the week of spring break (10–16 March).
+
+You are required to submit a total of 12 eBird checklists from six designated stations located around campus. These checklists are separate from other assignments, such as the Great Backyard Bird Count assignment.
+
+All stations are located on the main campus bounded by Normal Drive on the south, Henderson Street on the west, New Madrid Street on the north, and Pacific Street on the east. 
+
+You must visit one station per week. You must visit each station twice during the semester.
+
+For each station, you will do a 15 minute (minimum) stationary count for one visit. You will do a 15 minute (minimum) walking count for the other visit. You can do the stationary and walking counts in any order. You can do a stationary count one week, followed by a walking count another week. Or walking, then stationary. You can do all of your stationary counts in six weeks, followed by six walking counts. Mix and match but submit a checklist from no more than one station per week.
+
+Use your eBird mobile app to record all bird detected and positively identified. Tracking must be on in eBird. If tracking is turned off so that I cannot see the path you walked, I will not count the checklist.
+
+Record any bird you see, even if it is outside of the designated area. You must remain inside the area when walking. You can leave the designated area temporarily if you need to identify a bird you detected outside the area while you were inside the area. 
+
+You may use Merlin to help you identify birds that are present but you must visually confirm the presence of the bird. Merlin can be fooled. If you are unable to find the bird, save the recording to play back for Dr.~Taylor. He can verify whether the species was present.  If the species was present, you can edit your checklist in eBird and reshare. You must reshare from eBird online, not the app. Do not include birds identified by Merlin that you did not see unless you are \textit{positive} of your vocal identification.
+
+Include the station number (and optionally name) in your eBird checklist comments. Checklists submitted without a station number will not be counted for credit.
+
+Choose the Southeast Missouri State University State University Campus eBird hotspot (not the River Campus hotspot) for every checklist you submit for this assignment.
+
+Share your eBird checklist with semo\_ornithology (Dr.~Taylor's course account) when you submit your checklist. You \textit{must} share your checklist with semo\_ornithology the same day you make the checklist or you will not receive credit for that checklist. If you do not share your checklist with semo\_ornithology on the same day you completed the checklist, you will have to revisit the station to perform another count (not necessarily a bad thing).
+
+For safety, I recommend you visit the stations during daylight hours, defined as 1/2 hour before sunrise to 1/2 hour after sunset. eBird accepts nocturnal checklists. Nocturnal is defined as 1/2 hour after sunset to 1/2 hour before sunrise. eBird determines this automatically for you. You can submit a nocturnal checklist but be sure to have another person with you for general safety.
+
+An easy time to visit a station each week is on your way to your 8:00~\textsc{am} ornithology class. Bird are most active in the morning and therefore easiest to detect. In general, try to bird at a time when student traffic is minimal.
+
+Birding with a classmate is acceptable \textit{but} no more than one of you may submit a checklist for that station for that time. You and a classmate could bird together at two different stations. One of you would submit a checklist for one station, then the other person would submit a checklist for the next station. You can reverse the order the following week.  You could also visit the same station at different times, such as before and after class. One of you submits a checklist before class, the other submits after class. There are many possibilities so ask if you are unsure but the general rule is that two students may not submit checklists for the same station on the same day and time.
+
+If you arrive at a station and another student is already there, visit another station.
+
+Each valid checklist submitted is worth 5 points. If you properly complete this assignment, you will have submitted 12 checklists from six stations for a total of 60 points.
+
+We will do some basic analyses of the data at the end of the semester.
+
+Use this table to track the stations and count types you have completed.
+
+\begin{tabular}{lcc}
+
+\toprule
+
+Station & Stationary & Walking \tabularnewline
+
+\midrule
+
+1: Wild Wood & & \tabularnewline
+
+\midrule
+
+2: Football Practice Fields & & \tabularnewline
+
+\midrule
+
+3: TBD & & \tabularnewline
+
+\midrule
+
+4: Band Practice Field & & \tabularnewline
+
+\midrule
+
+5: Memorial  & & \tabularnewline
+
+\midrule
+
+6: Stage & & \tabularnewline
+
+\bottomrule
+
+\end{tabular}
+
+\newpage
+
+\subsubsection*{Station names and descriptions}
+
+Listed in numerical order from north to south. 
+
+\begin{enumerate}
+\item \textbf{Wild Wood:} the area bounded by Greek Drive and New Madrid Street. The stationary point is located on Wild Wood St. down in the valley west of the house (Wild Wood).
+
+\item \textbf{Football Practice Fields:} the area bounded by the sidewalk between the west side of the practice fields and LaFerla Hall, the north side of the fields, the tree line between the east side of the practice fields and the International Village, and New Madrid Street on the north. You can bird the west side of the trees from the sky-bridge but do not cross New Madrid from the bridge. There is a gap between the trees on the north and east side of the practice fields that you can walk through to get to New Madrid Street sidewalk. Spend most of your walking time near the trees but definitely watch for birds on the field and keep an eye to the sky. DO NOT BIRD HERE IF THE FIELD IS BEING USED FOR PRACTICE.
+
+\item \textbf{Chill Magill:} the area bounded by Magill, Johnson, and Polytech on the west, the sidewalk from Magill to North Tower on the south, Tower Circle on the east, and the road between Group Housing and the Rosengarten Athletic Complex to the North (follow the map). Notice that the buildings along Tower Circle are outside of the area, to help reduce the influence of traffice.
+
+\item \textbf{Band Practice Field:} the area bounded by the sidewalk on the west side of the band practice field, to the sidewalk on the north side of the band practice field (including the trees between this sidewalk and the greenhouses), to the sidewalk going up Cardiac Hill on the east, to Cheney Drive on the south. DO NOT BIRD HERE IF THE FIELD IS BEING USED FOR PRACTICE.
+
+\item \textbf{Memorial:} the area bounded by Cheney Drive on the north, Henderson Street on the west, Normal Drive on the south, and the sidewalk east of Art Building and Memorial Hall. 
+
+\item \textbf{Stage:} the area bounded by Academic Circle Drive on the north and east, Pacific Street on the east, Normal Drive on the south, and the sidewalk along Academic Hall on the west. 
+\end{enumerate}
+
+Be sure to watch the ground and the skies, especially in open areas like the practice fields. You may observe geese flying north in late January and February, and vultures, hawks, and other birds flying are possible any time. Robins, starlings, blackbirds, and other species may be on the ground.
+
+
+\newpage
+
+Magill Hall (MG) is located near the center of the map to help you orient.
+
+\includegraphics[width=0.97\linewidth]{campus_ebird_map_trimmed}
+
+
+\end{document}  

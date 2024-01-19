@@ -1,0 +1,226 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt]{article}
+
+%\printanswers
+
+\usepackage{fontspec}
+\setmainfont[Ligatures={TeX, Common}, BoldFont={* Bold}, ItalicFont={* Italic}, BoldItalicFont={* BoldItalic}, Numbers={OldStyle,Proportional}]{Linux Libertine O}
+\setsansfont[Scale=MatchLowercase,Ligatures={TeX,Common}, Numbers={OldStyle,Proportional}]{Linux Biolinum O}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata}
+\usepackage{microtype}
+
+\usepackage{geometry}
+\geometry{letterpaper, bottom=1in}                   
+%\geometry{landscape}                % Activate for for rotated page geometry
+\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{mathtools}
+%\everymath{\displaystyle}
+
+
+\usepackage{unicode-math}
+\setmathfont[Scale=MatchLowercase, Numbers=Lining]{Asana Math}
+%\setmathfont[Scale=MatchLowercase]{XITS Math}
+
+% To define fonts for particular uses within a document. For example, 
+% This sets the Libertine font to use tabular number format for tables.
+\newfontfamily{\tablenumbers}[Numbers={Monospaced}]{Linux Libertine O}
+\newfontfamily{\libertinedisplay}{Linux Libertine Display O}
+
+
+\usepackage{graphicx}
+\graphicspath{{/Users/goby/Pictures/teach/466/handouts/}
+	{img/}} % set of paths to search for images
+
+
+
+\usepackage{booktabs}
+%\usepackage{longtable}
+%\usepackage{siunitx}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+\usepackage{multicol}
+
+\usepackage{siunitx}
+
+\usepackage{enumitem}
+\setlist{leftmargin=*}
+\setlist[1]{labelindent=\parindent}
+\setlist[enumerate]{label=\textbf{\arabic*}.}
+
+\usepackage{hyperref}
+
+\usepackage[sc]{titlesec}
+
+
+\makeatletter
+\def\SetTotalwidth{\advance\linewidth by \@totalleftmargin
+	\@totalleftmargin=0pt}
+\makeatother
+
+\usepackage{fancyhdr}
+\fancyhf{}
+\pagestyle{fancy}
+\setlength{\headheight}{13.6pt}
+\lhead{}
+\chead{}
+\rhead{\footnotesize pg.~\thepage }
+\renewcommand{\headrulewidth}{0.4pt}
+
+\fancypagestyle{plain}{%
+	\fancyhf{}
+	\lhead{\textsc{bi}~466/666: Ornithology}
+	\rhead{Name: \enspace \makebox[2.5in]{\hrulefill}}
+	\renewcommand{\headrulewidth}{0pt}
+}
+
+\begin{document}
+\thispagestyle{plain}
+
+\subsection*{Hotspot survey (graduate and honors students) (100\ points)}
+
+\textbf{Read these instructions carefully and follow them closely.}
+
+Graduate students and undergraduate students pursuing an honors contract for this course must do some additional field work beyond the requirements for non-honors undergraduate students.
+
+You are required to choose a eBird “hotspot” by the end of the January, then spend time birding at that hotspot each month through the end of the semester. You will submit a final report detailing the birds you detected and describing how the species changed by migration during the semester.
+
+\subsubsection*{Choose your hotspot}
+
+You can find a suitable hotspot in a couple ways. The first is to list all hotspots in your preferred county. The second is to explore a region.
+
+\textsc{County list}
+
+\begin{itemize}
+\item Log in to your online eBird account. You must log in to ebird.org using a web browser. You cannot do this via the eBird mobile app.
+
+\item Click on the Explore tab near the top of the page.
+
+\item Enter the name of your home county (e.g., Cape Girardeau) into the “Explore Regions” space in the upper right of the page. As you type, eBird will enter matches. Type only the name of the county but not the word “county.” Choose your county when it appears. You may have to scroll down the list to find the county for your state (e.g., Perry, Illinois vs Perry, Missouri).
+
+\item You will be presented a list of recent sightings and visits to the county. Scroll down the page until you see “Top hotspots” on the lower right. The first 10 listed are those with the highest reported species counts over time (not all at one time). 
+
+\item Click the “More hotspots” button to view all of the hotspots for the county. The are listed in descending order of species reported. The number of species reported is mostly indicative of how often the hotspot has been birded, not how many species might actually be present over the course of a year.
+
+\item Click interesting hotspot names to see species reported from recent visits. Click on the “Map” button on the upper right to see the location of the hotspot. Click “Illustrated Checklist” to see a list of all species reported for the hotspot and when they were reported. That will give you an indication of what species to search for and when to start watching for them.
+
+\item Tell Dr.~Taylor your hotspot choice. First come, first serve.
+
+\end{itemize}
+
+\textsc{Explore a region}
+
+\begin{itemize}
+\item Log in to your online eBird account. You must log in to ebird.org using a web browser. You cannot do this via the eBird mobile app.
+
+\item Click on the Explore tab near the top of the page.
+
+\item Click on the “Explore Hotspots” link near the top right of the page.
+
+\item Enter the name of your home county (e.g., Cape Girardeau) into the “Location” text box in the upper right of the page. As you type, eBird will enter matches.  Choose your county and state when it appears. You may have to add the two-letter code for your state to find your county (e.g., Perry, IL vs Perry, MO).
+
+\item The map will center on your chosen county but will show pins showing hotspots in the area. Pin color corresponds broadly to the number of species reported. Click a pin then click the large “View Details” to learn more about the hotspot. (You can also click the other links if you wish to explore.)
+
+\item Click on the “Map” button on the upper right to see the location of the hotspot. Click “Illustrated Checklist” to see a list of all species reported for the hotspot and when they were reported. That will give you an indication of what species to search for and when to start watching for them.
+
+\item \textit{Alternatively:} after you click the “Explore hotspots” link, you can zoom in on your region of interest (e.g., southeast Missouri, southern Illinois). You can click on each pin to explore, as described above.
+
+\item Tell Dr.~Taylor your hotspot choice. First come, first serve.
+
+\end{itemize}
+
+\subsubsection*{Visit your hotspot}
+
+\begin{itemize}
+\item You must bird at your hotspot in February, March, April, and either January or May. 
+
+\textsc{Note:} If you want to start early, bird your hotspot in January so you do not have to visit it in May. If you do not bird in January, then bird in May. Of course, you can bird both January and May if you want, but you will not be awarded extra points. Sorry, but grad students should not need extra credit.
+
+\item You must bird at your hotspot at least two hours in February through April. You are only required to bird for one hour in either January or May.
+
+\item You can do all two hours (or more) for each month in a single visit or you can spread the time across multiple visits. Multiple visits each month will increase the chances of seeing more species \emph{and} give you a better sense of when birds are departing and arriving via migration.
+
+\item You can earn 20 points per month for February, March, and April, and 10 points for January or May.
+
+\item Your checklists \textit{must} follow eBird best practices for checklists. You can \href{https://support.ebird.org/en/support/solutions/articles/48000795623-ebird-rules-and-best-practices}{click here} or follow the “eBird best practices” link found on the “eBird related” module of our Canvas page to learn the best practices.
+
+\item If you follow eBird's recommended best practices, you ensure that the data you collect will have the greatest scientific values. Read the entire page but the most important practices are time and distance. They recommend that you should limit a checklist to one hour or less and one mile or less. It is okay to submit multiple checklists for a single visit. 
+
+\item I'll stress again that you must read eBird's best practices but you can also talk with Dr.~Taylor. \textsc{Note:} if at least one checklist submitted for a month  does not follow best practices, your grade will be penalized one level in the grading rubric (e.g., two hours of birding will drop from the maximum 20 points to 15 points.)
+
+Points for Febuary, March, and April will be awarded with this rubric:
+
+\begin{tabular}{L{1.5cm}C{1.2cm}C{1.2cm}C{1.2cm}C{1.2cm}C{1.2cm}C{1.2cm}}
+\toprule
+Points & 20 & 15 & 10 & 5 & 3 & 0 \tabularnewline
+\midrule
+Minutes birding & 120+ & 90–119 & 60–89 & 30–59 & 15–29 & < 15 \tabularnewline
+\bottomrule
+\end{tabular}
+
+\bigskip
+
+Points for January or April will be awarded with this rubric:
+
+\begin{tabular}{L{1.5cm}C{1.2cm}C{1.2cm}C{1.2cm}C{1.2cm}C{1.2cm}}
+\toprule
+Points & 10 & 7 & 5 & 3 & 0 \tabularnewline
+\midrule
+Minutes birding & 60+ & 45–59 & 30–44 & 15–29 & < 15 \tabularnewline
+\bottomrule
+\end{tabular}
+\end{itemize}
+
+\subsubsection*{Media uploads}
+
+\begin{itemize}
+\item You must upload at least four media items, either photo or audio (note that video is not an eBird option). At least one media must be audio.
+
+\item Read the photo and audio upload tutorials found in the “eBird related” module of our Canvas page. We will have a lab exercise on editing and uploading audio. 
+
+\item You can use your smartphone to record audio or you can checkout a hand-held recorder from Dr.~Taylor.
+
+\item You \emph{must} make the photo or audio recording during your checklist time. You cannot take a picture of a Northern Cardinal in your backyard in May and upload it to your hotspot checklist for February. That is falsifying eBird data (and cheating).
+
+\item Your media must be properly rated (read the tutorial). It is okay and eBird-recommended that you rate your own media. 
+
+\item You will earn 5 points per media upload that follows eBird best practices for the media type \emph{and} is reasonably rated. You will lose 2 points for each media file (photo or audio) that is not reasonably rated. Trust me, you will not be making 5-star photos or audio recordings with a smartphone; again, read the tutorial.
+
+\item Dr.~Taylor will also rate your media when he awards your points for the month. His rating may be different from yours but that will not affect your grade as long as your ratings are reasonable. For example, it can be a matter of judgment between a 2-star and a 3-star photo
+
+\item Your media can be uploaded in one or more months but must be uploaded with the checklist you were making when you took the photo or recorded the audio. 
+
+For example, if you recorded a checklist in March and took a photo during that checklist, upload your photo to that checklist by the end of March so that you can receive credit. Dr.~Taylor will verify the checklists at the end of each month and make note of any uploaded media. Once he has graded a month, he will not go back to previous months to see if you met the requirements.
+
+\item Your audio recording \emph{must} include a voice announcement for full marks. The announcement must include at least the proper species name (e.g., Northern Cardinal, not cardinal), time and date of recording, and one other item of note, such as habitat, behavior, weather conditions, etc.
+
+
+\end{itemize}
+
+\subsubsection*{Final report}
+
+You will submit a final summary report of your birding results. The requirements for the report will be provided in a separate handout, mainly because it is not yet written. The required report will be relatively basic, nothing elaborate.
+
+The total point break down of the entire assignment is
+
+\begin{tabular}{llr}
+\toprule
+Item &  Minimum & Points \tabularnewline
+\midrule
+Checklists & 7 hours & 70 \tabularnewline
+Media	& 4 files	& 20 \tabularnewline
+Report	& 1	document & \textsc{tbd} \tabularnewline
+\midrule
+Total	& 	& 100+ \tabularnewline
+\bottomrule
+\end{tabular}
+
+The final report will be worth at least 10 points, probably more like 20 or so.
+
+\end{document}  
