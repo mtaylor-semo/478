@@ -12,6 +12,7 @@
 *.cb2
 .*.lb
 *.pdf
+.DS_Store
 
 ## ZO 466 wave files
 *.wav
