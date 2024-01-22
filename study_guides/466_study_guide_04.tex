@@ -1,0 +1,147 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[nofonts, letterpaper]{tufte-handout}
+
+%\geometry{showframe} % display margins for debugging page layout
+
+\usepackage{graphicx} % allow embedded images
+  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+  \graphicspath{{img/}} % set of paths to search for images
+  
+\usepackage{fontspec}
+  \setmainfont[Ligatures={Common,TeX},Numbers={Proportional}]{Linux Libertine O}
+  \setsansfont{Linux Biolinum O}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{multicol} % multiple column layout facilities
+%\usepackage{hyperref}
+%\usepackage{fancyvrb} % extended verbatim environments
+%  \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
+
+% Change the header to shift the title to the left side of the page. 
+% Replaced \quad with \hfill.  See \plaintitle in tufte-common.def
+{\fancyhead[RE,RO]{\scshape{\newlinetospace{\plaintitle}}\hfill\thepage}}
+
+\makeatletter
+% Paragraph indentation and separation for normal text
+\renewcommand{\@tufte@reset@par}{%
+  \setlength{\RaggedRightParindent}{1.0pc}%
+  \setlength{\JustifyingParindent}{1.0pc}%
+  \setlength{\parindent}{1pc}%
+  \setlength{\parskip}{0pt}%
+}
+\@tufte@reset@par
+
+% Paragraph indentation and separation for marginal text
+\renewcommand{\@tufte@margin@par}{%
+  \setlength{\RaggedRightParindent}{0pt}%
+  \setlength{\JustifyingParindent}{0.5pc}%
+  \setlength{\parindent}{0.5pc}%
+  \setlength{\parskip}{0pt}%
+}
+
+\makeatother
+
+% Set up the spacing using fontspec features
+\renewcommand\allcapsspacing[1]{{\addfontfeatures{LetterSpace=15}#1}}
+\renewcommand\smallcapsspacing[1]{{\addfontfeatures{LetterSpace=10}#1}}
+
+\title{Study Guide 04}
+\author{Feathers and flight}
+
+\date{} % without \date command, current date is supplied
+
+\begin{document}
+
+\maketitle	% this prints the handout title, author, and date
+
+%\printclassoptions
+
+\section{Vocabulary}
+\vspace{-1\baselineskip}
+\begin{multicols}{2}
+plumulaceous feathers \\
+pennaceous feathers \\
+vane \\
+rachis \\
+calamus (quill) \\
+barbs  \\
+distal barbules \\
+proximal barbules \\
+hooklets (barbicels) \\
+%Afterfeather \\
+vaned feathers \\
+remiges (wing flight feathers) \\
+retrices (tail flight feathers) \\
+contour feathers (body feathers) \\
+semiplume feathers\\
+filoplume feathers\\
+bristle feathers \\
+downy feathers \\
+natal down \\
+body down \\
+%Epidermins \\
+%Follicles 
+%Alpha-keratin \\
+%Beta-keratin \\
+%Inferior umbilicus \\
+%Superior umbilicus 
+%Follicle collar \\
+%Barb ridge \\
+%Rachis ridge \\
+%Barbule plates \\
+pterylae \\
+%Apteria \\
+%Airfoil \\
+lift \\
+drag \\
+thrust \\
+Bernoulli principle \\
+angle of attack \\
+downstroke \\
+upstroke \\
+%Profile drag \\
+%Induced drag \\
+gliding \\
+thermal soaring \\
+slope soaring \\
+dynamic soaring \\
+%Alula (bastard wing) \\
+aspect ratio \\
+wing loading \\
+arboreal hypothesis \\
+cursorial hypothesis \\
+ontogenetic transition wing\\\hspace{1em} hypothesis
+\end{multicols}
+
+\section{Concepts}
+%\marginnote{\textbf{Study:} Chap. 18: 533--562.\\ Chap. 21: 635--645. Skim 645--650 for examples of human persecution of birds.}
+
+These concept-questions cover most of the lecture material but exam questions are not restricted to these questions. Questions may also come from the related pages from the textbook.\vspace{\baselineskip}
+
+\begin{enumerate}
+
+\item Describe the evolutionary transitions for feathers from their earliest feather types to more evolved feather types in theropod dinosaurs leading to the Avialae. Relate the form of the feathers to the evolutionary functions of feathers.
+
+\item Relate the evolution of feather types of the stages of feather development (stage I, stage II, etc.) You do not have to distinguish between IIIa and IIIb, nor stages IV and V.
+
+\item Describe how a bird controls angle of attack along the wing (at the body and near the tip) for flight. Do this for the downstroke and upstroke. Which stroke (down or up) maximizes lift and thrust. 
+
+\item List three functions of the tail of a typical bird in flight. 
+
+\item Distinguish between aspect ratio and wing loading. Relate the form of the wing to aspect ratio and wing loading. For a given wing span, does a broad wing have a higher or lower aspect ratio.  For a given surface area, does a bird with a larger body have a higher or lower wing loading? How does wing loading affect maneuverability in flight?
+
+\item Explain the difference between gliding and soaring.
+
+\item Compare and contrast flap-bounding and flap-gliding. Use relative sizes (small, medium, large) to describe birds that are more like to use flap-bounding, flap-gliding, or neither.
+
+\item Compare and contrast the arboreal, cursorial, and ontogenetic transition wing hypotheses that have been proposed to explain the origin of flight.
+
+
+
+
+\end{enumerate}
+
+
+\end{document}

@@ -1,0 +1,111 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[nofonts, letterpaper]{tufte-handout}
+
+%\geometry{showframe} % display margins for debugging page layout
+
+\usepackage{graphicx} % allow embedded images
+  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+  \graphicspath{{img/}} % set of paths to search for images
+  
+\usepackage{fontspec}
+  \setmainfont[Ligatures={Common,TeX},Numbers={Proportional}]{Linux Libertine O}
+  \setsansfont{Linux Biolinum O}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{multicol} % multiple column layout facilities
+%\usepackage{hyperref}
+%\usepackage{fancyvrb} % extended verbatim environments
+%  \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
+
+% Change the header to shift the title to the left side of the page. 
+% Replaced \quad with \hfill.  See \plaintitle in tufte-common.def
+{\fancyhead[RE,RO]{\scshape{\newlinetospace{\plaintitle}}\hfill\thepage}}
+
+\makeatletter
+% Paragraph indentation and separation for normal text
+\renewcommand{\@tufte@reset@par}{%
+  \setlength{\RaggedRightParindent}{1.0pc}%
+  \setlength{\JustifyingParindent}{1.0pc}%
+  \setlength{\parindent}{1pc}%
+  \setlength{\parskip}{0pt}%
+}
+\@tufte@reset@par
+
+% Paragraph indentation and separation for marginal text
+\renewcommand{\@tufte@margin@par}{%
+  \setlength{\RaggedRightParindent}{0pt}%
+  \setlength{\JustifyingParindent}{0.5pc}%
+  \setlength{\parindent}{0.5pc}%
+  \setlength{\parskip}{0pt}%
+}
+
+\makeatother
+
+% Set up the spacing using fontspec features
+\renewcommand\allcapsspacing[1]{{\addfontfeatures{LetterSpace=15}#1}}
+\renewcommand\smallcapsspacing[1]{{\addfontfeatures{LetterSpace=10}#1}}
+
+\title{Study Guide 05}
+\author{Food and foraging}
+
+\date{} % without \date command, current date is supplied
+
+\begin{document}
+
+\maketitle	% this prints the handout title, author, and date
+
+%\printclassoptions
+
+\section{Vocabulary}
+\vspace{-1\baselineskip}
+\begin{multicols}{2}
+functional response \\
+Lévy's Flight \\
+evolutionary stable strategy \\
+flush-pursuit foraging \\
+sit-and-wait foraging \\
+hynchokinesis  \\
+kleptoparasitism \\
+foraging guild 
+\end{multicols}
+
+\section{Concepts}
+%\marginnote{\textbf{Study:} Chap. 18: 533--562.\\ Chap. 21: 635--645. Skim 645--650 for examples of human persecution of birds.}
+
+These concept-questions cover most of the lecture material but exam questions are not restricted to these questions. Questions may also come from the related pages from the textbook.\vspace{\baselineskip}
+
+\begin{enumerate}
+
+\item Describe the three types of functional response curves associated with food availability. What is the primary difference(s) between the functional responses for handling time versus search imagery.
+
+\item Lévy's flight is often used by seabirds that spend considerable time foraging over the open ocean. Describe what is Lévy's flight and how it increases the chance of foraging success in seabirds.
+
+\item What is kleptoparasitism? Would you expect kleptoparasitic birds to display Lévy's flight? Why or why not.
+
+\item Scaly-breasted Munia and some other species have some individuals that are “producers” and some that are “scroungers.” Most feeding groups of munias (a small flock of birds foraging together) have converged on an ideal number of each foraging type (an evolutionary stable strategy). The ideal number of each type depending on how the balance between producers and scroungers. Describe how this stable strategy works in munias and why it is stable over time.
+
+\item Compare and contrast flush-pursuit and sit-and-wait foraging strategies. Are these the only two types of foraging strategies used by birds? If so, why are these most effective? If not, what other types of foraging strategies can you find and why might they also be effective?
+
+\item How might some sit-and-wait foragers increase their chance of success? That is, how might they increase the number of possible prey items in the area where the bird waits?
+
+\item All birds (and many animals overall) must forage for food. What are some risks associated with foraging, How might foraging birds offset those risks?
+
+\item Many bird species can recognize the alarm calls of other species. From a foraging perspective, why is it beneficial for one species to recognize the alarm calls of other species.
+
+\item Many birds have specialized tongue shapes or bill shapes. Explain why.
+
+\item Blue jays are good mimics of Red-shouldered Hawks. Other birds can also mimic larger predators. What are possible advantages, if any, of this mimicry?
+
+\item What is a foraging guild? How does dominance structure in a guild determine where or when members of the guild forage? You can use the ant-following guild as an example.
+
+
+
+
+
+
+\end{enumerate}
+
+
+\end{document}

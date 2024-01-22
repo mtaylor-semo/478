@@ -1,0 +1,111 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[nofonts, letterpaper]{tufte-handout}
+
+%\geometry{showframe} % display margins for debugging page layout
+
+\usepackage{graphicx} % allow embedded images
+  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+  \graphicspath{{img/}} % set of paths to search for images
+  
+\usepackage{fontspec}
+  \setmainfont[Ligatures={Common,TeX},Numbers={Proportional}]{Linux Libertine O}
+  \setsansfont{Linux Biolinum O}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{multicol} % multiple column layout facilities
+%\usepackage{hyperref}
+%\usepackage{fancyvrb} % extended verbatim environments
+%  \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
+
+% Change the header to shift the title to the left side of the page. 
+% Replaced \quad with \hfill.  See \plaintitle in tufte-common.def
+{\fancyhead[RE,RO]{\scshape{\newlinetospace{\plaintitle}}\hfill\thepage}}
+
+\makeatletter
+% Paragraph indentation and separation for normal text
+\renewcommand{\@tufte@reset@par}{%
+  \setlength{\RaggedRightParindent}{1.0pc}%
+  \setlength{\JustifyingParindent}{1.0pc}%
+  \setlength{\parindent}{1pc}%
+  \setlength{\parskip}{0pt}%
+}
+\@tufte@reset@par
+
+% Paragraph indentation and separation for marginal text
+\renewcommand{\@tufte@margin@par}{%
+  \setlength{\RaggedRightParindent}{0pt}%
+  \setlength{\JustifyingParindent}{0.5pc}%
+  \setlength{\parindent}{0.5pc}%
+  \setlength{\parskip}{0pt}%
+}
+
+\makeatother
+
+% Set up the spacing using fontspec features
+\renewcommand\allcapsspacing[1]{{\addfontfeatures{LetterSpace=15}#1}}
+\renewcommand\smallcapsspacing[1]{{\addfontfeatures{LetterSpace=10}#1}}
+
+\title{Study Guide 07}
+\author{Avian vocal behavior}
+
+\date{} % without \date command, current date is supplied
+
+\begin{document}
+
+\maketitle	% this prints the handout title, author, and date
+
+%\printclassoptions
+
+\section{Vocabulary}
+\vspace{-1\baselineskip}
+\begin{multicols}{2}
+vocal signals \\
+frequency (Hz) \\
+note \\
+phrase \\
+song \\
+song type \\
+syrinx \\
+call \\
+non-vocal sounds \\
+contact calls \\
+aggression calls \\
+alarm calls \\
+begging calls \\
+sensitive period \\
+open-ended learning 
+\end{multicols}
+
+\section{Concepts}
+%\marginnote{\textbf{Study:} Chap. 18: 533--562.\\ Chap. 21: 635--645. Skim 645--650 for examples of human persecution of birds.}
+
+These concept-questions cover most of the lecture material but exam questions are not restricted to these questions. Questions may also come from the related pages from the textbook.\vspace{\baselineskip}
+
+\begin{enumerate}
+
+\item What is the broad role of vocal signals (communication) in birds? Think broadly here; we'll get into specifics below.
+
+\item Be able to interpret a basic spectrogram. Tell whether a sound is more likely to be a clear whistle or a harsh buzz (I would not try to trick you).
+
+\item Explain the relationship between notes, phrases, and songs.
+
+\item Explain the difference between a song and multiple song types.
+
+\item What is the role of the syrinx in birds? Where is this structure located.
+
+\item Describe in general terms (e.g., decree of musculature) the structural difference of the syrinx between suboscine and oscine birds. How does this difference correlate to the complexity of the songs between the two bird groups? Which group (suboscine or oscine) is more likely to have multiple song types?
+
+\item What is the function of each call type listed above?
+
+\item What are the two primary functions for song?
+
+\item What are some of the ways birds produce non-vocal sounds? Are most non-vocal sounds used for mating or non-mating purposes? Give some examples to support your answer.
+
+\item Explain the difference between birds that learn song during a sensitive period vs those that are open-ended learners. For each type, what other birds in their immediate area might they learn from (e.g., fathers or neighbors or $\dots$).
+
+\end{enumerate}
+
+
+\end{document}

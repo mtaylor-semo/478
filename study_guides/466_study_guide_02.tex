@@ -1,0 +1,93 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[nofonts, letterpaper]{tufte-handout}
+
+%\geometry{showframe} % display margins for debugging page layout
+
+\usepackage{graphicx} % allow embedded images
+  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+  \graphicspath{{img/}} % set of paths to search for images
+  
+\usepackage{fontspec}
+  \setmainfont[Ligatures={Common,TeX},Numbers={Proportional}]{Linux Libertine O}
+  \setsansfont{Linux Biolinum O}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{multicol} % multiple column layout facilities
+%\usepackage{hyperref}
+%\usepackage{fancyvrb} % extended verbatim environments
+%  \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
+
+% Change the header to shift the title to the left side of the page. 
+% Replaced \quad with \hfill.  See \plaintitle in tufte-common.def
+{\fancyhead[RE,RO]{\scshape{\newlinetospace{\plaintitle}}\hfill\thepage}}
+
+\makeatletter
+% Paragraph indentation and separation for normal text
+\renewcommand{\@tufte@reset@par}{%
+  \setlength{\RaggedRightParindent}{1.0pc}%
+  \setlength{\JustifyingParindent}{1.0pc}%
+  \setlength{\parindent}{1pc}%
+  \setlength{\parskip}{0pt}%
+}
+\@tufte@reset@par
+
+% Paragraph indentation and separation for marginal text
+\renewcommand{\@tufte@margin@par}{%
+  \setlength{\RaggedRightParindent}{0pt}%
+  \setlength{\JustifyingParindent}{0.5pc}%
+  \setlength{\parindent}{0.5pc}%
+  \setlength{\parskip}{0pt}%
+}
+
+\makeatother
+
+\title{Study Guide 02}
+\author{Form and function, early evolution}
+
+\date{} % without \date command, current date is supplied
+
+\begin{document}
+
+\maketitle	% this prints the handout title, author, and date
+
+%\printclassoptions
+
+\section{Vocabulary}
+\vspace{-1\baselineskip}
+\begin{multicols}{2}
+single occipital condyle \\
+double occipital condyle \\
+middle ear bones \\
+articular-quadrate jaw joint \\
+dentary-squamosal jaw joint \\
+\textit{Archaeopteryx} \\
+plumulaceous feathers \\
+pennaceous feathers \\
+Avialae 
+\end{multicols}
+
+\section{Concepts}
+%\marginnote{\textbf{Study:} Chap. 18: 533--562.\\ Chap. 21: 635--645. Skim 645--650 for examples of human persecution of birds.}
+
+These concept-questions cover most of the lecture material but exam questions are not restricted to these questions. Questions may also come from the related pages from the textbook.\vspace{\baselineskip}
+
+\begin{enumerate}
+
+\item This is broad, but think about form and function. Relate wing size and shape to type of flight, bill size and shape to type of food consumed, size and type of foot to habitat (and possibly food consumed), and so on. The overall form of a bird can give you many insights into it's ecology.
+
+\item How do birds and reptiles differ from mammals in terms of: number of occipital condyles, number of middle ear bones, jaw structure and joints.
+
+\item State the importance of \textit{Archaeopteryx} as an early fossil discovery for understanding the evolution of birds and relationships to therapod dinosaurs.
+
+\item Explain the evolutionary trend\marginnote{The sequence is simple filaments, plumulaceous feathers, pennaceous feathers. See also Lecture 04.} of feather evolution based on fossil therapods. 
+
+\item How is the clade Avialae distinguished from non-avian therapod dinosaurs.
+
+\item What was the evolutionary trend in body size leading from non-avian therapods to the Avialae?
+
+\end{enumerate}
+
+
+\end{document}

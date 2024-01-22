@@ -1,0 +1,127 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[nofonts, letterpaper]{tufte-handout}
+
+%\geometry{showframe} % display margins for debugging page layout
+
+\usepackage{graphicx} % allow embedded images
+  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+  \graphicspath{{img/}} % set of paths to search for images
+  
+\usepackage{fontspec}
+  \setmainfont[Ligatures={Common,TeX},Numbers={Proportional}]{Linux Libertine O}
+  \setsansfont{Linux Biolinum O}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{multicol} % multiple column layout facilities
+%\usepackage{hyperref}
+%\usepackage{fancyvrb} % extended verbatim environments
+%  \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
+
+% Change the header to shift the title to the left side of the page. 
+% Replaced \quad with \hfill.  See \plaintitle in tufte-common.def
+{\fancyhead[RE,RO]{\scshape{\newlinetospace{\plaintitle}}\hfill\thepage}}
+
+\makeatletter
+% Paragraph indentation and separation for normal text
+\renewcommand{\@tufte@reset@par}{%
+  \setlength{\RaggedRightParindent}{1.0pc}%
+  \setlength{\JustifyingParindent}{1.0pc}%
+  \setlength{\parindent}{1pc}%
+  \setlength{\parskip}{0pt}%
+}
+\@tufte@reset@par
+
+% Paragraph indentation and separation for marginal text
+\renewcommand{\@tufte@margin@par}{%
+  \setlength{\RaggedRightParindent}{0pt}%
+  \setlength{\JustifyingParindent}{0.5pc}%
+  \setlength{\parindent}{0.5pc}%
+  \setlength{\parskip}{0pt}%
+}
+
+\makeatother
+
+% Set up the spacing using fontspec features
+\renewcommand\allcapsspacing[1]{{\addfontfeatures{LetterSpace=15}#1}}
+\renewcommand\smallcapsspacing[1]{{\addfontfeatures{LetterSpace=10}#1}}
+
+\title{Study Guide 03}
+\author{Anatomy and physiology}
+
+\date{} % without \date command, current date is supplied
+
+\begin{document}
+
+\maketitle	% this prints the handout title, author, and date
+
+%\printclassoptions
+
+\section{Vocabulary}
+\vspace{-1\baselineskip}
+\begin{multicols}{2}
+sternum \\
+carina \\
+furcula \\
+pectoralis \\
+supracoracoideus \\
+pneumatic bone \\
+parabronchus \\
+cross-current exchange \\
+counter-current exchange  \\
+crop \\
+gizzard \\
+thermal neutral zone 
+\end{multicols}
+
+\section{Concepts}
+%\marginnote{\textbf{Study:} Chap. 18: 533--562.\\ Chap. 21: 635--645. Skim 645--650 for examples of human persecution of birds.}
+
+These concept-questions cover most of the lecture material but exam questions are not restricted to these questions. Questions may also come from the related pages from the textbook.\vspace{\baselineskip}
+
+\begin{enumerate}
+
+\item What is the function of the carina? The carina is an extension of what bone?
+
+\item Provide some examples of skeletal structures that are fused in birds to increase strength and rigidity for flight.
+
+\item Describe how the pectoralis and supracoracoideus muscles work to power flight. Do this for a full flap cycle (downstroke and upstroke).
+
+\item What is the function of pneumatic bone? How does air exchange occur in pneumatic bone? 
+
+\item Name a group of birds that do not have pneumatic bone? Why does this group lack pneumatic bone?
+
+\item How many air sacs are found in a typical bird? How many are paired? How many are unpaired? (You do not have to name air sacs,)
+
+\item Describe and explain the complete respiratory cycle of a typical bird. Include the roll of the air sacs in the cycle.
+
+\item Compare and contrast cross-current and counter-current exchange.
+
+\item Does cross- and counter-current exchange work by active transport or passive diffusion? Explain.
+
+\item Describe\marginnote{Parabronchus is singular; parabronchi is plural.} how cross-current exchange in the parabronchi maximizes oxygen uptake.
+
+\item What is the thermal neutral zone for birds? Why is this important for metabolism? What might a bird do if body temperature falls outside the thermal neutral zone (too hot or too cold).
+
+\item Describe how a bird standing on snow or ice maintains a warm core body temperature.
+
+\item Describe oxygen demand for birds based on (1) body size and (2) metabolic rate.
+
+\item Why\marginnote{Hint: do birds have big or small eyes?} is the brain restricted to the posterior region of the skull? Explain.
+
+\item Describe\marginnote{Most but not all birds have a crop. All birds have a gizzard but it is greatly reduced in size for some species, such as those that consume nectar primarily.} the roles of the crop and gizzard as part of the overall digestive system,
+
+
+\item Explain eye position in the head (facing sideways or forward) whether a bird sees primarily in monocular or binocular vision.
+
+\item Why do some birds bob their head back and forth while they walk or swim?
+
+\item What macromolecules are the main energy sources for birds?
+
+\item Why might a migratory bird consume sugary nectar during migration but switch to fats and proteins once it has arrived on its breeding ground.
+
+\end{enumerate}
+
+
+\end{document}

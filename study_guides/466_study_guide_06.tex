@@ -1,0 +1,125 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[nofonts, letterpaper]{tufte-handout}
+
+%\geometry{showframe} % display margins for debugging page layout
+
+\usepackage{graphicx} % allow embedded images
+  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+  \graphicspath{{img/}} % set of paths to search for images
+  
+\usepackage{fontspec}
+  \setmainfont[Ligatures={Common,TeX},Numbers={Proportional}]{Linux Libertine O}
+  \setsansfont{Linux Biolinum O}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{multicol} % multiple column layout facilities
+%\usepackage{hyperref}
+%\usepackage{fancyvrb} % extended verbatim environments
+%  \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
+
+% Change the header to shift the title to the left side of the page. 
+% Replaced \quad with \hfill.  See \plaintitle in tufte-common.def
+{\fancyhead[RE,RO]{\scshape{\newlinetospace{\plaintitle}}\hfill\thepage}}
+
+\makeatletter
+% Paragraph indentation and separation for normal text
+\renewcommand{\@tufte@reset@par}{%
+  \setlength{\RaggedRightParindent}{1.0pc}%
+  \setlength{\JustifyingParindent}{1.0pc}%
+  \setlength{\parindent}{1pc}%
+  \setlength{\parskip}{0pt}%
+}
+\@tufte@reset@par
+
+% Paragraph indentation and separation for marginal text
+\renewcommand{\@tufte@margin@par}{%
+  \setlength{\RaggedRightParindent}{0pt}%
+  \setlength{\JustifyingParindent}{0.5pc}%
+  \setlength{\parindent}{0.5pc}%
+  \setlength{\parskip}{0pt}%
+}
+
+\makeatother
+
+% Set up the spacing using fontspec features
+\renewcommand\allcapsspacing[1]{{\addfontfeatures{LetterSpace=15}#1}}
+\renewcommand\smallcapsspacing[1]{{\addfontfeatures{LetterSpace=10}#1}}
+
+\title{Study Guide 06}
+\author{Mates and mating}
+
+\date{} % without \date command, current date is supplied
+
+\begin{document}
+
+\maketitle	% this prints the handout title, author, and date
+
+%\printclassoptions
+
+\section{Vocabulary}
+\vspace{-1\baselineskip}
+\begin{multicols}{2}
+resource-based territories \\
+mating territories \\
+nesting territories \\
+lek \\
+exploded lek \\
+floater  \\
+sexual selection \\
+genetic benefits \\
+sexy sons hypothesis \\
+good genes hypothesis \\
+honest indicator \\
+material benefits \\
+sexual conflict \\
+secondary sexual traits \\
+mating systems \\
+monogamy \\
+extra-pair copulation \\
+social monogamy \\
+polyandry \\
+sequential polyandry \\
+polygyny \\
+resource-defense polygyny 
+\end{multicols}
+
+\section{Concepts}
+%\marginnote{\textbf{Study:} Chap. 18: 533--562.\\ Chap. 21: 635--645. Skim 645--650 for examples of human persecution of birds.}
+
+These concept-questions cover most of the lecture material but exam questions are not restricted to these questions. Questions may also come from the related pages from the textbook.\vspace{\baselineskip}
+
+\begin{enumerate}
+
+\item Compare and contratst resource based, mating, and nesting territories. What do they all have in common? How is each different from the others.
+
+\item What is a lekking territory? How does an exploded lek differ?
+
+\item What is a floater male? When is floating most likely to occur in a species? What are advantages and disadvantages of floating?
+
+\item Explain how sexual selection arises from sexual conflict in birds (it applies for most animals that show sexual selection).
+
+\item Why are females choosy about potential male mates? Explain how genetic benefits or material benefits might influence their choice.
+
+\item In terms of sexual selection, what is an honest indicator? Is it found in males, females, or both? Explain why.
+
+\item What are secondary sexual traits? Are they found in males, females, or both? Explain why. Explain how sexual selection results in the evolution of secondary sexual traits. Describe some examples of secondary sexual traits.
+
+\item Describe the monogamous, polygynous, and polyandrous mating systems.
+
+\item What is social monogamy? Is it the same as genetic monogamy? Explain. Include the role of extra-pair copulations in social monogamous systems.
+
+\item What is mating guarding? Does it decrease or increase extra-pair copulations? Why?
+
+\item Polyandry is relatively rare among birds. Explain the conditions that favor its evolution.
+
+\item Secondary sexual traits are most often found in males. Female phalaropes (e.g., Red-necked Phalarope) show secondary sexual traits instead of males. What mating system favors this unusual feature in phalaropes? Why is this advantageous for females?
+
+\item A single Red-winged Blackbird usually has a territory with multiple females nesting within. Explain this observation in terms of resource-defense polygyny.
+
+
+\end{enumerate}
+
+
+\end{document}
