@@ -1,0 +1,354 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[t]{beamer}
+
+%%%% HANDOUTS For online Uncomment the following four lines for handout
+%\documentclass[t,handout]{beamer}  %Use this for handouts.
+%\includeonlylecture{student}
+%\usepackage{handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
+
+
+%%% Including only some slides for students.
+%%% Uncomment the following line. For the slides,
+%%% use the labels shown below the command.
+%\includeonlylecture{student}
+
+%% For students, use \lecture{student}{student}
+%% For mine, use \lecture{instructor}{instructor}
+
+
+%\usepackage{pgf,pgfpages}
+%\pgfpagesuselayout{4 on 1}[letterpaper,border shrink=5mm]
+
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Biolinum O}
+\setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
+\setmonofont[Scale=MatchLowercase]{Linux Libertine Mono O} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/466/lectures/}%
+	{img/}}%
+%	{/Users/goby/Pictures/teach/common/}} % set of paths to search for images
+
+%\usepackage{amsmath,amssymb}
+
+%\usepackage{units}
+
+%\usepackage{booktabs}
+\usepackage{multicol}
+%	\setlength{\columnsep=1em}
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+%usepackage{tikz}
+%	\tikzstyle{every picture}+=[remember picture,overlay]
+
+\usepackage{forest}
+\usetikzlibrary{trees}
+\tikzstyle{block} = [rectangle, draw, fill=white, rounded corners, minimum size=2em]
+\tikzstyle{branch} = [thick, draw]
+
+%\usetikzlibrary{positioning, backgrounds}
+
+
+\forestset{
+	every leaf node/.style={
+		if n children=0{#1}{}
+	},
+	every tree node/.style={
+		if n children=0{}{#1}
+	},
+	mytree/.style={
+		for tree={
+			font=\footnotesize\selectfont,
+			edge path={
+				\noexpand\path [draw, thick, \forestoption{edge}] (!u.parent anchor) |- (.child anchor)\forestoption{edge label};
+			},
+			every tree node={draw=none,inner sep=0, outer sep=0, minimum size=0},
+			%every leaf node/.style={align=left},
+			grow'=0,
+			parent anchor=east, 
+			child anchor=west,
+			anchor=west,
+			l = 2cm,
+			%l sep=1.5cm,
+			s sep=0mm,
+			draw=none,
+			if n children=0{tier=word}{}
+		}
+	}
+}
+
+\mode<presentation>
+{
+  \usetheme{Lecture}
+  \setbeamercovered{invisible}
+  \setbeamertemplate{items}[square]
+}
+
+%\usepackage{calc}
+\usepackage{hyperref}
+
+% shortstack needed to highlight across \\ line break.
+\newcommand\sshighlight[1]{%
+	\highlight{\shortstack[l]{#1}}%
+}
+
+\newcommand{\backoneline}{\vspace{-\baselineskip}}
+
+\begin{document}
+
+
+\lecture{student}{student}
+
+
+\begin{frame}{You must learn these major taxa of Neornithes.}
+
+
+\begin{forest} mytree
+[[, l sep=+1.7cm, edge label = {node [xshift=-0.8cm, text width = 1.5cm] {\footnotesize Subclass Neornithes}}
+	[,name=neognathae, edge label = {node [text width=2cm, midway, xshift=1.1cm] {\footnotesize Infraclass Neognathae}}
+		[, name=neoaves, edge label = {node [text width=2cm, midway, xshift=1.1cm] {\footnotesize Superorder Neoaves}}
+			[,l-=1cm
+				[\sshighlight{Clade\\ Passerea}, align=left]
+				[Clade\\ Columbimorphae, align=left]
+			]
+			[Clade\\ Mirandornithes, align=left]
+		]
+		[, name=galloanseres, edge label = {node [text width=2cm, midway, xshift=1.1cm] {\footnotesize Superorder Galloanseres}}
+			[Order\\ Galliformes, align=left]
+			[Order\\ Anseriformes, align=left]
+		]
+	]
+	[,name=paleognathae, edge label = {node [text width=1.75cm, midway, xshift=1cm] {\footnotesize Infraclass Paleognathae}}
+		[Tinamous\\ and “Ratites”, align=left]
+		%[Grade\\ “Ratites”, align=left]
+	]
+]]
+\end{forest}
+
+\end{frame}
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{taxonomy_passerea}}
+{	\tikzstyle{every picture}+=[remember picture,overlay]
+\definecolor{orange5}{HTML}{F16913}
+\begin{frame}[b, plain]
+
+\begin{tikzpicture}
+
+\draw [white, fill=white] (5,0.5) rectangle (12,1.1);
+
+\draw[ultra thick, orange5] (0.8,3.05) rectangle (5.0,3.6) node (placeholder){};
+\draw [->, orange5, ultra thick] (7,3.35) -- (5.1, 3.35);
+
+
+\end{tikzpicture}
+	\tiny\hfill Jarvis et al. 2014. Science 346: 1320.
+\end{frame}
+}}
+
+
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{taxonomy_gruiformes}}
+\begin{frame}[t]{\highlight{Gruiformes} has two families in Missouri: Gruidae (cranes) and \highlight{Rallidae} (rails).}
+
+\tikzset{
+    use page relative coordinates/.style={
+        shift={(current page.south west)},
+        x={(current page.south east)},
+        y={(current page.north west)}
+    },
+}
+
+\begin{tikzpicture}[remember picture, overlay, use page relative coordinates]
+%\node[anchor=south west] at (0,0) {(0,0)};
+\node[anchor=south west, minimum width=5.5cm, align=right, color=white] at (0.56,0.45) {\tiny Virginia Rail by  \href{https://macaulaylibrary.org/asset/29069861}{Evan Lipton, Macaulay Library \textsc{ML29069861}}};
+\end{tikzpicture}
+
+\vfilll
+
+\tiny \textcolor{white}{Sandhill Crane by  \href{https://macaulaylibrary.org/asset/180195071}{Lorri Howski, Macaulay Library \textsc{ML180195071}}\hfill Common Gallinule by \href{https://macaulaylibrary.org/asset/43686631}{John Whigham, Macaulay Library \textsc{ML43686631}}}
+
+
+\end{frame}
+}
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{taxonomy_american_coot}}
+\begin{frame}[b]
+
+
+	\tinyfill American Coot by  \href{https://macaulaylibrary.org/asset/202472221}{Daniel Irons, Macaulay Library \textsc{ML202472221}}
+\end{frame}
+}
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{taxonomy_rallidae}}
+\begin{frame}[t]{Most Rallidae have longer bills and unlobed toes.}
+
+	\tinyfill \textcolor{white}{Virginia Rail by  \href{https://flickr.com/photos/wildreturn/26985213537/}{Andy Reago \& Chrissy McLaren, Flickr, \ccby{2.0}}}
+\end{frame}
+}
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{taxonomy_charadriiformes}}
+\begin{frame}[t]{\highlight{Charadriiformes} (shorebirds) has four families in Missouri.}
+
+\tikzset{
+    use page relative coordinates/.style={
+        shift={(current page.south west)},
+        x={(current page.south east)},
+        y={(current page.north west)}
+    },
+}
+
+\begin{tikzpicture}[remember picture, overlay, use page relative coordinates]
+
+\node[anchor=south west, minimum width=5.5cm, align=right, color=white] at (0.0,0.44) {\tiny Black-necked Stilt by  \href{https://flickr.com/photos/95782365@N08/26203432462}{Susan Young, Flickr, Public Domain}};
+
+
+\node[anchor=south west, minimum width=5.5cm, align=right, color=white] at (0.59,0.44) {\tiny Greater Yellowlegs by  \href{https://flickr.com/photos/joeweav/30133422748}{Joe Weaver, Flickr, \ccby{2.0}}};
+\end{tikzpicture}
+
+\vfilll
+
+\tiny \textcolor{white}{American Golden-Plover by  \href{https://flickr.com/photos/usfws_alaska/51101401474}{Peter Pearsall/USFWS, Public Domain}\hfill Forster's Term by \href{https://flickr.com/photos/dfaulder/35770210905}{dfaulder, Flickr, \ccby{2.0}}}
+
+
+\end{frame}
+}
+
+
+\begin{frame}{Charadriiformes: Charadriidae — Plovers}
+\includegraphics[width=0.49\linewidth]{taxonomy_sepl}\hfill \includegraphics[width=0.49\linewidth]{taxonomy_killdeer}
+
+Charadriidae are small shorebirds, with medium to long legs and short bills. The hallux absent or short and elevated. Toes usually semipalmate to palmate.
+
+\vspace{\baselineskip}
+
+Most plovers have 1–2 complete or incomplete breast bands\dots
+
+
+\vfilll
+
+\tiny Semipalmated Plover by  \href{https://flickr.com/photos/island_deborah/51161493609}{Deborah Freeman, \ccbysa{2.0}} \hfill Killdeer by \href{https://flickr.com/photos/beckymatsubara/46556538305}{Becky Matsubara, Flickr, \ccby{2.0}}
+\end{frame}
+%
+\begin{frame}{Charadriiformes: Charadriidae — Plovers}
+\includegraphics[width=0.49\linewidth]{taxonomy_agpl}\hfill \includegraphics[width=0.49\linewidth]{taxonomy_bbpl}
+
+\dots but two species have solid black chins, necks, and breasts.
+
+\vspace{\baselineskip}
+
+They are sight feeders, standing still until they spot prey, then run to it. 
+
+
+\vfilll
+
+\tiny American Golden-Plover by  \href{https://flickr.com/photos/usfws_alaska/51101401474}{Peter Pearsall/USFWS, Public Domain} \hfill Black-bellied Plover by \href{https://flickr.com/photos/71119007@N03/17440547326}{Under the same moon, Flickr, \ccby{2.0}}
+\end{frame}
+
+
+
+\begin{frame}{Charadriiformes: Scolopacidae — Sandpipers}
+\includegraphics[width=0.49\linewidth]{taxonomy_sosa} \hfill \includegraphics[width=0.49\linewidth]{taxonomy_grye}
+
+Scolopacidae are small to medium-size shorbirds with long, slender bills that are straight to decurved. 
+
+\vspace{\baselineskip}
+
+They use the bills to probe down into the water or sediment. 
+
+
+\vfilll
+
+\tiny Solitary Sandpiper by \href{https://flickr.com/photos/95782365@N08/52243404588}{Susan Young, Flickr, Public Domain}\hfill Greater Yellowlegs by  \href{https://flickr.com/photos/joeweav/30133422748}{Joe Weaver, Flickr, \ccby{2.0}}
+
+\end{frame}
+
+%
+
+
+\begin{frame}{Charadriiformes: Scolopacidae — Sandpipers}
+\includegraphics[width=0.49\linewidth]{taxonomy_spsa} \hfill \includegraphics[width=0.49\linewidth]{taxonomy_pesa}
+
+Hallux absent or short and elevated. Toes usually semipalmate to palmate.
+
+\vspace{\baselineskip}
+
+The Spotted Sandpiper (left) stops every few steps to bob its but up and down.
+
+\vspace{\baselineskip}
+
+“Peeps” are a group of very small sandpipers, like the Least Sandpiper, that can be tricky to identify.
+
+
+\vfilll
+
+\tiny Spotted Sandpiper by \href{https://flickr.com/photos/airboy123/26032281188}{Sunny, Flickr, \ccby{2.0}}\hfill Pectoral Sandpiper by  \href{https://flickr.com/photos/wildreturn/46104489551}{Andy Reago \& Chrissy McClarren, Flickr, \ccby{2.0}}
+
+\end{frame}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{taxonomy_amwo}}
+\begin{frame}[t]{American Woodcock is found in fields and woods.}
+
+	\tinyfill \textcolor{white}{American Woodock by  \href{https://www.flickr.com/photos/79452129@N02/15728605426}{Fyn Kynd, Flickr, \ccby{2.0}}}
+\end{frame}
+}
+
+
+\begin{frame}{Charadriiformes: Laridae — Gulls and Terns}
+
+\includegraphics[width=0.49\linewidth]{taxonomy_rbgu}\hfill
+\includegraphics[width=0.49\linewidth]{taxonomy_fote}
+
+\begin{tabular}{L{5.7cm}L{6cm}}
+\textbf{Gulls}	& \textbf{Terns} \tabularnewline
+Bill slightly hooked & Bill acutely pointed \tabularnewline
+Tail square to slightly rounded & Tail forked\tabularnewline
+Upright posture & 	Squat, elongated posture\tabularnewline
+\end{tabular}
+
+
+\vfilll
+
+\tiny Ring-billed Gull by \href{https://flickr.com/photos/marknenadov/33299083036}{Mark Nenadov, Flickr, \ccby{2.0}} \hfill
+Forstner's Tern by \href{https://flickr.com/photos/dfaulder/35770210905}{dfaulder, Flickr, \ccby{2.0}}
+4\end{frame}
+
+\begin{frame}{Charadriiformes: Laridae — Gulls and Terns}
+
+\includegraphics[width=0.49\linewidth]{taxonomy_rbgu_flying}\hfill
+\includegraphics[width=0.49\linewidth]{taxonomy_cate}
+
+Gulls are larger and less graceful than terns. Terns fly with their bills pointed toward water as they watch for prey. Tern wings are more pointed than gull wings.
+
+\vfilll
+
+\tiny Ring-billed Gull by \href{https://flickr.com/photos/pavdw/16805907032}{Paul VanDerWerf, Flickr, \ccby{2.0}} \hfill
+Caspian Tern by \href{https://flickr.com/photos/seneynwr/15191931442}{Seney Natural History Association, Flickr, \ccbysa{2.0}}
+
+
+\end{frame}
+
+
+
+\end{document}
