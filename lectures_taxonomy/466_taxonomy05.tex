@@ -1,0 +1,222 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[t]{beamer}
+
+%%%% HANDOUTS For online Uncomment the following four lines for handout
+%\documentclass[t,handout]{beamer}  %Use this for handouts.
+%\includeonlylecture{student}
+%\usepackage{handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
+
+
+%%% Including only some slides for students.
+%%% Uncomment the following line. For the slides,
+%%% use the labels shown below the command.
+%\includeonlylecture{student}
+
+%% For students, use \lecture{student}{student}
+%% For mine, use \lecture{instructor}{instructor}
+
+
+%\usepackage{pgf,pgfpages}
+%\pgfpagesuselayout{4 on 1}[letterpaper,border shrink=5mm]
+
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Biolinum O}
+\setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
+\setmonofont[Scale=MatchLowercase]{Linux Libertine Mono O} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/466/lectures/}%
+	{img/}}%
+%	{/Users/goby/Pictures/teach/common/}} % set of paths to search for images
+
+%\usepackage{amsmath,amssymb}
+
+%\usepackage{units}
+
+%\usepackage{booktabs}
+\usepackage{multicol}
+%	\setlength{\columnsep=1em}
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+%usepackage{tikz}
+%	\tikzstyle{every picture}+=[remember picture,overlay]
+
+\usepackage{forest}
+\usetikzlibrary{trees}
+\tikzstyle{block} = [rectangle, draw, fill=white, rounded corners, minimum size=2em]
+\tikzstyle{branch} = [thick, draw]
+
+%\usetikzlibrary{positioning, backgrounds}
+
+
+\forestset{
+	every leaf node/.style={
+		if n children=0{#1}{}
+	},
+	every tree node/.style={
+		if n children=0{}{#1}
+	},
+	mytree/.style={
+		for tree={
+			font=\footnotesize\selectfont,
+			edge path={
+				\noexpand\path [draw, thick, \forestoption{edge}] (!u.parent anchor) |- (.child anchor)\forestoption{edge label};
+			},
+			every tree node={draw=none,inner sep=0, outer sep=0, minimum size=0},
+			%every leaf node/.style={align=left},
+			grow'=0,
+			parent anchor=east, 
+			child anchor=west,
+			anchor=west,
+			l = 2cm,
+			%l sep=1.5cm,
+			s sep=0mm,
+			draw=none,
+			if n children=0{tier=word}{}
+		}
+	}
+}
+
+\mode<presentation>
+{
+  \usetheme{Lecture}
+  \setbeamercovered{invisible}
+  \setbeamertemplate{items}[square]
+}
+
+%\usepackage{calc}
+\usepackage{hyperref}
+
+% shortstack needed to highlight across \\ line break.
+\newcommand\sshighlight[1]{%
+	\highlight{\shortstack[l]{#1}}%
+}
+
+\newcommand{\backoneline}{\vspace{-\baselineskip}}
+
+\begin{document}
+
+
+\lecture{student}{student}
+
+
+\begin{frame}{You must learn these major taxa of Neornithes.}
+
+
+\begin{forest} mytree
+[[, l sep=+1.7cm, edge label = {node [xshift=-0.8cm, text width = 1.5cm] {\footnotesize Subclass Neornithes}}
+	[,name=neognathae, edge label = {node [text width=2cm, midway, xshift=1.1cm] {\footnotesize Infraclass Neognathae}}
+		[, name=neoaves, edge label = {node [text width=2cm, midway, xshift=1.1cm] {\footnotesize Superorder Neoaves}}
+			[,l-=1cm
+				[\sshighlight{Clade\\ Passerea}, align=left]
+				[Clade\\ Columbimorphae, align=left]
+			]
+			[Clade\\ Mirandornithes, align=left]
+		]
+		[, name=galloanseres, edge label = {node [text width=2cm, midway, xshift=1.1cm] {\footnotesize Superorder Galloanseres}}
+			[Order\\ Galliformes, align=left]
+			[Order\\ Anseriformes, align=left]
+		]
+	]
+	[,name=paleognathae, edge label = {node [text width=1.75cm, midway, xshift=1cm] {\footnotesize Infraclass Paleognathae}}
+		[Tinamous\\ and “Ratites”, align=left]
+		%[Grade\\ “Ratites”, align=left]
+	]
+]]
+\end{forest}
+
+\end{frame}
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{taxonomy_passerea}}
+{	\tikzstyle{every picture}+=[remember picture,overlay]
+\definecolor{orange5}{HTML}{F16913}
+\begin{frame}[b, plain]
+
+\begin{tikzpicture}
+
+\draw [white, fill=white] (5,0.5) rectangle (12,1.1);
+
+\draw [white, fill=white] (5,6) rectangle (12,7);
+
+
+\draw[ultra thick, orange5] (0.8,5.71) rectangle (5.0,6.5) node (placeholder){};
+
+\draw [->, orange5, ultra thick] (7,6.05) -- (5.1, 6.05);
+\node[minimum width=5.5cm, align=left, color=orange5] at (8.3,6.07) {Strigiformes\\[-0.2em] Acciptriformes};
+
+
+\draw[ultra thick, orange5] (0.8,5) rectangle (5.0,5.7) node (placeholder){};
+\draw [->, orange5, ultra thick] (7,5.35) -- (5.1, 5.35);
+
+\node[minimum width=5.5cm, align=left, color=orange5] at (8.3,5.37) {Pelicaniformes};
+
+
+
+\end{tikzpicture}
+	\tiny\hfill Jarvis et al. 2014. Science 346: 1320.
+\end{frame}
+}}
+
+
+\begin{frame}{Pelicaniformes: \highlight{Ardeidae} —  herons and egrets are wading birds with long bills and legs.}
+\vspace{-0.5\baselineskip}
+\centering
+\includegraphics[height=0.78\textheight]{taxonomy_gbhe_greg}
+
+\vfilll
+\tiny Great Blue Heron by \href{https://en.wikipedia.org/wiki/File:Great_Blue_Heron_at_Sunnyvale_California.jpg}{Alpinekid, Wikimedia, \ccbysa{4.0}} \hfill Great Egret by \href{https://en.wikipedia.org/wiki/File:Ardea_modesta.jpg}{JJ Harrison, Wikimedia, \ccbysa{3.0}}
+\end{frame}
+
+\begin{frame}{Ardeidae have a pectinate third (middle) toe.}
+\includegraphics[width=\linewidth]{taxonomy_pectinate_toe}
+
+The foot is anisodactyl with an incumbent hallux.
+
+\tinyfill \href{https://besgroup.org/2021/09/16/cattle-egret-pectinate-claw/}{\textcopyright\,Amar Singh HSS, Bird Ecology Study Group}
+
+\end{frame}
+
+\begin{frame}{Cattle Egret (left) and Snowy Egret (right)}
+\includegraphics[width=\linewidth]{taxonomy_caeg_sneg}
+Note difference in bill length and color. Cattle Egret feathers are white when not breeding. Snowy Egret has black legs and yellow feet.
+
+\vfilll
+
+\tiny Cattle Egret by \href{https://flickr.com/photos/peggycadigan/14158508211}{Peggy Cadigan, Flickr, \ccby{2.0}} \hfill Snowy Egret by \href{https://commons.wikimedia.org/wiki/File:Snowy_Egret-1.jpg}{Pat Hansen, Wikimedia, \ccby{4.0}}
+\end{frame}
+
+\begin{frame}{Green Heron (left) and Little Blue Heron (middle, right)}
+\includegraphics[height=5.2cm]{taxonomy_grhe}\hfill 
+\includegraphics[height=5.2cm]{taxonomy_lbhe}
+
+\vfilll
+
+\tiny Green Heron: \href{https://commons.wikimedia.org/wiki/File:Green_heron_in_PP_(14296).jpg}{Rhododendrites, \ccbysa{4.0}} \hfill Little Blue Heron: (middle) \href{https://flickr.com/photos/manjithkaini/4686037391}{Manjith Kainickara, \ccbysa{2.0}}\hfill (right) \href{https://flickr.com/photos/ferjflores/10765140464}{Fernando Flores, \ccbysa{2.0}}
+\end{frame}
+
+\begin{frame}{Black-crowned Night Heron and Yellow-crowned Night Heron are most active at night.}
+\includegraphics[width=0.49\linewidth]{taxonomy_bcnh} \hfill
+\includegraphics[width=0.49\linewidth]{taxonomy_ycnh}
+
+\vfilll
+
+\tiny Black-crowned Night Heron, \href{https://flickr.com/photos/pazzani/6021109879}{Mike's Birds, \ccbysa{2.0}} \hfill Yellow-crowned Night Heron by \href{https://flickr.com/photos/wildreturn/51220695991}{Andy Reago \& Chrissy McClarren, \ccby{2.0}}
+\end{frame}
+
+
+
+
+\end{document}
