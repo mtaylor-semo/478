@@ -1,0 +1,122 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt]{article}
+\usepackage{graphicx}
+	\graphicspath{{/Users/goby/Pictures/teach/466/lab/}} % set of paths to search for images
+%	\graphicspath{{img/}} % set of paths to search for images
+
+\usepackage{geometry}
+\geometry{letterpaper}                   
+\geometry{bottom=1in}
+%\geometry{landscape}                % Activate for for rotated page geometry
+\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+%\usepackage{amssymb}
+%\usepackage{mathtools}
+%	\everymath{\displaystyle}
+
+%\pagenumbering{gobble}
+
+\usepackage{fontspec}
+\setmainfont[Ligatures={Common,TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, BoldItalicFont={* BoldItalic}, Numbers={Proportional}]{Linux Libertine O}
+\setsansfont[Scale=MatchLowercase,Ligatures=TeX]{Linux Biolinum O}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata}
+\usepackage{microtype}
+
+\usepackage{unicode-math}
+\setmathfont[Scale=MatchLowercase]{Asana-Math.otf}
+%\setmathfont{XITS Math}
+
+% To define fonts for particular uses within a document. For example, 
+% This sets the Libertine font to use tabular number format for tables.
+%\newfontfamily{\tablenumbers}[Numbers={Monospaced}]{Linux Libertine O}
+%\newfontfamily{\libertinedisplay}{Linux Libertine Display O}
+
+
+\usepackage{booktabs}
+\usepackage{multicol}
+%\usepackage{longtable}
+%\usepackage{siunitx}
+%\usepackage[justification=raggedright, singlelinecheck=off]{caption}
+%\captionsetup{labelsep=period} % Removes colon following figure / table number.
+%\captionsetup{tablewithin=none}  % Sequential numbering of tables and figures instead of
+%\captionsetup{figurewithin=none} % resetting numbers within each chapter (Intro, M&M, etc.)
+%\captionsetup[table]{skip=0pt}
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+
+%\usepackage{pdfpages}
+
+\usepackage{enumitem}
+\setlist{leftmargin=*}
+\setlist[1]{labelindent=\parindent}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+%
+%\hypersetup{%
+%  colorlinks=false,% hyperlinks will be black
+%  linkbordercolor=red,% hyperlink borders will be red
+%  pdfborderstyle={/S/U/W 0.8}% border style will be underline of width 1pt
+%}
+
+\usepackage[sc]{titlesec}
+
+
+\usepackage{fancyhdr}
+\fancyhf{}
+\pagestyle{fancy}
+\setlength{\headheight}{13.6pt}
+\lhead{}
+\chead{}
+\rhead{\footnotesize pg.~\thepage }
+\renewcommand{\headrulewidth}{0.4pt}
+
+\fancypagestyle{plain}{%
+	\fancyhf{}
+	\lhead{\textsc{bi}~466/666: Ornithology}
+	\rhead{\textbf{Answer Key}}
+	\renewcommand{\headrulewidth}{0pt}
+}
+
+
+\begin{document}
+\thispagestyle{plain}
+
+\subsubsection*{Real birders use four letter words!\footnote{Title stolen from South Bay Birders Unlimited.}}
+
+Trumpeter Swan = TRUS (Rule 2, Order 2; Tree Swallow)\\
+Tundra Swan = TUSW (Rule 2)\\
+Northern Pintail = NOPI (Rule 2)\\
+Hooded Merganser = HOME (Rule 2)\\
+Turkey Vulture = TUVU (Rule 2)\\
+Red-tailed Hawk = RTHA (Rule 4)\\
+Greater Prairie-Chicken GRPC (Rule 5)\\
+Killdeer = KILL (Rule 1)\\
+Ring-billed Gull = RBGU (Rule 4)\\
+White-winged Dove = WWDO (Rule 4)\\
+Eastern Whip-poor-will  = EWPW (Rule 6)\\
+Belted Kingfisher = BEKI (Rule 2)\\
+Eastern Wood-Pewee = EAWP (Rule 5)\\
+Blue Jay = BLJA (Rule 2)\\
+Horned Lark = HOLA (Rule 2)\\
+Bank Swallow = BANS (Rule 2, Order 2, Barn Swallow)\\
+Barn Swallow = BARS (Rule 2, Order 2, Bank Swallow)\\
+Tree Swallow = TRES (Rule 2, Order 2, Trumpeter Swan)\\
+Tufted Titmouse = TUTI (Rule 2)\\
+Northern Mockingbird = NOMO (Rule 2)\\
+Cedar Waxwing = CEDW (Rule 2, Order 2, Cerulean Warbler)\\
+Black-and-white Warbler = BAWW (Rule 6)\\
+Blackburnian Warbler = BLBW (Rule 2, Order 4, Blackpoll Warbler)\\
+Blackpoll Warbler = BLPW (Rule 2, Order 4, Blackburnian Warbler)\\
+Cerulean Warbler = CERW (Rule 2, Order 2, Cedar Waxwing)\\
+Northern Waterthrush = NOWA (Rule 2)\\
+Dickcissel = DICK (Rule 1)\\
+Nelson's Sharp-tailed Sparrow = NSTS (Rule 6)\\
+American Goldfinch = AMGO (Rule 2)\\
+Purple Finch = PUFI (Rule 2)
+
+\end{document}
