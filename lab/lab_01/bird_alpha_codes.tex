@@ -54,9 +54,14 @@
 \usepackage{enumitem}
 \setlist{leftmargin=*}
 \setlist[1]{labelindent=\parindent}
-
+\usepackage{xcolor}
 \usepackage[hidelinks]{hyperref}
-%\usepackage{placeins} %PRovides \FloatBarrier to flush all floats before a certain point.
+%
+%\hypersetup{%
+%  colorlinks=false,% hyperlinks will be black
+%  linkbordercolor=red,% hyperlink borders will be red
+%  pdfborderstyle={/S/U/W 0.8}% border style will be underline of width 1pt
+%}
 
 \usepackage[sc]{titlesec}
 
@@ -81,11 +86,49 @@
 \begin{document}
 \thispagestyle{plain}
 
-\subsection*{Real birders use four letter words!\footnote{Title stolen from South Bay Birders Unlimited.}}
+\subsection*{Bird names and banding codes}
+
+This exercise provides important information about common bird names and using four-letter codes to refer to birds.
+
+\subsubsection*{Bird names}
+
+You will learn proper common names for birds we see throughout the semester. You must learn a few basic rules to ensure you get full credit when you are asked to identify a bird by sight or sound.  \emph{The first two rules apply to the vast majority of names you will learn.} Pay attention to the spelling when you enter your checklists, in your field guides, and when you study.
+
+\begin{enumerate}
+\item Bird names are proper nouns so must capitalized. If the bird name is one or two words, capitalize both words. For example,
+
+Killdeer, Northern Cardinal, Downy Woodpecker, Barred Owl.
+
+\item Birds with three names usually have a hyphen between the first two words, and the second word is \emph{not} capitalized.  In these cases, the first two words combined describe something about the bird. For example,
+
+Red-shouldered Hawk (shoulder color), Red-winged Blackbird (red patches on wing), Ruby-throated Hummingbird
+
+\item The last name of many birds sounds like two words but is one word. For example,
+
+Eastern Bluebird (not Blue Bird), Eastern Meadowlark (not Meadow Lark), Red-winged Blackbird (not Black Bird), Blue Grosbeak (not Gross Beak).
+
+\item You will run into relatively few exceptions but they are easy to remember because they stand out as different. For example,
+
+Three word names, not hypenated: Great Blue Heron, Little Blue Heron (blue herons that are great or little), Great Crested Flycatcher, Cape May Warbler, American Black Duck. 
+
+Four word names, middle two are hyphenated: Northern Rough-winged Swallow (note the hyphenated pair is descriptive of the wing), Great Black-backed Gull (descriptive of the back color).
+
+Lots of hyphens: a few species have multiple hyphens to make names easier to read, such as Eastern Whip-poor-will (Whippoorwill is harder to read), Chuck-will's-widow (Chuckwill'swidow is especially awkward).
+
+\item Final note: some species used to have hyphens between the last two names, such as the Greater Prairie-Chicken and Eurasian Collared-Dove. The various committees in different countries that standardize common names are trending towards dropping the hyphen between the last two names, such as Greater Prairie Chicken and Eurasian Collared Dove. Note that both words separated by the hyphen are capitalized.
+
+I think it is easiest to drop the hyphen and capitalize all the words but you may include it as long as you include it properly, such as Eurasian Collared-Dove, not Eurasian-collared Dove. 
+
+\emph{This hyphen can still be important for the four-letter codes. See Rule 5 below.}
+
+
+\end{enumerate}
+
+\subsubsection*{Real birders use four letter words!\footnote{Title stolen from South Bay Birders Unlimited.}}
 
 Birders have long used four-letter “alpha codes” as short-hand codes to record field observations on field sheets. The code birders adopted in based on the four- and six-letter codes standardized by the Bird Banding Laboratory for North American Birds. 
 
-The code is based on the official taxonomic names list published by the American Ornithological Society (\textsc{aos;} formerly, the American Ornithological Union). The \textsc{aos} maintains the \href{http://checklist.americanornithology.org/}{Checklist of North and Middle American Birds}, the official taxonomy for birds found in North and Central America, including the Bahama and Caribbean islands.
+The code is based on the official taxonomic names list published by the American Ornithological Society (\textsc{aos;} formerly, the American Ornithological Union). The \textsc{aos} maintains the \href{http://checklist.americanornithology.org/}{\underline{Checklist of North and Middle American Birds}}, the official taxonomy for birds found in North and Central America, including the Bahama and Caribbean islands.
 
 The alpha code is fairly easy to learn, especially when converting official common names to the code. Converting the code to common names requires familiarity with the common names so is harder for beginning birders. 
 
@@ -105,7 +148,7 @@ The code consists of seven rules, plus my Rule 0.  The rules are
 
 \begin{enumerate}
 \setcounter{enumi}{-1}
-\item Learn the \emph{official} common names! You must know the official names of the birds to apply the rules. The names given in your field guide are the official names, e.g., Northern Cardinal, not Cardinal.
+\item Learn the \emph{official} common names! You must know the official names of the birds to apply the rules. The names given in your field guide are the official names, e.g., Northern Cardinal, not Cardinal. See the \textsc{Bird names} section above.
 
 \item If the English name is a single word, use the
 first four letters; e.g., Canvasback, CANV.
@@ -121,7 +164,7 @@ Common Loon, COLO.
 the first two are hyphenated, use rule 3; e.g.,
 Pied-billed Grebe, PBGR.
 
-\item If the English name consists of three words and the last two are hyphenated, use the reverse of rule three; e.g., Eastern Screech-Owl, EASO. [In other words,use the first two letters of the first word, the first letter of the second word, and the first letter of the third word.]
+\item If the English name consists of three words and the last two are hyphenated, use the reverse of rule three; e.g., Eastern Screech-Owl, EASO. [In other words, use the first two letters of the first word, the first letter of the second word, and the first letter of the third word. See the Rule 5 (Final note) in the \textsc{Bird names} section above.]
 
 \item If the English name consists of four words
 (with or without hypens), use the first letter of
@@ -135,7 +178,7 @@ it as four words [eliminating the fourth word first]; e.g., Puget Sound White-cr
 
 \subsubsection*{Name conflicts}
 
-The rules above work for \emph{most} common names. However, some birds have common names that give the same alpha code, such as Canada Goose and Cackling Goose. Two word names follow Rule 2, so both reduce to the same code, CAGO, which is unacceptable.
+The rules above work for \emph{most} common names. However, some birds have common names that give the same alpha code, such as Canada Goose and Cackling Goose. Two word names follow Rule 2, so both reduce to the same code, CAGO, which is not acceptable.
 
 The following modification strategies resolve conflicts for the most common cases in our area.  These strategies are not exhaustive. See the original publications for the complete modifications.
 
@@ -146,7 +189,7 @@ The strategies follow a specific order, called first order, second order, third 
 Most of the conflicts in our area are for two word names that follow Rule 2. Follow down the list in order until the conflict is resolved.
 
 \begin{enumerate}[label={Order \arabic*:}]
-\item AaBb. Common Loon = COLO. This is the base Rule 2.
+\item AaBb. Common Loon = COLO. This is base Rule 2.
 
 \item AaaB. Canada Goose = CANG. Cackling Goose = CACG. Stop here if the conflict is resolved.
 
@@ -162,7 +205,11 @@ The strategies get more involved for conflicting names with three or more words 
 
 \subsubsection*{Your turn}
 
-Submit a Word or PDF document with the alpha codes for the following list of 30 birds (arranged phylogenetically). Type the common name, an equal sign, and then the code; e.g., Common Loon = COLO.  Then, write the rule(s) used to derive the code. If conflicts arise, tell which  strategy you used to resolve the conflict, and name the species from this list that is in conflict. Do not name Rule 0. Put one name and its rules per line. 
+Pull out a sheet of paper to turn in at the end of lab. If you have a laptop with you, you may upload a Word or \textsc{pdf} document before you leave  today. 
+
+Write or type the alpha codes for the following list of 30 birds (arranged phylogenetically). Write the common name, an equal sign, and then the code; e.g., Common Loon = COLO.  Then, write the rule(s) used to derive the code. If conflicts arise, tell which  strategy you used to resolve the conflict, and name the species from this list that is in conflict. Do not name Rule 0. Put one name and its rules per line. 
+
+\emph{Be sure to pay attention to the codes you use. Conflicts may arise!}
 
 \begin{multicols}{2}
 Trumpeter Swan\\
@@ -171,7 +218,7 @@ Northern Pintail\\
 Hooded Merganser\\
 Turkey Vulture\\
 Red-tailed Hawk\\
-Greater Prairie-chicken\\
+Greater Prairie-Chicken\\
 Killdeer\\
 Ring-billed Gull\\
 White-winged Dove\\
@@ -196,5 +243,7 @@ Nelson's Sharp-tailed Sparrow\\
 American Goldfinch\\
 Purple Finch
 \end{multicols}
+
+\textsc{Final note:} eBird Mobile recognizes four-letter alpha codes, so you can type “noca” (lower case is okay) to bring up Northern Cardinal, etc. I'll use the alpha codes in class, too. 
 
 \end{document}  
