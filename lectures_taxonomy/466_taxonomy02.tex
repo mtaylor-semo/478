@@ -100,6 +100,11 @@
 	\highlight{\shortstack[l]{#1}}%
 }
 
+% shortstack needed to hold across \\ line break.
+\newcommand\ssbf[1]{%
+	\textbf{\shortstack[l]{#1}}%
+}
+
 \newcommand{\backoneline}{\vspace{-\baselineskip}}
 
 \begin{document}
@@ -107,8 +112,9 @@
 
 \lecture{student}{student}
 
-\begin{frame}{You must learn these major taxa of Neornithes.}
+\begin{frame}{Mirandornithes and Columbimorphae each have one family in Missouri.}
 
+\backoneline
 
 \begin{forest} mytree
 [[, l sep=+1.7cm, edge label = {node [xshift=-0.8cm, text width = 1.5cm] {\footnotesize Subclass Neornithes}}
@@ -116,9 +122,9 @@
 		[, name=neoaves, edge label = {node [text width=2cm, midway, xshift=1.1cm] {\footnotesize Superorder Neoaves}}
 			[,l-=1cm
 				[Clade\\ Passerea, align=left]
-				[\sshighlight{Clade\\ Columbimorphae}, align=left]
+				[\ssbf{Clade\\ Columbimorphae}, align=left]
 			]
-			[\sshighlight{Clade\\ Mirandornithes}, align=left]
+			[\ssbf{Clade\\ Mirandornithes}, align=left]
 		]
 		[, name=galloanseres, edge label = {node [text width=2cm, midway, xshift=1.1cm] {\footnotesize Superorder Galloanseres}}
 			[Order\\ Galliformes, align=left]
@@ -200,7 +206,7 @@
 
 
 
-\begin{frame}{You must learn these major taxa of Neornithes.}
+\begin{frame}{Most birds you see belong to Clade Passerea.}
 
 
 \begin{forest} mytree
@@ -208,7 +214,7 @@
 	[,name=neognathae, edge label = {node [text width=2cm, midway, xshift=1.1cm] {\footnotesize Infraclass Neognathae}}
 		[, name=neoaves, edge label = {node [text width=2cm, midway, xshift=1.1cm] {\footnotesize Superorder Neoaves}}
 			[,l-=1cm
-				[\sshighlight{Clade\\ Passerea}, align=left]
+				[\ssbf{Clade\\ Passerea}, align=left]
 				[Clade\\ Columbimorphae, align=left]
 			]
 			[Clade\\ Mirandornithes, align=left]
