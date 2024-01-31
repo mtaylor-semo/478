@@ -242,17 +242,27 @@
 
 \begin{tikzpicture}
 
-\draw [white, fill=white] (5,0.5) rectangle (12,1.1);
 
-\onslide*<2>{\draw[ultra thick, orange5] (0.8,2.1) rectangle (5.0,2.9) node (placeholder){};
-\draw [->, orange5, ultra thick] (7,2.5) -- (5.1, 2.5);
+\onslide*<1>{%
+%\draw [white, fill=white] (5,0.5) rectangle (12,1.1);
 
-\node[minimum width=5.5cm, align=left, color=orange5] at (8.5,2.5) {Caprimulgiformes};
+\draw[ultra thick, black] (4.8, 0.25) -- (4.8, 1.45) node[minimum width=5.5, align = left, right, midway]{Columbimorphae\\Mirandornithes};
+}
 
-\draw[ultra thick, orange5] (0.8,1.4) rectangle (5.0,1.7) node (placeholder){};
-\draw [->, orange5, ultra thick] (7,1.55) -- (5.1, 1.55);
+\onslide*<2>{%
+\draw[ultra thick, black] (4.8, 1.45) -- (4.8, 9.2) node[right, midway] {Passerea contains \textasciitilde 10,000 species};
 
-\node[minimum width=5.5cm, align=left, color=orange5] at (8.13,1.55) {Cuculiformes};
+}
+
+
+\onslide*<3>{\draw[ultra thick, orange5] (0.9,2.1) rectangle (4.8,2.9);
+\draw [<-, orange5, ultra thick] (4.9,2.5) -- (6.5, 2.5) node[right] {Caprimulgiformes}; 
+
+\draw[ultra thick, orange5] (0.9,1.4) rectangle (4.8,1.7);
+\draw [<-, orange5, ultra thick] (4.9,1.55) -- (6.5, 1.55) node[right] {Cuculiformes};
+
+\draw[ultra thick, orange5] (0.9,3.07) rectangle (4.8,3.37);
+\draw [<-, orange5, ultra thick] (4.9,3.22) -- (6.5, 3.22) node[right] {Gruiformes};
 
 }
 
@@ -350,5 +360,52 @@ Most often seen in flight. Stiff wing beats give the \textit{illusion} of altern
 \tiny \href{https://macaulaylibrary.org/asset/97947051}{Ruby-throated Hummingbird male, Brian Kulvete, ML97947051} \hfill  \href{https://macaulaylibrary.org/asset/268051161}{Ruby-throated Hummingbird female, German Garcia, ML268051161}
 
 \end{frame}
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{taxonomy_gruiformes}}
+\begin{frame}[t]{\highlight{Gruiformes} has two families in Missouri: Gruidae (cranes) and \highlight{Rallidae} (rails).}
+
+\tikzset{
+    use page relative coordinates/.style={
+        shift={(current page.south west)},
+        x={(current page.south east)},
+        y={(current page.north west)}
+    },
+}
+
+\begin{tikzpicture}[remember picture, overlay, use page relative coordinates]
+%\node[anchor=south west] at (0,0) {(0,0)};
+\node[anchor=south west, minimum width=5.5cm, align=right, color=white] at (0.56,0.45) {\tiny Virginia Rail by  \href{https://macaulaylibrary.org/asset/29069861}{Evan Lipton, Macaulay Library \textsc{ML29069861}}};
+\end{tikzpicture}
+
+\vfilll
+
+\tiny \textcolor{white}{Sandhill Crane by  \href{https://macaulaylibrary.org/asset/180195071}{Lorri Howski, Macaulay Library \textsc{ML180195071}}\hfill Common Gallinule by \href{https://macaulaylibrary.org/asset/43686631}{John Whigham, Macaulay Library \textsc{ML43686631}}}
+
+
+\end{frame}
+}
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{taxonomy_american_coot}}
+\begin{frame}[b]
+
+
+	\tinyfill American Coot by  \href{https://macaulaylibrary.org/asset/202472221}{Daniel Irons, Macaulay Library \textsc{ML202472221}}
+\end{frame}
+}
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{taxonomy_rallidae}}
+\begin{frame}[t]{Most Rallidae have longer bills and unlobed toes.}
+
+	\tinyfill \textcolor{white}{Virginia Rail by  \href{https://flickr.com/photos/wildreturn/26985213537/}{Andy Reago \& Chrissy McLaren, Flickr, \ccby{2.0}}}
+\end{frame}
+}
+
+
 
 \end{document}
