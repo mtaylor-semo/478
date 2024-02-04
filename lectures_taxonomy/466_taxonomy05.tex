@@ -1,0 +1,550 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[t]{beamer}
+
+%%%% HANDOUTS For online Uncomment the following four lines for handout
+%\documentclass[t,handout]{beamer}  %Use this for handouts.
+%\includeonlylecture{student}
+%\usepackage{handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
+
+
+%%% Including only some slides for students.
+%%% Uncomment the following line. For the slides,
+%%% use the labels shown below the command.
+%\includeonlylecture{student}
+
+%% For students, use \lecture{student}{student}
+%% For mine, use \lecture{instructor}{instructor}
+
+
+%\usepackage{pgf,pgfpages}
+%\pgfpagesuselayout{4 on 1}[letterpaper,border shrink=5mm]
+
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Biolinum O}
+\setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
+\setmonofont[Scale=MatchLowercase]{Linux Libertine Mono O} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/466/lectures/}%
+	{img/}}%
+%	{/Users/goby/Pictures/teach/common/}} % set of paths to search for images
+
+%\usepackage{amsmath,amssymb}
+
+%\usepackage{units}
+
+%\usepackage{booktabs}
+\usepackage{multicol}
+%	\setlength{\columnsep=1em}
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+%usepackage{tikz}
+%	\tikzstyle{every picture}+=[remember picture,overlay]
+
+\usepackage{forest}
+\usetikzlibrary{trees}
+\tikzstyle{block} = [rectangle, draw, fill=white, rounded corners, minimum size=2em]
+\tikzstyle{branch} = [thick, draw]
+
+%\usetikzlibrary{positioning, backgrounds}
+
+
+\forestset{
+	every leaf node/.style={
+		if n children=0{#1}{}
+	},
+	every tree node/.style={
+		if n children=0{}{#1}
+	},
+	mytree/.style={
+		for tree={
+			font=\footnotesize\selectfont,
+			edge path={
+				\noexpand\path [draw, thick, \forestoption{edge}] (!u.parent anchor) |- (.child anchor)\forestoption{edge label};
+			},
+			every tree node={draw=none,inner sep=0, outer sep=0, minimum size=0},
+			%every leaf node/.style={align=left},
+			grow'=0,
+			parent anchor=east, 
+			child anchor=west,
+			anchor=west,
+			l = 1cm,
+			%l sep=1.5cm,
+			s sep=0mm,
+			draw=none,
+			if n children=0{tier=word}{}
+		}
+	}
+}
+
+\mode<presentation>
+{
+  \usetheme{Lecture}
+  \setbeamercovered{invisible}
+  \setbeamertemplate{items}[square]
+}
+
+%\usepackage{calc}
+\usepackage{hyperref}
+\usepackage{color}
+
+% shortstack needed to highlight across \\ line break.
+\newcommand\sshighlight[1]{%
+	\highlight{\shortstack[l]{#1}}%
+}
+
+\newcommand{\backoneline}{\vspace{-\baselineskip}}
+
+\begin{document}
+
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{taxonomy_passerea}}
+{	\tikzstyle{every picture}+=[remember picture,overlay]
+\definecolor{orange5}{HTML}{F16913}
+\begin{frame}[b, plain]
+
+\begin{tikzpicture}
+
+
+\draw[ultra thick, orange5] (0.9,7.3) rectangle (4.8,7.7);
+
+\draw [<-, orange5, ultra thick] (4.9,7.5) -- (6.5, 7.5) node[minimum width=2cm, align=left, right] {Piciformes};
+
+\draw[ultra thick, orange5] (0.9,8.7) rectangle (4.8,9.3);
+
+\draw [<-, orange5, ultra thick] (4.9,9.0) -- (6.5, 9.0) node[right] {Passeriformes};
+
+\node[minimum width=2cm, align=left] at (8,5.25) {Passeriformes is divided
+into\\ Suboscine and Oscine clades.};
+
+\end{tikzpicture}
+	\tiny\hfill Jarvis et al. 2014. Science 346: 1320.
+\end{frame}
+}}
+
+
+\begin{frame}{Piciformes: \highlight{Picidae} — woodpeckers.}
+
+More to come\dots
+\end{frame}
+
+
+\begin{frame}{Downy and Hairy Woodpecker identified with practice.}
+
+\vspace{-\baselineskip}
+
+\begin{multicols}{2}
+\reflectbox{\includegraphics[width=\linewidth]{taxonomy_dowo_hawo_feeder}}
+
+\columnbreak
+
+Downy Woodpecker is smaller, about the size of a House Sparrow.
+
+\bigskip
+
+Hairy Woodpecker is larger, about the size of an American Robin.
+
+\end{multicols}
+
+
+
+\tinyfill
+
+\href{https://www.birdsandblooms.com/birding/bird-species/tell-difference-downy-hairy-woodpeckers/}{Hairy and Downy Woodpecker: Marie Read, \textcopyright\,Birds and Blooms} 
+\end{frame}
+
+\begin{frame}
+
+\includegraphics[width=\linewidth]{taxonomy_dowo_hawo_compare}
+
+\vspace{-\baselineskip}
+
+\begin{multicols}{2}
+
+Downy Woodpecker
+
+\medskip
+
+Short bill about 1/3 of head length.
+
+\smallskip
+
+Small spots in outer tail feathers.
+
+\smallskip
+
+Red patch on males usually undivided.
+
+
+\columnbreak
+
+Hairy Woodpecker
+
+\medskip
+
+Longer bill about length of head.
+
+\smallskip
+
+No spots on outer tail feathers.
+
+\smallskip
+
+Red patch on males usually divided.
+
+\end{multicols}
+
+
+\vfilll
+
+\tiny \href{https://macaulaylibrary.org/asset/47227441}{Downy Woodpecker: Evan Lipton, ML47227441} \hfill \href{https://macaulaylibrary.org/asset/25034271}{Hairy Woodpecker: Jean-Sébastien Guénette, ML25034271}
+
+\end{frame}
+
+
+
+
+\begin{frame}{Suboscine birds do not learn their song.}
+
+The only suboscines in North America are the Tyrant Flycatchers.
+
+\end{frame}
+
+
+\begin{frame}{Accipitriformes: \highlight{Cathartidae} — vultures}
+\includegraphics[width=0.49\linewidth]{taxonomy_tuvu}\hfill
+\includegraphics[width=0.49\linewidth]{taxonomy_blvu}
+
+Turkey Vulture (left) has a red head. Black Vulture (right) has a dark gray head. \emph{Head color is not always visible at a distance or in flight.}
+
+\vspace{0.5\baselineskip}
+
+Head lacks plumage in adults. Feet are weakly raptorial. Bill moderately hooked.
+
+\vfilll
+
+\tiny Turkey Vulture:   \href{https://macaulaylibrary.org/asset/109079321}{Michael S. Taylor, ML109079321}\hfill
+Black Vulture: \href{https://commons.wikimedia.org/wiki/File:Vulture,_Black_FG1.jpg}{Dick Daniels, \ccbysa{3.0}}
+\end{frame}
+
+
+
+
+
+\begin{frame}{Black Vulture (top) and Turkey Vulture (bottom) can be identified in flight.}
+\includegraphics[width=\linewidth]{taxonomy_tuvu_blvu}
+
+Black Vulture is distinctly smaller with much shorter tails. 
+
+\vspace{0.5\baselineskip}
+
+BLVU flap more frequently. TUVU are “tippy” in flight.
+\vspace{0.5\baselineskip}
+
+BLVU has white patches restricted to wing tips. TUVU wings look black or black coverts and silver-gray primaries and secondaries.
+
+\tinyfill \href{https://www.nps.gov/articles/netn-species-spotlight-vultures.htm}{National Park Service, Public Domain.}
+\end{frame}
+
+
+\begin{frame}{Osprey (Pandionidae) is found near open water with fish.}
+\includegraphics[width=\linewidth]{taxonomy_ospr}
+
+\vfilll
+
+\tiny \href{https://flickr.com/photos/acrylicartist/6208785891}{Rodney Cambell, \ccby{2.0}} \hfill \href{https://flickr.com/photos/usfwsnortheast/51416053070}{USFWS, Public Domain}
+\end{frame}
+
+
+
+\begin{frame}{Accipitriformes: \highlight{Accipitridae} — hawks, eagles, and kites.}
+
+\begin{forest} mytree
+[,l=1cm
+	[
+		[
+			[
+			[
+				[
+					[“Buteos”, align=left]
+					[Mississippi Kite, align=left]
+				]
+				[Bald Eagle, align=left]
+				]
+			[, name = accipiter, 
+				[Cooper's Hawk]
+				[Northern Harrier]
+			]
+		]
+		]
+	]
+]
+\end{forest}
+
+\begin{tikzpicture}[remember picture, overlay]
+\draw [thick] (8.5,0.5) -- (8.5,1.5) node[right, midway] {Accipitrinae};;
+
+\draw [thick] (8.5,1.7) -- (8.5,3.4) node[right, midway] {Buteoninae};;
+
+\end{tikzpicture}
+
+
+
+\end{frame}
+
+\begin{frame}{Accipitrinae include Northern Harrier and Cooper's Hawk.}
+\backoneline
+
+\begin{multicols}{2}
+\includegraphics[width=\linewidth]{taxonomy_noha} \hfill
+\includegraphics[width=\linewidth]{taxonomy_coha}
+
+\end{multicols}
+
+\vfilll
+
+\tiny Northern Harrier: \href{https://flickr.com/photos/52450054@N04/52848994837}{Judy Gallagher (top)}, \href{https://flickr.com/photos/jwcolo/8714842140}{Jonathan Wisner (bottom)}, \ccby{2.0} \hfill Cooper's Hawk: \href{https://flickr.com/photos/pazzani/36473380835}{Mike's Birds, \ccbysa{2.0}}
+
+\end{frame}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{taxonomy_baea_adult}}
+\begin{frame}{\textcolor{white}{Bald Eagle is found near open water with fish.}}
+
+
+\tinyfill \textcolor{white}{\href{https://www.flickr.com/photos/andymorffew/30742412415}{Andy Morffew, \ccby{2.0}}}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{taxonomy_baea_adult2}}
+\begin{frame}{\textcolor{white}{Bald Eagle takes 5 years to attain adult plumage.}}
+
+
+\tinyfill \textcolor{white}{\href{https://www.flickr.com/photos/andymorffew/30742412415}{Andy Morffew, \ccby{2.0}}}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{taxonomy_baea_imm}}
+\begin{frame}{\textcolor{white}{Immature Bald Eagle is mottled brown.}}
+
+
+\tinyfill \textcolor{white}{\href{https://www.flickr.com/photos/andymorffew/46931504035}{Andy Morffew, \ccby{2.0}}}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{taxonomy_baea_flat}}
+\begin{frame}{\textcolor{white}{Bald Eagle soars with wings held flat.}}
+
+
+\tinyfill \textcolor{white}{\href{https://www.flickr.com/photos/andymorffew/28687274768}{Andy Morffew, \ccby{2.0}}}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{taxonomy_miki_perched}}
+\begin{frame}{Mississippi Kite is a small, gray raptor.}
+
+
+\tinyfill \textcolor{white}{\href{https://flickr.com/photos/wildreturn/28138609132}{Andy Reago \& Chrissy McClarren, \ccby{2.0}}}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{taxonomy_miki_kiting}}
+\begin{frame}{\textcolor{white}{Mississippi Kite feeds on insects in the air.}}
+
+
+\tinyfill \textcolor{white}{\href{https://flickr.com/photos/wildreturn/28138609132}{Andy Reago \& Chrissy McClarren, \ccby{2.0}}}
+\end{frame}
+}
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{taxonomy_miki_chased}}
+\begin{frame}{\textcolor{white}{Watch for the white patches on top of the wings.}}
+
+
+\tinyfill \textcolor{white}{Common Grackle chasing Mississippi Kite, \href{https://flickr.com/photos/wildreturn/28138609132}{Andy Reago \& Chrissy McClarren, \ccby{2.0}}}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{taxonomy_rtha_back}}
+\begin{frame}{\textcolor{white}{Red-tailed Hawk is our largest “buteo.”}}
+
+
+\tinyfill Red-tailed Hawk, \href{https://flickr.com/photos/oregondot/5396663758}{Oregon Dept.~of Transportation, \ccby{2.0}}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{taxonomy_rtha_belly}}
+\begin{frame}
+
+
+\tinyfill Red-tailed Hawk, \href{https://macaulaylibrary.org/asset/24238641}{Alex Lamoreaux, ML24238641}
+\end{frame}
+}
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{taxonomy_rtha_flying}}
+\begin{frame}{\textcolor{white}{Note the dark head and leading wing edge, light breast.}}
+
+
+\tinyfill \textcolor{white}{Red-tailed Hawk, \href{https://macaulaylibrary.org/asset/48674511}{Jonathan Eckerson, ML48674511}}
+\end{frame}
+}
+
+%{
+%\usebackgroundtemplate{\includegraphics[width=\paperwidth]{taxonomy_rsha}}
+%\begin{frame}{Red-shouldered Hawk is medium-sized with reddish breast.}
+%
+%
+%\tinyfill Red-shouldered Hawk, \href{https://macaulaylibrary.org/asset/76309941}{Eric Keith, ML76309941}
+%\end{frame}
+%}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{taxonomy_rsha1}}
+\begin{frame}{Red-shouldered Hawk has slender build with long legs.}
+
+
+\tinyfill Red-shouldered Hawk, \href{https://macaulaylibrary.org/asset/76309941}{Eric Keith, ML76309941}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{taxonomy_rsha_flying1}}
+\begin{frame}
+
+
+\tinyfill \textcolor{white}{Red-shouldered Hawk, \href{https://macaulaylibrary.org/asset/86154661}{Paul Fenwick, ML86154661}}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{taxonomy_rsha_flying2}}
+\begin{frame}
+
+
+\tinyfill Red-shouldered Hawk, \href{https://flickr.com/photos/cuatrok77/8535844534}{cuatrok77, \ccbysa{2.0}}
+\end{frame}
+}
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{taxonomy_strigidae}}
+\begin{frame}{Strigiformes: \highlight{Strigidae} — owls are mostly nocturnal.}
+
+
+\vfilll 
+
+
+
+\tiny \colorbox[gray]{0.9}{\parbox{0.3\textwidth}{Great Horned Owl,  \href{https://flickr.com/photos/12463666@N03/32547241817}{Robert Miller, \ccby{2.0}}}}
+ \hfill Barred Owl, \href{https://flickr.com/photos/79452129@N02/30833383633}{Fyn Kynd, \ccby{2.0}}
+\end{frame}
+}
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{taxonomy_strigidae_less_common}}
+
+\begin{frame}{Barn Owl is family Tytonidae. All others in Strigidae.}
+
+\begin{tikzpicture}[remember picture, overlay]
+
+\node[minimum width=5.5cm, align=right] at (2.8,-3.5) {\textcolor{white}{\tiny Eastern Screech Owl:   \href{https://flickr.com/photos/wildreturn/30621282464}{Andy Reago \& Chrissy McClarren, \ccby{2.0}}}};
+
+%\node[minimum width=5.5cm, align=right, color=white] at (10.4,-3.5) {\tiny Bald Eagle:   \href{https://flickr.com/photos/jamham/4317710020}{Jim Hamilton, Public Domain}};
+
+\end{tikzpicture}
+
+
+\vfilll
+
+\tiny \textcolor{white}{Short-eared Owl: \href{https://flickr.com/photos/128941223@N02/49978078296}{Caroline Legg, \ccby{2.0}}} \hfill Barn Owl: \href{https://macaulaylibrary.org/asset/155550701}{Sharif Udden, ML155550701}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{taxonomy_pefa}}
+\begin{frame}{Falconiformes: Falconidae — falcons.}
+
+
+\tinyfill Peregrin Falcon, \href{https://flickr.com/photos/79452129@N02/21571335442}{Fyn Kynd, \ccby{2.0}}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{taxonomy_amke}}
+\begin{frame}{American Kestrel is commonly seen near open fields.}
+
+\begin{tikzpicture}[remember picture, overlay]
+
+\node[minimum width=5.5cm, align=right] at (8.8,-3.5) {\textcolor{white}{Males have blue-gray wings.}};
+
+%\node[minimum width=5.5cm, align=right, color=white] at (10.4,-3.5) {\tiny Bald Eagle:   \href{https://flickr.com/photos/jamham/4317710020}{Jim Hamilton, Public Domain}};
+
+\end{tikzpicture}
+
+
+\tinyfill \textcolor{white}{Male American Kestrel, %
+ \href{https://commons.wikimedia.org/wiki/File:American_Kestrel_(Male)_(8238822396).jpg}{Andy Morffew, \ccby{2.0}}}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{taxonomy_amke_female}}
+\begin{frame}{American Kestrel often bob its tail when perched.}
+
+\begin{tikzpicture}[remember picture, overlay]
+
+\node[minimum width=5.5cm, align=right] at (8.8,-1.5) {\textcolor{black}{Females have rufous wings.}};
+
+%\node[minimum width=5.5cm, align=right, color=white] at (10.4,-3.5) {\tiny Bald Eagle:   \href{https://flickr.com/photos/jamham/4317710020}{Jim Hamilton, Public Domain}};
+
+\end{tikzpicture}
+
+
+\tinyfill Female American Kestrel, %
+ \href{https://flickr.com/photos/jls195674/16558905212}{John Schmoll, \ccby{2.0}}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{taxonomy_amke_flying}}
+\begin{frame}{American Kestrel can hover in flight.}
+
+\begin{tikzpicture}[remember picture, overlay]
+
+\node[minimum width=5.5cm, align=left] at (2.8,-1.5) {Watch for pointed wings\\ and long slender tail.};
+
+%\node[minimum width=5.5cm, align=right, color=white] at (10.4,-3.5) {\tiny Bald Eagle:   \href{https://flickr.com/photos/jamham/4317710020}{Jim Hamilton, Public Domain}};
+
+\end{tikzpicture}
+
+
+\tinyfill American Kestrel, %
+ \href{https://commons.wikimedia.org/wiki/File:American_Kestrel_Diving_(16114435431).jpg}{Andy Morffew, \ccby{2.0}}
+\end{frame}
+}
+
+\end{document}
