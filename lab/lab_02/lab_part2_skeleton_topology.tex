@@ -1,0 +1,188 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[10pt]{article}  
+\usepackage[left=0.75in,right=0.75in,top=1in,bottom=0.5in]{geometry} 
+\geometry{letterpaper}                   		% 
+\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\setlength{\parindent}{0pt}
+
+\usepackage{graphicx}
+\graphicspath{%
+	{/Users/goby/Pictures/teach/466/lab/}}
+	
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+%\defaultfontfeatures{Mapping=tex} % converts LaTeX specials (``quotes'' --- dashes etc.) to unicode
+\setmainfont[Ligatures={Common, TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional, OldStyle}]{\mainfont}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+%\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+
+
+\usepackage[singlelinecheck=false]{caption}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+
+%\pagenumbering{gobble}
+%\usepackage{pdflscape}
+\usepackage{longtable}
+\usepackage[frenchlinks]{hyperref}
+\hypersetup{
+	frenchlinks=true,
+	pdfborder={0 0 0}}
+\usepackage{booktabs}
+\usepackage{multicol}
+%\usepackage{amssymb}
+%\usepackage{enumitem}
+%\setlist{noitemsep}
+%\setlist[description]{style=multiline, leftmargin=1.25cm, parsep=1ex}
+
+\usepackage[sc]{titlesec}
+
+\usepackage{fancyhdr}
+\fancyhf{}
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{\footnotesize pg.~\thepage }
+\renewcommand{\headrulewidth}{0.4pt}
+
+\fancypagestyle{plain}{%
+	\fancyhf{}
+	\lhead{\textsc{bi}~466/666: Ornithology}
+	\rhead{Name: \enspace \makebox[2.5in]{\hrulefill}}
+	\renewcommand{\headrulewidth}{0pt}
+}
+
+\newcommand{\blankline}{\rule{2in}{0.4pt}}
+
+
+
+\begin{document}
+\thispagestyle{plain}
+%\begin{landscape}
+
+\subsection*{Skeleton and external topology, part ii: apply your knowledge}
+
+\subsubsection*{Skeleton}
+
+	Get with Dr. Taylor and show him the following structures on the large skeleton at the front of the room. This skeleton is (probably) from a Double-crested Cormorant.
+
+\begin{multicols}{3}
+	alular digit\\
+	carina (extension of the sternum)\\
+	carpometacarpus\\
+	coracoid\\
+	femur\\
+	furcula (“wishbone”)\\
+	hallux (toe I)\\
+	humerous\\
+	major and minor digits (wing)\\
+	% mandible, lower\\
+	% mandible, upper\\
+	%pygostyle\\
+	radius\\
+	sternum\\
+	tarsometatarsus\\
+	tibiotarsus\\
+	%tomium, upper and lower\\
+	toes (toes II–IV)\\
+	ulna
+\end{multicols}
+
+\subsubsection*{External topology}
+
+Visit the various stations around the room. Answer the following questions.
+
+
+\medskip
+
+\textsc{Green Jay:} What color is the crown? \blankline
+
+\bigskip
+
+\textsc{Green Jay:} What color are the outermost rectrices? \blankline
+
+\bigskip
+
+%\textsc{Green Jay:} What color is the breast? \blankline
+
+%\bigskip
+\textsc{Crimson Tanager:} What color is the mantle? \blankline
+
+\bigskip
+
+\textsc{Crimson Tanager:} What color are the lores ? \blankline
+
+\bigskip
+
+ 
+\textsc{Tag 876:} What color is the supercilium? \blankline
+
+\bigskip
+
+\textsc{Tag unknown:} What color is the auricular? \blankline
+
+\bigskip
+
+\textsc{Tag unknown:} What color is the auricular? \blankline
+
+\bigskip
+
+\textsc{Tag unknown:} What color is the rump/upper tail coverts? \blankline
+
+\bigskip
+
+\textsc{Tag 876:} What color is the throat? \blankline
+
+\bigskip
+
+\textsc{Tag 1015:} What color is the malar? \blankline
+
+\bigskip
+
+\textsc{Tag 1015:} What color is the breast? \blankline
+
+\bigskip
+
+\textsc{Tag 1482:} What color is the nape? \blankline
+
+\bigskip
+
+\textsc{Tag 1482:} What color is the belly? \blankline
+
+\bigskip
+\textsc{Tag 1482:} What color are the undertail coverts?   \blankline
+
+\subsubsection*{Wings}
+
+Visit the mounted Snow Goose and Wild Turkey (if present) specimens. Complete this table. Also, identify the greater and median primary and secondary coverts. Try to identify the tertials.
+
+\begin{tabular}{lcc}
+	\toprule
+	Number	&	Snow Goose	& Wild Turkey \tabularnewline
+	\midrule
+	&	& \\[0.3in]
+	Primaries	& \rule{1in}{0.4pt} & \rule{1in}{0.4pt} \\[0.5in]
+	Secondaries & \rule{1in}{0.4pt} & \rule{1in}{0.4pt} \\[0.5in]
+	Allular quills & \rule{1in}{0.4pt} & \rule{1in}{0.4pt} \\
+	\bottomrule
+\end{tabular}
+
+\vspace{2\baselineskip}
+
+Examine the duck wing next to the above two birds. The iridescent patch at the rear edge of the wing is called the speculum.  Give the number range of primaries or secondaries or both that include the speculum.  Zero is an acceptable answer if the speculum is found only on the primaries or secondaries. For example, if the speculum includes the first three primaries and the first five secondaries, your answer would be P1-3 and S1-5.
+
+\vspace{2\baselineskip}
+
+The speculum covers \rule{3in}{0.4pt}
+
+
+
+\end{document}  
