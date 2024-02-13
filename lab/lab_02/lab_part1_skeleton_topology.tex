@@ -1,0 +1,274 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[10pt]{article}  
+\usepackage[left=0.75in,right=0.75in,top=1in,bottom=0.5in]{geometry} 
+\geometry{letterpaper}                   		% 
+\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\setlength{\parindent}{0pt}
+
+\usepackage{graphicx}
+\graphicspath{%
+	{/Users/goby/Pictures/teach/466/lab/}}
+	
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+%\defaultfontfeatures{Mapping=tex} % converts LaTeX specials (``quotes'' --- dashes etc.) to unicode
+\setmainfont[Ligatures={Common, TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional, OldStyle}]{\mainfont}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+%\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+
+
+\usepackage[singlelinecheck=false]{caption}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+
+%\pagenumbering{gobble}
+%\usepackage{pdflscape}
+\usepackage{longtable}
+\usepackage[frenchlinks]{hyperref}
+\hypersetup{
+	frenchlinks=true,
+	pdfborder={0 0 0}}
+\usepackage{booktabs}
+\usepackage{multicol}
+%\usepackage{amssymb}
+%\usepackage{enumitem}
+%\setlist{noitemsep}
+%\setlist[description]{style=multiline, leftmargin=1.25cm, parsep=1ex}
+
+\usepackage[sc]{titlesec}
+
+\usepackage{fancyhdr}
+\fancyhf{}
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{\footnotesize pg.~\thepage }
+\renewcommand{\headrulewidth}{0.4pt}
+
+\fancypagestyle{plain}{%
+	\fancyhf{}
+	\lhead{\textsc{bi}~466/666: Ornithology}
+	\rhead{Name: \enspace \makebox[2.5in]{\hrulefill}}
+	\renewcommand{\headrulewidth}{0pt}
+}
+
+
+\begin{document}
+\thispagestyle{plain}
+%\begin{landscape}
+
+\subsection*{Skeleton and external topology\footnote{Adapted from
+		Pettingill, O.S., Jr. \textit{Ornithology in Laboratory and Field,} 
+		5th ed.}}
+
+	This exercise will help you learn skeletal elements specific 
+	to birds. You will also learn the external topology of birds to 
+	identify them accurately. 
+
+
+\subsubsection*{Skeleton}
+
+	Below is a labeled drawing of a pigeon skeleton. You are 
+	responsible for knowing the following structures. Find 
+	the structures on the drawing below and identify them 
+	on the skeletons provided in lab.
+
+\begin{multicols}{3}
+	alular digit\\
+	carina (extension of the sternum)\\
+	carpometacarpus\\
+	coracoid\\
+	femur\\
+	furcula (“wishbone”)\\
+	hallux (toe I)\\
+	humerous\\
+	major and minor digits (wing)\\
+	% mandible, lower\\
+	% mandible, upper\\
+	%pygostyle\\
+	radius\\
+	sternum\\
+	tarsometatarsus\\
+	tibiotarsus\\
+	%tomium, upper and lower\\
+	toes (toes II–IV)\\
+	ulna
+\end{multicols}
+
+
+\begin{center}
+	\includegraphics[width=0.8\linewidth]{skeleton_pigeon}
+\end{center}
+
+\newpage
+
+Here are close-up illustrations of the wing and leg skeletons. 
+
+\includegraphics[width=\linewidth]{skeleton_wing_pigeon}
+
+\vfill
+
+\begin{center}
+	\includegraphics[width=0.8\linewidth]{skeleton_leg_pigeon}
+\end{center}
+
+\textsc{Note:} toes are numbered from the midline outward. For comparison, hold you arms down by your side, hand open, palms directed backwards. Your thumb would be the hallux (toe I), your index finger would be toe II, and so on.
+
+\newpage
+
+\subsubsection*{External topology}
+
+Use the provided images or the bird topology section of your Sibley field guide (page xvii) to identify and label the following parts on the drawings below. You may color in the parts or use lines. If using lines, be sure you point clearly at the correct part. If you are identifying feathers of the wing (e.g., the lesser coverts) be sure you bracket the entire set of feathers so I can tell you identified them correctly. You may use sources other than your field guide if that helps you. 
+ 
+You only need to label parts listed below. Be sure to learn the parts. You \emph{will} see them again on the lab practical. You may also have to know them for lecture exams. The diagrams below are of a House Sparrow but you must be able to recognize them on other birds, including photos of birds.
+ 
+% Upload photos or scans of your drawings to the Lab~2 drop box by the due date. 
+
+%\bigskip
+
+\subsubsection*{Resting bird}
+
+Label or color the following parts on a standing House Sparrow. Include a key for your colors, if you use them.
+
+\begin{multicols}{3}
+auriculars\\
+belly\\
+bill\\
+breast\\
+crown\\
+flank\\
+greater coverts\\
+lore\\
+malar\\
+mantle\\
+nape\\
+primaries\\
+primary coverts\\
+rump (anterior to uppertail\newline
+\phantom{M}coverts on back)\\
+secondaries\\
+side\\
+supercilium\\
+tail\\
+tarsus\\
+tertials\\
+throat\\
+undertail coverts\\
+uppertail coverts
+%vent\\
+\end{multicols}
+
+\begin{center}
+\includegraphics[width=0.75\linewidth]{topology_sparrow_body_standing}
+\end{center}
+
+\newpage
+
+
+\subsubsection*{Flying bird}
+
+Label or color the following parts on a House Sparrow in flight. Include a key for your colors.
+
+
+\begin{multicols}{3}
+belly\\
+bill\\
+breast\\
+crown\\
+flank\\
+greater coverts\\
+mantle\\
+neck\\
+primaries\\
+rectrices\\
+secondaries\\
+side\\
+tail\\
+tertials\\
+throat\\
+undertail coverts\\
+underwing coverts
+%vent\\
+\end{multicols}
+
+\vspace{\baselineskip}
+
+\begin{center}
+\includegraphics[width=0.75\linewidth]{topology_sparrow_body_flying}
+\end{center}
+
+\newpage
+
+\subsubsection*{Wing surfaces}
+
+Label or color the following parts on the upper (top drawing) and lower (bottom drawing) wing surfaces of a House Sparrow. Include a key for your colors.
+
+
+\begin{multicols}{3}
+allula (upper only)\\
+greater primary coverts\\
+greater secondary coverts\\
+lesser secondary coverts\\
+median secondary coverts\\
+primaries\\
+secondaries\\
+tertials
+%vent\\
+\end{multicols}
+
+\vspace{\baselineskip}
+
+\begin{center}
+\includegraphics[width=0.7\linewidth]{topology_sparrow_wing_upper}
+
+\vspace{0.5in}
+
+\includegraphics[width=0.7\linewidth]{topology_sparrow_wing_lower}
+
+\end{center}
+
+%\newpage
+%
+%\subsubsection*{Lower wing surface}
+%
+%Label or color the following parts on the lower wing surface of a House Sparrow. Include a key for your colors.
+%
+%
+%\begin{multicols}{3}
+%greater primary coverts\\
+%greater secondary coverts\\
+%lesser secondary coverts\\
+%median secondary coverts\\
+%primaries\\
+%secondaries\\
+%tertials
+%%vent\\
+%\end{multicols}
+%
+%\begin{center}
+%\end{center}
+%
+
+%\newpage
+\newpage
+
+Here is a blank skeleton you can use to practice identifying the skeletal structures you are required to know.
+
+\vfill
+
+\begin{center}
+	\includegraphics[width=0.85\linewidth]{skeleton_pigeon_unlabeled}
+	
+\end{center}
+
+\vfill
+
+\end{document}  
