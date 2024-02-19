@@ -1,0 +1,46 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[t]{beamer}
+
+
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Biolinum O}
+\setmainfont[Ligatures=TeX, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
+\setmonofont[Scale=MatchLowercase]{Linux Libertine Mono O} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/466/lectures/}}%
+
+
+\mode<presentation>
+{
+  \usetheme{Lecture}
+  \setbeamercovered{invisible}
+  \setbeamertemplate{items}[square]
+}
+
+\begin{document}
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{wandering_albatross}}
+\begin{frame}[b, plain]
+
+%\vfilll
+
+\tiny \hfill
+\textcolor{white}{
+	\href{https://flickr.com/photos/blachswan/38837899111}
+		{Wandering Albatross, Ed Dunens, \ccby{2.0}}}
+
+\end{frame}
+}
+
+
+
+\end{document}
