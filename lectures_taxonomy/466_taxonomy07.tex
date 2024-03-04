@@ -1,0 +1,689 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[t]{beamer}
+
+%%%% HANDOUTS For online Uncomment the following four lines for handout
+%\documentclass[t,handout]{beamer}  %Use this for handouts.
+%\includeonlylecture{student}
+%\usepackage{handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
+
+
+%%% Including only some slides for students.
+%%% Uncomment the following line. For the slides,
+%%% use the labels shown below the command.
+%\includeonlylecture{student}
+
+%% For students, use \lecture{student}{student}
+%% For mine, use \lecture{instructor}{instructor}
+
+
+%\usepackage{pgf,pgfpages}
+%\pgfpagesuselayout{4 on 1}[letterpaper,border shrink=5mm]
+
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Biolinum O}
+\setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
+\setmonofont[Scale=MatchLowercase]{Linux Libertine Mono O} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/466/lectures/}%
+	{img/}}%
+%	{/Users/goby/Pictures/teach/common/}} % set of paths to search for images
+
+%\usepackage{amsmath,amssymb}
+
+%\usepackage{units}
+
+%\usepackage{booktabs}
+\usepackage{multicol}
+%	\setlength{\columnsep=1em}
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+\usepackage{tikz}
+	\tikzstyle{every picture}+=[remember picture,overlay]
+
+
+\mode<presentation>
+{
+  \usetheme{Lecture}
+  \setbeamercovered{invisible}
+  \setbeamertemplate{items}[square]
+}
+
+%\usepackage{calc}
+\usepackage{hyperref}
+\usepackage{color}
+
+% shortstack needed to highlight across \\ line break.
+\newcommand\sshighlight[1]{%
+	\highlight{\shortstack[l]{#1}}%
+}
+
+\newcommand{\backoneline}{\vspace{-\baselineskip}}
+
+\begin{document}
+
+
+
+{
+	\usebackgroundtemplate{\includegraphics[width=\paperwidth]{taxonomy_passerea}}
+	{	\tikzstyle{every picture}+=[remember picture,overlay]
+		\definecolor{orange5}{HTML}{F16913}
+		\begin{frame}[b, plain]
+			
+			\begin{tikzpicture}
+				
+				
+				%\draw[ultra thick, orange5] (0.9,7.3) rectangle (4.8,7.7);
+				
+				%\draw [<-, orange5, ultra thick] (4.9,7.5) -- (6.5, 7.5) node[minimum width=2cm, align=left, right] {Piciformes};
+				
+				\draw[ultra thick, orange5] (0.9,8.7) rectangle (4.8,9.3);
+				
+				\draw [<-, orange5, ultra thick] (4.9,9.0) -- (6.5, 9.0) node[right] {Passeriformes};
+				
+			\end{tikzpicture}
+			\tiny\hfill Jarvis et al. 2014. Science 346: 1320.
+		\end{frame}
+}}
+
+
+
+\begin{frame}{Passeriformes: \highlight{Fringillidae} — finches.}
+
+%	\includegraphics[width=0.49\linewidth]{taxonomy_cach}\hfill
+%	\includegraphics[width=0.49\linewidth]{taxonomy_tuti}
+%
+%	\backoneline
+%	
+%	\begin{multicols}{2}
+%		Carolina Chickadee
+%		
+%		\medskip
+%		
+%		Replaced by Black-capped Chickadee to north and west of our region.
+%		
+%		\columnbreak
+%		
+%		Tufted Titmouse
+%	\end{multicols}	
+%	
+%	\vfilll
+%	
+%	\tiny
+%	
+%	\href{https://commons.wikimedia.org/w/index.php?curid=31464294}{Carolina Chickadee, Dick Daniels, \ccbysa{3.0}} \hfill 
+%	\href{https://www.flickr.com/photos/43322816@N08/6588366549}{Tufted Titmouse, USFWS, Public Domain}
+
+\end{frame}
+
+%
+
+\begin{frame}{Passeriformes: \highlight{Passerellidae} — New World sparrows.}
+	
+	%	\includegraphics[width=0.49\linewidth]{taxonomy_cach}\hfill
+	%	\includegraphics[width=0.49\linewidth]{taxonomy_tuti}
+	%
+	%	\backoneline
+	%	
+	%	\begin{multicols}{2}
+		%		Carolina Chickadee
+		%		
+		%		\medskip
+		%		
+		%		Replaced by Black-capped Chickadee to north and west of our region.
+		%		
+		%		\columnbreak
+		%		
+		%		Tufted Titmouse
+		%	\end{multicols}	
+	%	
+	%	\vfilll
+	%	
+	%	\tiny
+	%	
+	%	\href{https://commons.wikimedia.org/w/index.php?curid=31464294}{Carolina Chickadee, Dick Daniels, \ccbysa{3.0}} \hfill 
+	%	\href{https://www.flickr.com/photos/43322816@N08/6588366549}{Tufted Titmouse, USFWS, Public Domain}
+	
+\end{frame}
+
+%
+
+\begin{frame}{Passeriformes: \highlight{Icteridae} — blackbirds, grackles, and orioles.}
+	
+	%	\includegraphics[width=0.49\linewidth]{taxonomy_cach}\hfill
+	%	\includegraphics[width=0.49\linewidth]{taxonomy_tuti}
+	%
+	%	\backoneline
+	%	
+	%	\begin{multicols}{2}
+		%		Carolina Chickadee
+		%		
+		%		\medskip
+		%		
+		%		Replaced by Black-capped Chickadee to north and west of our region.
+		%		
+		%		\columnbreak
+		%		
+		%		Tufted Titmouse
+		%	\end{multicols}	
+	%	
+	%	\vfilll
+	%	
+	%	\tiny
+	%	
+	%	\href{https://commons.wikimedia.org/w/index.php?curid=31464294}{Carolina Chickadee, Dick Daniels, \ccbysa{3.0}} \hfill 
+	%	\href{https://www.flickr.com/photos/43322816@N08/6588366549}{Tufted Titmouse, USFWS, Public Domain}
+	
+\end{frame}
+
+%
+
+\begin{frame}{Passeriformes: \highlight{Parulidae} — New World warblers.}
+	
+	%	\includegraphics[width=0.49\linewidth]{taxonomy_cach}\hfill
+	%	\includegraphics[width=0.49\linewidth]{taxonomy_tuti}
+	%
+	%	\backoneline
+	%	
+	%	\begin{multicols}{2}
+		%		Carolina Chickadee
+		%		
+		%		\medskip
+		%		
+		%		Replaced by Black-capped Chickadee to north and west of our region.
+		%		
+		%		\columnbreak
+		%		
+		%		Tufted Titmouse
+		%	\end{multicols}	
+	%	
+	%	\vfilll
+	%	
+	%	\tiny
+	%	
+	%	\href{https://commons.wikimedia.org/w/index.php?curid=31464294}{Carolina Chickadee, Dick Daniels, \ccbysa{3.0}} \hfill 
+	%	\href{https://www.flickr.com/photos/43322816@N08/6588366549}{Tufted Titmouse, USFWS, Public Domain}
+	
+\end{frame}
+
+%
+
+\begin{frame}{Passeriformes: \highlight{Cardinalidae} — cardinals, tanagers, and allies.}
+	
+	\begin{tabular}{ccc}
+		\includegraphics[width=0.3\textwidth]{taxonomy_scta} &
+		\includegraphics[width=0.3\textwidth]{taxonomy_suta} &
+		NOCA Pic\tabularnewline
+		Scarlet Tanager & Summer Tanager & Northern Cardinal \tabularnewline
+		%\includegraphics[width=0.3\textwidth]{taxonomy_suta} \tabularnewline
+		%\includegraphics[width=0.3\textwidth]{taxonomy_scta} &
+		RBGR &
+		%\includegraphics[width=0.3\textwidth]{taxonomy_suta} &
+		DICK &
+		%\includegraphics[width=0.3\textwidth]{taxonomy_suta} \tabularnewline
+		INBU \tabularnewline
+	\end{tabular}
+	
+	%	\includegraphics[width=0.49\linewidth]{taxonomy_cach}\hfill
+	%	\includegraphics[width=0.49\linewidth]{taxonomy_tuti}
+	%
+	%	\backoneline
+	%	
+	%	\begin{multicols}{2}
+		%		Carolina Chickadee
+		%		
+		%		\medskip
+		%		
+		%		Replaced by Black-capped Chickadee to north and west of our region.
+		%		
+		%		\columnbreak
+		%		
+		%		Tufted Titmouse
+		%	\end{multicols}	
+	%	
+	%	\vfilll
+	%	
+	%	\tiny
+	%	
+	%	\href{https://commons.wikimedia.org/w/index.php?curid=31464294}{Carolina Chickadee, Dick Daniels, \ccbysa{3.0}} \hfill 
+	%	\href{https://www.flickr.com/photos/43322816@N08/6588366549}{Tufted Titmouse, USFWS, Public Domain}
+	
+\end{frame}
+
+%
+
+\begin{frame}{Two species of tanagers are common here.}
+	
+		\includegraphics[width=0.49\linewidth]{taxonomy_scta}\hfill
+		\includegraphics[width=0.49\linewidth]{taxonomy_suta}
+	
+		\backoneline
+		
+		\begin{multicols}{2}
+				Scarlet Tanager
+				
+				\medskip
+				
+				Watch for red body with black wings, stout bill.
+				
+				\smallskip
+				
+				Common in deciduous woods.
+				
+				
+				\columnbreak
+				
+				Summer Tanager
+				
+				\medskip
+				
+				Watch for all red body and wings, stout bill.
+				
+				\smallskip
+				
+				Common in open woods.
+				
+			\end{multicols}	
+		
+		\vfilll
+		
+		\tiny
+		
+		\href{https://flickr.com/photos/usfwsnortheast/50109221467}{Scarlet Tanager, USFWS, Public Domain} \hfill 
+		\href{https://flickr.com/photos/usfwsnortheast/51177620670}{Summer Tanager, USFWS, Public Domain}
+	
+\end{frame}
+
+%
+%
+%
+%
+%
+%{
+%	\usebackgroundtemplate{\includegraphics[width=\paperwidth]{taxonomy_swallows}}
+%	
+%	\begin{frame}{Passeriformes: \highlight{Hirudinidae} — swallows.}
+%		
+%		\vfilll
+%		
+%		\tiny \href{https://chicagobirdalliance.org/blog/2023/6/22/identifying-adult-swallows-in-flight}{\textcopyright\,Woody Goss, Chicago Bird Alliance}
+%		
+%		
+%	\end{frame}
+%}
+
+
+%
+
+\begin{frame}{Barn and Cliff swallows have dark blue backs\dots}
+	\includegraphics[width=0.49\linewidth]{taxonomy_bars_above}\hfill
+	\includegraphics[width=0.49\linewidth]{taxonomy_clsw_above}
+	
+	\backoneline
+	
+	\begin{multicols}{2}
+		Barn Swallow
+		
+		\medskip
+		
+		Watch for deeply forked tail.
+		
+		\medskip
+		
+		\columnbreak
+		
+		Cliff Swallow
+		
+		\medskip
+		
+		Watch for light rump and forehead.
+	\end{multicols}	
+	
+	\vfilll
+	
+	\tiny
+	
+	\href{https://macaulaylibrary.org/asset/240409051}{Barn Swallow, Ryan Sanderson, ML240409051} \hfill 
+	\href{https://macaulaylibrary.org/asset/184586801}{Cliff Swallow, Bryan Calk, ML184586801}
+	
+	
+\end{frame}
+
+
+%
+
+\begin{frame}{\dots with contrasting light breast and belly.}
+	\includegraphics[width=0.49\linewidth]{taxonomy_bars_below}\hfill
+	\includegraphics[width=0.49\linewidth]{taxonomy_clsw_below}
+
+	\backoneline
+	
+	\begin{multicols}{2}
+		Barn Swallow
+		
+		\medskip
+		
+		Watch for deeply forked tail and orangish throat and rusty underparts.
+		
+		\columnbreak
+		
+		Cliff Swallow
+		
+		\medskip
+		
+		Watch for square tail, orangish throat, light underparts.
+		
+		\vfill\
+		
+	\end{multicols}	
+	
+	\vfilll
+	
+	\tiny
+	
+	\href{https://macaulaylibrary.org/asset/257081181}{Barn Swallow, Ad Konings, ML257081181} \hfill 
+	\href{https://macaulaylibrary.org/asset/225211571}{Cliff Swallow, Matt Davis, ML225211571}
+
+
+\end{frame}
+
+%
+
+\begin{frame}{Purple Martin is our largest swallow.}
+	\includegraphics[width=0.49\linewidth]{taxonomy_puma_female}\hfill
+	\includegraphics[width=0.49\linewidth]{taxonomy_puma_male}
+	
+	\backoneline
+	
+	\begin{multicols}{2}
+		Female
+		
+		\medskip
+		
+		Light underparts but larger than other swallows with light underparts.
+		
+		\columnbreak
+		
+		Male
+		
+		\medskip
+		
+		Only all dark swallow. Watch for large size and slightly forked tail.
+	\end{multicols}	
+	
+	Purple Martin tend to glide much more often than other swallows.
+	
+	\vfilll
+	
+	\tiny
+	
+	\href{https://macaulaylibrary.org/asset/145026141}{Purple Martin, female, Tom Johnson, ML145026141} \hfill 
+	\href{https://macaulaylibrary.org/asset/223134471}{Purple Martin, male, Ryan Sanderson, ML223134471}
+		
+\end{frame}
+
+%
+
+\begin{frame}{Northern Rough-winged and Tree tend to be near water.}
+	\includegraphics[width=0.49\linewidth]{taxonomy_nrws}\hfill
+	\includegraphics[width=0.49\linewidth]{taxonomy_tres}
+	
+	\backoneline
+	
+	\begin{multicols}{2}
+		Northern Rough-winged Swallow
+		
+		\medskip
+		
+		Watch for dingy breast and throat, brown back.
+		
+		\columnbreak
+		
+		Tree Swallow
+		
+		\medskip
+		
+		Watch for high contrast between under and upper parts. White throat.
+	\end{multicols}	
+	
+	
+	\vfilll
+	
+	\tiny
+	
+	\href{https://macaulaylibrary.org/asset/223134471}{Northern Rough-winged Swallow, ML223134471} \hfill 
+	\href{https://macaulaylibrary.org/asset/219176661}{Tree Swallow, Brad Imhof, ML219176661}
+	
+	
+\end{frame}
+
+%
+
+\begin{frame}{Passeriformes: \highlight{Sittidae} – nuthatches}
+	\includegraphics[width=\linewidth]{taxonomy_wbnu}
+	
+	White-breasted Nuthatch often forage with head pointed downward. Watch for rufous lower belly.
+	
+	\tinyfill \href{https://www.flickr.com/photos/43322816@N08/6869438631}{White-breasted Nuthatch: USFWS, Public Domain}
+\end{frame}
+
+%
+
+\begin{frame}{Passeriformes: \highlight{Troglodytidae} — wrens.}
+	\includegraphics[width=0.49\linewidth]{taxonomy_howr}\hfill
+	\includegraphics[width=0.49\linewidth]{taxonomy_carw}
+	
+	\backoneline
+	
+	\begin{multicols}{2}
+		House Wren
+		
+		\medskip
+		
+		Watch for drab brown, slight eye ring, no eyebrow.
+		
+		\smallskip
+		
+		More common in town than Carolina Wren.
+		
+		\columnbreak
+		
+		Carolina Wren
+		
+		\medskip
+		
+		Watch for rufous back, buffy belly, bold eyebrow.
+		
+		\smallskip
+		
+		More common in woods than House Wren.
+	\end{multicols}	
+	
+	
+	\vfilll
+	
+	\tiny
+	
+	\href{https://flickr.com/photos/dfaulder/14333805721}{House Wren, dfaulder, \ccby{2.0}} \hfill 
+	\href{https://flickr.com/photos/snpphotos/45449957822}{Carolina Wren, Shenandoah National Park, Public Domain}
+	
+	
+\end{frame}
+
+%
+
+\begin{frame}{Passeriformes: \highlight{Sturnidae} — starlings.}
+	\includegraphics[width=0.49\linewidth]{taxonomy_eust_flight}\hfill
+	\includegraphics[width=0.49\linewidth]{taxonomy_eust}
+	
+	\backoneline
+	
+	\begin{multicols}{2}
+		European Starling
+		
+		\medskip
+		
+		Watch for pointed wings and short tail. Sometimes mixed with blackbirds.
+		
+		
+		\columnbreak
+		
+		European Starling
+		
+		\medskip
+		
+		Watch for glossy green-black with white spots, bright yellow bill.
+		
+	\end{multicols}	
+	
+	
+	\vfilll
+	
+	\tiny
+	
+	\href{https://www.flickr.com/photos/mr_t_in_dc/6304096569}{European Starling, Dr.TinMD, \ccbync{2.0}} \hfill 
+	\href{https://flickr.com/photos/treegrow/33244397614}{European Starling, Katja Schulz, \ccby{2.0}}
+	
+	
+\end{frame}
+
+%
+
+\begin{frame}{Passeriformes: \highlight{Mimidae} — mockingbird and thrashers.}
+	\includegraphics[width=0.49\linewidth]{taxonomy_nomo}\hfill
+	\includegraphics[width=0.49\linewidth]{taxonomy_brth}
+	
+	\backoneline
+	
+	\begin{multicols}{2}
+		Northern Mockingbird
+		
+		\medskip
+		
+		Robin-sized light gray bird. Watch for long tail with white outer tail feathers, white wing patches.
+		
+		
+		\columnbreak
+		
+		Brown Thrasher
+		
+		\medskip
+		
+		Robin-sized rufous-brown bird. Watch for long tail, streaked breast and flanks, slightly decurved bill.
+		
+	\end{multicols}	
+	
+	
+	\vfilll
+	
+	\tiny
+	
+	\href{https://www.flickr.com/photos/130819719@N05/39505827385}{Northern Mockingbird, Becky Matsubara, \ccbync{2.0}} \hfill 
+	\href{https://flickr.com/photos/rick_al/41869016892}{Brown Thrasher, Rick from Georgia, \ccby{2.0}}
+	
+	
+\end{frame}
+
+%
+
+\begin{frame}{Passeriformes: \highlight{Turdidae} — thrushes.}
+	\includegraphics[width=0.49\linewidth]{taxonomy_amro}\hfill
+	\includegraphics[width=0.49\linewidth]{taxonomy_woth}
+	
+	\backoneline
+	
+	\begin{multicols}{2}
+		American Robin
+		
+		\medskip
+		
+		Slate-gray back, orange underparts, broken white eye ring. Watch for white corners of tail in flight.
+		
+		\smallskip
+		
+		Open habitat, often park-like settings.
+		\columnbreak
+		
+		Wood Thrush
+		
+		\medskip
+		
+		Robin-sized brown bird with white underparts. Breast, flanks, and belly heavily spotted. White eye ring.
+		
+		\smallskip
+		
+		Understory of deciduous woods.
+		
+	\end{multicols}	
+	
+	\vfilll
+	
+	\tiny
+	
+	\href{https://flickr.com/photos/52450054@N04/49910016428}{American Robin, Judy Gallagher, \ccby{2.0}} \hfill 
+	\href{https://flickr.com/photos/pazzani/40741868431}{Wood Thrush, Mike's Birds, \ccbysa{2.0}}
+	
+	
+\end{frame}
+
+\begin{frame}{Eastern Bluebird is the Missouri state bird.}
+	\includegraphics[width=\linewidth]{taxonomy_eabl}
+	
+	\tinyfill \href{https://flickr.com/photos/bhnuthatch611/49658803853}{Eastern Bluebird, 611catbirds too, \ccby{2.0}}
+	
+\end{frame}
+
+
+
+%
+
+\begin{frame}{Passeriformes: \highlight{Passeridae} — Old World sparrows.}
+	\includegraphics[width=0.49\linewidth]{taxonomy_hosp_male}\hfill
+	\includegraphics[width=0.49\linewidth]{taxonomy_hosp_female}
+	
+	\backoneline
+	
+	\begin{multicols}{2}
+		male
+		
+		\medskip
+		
+		Watch for black chin that extends to breast during breeding. Gray crown, rufous nape.
+		\columnbreak
+		
+		female
+				
+		\medskip
+		
+		Watch for drab head with light tan eyebrow. Stout yellowish bill. \phantom{Hidden words to fill space.}
+		
+		
+	\end{multicols}	
+	
+	House Sparrows are exotic species found urban and rural areas with buildings.
+	
+	
+	\vfilll
+	
+	\tiny
+	
+	\href{https://flickr.com/photos/hedera_baltica/32691733707}{House Sparrow, hedera.baltica, \ccbysa{2.0}} \hfill 
+	\href{https://flickr.com/photos/hedera_baltica/52118904483}{House Sparrow, hedera.baltica, \ccbysa{2.0}}
+	
+	
+\end{frame}
+
+
+
+\end{document}
