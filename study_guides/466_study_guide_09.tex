@@ -1,0 +1,91 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[nofonts, letterpaper]{tufte-handout}
+
+%\geometry{showframe} % display margins for debugging page layout
+
+\usepackage{graphicx} % allow embedded images
+  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+  \graphicspath{{img/}} % set of paths to search for images
+  
+\usepackage{fontspec}
+  \setmainfont[Ligatures={Common,TeX},Numbers={Proportional}]{Linux Libertine O}
+  \setsansfont{Linux Biolinum O}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{multicol} % multiple column layout facilities
+%\usepackage{hyperref}
+%\usepackage{fancyvrb} % extended verbatim environments
+%  \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
+
+% Change the header to shift the title to the left side of the page. 
+% Replaced \quad with \hfill.  See \plaintitle in tufte-common.def
+{\fancyhead[RE,RO]{\scshape{\newlinetospace{\plaintitle}}\hfill\thepage}}
+
+\makeatletter
+% Paragraph indentation and separation for normal text
+\renewcommand{\@tufte@reset@par}{%
+  \setlength{\RaggedRightParindent}{1.0pc}%
+  \setlength{\JustifyingParindent}{1.0pc}%
+  \setlength{\parindent}{1pc}%
+  \setlength{\parskip}{0pt}%
+}
+\@tufte@reset@par
+
+% Paragraph indentation and separation for marginal text
+\renewcommand{\@tufte@margin@par}{%
+  \setlength{\RaggedRightParindent}{0pt}%
+  \setlength{\JustifyingParindent}{0.5pc}%
+  \setlength{\parindent}{0.5pc}%
+  \setlength{\parskip}{0pt}%
+}
+
+\makeatother
+
+\title{Study Guide 10}
+\author{Population ecology, conservation, and management}
+
+\date{} % without \date command, current date is supplied
+
+\begin{document}
+
+\maketitle	% this prints the handout title, author, and date
+
+%\printclassoptions
+
+\section{Concepts}
+%\marginnote{\textbf{Study:} Chap. 18: 533--562.\\ Chap. 21: 635--645. Skim 645--650 for examples of human persecution of birds.}
+
+These concept-questions cover most of the lecture material but exam questions are not restricted to these questions. Questions may also come from the related pages from the textbook.\vspace{\baselineskip}
+
+\begin{enumerate}
+
+\item Why do invasive species (any species introduced outside of its native range), such as the House Finch or Monk Parakeet, initially show exponential population growth?  Why do all species ultimately show logistic population growth?  Note that need to know the difference between exponential and logistic population growth. If you do not, then you need to look them up in a reliable resource.
+
+\item Explain density-dependent population regulation. Explain negative feedback. Know and explain several mechanisms that cause density-dependent population regulation. Explain how each causes the population growth to decline (negative feedback).
+
+\item Why do many bird populations experience their highest mortality rate during migration?
+
+\item Avian flu originated in southeast Asia. Explain how overlapping flying ways in eastern Asia and Siberia enhanced the spread of avian flu into Europe. Explain how migration has led to the introduction of various strains of avian flu into North America.
+
+\item What group of migratory birds appears to be most responsible for the spread of avian flu?  That is, which group has the highest incidence of avian flu?
+
+\item Why have many species of birds, such as grassland and woodland birds, experienced severe population declines?
+
+\item How does species richness relate to habitat fragment size?  Why?
+
+\item How does the density of dead organic matter change from immediately after a burn to several years after the burn. How does this affect grassland bird species?
+
+\item How doe the different types of vegetation (grass, shrubs, and forbs) change from immediately after a burn to several years after the burn. How does this affect grassland bird species?
+
+\item Explain how the goals of burn management might differ if your goal is to protect overall grassland bird richness or if your goal is to target one specific species.
+
+\item What is the greatest threat to birds populations, habitat loss, predation, or human persecution (e.g., hunting, taking for ornaments, pesticides, etc.)?
+
+\item Describe which types of birds are most affected by habitat loss and which are most affected by human persecution. Describe them in terms of body size, generation time, and degree of habitat specialization. Explain this difference.
+
+\end{enumerate}
+
+
+\end{document}
