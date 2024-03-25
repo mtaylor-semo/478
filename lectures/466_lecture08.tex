@@ -1,0 +1,432 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[t]{beamer}
+
+%%%% HANDOUTS For online Uncomment the following four lines for handout
+%\documentclass[t,handout]{beamer}  %Use this for handouts.
+%\usepackage{handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
+%	\setbeamercolor{background canvas}{bg=black!5}
+
+
+%%% Including only some slides for students.
+%%% Uncomment the following line. For the slides,
+%%% use the labels shown below the command.
+%\includeonlylecture{student}
+
+%% For students, use \lecture{student}{student}
+%% For mine, use \lecture{instructor}{instructor}
+
+
+%\usepackage{pgf,pgfpages}
+%\pgfpagesuselayout{4 on 1}[letterpaper,border shrink=5mm]
+
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Biolinum O}
+\setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
+\setmonofont[Scale=MatchLowercase]{Linux Libertine Mono O} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/466/lectures/}%
+	{img/}%
+	{/Users/goby/Pictures/teach/common/}} % set of paths to search for images
+
+\usepackage{amsmath,amssymb}
+
+%\usepackage{units}
+
+\usepackage{booktabs}
+\usepackage{multicol}
+%	\setlength{\columnsep=1em}
+
+\usepackage{textcomp}
+\usepackage{setspace}
+\usepackage{tikz}
+	\tikzstyle{every picture}+=[remember picture,overlay]
+
+\mode<presentation>
+{
+  \usetheme{Lecture}
+  \setbeamercovered{invisible}
+  \setbeamertemplate{items}[square]
+}
+
+\usepackage{calc}
+\usepackage{hyperref}
+
+\newcommand\HiddenWord[1]{%
+	\alt<handout>{\rule{\widthof{#1}}{\fboxrule}}{#1}%
+}
+
+\newcommand\imagecredit[1]{%
+	\vskip0pt plus 1filll \tiny #1}%
+	
+
+\begin{document}
+
+
+\lecture{student}{student}
+
+{\setbeamercolor{background canvas}{bg=black}
+\begin{frame}[t,plain]{\textcolor{white}{Bird migration is a complex interaction of many processes.}}
+	\centering
+		\includegraphics[width=1.0\textwidth]{migrating_barnacle_geese}
+
+	\imagecredit{\hfill\textcolor{white}{Migrating Barnacle Geese by Thermos, Wikimedia Commons.}}
+\end{frame}
+}
+
+
+{
+\begin{frame}[t,plain]{Migration maximizes association with primary productivity.}
+	\centering
+		\includegraphics[width=1.0\textwidth]{net_primary_productivity}
+
+	\imagecredit{\href{https://www.youtube.com/watch?v=SulCktsf_PU}{Link to Video}\hfill Foley et al. 1996. Global Biogeochem. Cycles 10: 603;  Kucharik et al. 2000. Global Biogeochem.Cycles 14: 795.}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{sooty_shearwater}}
+\begin{frame}[t,plain]{\textcolor{black}{The Sooty Shearwater migrates round-trip more than 64,000 km.}}
+	\imagecredit{\hfill\textcolor{white}{J.J. Harrison, Wikimedia Commons}}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{migration_navigation}}
+\begin{frame}[t,plain]{Migratory paths of 19 shearwaters.}
+	\imagecredit{\hfill\textcolor{white}{Shaffer et al. 2006. Proc. Natl. Acad. Sci. USA 103: 12779.}}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{migration_shearwater_npp}}
+\begin{frame}[t,plain]{\textcolor{black}{Shearwater migration corresponds to high productivity.}}
+	\imagecredit{Shaffer et al. 2006. Proc. Natl. Acad. Sci. USA 103: 12779.}
+\end{frame}
+}
+
+%{
+%\usebackgroundtemplate{\includegraphics[width=\paperwidth]{arctic_tern_nesting}}
+%\begin{frame}[t,plain]{\textcolor{white}{The Arctic Tern also migrates long distances.}}
+%	\imagecredit{\hfill\textcolor{white}{ Carsten Egevang, \url{arctictern.info}}}
+%\end{frame}
+%}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{arctic_tern_transmitter}}
+\begin{frame}[t,plain]{\textcolor{white}{The Arctic Tern also migrates long distances.}}
+	\imagecredit{\hfill\textcolor{white}{ Carsten Egevang, \url{arctictern.info}}}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{arctic_tern_two_routes}}
+\begin{frame}[t,plain]{\textcolor{black}{Terns used one spring route and two fall routes.}}
+	\imagecredit{\hfill\textcolor{black}{ Map courtesy \url{arctictern.info}}}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{arctic_tern_consensus_routes}}
+\begin{frame}[t,plain]{\textcolor{white}{Can you explain why Arctic Terns follow these routes?}}
+	\imagecredit{\hfill\textcolor{white}{ Map courtesy \url{arctictern.info}}}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{migration_high_low_circulation}}
+\begin{frame}[t,plain]{Migrants take advantage of wind rotation around high and low pressure systems.}
+	\imagecredit{\hfill Vic DiVenere, \url{myweb.cwpost.liu.edu/vdivener/ers_1/chap_6.htm}}
+\end{frame}
+}
+
+
+{
+\begin{frame}[t,plain]{Terns follow wind rotation around high pressure centers.}
+	\centering
+		\includegraphics[width=\textwidth]{high_pressure_centers}
+\end{frame}
+}
+
+
+{
+\begin{frame}[t,plain]{North American birds use three flyways.}
+	\centering
+		\includegraphics[height=0.85\textheight]{flyways_north_america}
+		
+	\imagecredit{\hfill \href{http://borealbirds.org/boreal-bird-migrations}{BorealBirds.org}}
+\end{frame}
+}
+
+
+{
+\begin{frame}[t,plain]{Many eastern flyway birds follow a loop route.}
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{flyway_east}
+	\end{center}
+	\hangpara{Red: autumn. Blue: spring.}
+		
+	\imagecredit{\hfill La Sorte et al. 2014. J. Biogeogr. 41: 1685.}
+\end{frame}
+}
+
+{
+\begin{frame}[t,plain]{The central flyway is the reverse of the eastern route.}
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{flyway_central}
+	\end{center}
+	\hangpara{Red: autumn. Blue: spring.}
+		
+	\imagecredit{\hfill La Sorte et al. 2014. J. Biogeogr. 41: 1685.}
+\end{frame}
+}
+
+
+{
+\begin{frame}[t,plain]{Prevailing wind direction may explain loop routes.}
+	\centering
+		\includegraphics[height=0.75\textheight]{prevailing_winds2}
+\end{frame}
+}
+
+{
+\begin{frame}[t,plain]{Eastern and central loop routes may be tied to prevailing winds.}
+	\vspace{-\baselineskip}
+	\centering
+		\includegraphics[height=0.8\textheight]{looped_migration_fall_route}
+
+	\imagecredit{\hfill Figure 10–6 of text.}
+\end{frame}
+}
+
+{
+\begin{frame}[t,plain]{Birds migrate at higher altitudes in the west.}
+
+\centering
+\includegraphics[width=\textwidth]{migration_altitude}
+		
+	\imagecredit{\hfill Living Bird August 2021}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{arctic_tern_consensus_routes}}
+\begin{frame}[t,plain]{\textcolor{white}{Why do some Arctic Terns follow the African coast in the fall?}}
+	\imagecredit{\hfill\textcolor{white}{ Map courtesy \url{arctictern.info}}}
+\end{frame}
+}
+
+
+{
+\begin{frame}[t,plain]{Shearwaters only feed where productivity is high.}
+	\vspace{0.5cm}
+	\centering
+		\includegraphics[width=\textwidth]{migration_shearwater2}
+
+	\imagecredit{Shaffer et al. 2006. Proc. Natl. Acad. Sci. USA 103: 12779.\hfill}
+\end{frame}
+}
+
+
+{
+\begin{frame}[t,plain]{Land migrations may also follow primary productivity.}
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{flyway_west}
+	\end{center}
+
+	\hangpara{Red: autumn. Blue: spring.}
+
+	\imagecredit{\hfill La Sorte et al. 2014. J. Biogeogr. 41: 1685.}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{flyway_npp}}
+\begin{frame}[t,plain]{West and east loops are associated with NPP.}
+
+	\imagecredit{\hfill La Sorte et al. 2014. Proc. Royal Soc. B. 281: 1793.}
+\end{frame}
+}
+
+\begin{frame}
+\includegraphics[width=\linewidth]{wing_load_migration}
+\end{frame}
+
+\begin{frame}
+\includegraphics[width=\linewidth]{aspect_ratio_migration} \end{frame}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{migration_nocturnal}}
+\begin{frame}[t,plain]{\textcolor{white}{Most migratory birds fly at night.}}
+
+	\imagecredit{\textcolor{white}{www.audobon.org}}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{migration_radar}}
+\begin{frame}[t,plain]
+
+	\imagecredit{\textcolor{white}{NEXRAD radar mosaic, 3 October 2010. \url{www.birdcast.info}\hfill\href{https://www.youtube.com/watch?v=uPff1t4pXiI}{Link to Video}}}
+\end{frame}
+}
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{migration_weather_map}}
+\begin{frame}[t,plain]{Fall migration follows cold fronts with north winds.}
+	\imagecredit{\hfill\url{ebird.org}}
+\end{frame}
+}
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{migration_april_front}}
+\begin{frame}[t,plain]{\textcolor{white}{Spring migration follows southern winds from Gulf of Mexico.}}
+	\imagecredit{\hfill\textcolor{white}{\href{https://people.mbi.ohio-state.edu/hurtado.10/US_Composite_Radar/}{Link to Birding by Radar}}}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{migration_wind_direction}}
+\begin{frame}[t,plain]{}
+	\imagecredit{\href{http://earth.nullschool.net}{Link to Animated Global Wind}\hfill\href{http://hint.fm/wind/}{Link to Animated U.S. Wind}}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{migration_april_front_overlay}}
+\begin{frame}[t,plain]{\textcolor{white}{10 April 2015, 3:11 am.}}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{migration_april11}}
+\begin{frame}[t,plain]{\textcolor{white}{11 April 2015, 10:21 pm}}
+
+\end{frame}
+}
+
+%Triggers of migration
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{blackcap}}
+\begin{frame}[t,plain]{Some birds adjust timing to natural climate variation.}
+	\imagecredit{Eurasian Blackcap\hfill \href{https://www.flickr.com/photos/pc_plod/7145668109/}{Tony Smith, Flickr Creative Commons}}
+\end{frame}
+}
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{north_atlantic_oscillation}}
+\begin{frame}[t,plain]{Positive NAO correlates with earlier arrival times.}
+
+	\imagecredit{\hfill Rachel Gregory}
+\end{frame}
+}
+
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{pied_flycatcher}}
+\begin{frame}[t,plain]{Pied flycatchers lay sooner after arrival at breeding sites.}
+	\imagecredit{\textcolor{black}{Lars Falkdalen Lindahl, Flickr Creative Commons}}
+\end{frame}
+}
+
+{
+\begin{frame}[t,plain]{Earlier laying correlates with warmer spring temperatures.}
+	\includegraphics[width=\textwidth]{pied_flycatcher_laying}
+
+	\imagecredit{\hfill Both and Visser 2001. Nature 411: 296.}
+\end{frame}
+}
+
+{
+\begin{frame}[t,plain]{Earlier laying corresponds to stronger population declines.}
+	\includegraphics[width=\textwidth]{pied_flycatcher_food}
+
+	\imagecredit{\hfill Both et al. 2006. Nature 441: 81.}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{migration_navigation}}
+\begin{frame}[t,plain]{\textcolor{black}{How do birds navigate during migration?}}
+	\imagecredit{\hfill\textcolor{white}{Shaffer et al. 2006. Proc. Natl. Acad. Sci. USA 103: 12779}}
+\end{frame}
+}
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{navigation_emlen_cones}}
+\begin{frame}[t,plain]{\textcolor{white}{A series of clever experiments revealed navigation cues.}}
+	\imagecredit{\hfill\textcolor{white}{www.audubon.org}}
+\end{frame}
+}
+
+{
+\begin{frame}[t,plain]{The North Star is an important part of orientation.}
+	\includegraphics[width=\textwidth]{navigation_northstar_orientation}
+
+	\imagecredit{\hfill Emlen 1975. Scientific American.}
+\end{frame}
+}
+
+{
+\begin{frame}[t,plain]{Rotation around North Star determines orientation.}
+	\centering
+		\includegraphics[height=0.85\textheight]{navigation_northstar_rotation}
+
+	\imagecredit{\hfill Emlen 1975. Scientific American.}
+\end{frame}
+}
+
+{
+\begin{frame}[t,plain]{Birds also use geomagnetism to orient.}
+	\centering
+		\includegraphics[width=\textwidth]{navigation_magnetism}
+
+	\imagecredit{\hfill Wiltschko and Wiltschko 2005. J. Comp. Physiol A 191: 675.}
+\end{frame}
+}
+
+{
+\begin{frame}[t,plain]{Wavelength is an important part of detecting magnetism.}
+	\centering
+		\includegraphics[width=0.95\textwidth]{navigation_color}
+
+	\imagecredit{\hfill Wiltschko and Wiltschko 2005. J. Comp. Physiol A 191: 675.}
+\end{frame}
+}
+
+{
+\begin{frame}[t,plain]{Radical electrons in retinal cryptochromes detect magnetism.}
+	\begin{center}
+		\includegraphics[width=1\textwidth]{navigation_cryptochrome}
+	\end{center}
+	
+	\imagecredit{\hfill Maeda et al. 2008. Nature 453: 387}
+\end{frame}
+}
+
+{
+\begin{frame}[t,plain]{Retinal cryptochromes enable birds to see magnetism.}
+	\begin{center}
+		\includegraphics[width=0.9\textwidth]{navigation_magnetism_view}
+	\end{center}
+	
+	\imagecredit{\hfill Solov’yov et al. 2010. Biophysical J. 99: 40.}
+\end{frame}
+}
+
+
+
+\end{document}

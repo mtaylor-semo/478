@@ -26,7 +26,6 @@
 \usepackage{fontspec}
 \def\mainfont{Linux Biolinum O}
 \setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
-%\setmonofont[Scale=MatchLowercase]{Inconsolata} 
 \setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
 \usepackage{microtype}
 
@@ -44,10 +43,15 @@
 \usepackage{multicol}
 %	\setlength{\columnsep=1em}
 
-\usepackage{textcomp}
-\usepackage{setspace}
-\usepackage{tikz}
-	\tikzstyle{every picture}+=[remember picture,overlay]
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+%\usepackage{textcomp}
+%\usepackage{setspace}
+%\usepackage{tikz}
+%	\tikzstyle{every picture}+=[remember picture,overlay]
 
 \mode<presentation>
 {
@@ -70,383 +74,225 @@
 \begin{document}
 
 
-\lecture{student}{student}
-{
-\usebackgroundtemplate{\includegraphics[width=\paperwidth]{horned_lark} }
-\begin{frame}[t,plain]{}
-\imagecredit{Kenneth Cole Schneider, Flickr Creative Commons.}
-\end{frame}
-}
-
-{
-\usebackgroundtemplate{\includegraphics[width=\paperwidth]{population_flock} }
-\begin{frame}[t,plain]{\textcolor{white}{What are the two models of population growth?}}
-\imagecredit{\hfill\textcolor{white}{Photographer unknown, Wikimedia Commons.}}
-\end{frame}
-}
-
-{
-\usebackgroundtemplate{\includegraphics[width=\paperwidth]{house_finch} }
-\begin{frame}[t,plain]{}
-\imagecredit{\hfill John Benson, Wikimedia Commons.}
-\end{frame}
-}
-
-\begin{frame}[t,plain]{Exponential population growth for House Finches.}
-	\begin{center}
-		\includegraphics[height=0.8\textheight]{house_finch_population_growth}
-	\end{center}	
-
-	\imagecredit{\hfill Fig. 18--2 of textbook.}
-\end{frame}
-
-
-{
-\usebackgroundtemplate{\includegraphics[width=\paperwidth]{monk_parakeet_chicago} }
-\begin{frame}[t,plain]{}
-\imagecredit{\textcolor{white}{John W. Iwanski, Flickr Creative Commons.}}
-\end{frame}
-}
-
-\begin{frame}[t,plain]{Exponential population growth for Monk Parakeets.}
-	\begin{center}
-		\includegraphics[height=0.8\textheight]{monk_parakeet_population_growth}
-	\end{center}	
-
-	\imagecredit{\hfill Pruett-Jones and Tarvin 1998, Proc. 18th Vertebr. Pest Conf. Paper 67.}
-\end{frame}
-
-{
-\usebackgroundtemplate{\includegraphics[width=\paperwidth]{cattle_egret} }
-\begin{frame}[t,plain]{}
-\imagecredit{\textcolor{white}{Changhua Coast Conservation Action, Flickr Creative Commons.}}
-\end{frame}
-}
-
-\begin{frame}[t,plain]{Cattle Egret had logistic population growth.}
-	\begin{center}
-		\includegraphics[width=1\textwidth]{cattle_egret_population_growth}
-	\end{center}	
-
-	\imagecredit{\hfill Fig. 18--3 of textbook.}
-\end{frame}
-
-\begin{frame}[t,plain]{Take a moment to answer these two questions. }
-
-	\hangpara What is density-dependent population regulation?
-	
-	\hangpara What is negative feedback?
-	
-\end{frame}
-
-{
-\usebackgroundtemplate{\includegraphics[width=\paperwidth]{density_dependent_song_sparrow} }
-\begin{frame}[t,plain]{}
-\imagecredit{\textcolor{white}{Keith, Wikimedia Commons.}}
-\end{frame}
-}
-
-{
-\usebackgroundtemplate{\includegraphics[width=\paperwidth]{density_dependent_sparrow_nest} }
-\begin{frame}[t,plain]{}
-\imagecredit{\textcolor{white}{K.P. McFarland, Flickr Creative Commons.}}
-\end{frame}
-}
-
-
-\begin{frame}[t,plain]{How does clutch size change? Why?}
-	\begin{center}
-		\includegraphics[height=0.8\textheight]{density_dependent_clutchsize}
-	\end{center}	
-
-	\imagecredit{Arcese and Smith 1988, J. Animal Ecology 57: 119.}
-\end{frame}
-
-\begin{frame}[t,plain]{How does nest failure change? Why?}
-	\begin{center}
-		\includegraphics[height=0.8\textheight]{density_dependent_failure}
-	\end{center}	
-
-	\imagecredit{Arcese and Smith 1988, J. Animal Ecology 57: 119.}
-\end{frame}
-
-{
-\usebackgroundtemplate{\includegraphics[width=\paperwidth]{BTBW} }
-\begin{frame}[t,plain]{}
-	\imagecredit{\hfill\textcolor{white}{cuatrok77, Wikimedia Commons.}}
-\end{frame}
-}
-
-\begin{frame}[t,plain]{\emph{r} decreases when \emph{N} increases.}
-	\centering
-		\includegraphics[height=0.85\textheight]{BTBW_population_size2}
-
-	\imagecredit{\hfill Fig. 18--13 of textbook.}
-\end{frame}
-
-\begin{frame}[t,plain]{Fledging success decreases with increasing density.}
-	\begin{center}
-		\includegraphics[height=0.7\textheight]{BTBW_fledgling_success}
-	\end{center}	
-
-	\imagecredit{\hfill Fig. 18--13 of textbook.}
-\end{frame}
-
-{
-\usebackgroundtemplate{\includegraphics[width=\paperwidth]{BTBW_migration_mortality} }
-\begin{frame}[t,plain]{}
-\imagecredit{\hfill\colorbox{black}{\color{white} cuatrok77, Wikimedia Commons.}}
-\end{frame}
-}
-
-
-{
-\usebackgroundtemplate{\includegraphics[width=\paperwidth]{density_dependent_territory} }
-\begin{frame}[t,plain]{}
-\imagecredit{\hfill\colorbox{black}{\color{white} Foliash, Wikimedia Commons.}}
-\end{frame}
-}
-
-\begin{frame}[t,plain]{Disease can cause local population decline.}
-	\centering
-		\includegraphics[width=1\textwidth]{population_decline_house_finch}
-
-	\imagecredit{\hfill Figure 18--9 of textbook.}
-\end{frame}
-
-{
-\usebackgroundtemplate{\includegraphics[width=\paperwidth]{h5n1_genealogy} }
-\begin{frame}[t,plain]{}
-\imagecredit{\hfill Li et al. 2014. Emerging Infectious Diseases 20: 1287.}
-\end{frame}
-}
-
-{
-\usebackgroundtemplate{\includegraphics[width=\paperwidth]{h5n1_spread} }
-\begin{frame}[t,plain]{Siberia is a critical “hub” for the spread of H5N1.}
-\imagecredit{\hfill Li et al. 2014. Emerging Infectious Diseases 20: 1287.}
-\end{frame}
-}
-
-{
-\usebackgroundtemplate{\includegraphics[width=\paperwidth]{h5n1_flyways} }
-\begin{frame}[t,plain]{Most eastern hemisphere flyways overlap in Siberia.}
-\imagecredit{Li et al. 2014. Emerging Infectious Diseases 20: 1287.}
-\end{frame}
-}
-
-{
-\usebackgroundtemplate{\includegraphics[width=\paperwidth]{migrating_duck_flock} }
-\begin{frame}[t,plain]{}
-\imagecredit{\textcolor{white}{Gary Kramer, USFWS, Public Domain.}}
-\end{frame}
-}
-
-{
-\begin{frame}[t,plain]{Some ducks have the highest incidence of avian flu.}
-	\includegraphics[height=0.85\textheight]{h5n1_anatidae}
-	
-	\imagecredit{\hfill Olsen et al. 2006. Science 312: 384.}
-\end{frame}
-}
-
-{
-\begin{frame}[t,plain]{Some migratory birds use Nearctic and Palearctic flyways.}
-	\includegraphics[width=1\textwidth]{h5n1_shared_flyways}
-	
-	\imagecredit{\hfill Peterson et al. 2007. PLoS ONE 2: e261.}
-\end{frame}
-}
-
-{
-\usebackgroundtemplate{\includegraphics[width=\paperwidth]{eastern_meadowlark}}
-\begin{frame}[t,plain]{}
-    	\imagecredit{\colorbox{white!80!gray}{Kenneth Cole Schneider, Flickr Creative Commons.}}
-\end{frame}
-}
-
-{
-\usebackgroundtemplate{\includegraphics[width=\paperwidth]{grasshopper_sparrow}}
-\begin{frame}[t,plain]{}
-	\imagecredit{\hfill Kenneth Cole Schneider, Flickr Creative Commons.}
-\end{frame}
-}
-
-{
-\usebackgroundtemplate{\includegraphics[width=\paperwidth]{dickcissel}}
-\begin{frame}[t,plain]{}
-	\imagecredit{\textcolor{white}{US Fish \& Wildlife Service, Public Domain.}}
-\end{frame}
-}
-
-{
-\usebackgroundtemplate{\includegraphics[width=\paperwidth]{henslows_sparrow}}
-\begin{frame}[t,plain]{}
-	\imagecredit{\hfill Amy Evenstad, Flickr Creative Commons.}
-\end{frame}
-}
-
-{
-\usebackgroundtemplate{\includegraphics[width=\paperwidth]{bobolink}}
-\begin{frame}[t,plain]{}
-	\imagecredit{\hfill Amy Evenstad, Flickr Creative Commons.}
-\end{frame}
-}
-
-{
-\begin{frame}[t,plain]{What do these bird species have in common?}
-
-	\hangpara{Eastern Meadowlark}
-
-	\hangpara{Grasshopper Sparrow}
-	
-	\hangpara{Dickcissel}
-	
-	\hangpara{Henslow's Sparrow}
-	
-	\hangpara{Bobolink}
-	
-\end{frame}
-}
-
-{
-\begin{frame}[t,plain]{Grassland birds have declined rapidly.  Why?}
-	\begin{center}
-		\includegraphics[width=1\textwidth]{grassland_bird_decline}
-	\end{center}
-
-	\imagecredit{\hfill Gregory et al. 2005. Phil. Trans. Roy. Soc. B. 360: 269. See also Fig. 21--2 of textbook.}
-\end{frame}
-}
-
-{
-\usebackgroundtemplate{\includegraphics[width=\paperwidth]{midwest_prairie}}
-\begin{frame}[t,plain]{The Midwest was once covered by prairies.}
-	\imagecredit{\hfill\textcolor{white}{US Fish \& Wildlife Service, Public Domain}}
-\end{frame}
-}
-
-{
-\usebackgroundtemplate{\includegraphics[width=\paperwidth]{taberville_prairie_ca}}
-\begin{frame}[t,plain]{\textcolor{white}{Taberville Prairie is a fragment of tallgrass prairie surrounded by agricultural land.}}
-\end{frame}
-}
+\lecture{instructor}{instructor}
 
 {
 \begin{frame}[t,plain]{Grassland bird richness increases with habitat area.}
 	\centering
 		\includegraphics[width=0.85\textwidth]{grassland_fragment_size}
-%	\end{center}
 
 	\imagecredit{\hfill Herkert 1994. Ecol. Appl. 4: 461.}
 \end{frame}
 }
 
-{
-\usebackgroundtemplate{\includegraphics[width=\paperwidth]{controlled_burn}}
-\begin{frame}[t,plain]{What is the purpose of controlled burning?}
-	\imagecredit{\hfill\textcolor{white}{Erik, Flickr Creative Commons.}}
-\end{frame}
-}
+\lecture{student}{student}
 
 {
-\begin{frame}[t,plain]{How does density of dead and live matter respond?}
-	\begin{center}
-		\includegraphics[width=0.9\textwidth]{grassland_burn_habitat_diversity2}
-	\end{center}
-
-	\imagecredit{\hfill Hovick et al. 2014. Ecosphere 5: Article 62.}
-\end{frame}
-}
-
-{
-\begin{frame}[t,plain]{How do vegetation types respond to controlled burns?}
-	\begin{center}
-		\includegraphics[width=0.9\textwidth]{grassland_burn_habitat_diversity1}
-	\end{center}
-
-	\imagecredit{\hfill Hovick et al. 2014. Ecosphere 5: Article 62.}
-\end{frame}
-}
-
-{
-\begin{frame}[t,plain]{How do individual species respond?}
-	\begin{center}
-		\includegraphics[width=0.9\textwidth]{grassland_burn_bird_response1}
-	\end{center}
-
-	\imagecredit{\hfill Hovick et al. 2014. Ecosphere 5: Article 62.}
-\end{frame}
-}
-
-{
-\begin{frame}[t,plain]{Which post-burn stage supports the most bird diversity?}
-	\begin{center}
-		\includegraphics[width=0.82\textwidth]{grassland_burn_bird_response2}
-	\end{center}
-
-	\imagecredit{\hfill Hovick et al. 2014. Ecosphere 5: Article 62.}
-\end{frame}
-}
-
-{
-\begin{frame}[t,plain]{Population size of the Grasshopper Sparrow is decreasing.}
+\begin{frame}[t,plain]{Island bird richness increases with island area.}
 	\centering
-		\includegraphics[height=0.85\textheight]{GRSP_population_decline}
+		\includegraphics[height=0.85\textheight]{island_species_area}
 
-	\imagecredit{\hfill Figure 21--6 of textbook.}
+	\imagecredit{\hfill Fig. 20–6 of textbook.}
 \end{frame}
 }
 
 {
-\begin{frame}[t,plain]{Grasshopper Sparrow populations respond to management.}
+\begin{frame}[t,plain]{A model of island biogeography provides a framework for conservation management.}
 	\centering
-		\includegraphics[width=0.9\linewidth]{GRSP_population_recovery}
+		\includegraphics[height=0.8\textheight]{island_biogeography_model}
 
-	\imagecredit{\hfill Figure 21--6 of textbook.}
+	\imagecredit{\hfill Fig. 20–5 of textbook.}
 \end{frame}
 }
 
 
 {
-\usebackgroundtemplate{\includegraphics[width=\paperwidth]{iiwi_extinction}}
+
+\begin{frame}[t,plain]{Global forest cover is decreasing, especially in SE Asia.}
+	\begin{center}
+		\includegraphics[width=1\textwidth]{forest_global_loss}
+	\end{center}	
+	\imagecredit{Global Forest Watch}
+\end{frame}
+}
+
+{
+\begin{frame}[t,plain]{The U.S. was heavily deforested in the late 1800s.}
+	\begin{center}
+		\includegraphics[width=1\textwidth]{forest_land_trends}
+	\end{center}	
+	\imagecredit{U.S. Forest Service.}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{forest_us} }
+\begin{frame}[t,plain]{Forest density in the U.S. remains greatly decreased}
+	\imagecredit{\hfill NASA Earth Observatory.}
+\end{frame}
+}
+
+%% Carolina Parakeet, Ivory-billed Woodpecker by James St. John, Wikimedia Commons
+%% Passenger Pigeon, Cornell University Museum, Flickr CC
+%% Bachman's Warbler Louis Agassiz Fuertest, public domain
+
+%Kirtland's Warbler, USFWS, FCC
+% Distribution map, Thayerbirding.com
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{extinct_birds} }
 \begin{frame}[t,plain]{}
-	\imagecredit{\hfill\textcolor{white}{Norman Kaleomokuokanalu Chock, Flickr Creative Commons.}}
+\imagecredit{\textcolor{white}{Wikimedia Commons, Cornell University.}}
 \end{frame}
 }
 
 {
-\usebackgroundtemplate{\includegraphics[width=\paperwidth]{hawaii_endangered}}
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{kirtlands_warbler} }
 \begin{frame}[t,plain]{}
-	\imagecredit{\hfill Brenda Zaun, US Fish \& Wildlife Service, Flickr Creative Commons.}
+\imagecredit{US Fish \& Wildlife Service, Flickr Creative Commons.}
+\end{frame}
+}
+
+\begin{frame}[t,plain]{Kirtland's Warbler requires specific breeding habitat.}
+	\begin{center}
+		\includegraphics[height=0.8\textheight]{kirtlands_warbler_distribution}
+	\end{center}	
+
+	\imagecredit{\hfill Stolen from \url{Thayersoftware.com}.}
+\end{frame}
+
+%% Flying flicker against blue sky is Jamie Chaves, FCC
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{bosque_del_apache} }
+\begin{frame}[t,plain]{}
+	\imagecredit{\hfill\textcolor{white}{Gail Diane Yovanovich, National Wildlife Refuge Association.}}
+\end{frame}
+}
+
+\lecture{instructor}{instructor}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{reserve_design_1} }
+\begin{frame}[t,plain]{}
+	\imagecredit{Fig. 21–13 of textbook.}
 \end{frame}
 }
 
 {
-\begin{frame}[t,plain]{Habitat loss is the greatest risk for threatened species.}
-	\begin{center}
-		\includegraphics[width=1\textwidth]{extinction_risk}
-	\end{center}
-	\imagecredit{\hfill Owens and Bennett, 2000. Proc. Natl. Acad. Sci. USA 97: 12144}
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{reserve_design_2} }
+\begin{frame}[t,plain]{}
+	\imagecredit{Fig. 21–13 of textbook.}
 \end{frame}
 }
 
-{
-\begin{frame}[t,plain]{Habitat loss affects different types of species.}
-	\begin{center}
-		\includegraphics[width=1\textwidth]{extinction_risk_habitat_loss}
-	\end{center}
+\lecture{student}{student}
 
-	\imagecredit{\hfill Owens and Bennett, 2000. Proc. Natl. Acad. Sci. USA 97: 12144}
+\begin{frame}[t,plain]{Songbird fledging success increases in larger fragments.}
+	\begin{center}
+		\includegraphics[width=1\textwidth]{forest_edge_fledging_success}
+	\end{center}	
+
+	\imagecredit{\hfill Fig. 21–19 of textbook.}
+\end{frame}
+
+\begin{frame}[t,plain]{Nest parasitism decreases with increased forest cover.}
+	\begin{center}
+		\includegraphics[width=1\textwidth]{forest_parasitism}
+	\end{center}	
+
+	\imagecredit{\hfill Fig. 21–18 of textbook.}
+\end{frame}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{scrub_jay} }
+\begin{frame}[t,plain]{}
+	\imagecredit{\textcolor{white}{Andrea Westmoreland, Flickr Creative Commons.}}
 \end{frame}
 }
 
-{
-\begin{frame}[t,plain]{Persecution affects different types of species.}
+\begin{frame}[t,plain]{The Florida Scrub-Jay distribution forms a metapopulation.}
+	\centering
+		\includegraphics[height=0.8\textheight]{scrub_jay_distribution}
+
+	\imagecredit{\hfill Fig. 21–14 of textbook.}
+\end{frame}
+
+
+\begin{frame}[t,plain]{Florida Scrub-Jay habitat requires burn management.}
+	\centering
+		\includegraphics[height=0.8\textheight]{scrub_jay_life_table}
+
+	\imagecredit{\hfill U.S. Fish \& Wildlife Service.}
+\end{frame}
+
+\begin{frame}[t,plain]{PVA shows 40 or more territories are needed to sustain a population.}
+	\centering
+		\includegraphics[height=0.8\textheight]{scrub_jay_pva}
+
+	\imagecredit{\hfill Fig. 21–15 of textbook.}
+\end{frame}
+
+\begin{frame}[t,plain]{Unsuitable habitat forces jays to disperse greater distances.}
 	\begin{center}
-		\includegraphics[width=1\textwidth]{extinction_risk_persecution}
+		\begin{tabular}{@{}L{5cm}C{2.5cm}C{2.5cm}@{}}
+		\toprule
+		\vfill Habitat Type 	&	Normal Dispersal Distance (km)	&	Maximum Dispersal Distance (km) \\
+		\midrule
+		Breeding pair dispersal & 0 & \textemdash \\
+		Open water	&	2	&	2 \\
+		Urban areas	&	2	&	2  \\
+		Dense pine forest	&	2	&	3  \\
+		Unbroken, open pasture	&	3	&	7  \\
+		Cropland	&	3	&	7  \\
+		Densely wooded suburbs	&	5	&	8  \\
+		Suburbs with few trees	&	5	&	13  \\
+		Broken pasture, fence rows	&	8	&	24  \\
+		Overgrown scrub 	&	8	&	24  \\
+		\bottomrule
+		\end{tabular}
 	\end{center}
-	\imagecredit{\hfill Owens and Bennett, 2000. Proc. Natl. Acad. Sci. USA 97: 12144}
+	\imagecredit{\hfill U.S. Fish \& Wildlife Service.}
+\end{frame}
+
+\begin{frame}[t,plain]{Patch dynamics across landscape mosaics increases diversity.}
+	\centering
+		\includegraphics[width=1\textwidth]{forest_mosaic}
+
+	\imagecredit{\hfill Fig. 21–23 of textbook.}
+\end{frame}
+
+\begin{frame}[t,plain]{Clear-cutting and regeneration creates a diverse landscape.}
+	\centering
+		\includegraphics[width=0.9\textwidth]{forest_mosaic_clearcut}
+
+	\imagecredit{\hfill\copyright Nature Education.}
+\end{frame}
+
+\begin{frame}[t,plain]{Landscape mosaics contain an array of habitat types.}
+	\centering
+		\includegraphics[width=1\textwidth]{landscape_mosaic}
+
+	\imagecredit{\hfill Federal Interagency Stream Restoration Working Group. 1998.}
+\end{frame}
+
+\begin{frame}[t,plain]{Landscape mosaics increases bird diversity.}
+	\centering
+		\includegraphics[height=0.85\textheight]{landscape_mosaic_bird_community}
+
+	\imagecredit{\hfill Mabry et al. 2010. Forest Ecol. Manage. 260: 42.}
+\end{frame}
+
+
+\begin{frame}[t,plain]{Migratory birds require global conservation networks.}
+	\centering
+		\includegraphics[height=0.85\textheight]{important_bird_areas}
+
+	\imagecredit{\hfill Fig. 21–25 of textbook.}
+\end{frame}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{western_shorebird_network} }
+\begin{frame}[t,plain]{The Western Hemisphere Shorebird Reserve network targets wetland birds.}
 \end{frame}
 }
 
