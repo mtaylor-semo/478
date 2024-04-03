@@ -1,0 +1,362 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt, addpoints]{exam}
+
+%\printanswers
+
+
+\usepackage[left=1in,right=0.75in,top=1in]{geometry}     
+\usepackage[parfill]{parskip}
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures={TeX, Common}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional, OldStyle}]{\mainfont}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+% This defines \amper for the fancy ampersand
+% to be used in the header. See
+% https://tex.stackexchange.com/a/58185/39194
+%\usepackage{xspace}
+%\newfontfamily\amperfont[Style=Alternate]{Linux Libertine O}
+%\makeatletter
+%\DeclareRobustCommand{\amper}{{\amperfont\ifx\f@shape\scname\smaller[1.2]\fi\&}\xspace}
+%\makeatother
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/466/exams/}}%
+
+
+% Used to get the last two digits of the year for the header below.
+\def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
+
+\usepackage[sc]{titlesec}
+
+\pagestyle{headandfoot}
+
+\firstpageheader{Ornithology, Lab Exam 2, \textsc{s}\short{\year}, \numpoints~points.}{}{%
+	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
+\runningheader{}{}{\small{pg. \thepage}}
+\runningheadrule
+
+\footer{\iflastpage{\small Lecture: \rule{0.6in}{0.4pt} / \numpoints\ points}{}}{}{\rule{1in}{0.4pt}}%{\makebox[0.75in]{\hrulefill}}
+\extrafootheight{-0.5in}
+
+
+%\fancypagestyle{labexam}{
+%\fancyfoot[L]{\small \rule{0.6in}{0.4pt} / \numpoints\ points}
+%}
+%\pagestyle{foot}
+%\footer{\small \rule{0.6in}{0.4pt} / 25~points}{}{}
+
+
+%\fancypagestyle{alim}{\fancyhf{}\renewcommand{\headrulewidth}{0pt}\fancyfoot[R]{Alim, from Unknown City}}
+
+
+\pointsinmargin
+\marginpointname{ pts}
+
+\usepackage{multicol}
+
+%% Remove comment %% to print answer key.
+\unframedsolutions
+\renewcommand{\solutiontitle}{}
+\SolutionEmphasis{\bfseries}
+
+%% Create a Matching question format
+\newcommand*\Matching[1]{
+\ifprintanswers
+	\textbf{#1}
+\else
+	\rule{2in}{0.4pt}
+\fi
+}
+\newlength\matchlena
+\newlength\matchlenb
+\settowidth\matchlena{\rule{2.1in}{0pt}}
+\newcommand\MatchQuestion[2]{%
+	\setlength\matchlenb{0.98\linewidth}
+	\addtolength\matchlenb{-\matchlena}
+	\parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}}
+
+
+%% Create a Matching question format
+\newcommand*\LabMatching[1]{
+\ifprintanswers
+	\textbf{#1}
+\else
+	\rule{2.0in}{0.4pt}
+\fi
+}
+\newlength\matchlaba
+\newlength\matchlabb
+\settowidth\matchlaba{\rule{2in}{0pt}}
+\newcommand\LabMatch[2]{%
+	\setlength\matchlabb{0.98\linewidth}
+	\addtolength\matchlabb{-\matchlaba}
+	\parbox[t]{\matchlaba}{\LabMatching{#1}} \parbox[t]{\matchlabb}{#2}}
+
+% change indentation for multiple choice
+\renewcommand{\choiceshook}{%
+	\setlength{\leftmargin}{0.25in}%
+	\setlength{\parsep}{3pt}%
+}
+
+
+\newcommand*\AnswerBox[2]{%
+    \parbox[t][#1]{0.92\textwidth}{%
+    \begin{solution}#2\end{solution}}
+    \vspace{\stretch{1}}
+}
+
+\newenvironment{AnswerPage}[1]
+    {\begin{minipage}[t][#1]{0.92\textwidth}%
+    \begin{solution}}
+    {\end{solution}\end{minipage}
+    \vspace{\stretch{1}}}
+
+\newlength{\basespace}
+\setlength{\basespace}{5\baselineskip}
+
+\newcommand{\bumppoints}[1]{%
+	\addtocounter{numpoints}{#1}
+}
+
+
+\begin{document}
+
+
+\fullwidth{%
+This lab exam covers external and skeletal features and taxonomy (order and family). Each question is worth 2 points.
+
+Fill in the blanks with the region of the body or the feather group that correspond to the numbered parts in the figure at right. Ignore unnumbered labels.
+}
+
+\begin{questions}
+
+%\vspace{2\baselineskip}
+\bigskip
+
+%\setcounter{question}{0}
+\bumppoints{14}
+\begin{multicols}{2}
+	\question 
+	\LabMatch{Mantle}{body region.}
+	%\rule{2in}{0.4pt} body region.
+	\vspace{0.4\baselineskip}
+	
+	\question
+	\LabMatch{Nape}{body region.}
+	%\rule{2in}{0.4pt} body region.
+	\vspace{0.4\baselineskip}
+	
+	\question 
+	\LabMatch{\small Greater secondary coverts}{feather group.}
+	\vspace{0.4\baselineskip}
+	
+	\question 
+	\LabMatch{Primaries}{feather group.}
+	\vspace{0.6\baselineskip}
+	
+	\question 
+	\LabMatch{Rectices}{feather group.} 
+	\vspace{0.6\baselineskip}
+	
+	\question 
+	\LabMatch{Upper tail coverts}{feather group.}
+	\vspace{0.6\baselineskip}
+	
+	\question 
+	\LabMatch{Rump}{body region.} 
+	
+	\columnbreak
+	
+	\includegraphics[width=\linewidth]{bird_upper_numbered}
+	
+\end{multicols}
+
+\fullwidth{%
+Choose the answer that matches the number of the numbered head region. Ignore the unnumbered labels.}
+%\vspace{\baselineskip}
+
+\bumppoints{6}
+\begin{multicols}{2}
+	\question
+	Region that covers the top of the head.
+	
+	\begin{choices}
+		\choice Auricular.
+		\correctchoice Crown.
+		\choice Supercilium.
+		\choice Nape.
+		\choice Lores.
+	\end{choices}
+	
+	
+	\question
+	Stripe above the eye.
+	
+	\begin{choices}
+		\choice Malar.
+		\choice Lores.
+		\choice Median stripe.
+		\choice Auricular.
+		\correctchoice Supercilium
+	\end{choices}
+	
+	\columnbreak
+	
+	\includegraphics[width=\linewidth]{bird_head_numbered}
+	
+	\question
+	Region of the face between the eye and bill.
+	
+	\begin{choices}
+		\choice Malar
+		\choice Nasal
+		\choice Supercilium
+		\correctchoice Lores.
+		\choice Crown
+	\end{choices}
+	
+\end{multicols}
+
+\newpage
+
+\bumppoints{6}
+\begin{multicols}{2}
+	
+	\vspace*{2\baselineskip}
+	
+	\question\LabMatch{Furcula}{Proper name for the fused collar bone.}
+	\vspace{0.6\baselineskip}
+	
+	\question\LabMatch{Carina}{Proper name for the “keel” of the sternum.}
+	\vspace{0.6\baselineskip}
+	
+%	\question\LabMatch{Tarsus}{Overall name for the leg.}
+	\question\LabMatch{Tarsometatarsus}{Proper name for this bone of the lower leg.}
+	\vspace{0.6\baselineskip}
+	
+	\columnbreak
+	
+	\vspace{-\baselineskip}
+	
+	\includegraphics[width=\linewidth]{skeleton_pigeon_numbered}
+	
+\end{multicols}
+
+
+\question
+A character that separates all diving ducks from all dabbling ducks is
+
+	\begin{choices}
+		\correctchoice The hallux of diving ducks is lobed. The hallux of dabbling ducks is not lobed.
+		\choice The bill of diving ducks is terrete. The bill of dabbling ducks is spatulate.
+		\choice The front toes of diving ducks are fully webbed. The front toes of dabbling ducks are partially webbed.
+		\choice The tomium of diving ducks is serrate. The tomium of dabbling ducks is lamellate.
+	\end{choices}
+
+
+\bumppoints{6}
+
+\question
+The only grebe in Missouri is the Pied-billed Grebe. It belongs to the family
+
+	\begin{choices}
+		\choice Anatidae
+		\choice Anseriformes
+		\correctchoice Podicipedidae
+		\choice Phasianidae
+		\choice Galloanseriformes
+	\choice Columbiformes
+	\end{choices}
+
+\question
+This family of weak-footed flyers has pamprodactyl feet.
+
+	\begin{choices}
+		\choice Caprimulgidae
+		\correctchoice Apodidae
+		\choice Trochilidae
+		\choice Podicipedidae
+		\choice Passeridae
+	\end{choices}
+
+\question
+This family of birds have a pectinate middle toe as a key characteristic.
+
+\begin{choices}
+	\correctchoice Ardeidae
+	\choice Anatidae
+	\choice Picidae
+	\choice Laridae
+	\choice Scolopacidae
+\end{choices}
+
+\bumppoints{16}
+\fullwidth{Match the proper taxonomic level to each description. Not all names are used. No name is used twice.}
+\vspace{-1\baselineskip}
+\fullwidth{%
+	\input{lab_exam1_matchwordlist.tex}
+}
+\vspace{0.6\baselineskip}
+
+\question\MatchQuestion{Galliformes}{Order with the families Odontophoridae and Phasianidae.}
+\vspace{0.6\baselineskip}
+
+\question\MatchQuestion{Falconiformes}{Order with the American Kestrel and Perigrine Falcon.}
+\vspace{0.6\baselineskip}
+
+\question\MatchQuestion{Columbidae}{Family of doves and pigeons.}
+\vspace{0.6\baselineskip}
+
+\question\MatchQuestion{Phasianidae}{Family with Wild Turkey and Greater Prairie Chicken.}
+\vspace{0.6\baselineskip}
+
+\question\MatchQuestion{Caprimulgiforrmes}{Order with nightjars, swifts, and hummingbirds.}
+\vspace{0.6\baselineskip}
+
+\question\MatchQuestion{Charadriformes}{Order with all shorebirds, gulls, and terns.}
+\vspace{0.6\baselineskip}
+
+\question\MatchQuestion{Cathartidae}{Family with Turkey and Black Vultures.}
+\vspace{0.6\baselineskip}
+
+\question\MatchQuestion{Strigidae / (Tytonidae)}{Family of owls. (Bonus +2 if you name the family you were not required to learn.)}
+\vspace{0.6\baselineskip}
+
+%\bonusquestion (extra credit)
+%Name the type of bill found on the Atlantic Puffin, pictured at right.
+\bumppoints{2}
+\question
+Name the type of bill found on most waterfowl \textit{or} the type of bill found on mergansers. Two answers are possible. Bonus +2 if you name both.
+
+\ifprintanswers
+\vspace{\baselineskip}
+
+\textbf{Waterfowl: Spatulate. Mergansers: terrete}
+\fi
+%\columnbreak
+
+%\includegraphics[width=0.75\linewidth]{puffin_head}
+
+%\newpage
+%
+%
+
+%
+
+%	\vfill
+
+
+\end{questions}
+
+
+
+
+
+\end{document}
