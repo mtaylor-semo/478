@@ -1,0 +1,263 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt, addpoints]{exam}
+
+%\printanswers
+
+\usepackage[left=1in,right=0.75in,top=1in]{geometry}     
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures={TeX, Common}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional, OldStyle}]{\mainfont}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+\usepackage[parfill]{parskip} 
+
+% This defines \amper for the fancy ampersand
+% to be used in the header. See
+% https://tex.stackexchange.com/a/58185/39194
+\usepackage{xspace}
+\newfontfamily\amperfont[Style=Alternate]{Linux Libertine O}
+\makeatletter
+\DeclareRobustCommand{\amper}{{\amperfont\ifx\f@shape\scname\smaller[1.2]\fi\&}\xspace}
+\makeatother
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/466/exams/}}%
+
+% Used to get the last two digits of the year for the header below.
+\def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
+
+\pagestyle{headandfoot}
+\firstpageheader{Ornithology, Field \& Taxonomy Quiz, \textsc{s}\short{\year}, \numpoints~points.}{}{%
+	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
+\runningheader{}{}{\small{pg. \thepage}}
+\runningheadrule
+
+
+\footer{\iflastpage{\small \rule{0.6in}{0.4pt} / \numpoints\ points}{}}{}{\makebox[1in]{\hrulefill}}%{\makebox[0.75in]{\hrulefill}}
+\extrafootheight{-0.5in}
+
+
+\pointsinmargin
+\marginpointname{ pts}
+
+\usepackage{multicol}
+\usepackage{booktabs}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+%% Remove comment %% to print answer key.
+\unframedsolutions
+\renewcommand{\solutiontitle}{}
+\SolutionEmphasis{\bfseries}
+
+%% Create a Matching question format
+\newcommand*\Matching[1]{
+\ifprintanswers
+	\textbf{#1}
+\else
+	\rule{2in}{0.5pt}
+\fi
+}
+\newlength\matchlena
+\newlength\matchlenb
+\settowidth\matchlena{\rule{2.1in}{0pt}}
+\newcommand\MatchQuestion[2]{%
+	\setlength\matchlenb{0.98\linewidth}
+	\addtolength\matchlenb{-\matchlena}
+	\parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}}
+
+%\usepackage{enumitem}
+%\setlist{leftmargin=*}
+%\setlist[1]{labelindent=\parindent}
+%\setlist[enumerate]{label=\textsc{\alph*}., ref=\textsc{\alph*}}
+
+\newcommand*\AnswerBox[2]{%
+    \parbox[t][#1]{0.92\textwidth}{%
+    \begin{solution}#2\end{solution}}
+    \vspace{\stretch{1}}
+}
+
+\newenvironment{AnswerPage}[1]
+    {\begin{minipage}[t][#1]{0.92\textwidth}%
+    \begin{solution}}
+    {\end{solution}\end{minipage}
+    \vspace{\stretch{1}}}
+
+\newlength{\basespace}
+\setlength{\basespace}{5\baselineskip}
+
+\newcommand{\bumppoints}[1]{%
+	\addtocounter{numpoints}{#1}
+}
+
+\newcommand{\qblank[1]}{\ifprintanswers \textbf{#1} \else \rule{2.5in}{0.4pt} \fi}
+
+\newcommand{\bqblank[1]}{\ifprintanswers \textbf{#1~(e.c.)} \else \rule{2.5in}{0.4pt}~(e.c.) \fi}
+
+\begin{document}
+
+Orders and families from taxonomy lectures 5–7. Some field quiz questions will ask you to name a taxonomic level. The answers are included below.
+
+
+\begin{multicols}{3}
+	Cardinalidae \\
+	Corvidae \\
+	Fringillidae \\
+	Hirudinidae \\
+	Icteridae \\
+	Mimidae \\
+	Paridae \\
+	Parulidae \\
+	Passeridae \\
+	Passerellidae \\
+	Passeriformes \\
+	Picidae \\
+	Piciformes \\
+	Sittidae \\
+	Sturnidae \\
+	Thraupidae \\
+	Troglodytidae \\
+	Turdidae \\
+	Tyrannidae \\
+	Vireonidae 
+\end{multicols}
+
+\begin{questions}
+
+\bumppoints{46}
+
+\vspace{\baselineskip}
+
+\begin{multicols}{2}
+\question
+\qblank[Wood Thrush]
+
+\bigskip
+
+\question
+\qblank[Canada Goose]
+
+\bigskip
+
+\question
+\qblank[White-eyed Vireo]
+
+\bigskip
+
+\question
+\qblank[Northern Mockingbird]
+
+\bigskip
+
+\question
+\qblank[Mimidae]
+
+\bigskip
+
+\question
+\qblank[Red-winged Blackbird]
+
+\bigskip
+
+\question
+\qblank[Eastern Bluebird]
+
+\bigskip
+
+\question
+\qblank[Turdidae]
+
+\bigskip
+
+\question
+\qblank[Red-belled Woodpecker]
+
+\bigskip
+
+\question
+\qblank[Lark Sparrow]
+
+\bigskip
+
+\question
+\qblank[Passerellidae]
+
+%\bigskip
+
+\question
+\qblank[Hirudinidae]
+
+\bigskip
+
+\question
+\qblank[Carolina Chickaeee]
+
+\bigskip
+
+\question
+\qblank[Paridae]
+
+\bigskip
+
+\question
+\qblank[Eastern Wood Pewee]
+
+\bigskip
+
+\question
+\qblank[Red-winged Blackbird]
+
+\bigskip
+
+\question
+\qblank[Icteridae]
+
+\bigskip
+
+\question
+\qblank[Piciformes]
+
+\bigskip
+
+%\question
+%\qblank[Female]
+
+\question
+\qblank[American Robin]
+
+\bigskip
+
+\question
+\qblank[American Crow]
+
+\bigskip
+
+\question
+\qblank[Corvidae]
+
+\bigskip
+
+\question
+\bqblank[Blue-gray gnatcatcher]
+
+\end{multicols}
+
+
+\vspace{1\baselineskip}
+
+\question\MatchQuestion{Cardinalidae/Thraupidae}{Name the family of tanagers and Northern Cardinal.}
+
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Parulidae}{Name the family of warblers, such as the Common Yellowthroat.}
+
+\end{questions}
+
+\end{document}
