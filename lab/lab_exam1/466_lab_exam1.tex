@@ -37,12 +37,12 @@
 
 \pagestyle{headandfoot}
 
-\firstpageheader{Ornithology, Lab Exam 2, \textsc{s}\short{\year}, \numpoints~points.}{}{%
+\firstpageheader{Ornithology, Lab Exam 1, \textsc{s}\short{\year}, \numpoints~points.}{}{%
 	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
 \runningheader{}{}{\small{pg. \thepage}}
 \runningheadrule
 
-\footer{\iflastpage{\small Lecture: \rule{0.6in}{0.4pt} / \numpoints\ points}{}}{}{\rule{1in}{0.4pt}}%{\makebox[0.75in]{\hrulefill}}
+\footer{\iflastpage{\small \rule{0.6in}{0.4pt} / \numpoints\ points}{}}{}{\rule{1in}{0.4pt}}%{\makebox[0.75in]{\hrulefill}}
 \extrafootheight{-0.5in}
 
 
@@ -58,6 +58,7 @@
 
 \pointsinmargin
 \marginpointname{ pts}
+\marginbonuspointname{\textsc{e.c.}}
 
 \usepackage{multicol}
 
@@ -130,7 +131,7 @@
 
 
 \fullwidth{%
-This lab exam covers external and skeletal features and taxonomy (order and family). Each question is worth 2 points.
+This lab exam covers external and skeletal features and external topology. Each question is worth 2 points.
 
 Fill in the blanks with the region of the body or the feather group that correspond to the numbered parts in the figure at right. Ignore unnumbered labels.
 }
@@ -141,7 +142,7 @@ Fill in the blanks with the region of the body or the feather group that corresp
 \bigskip
 
 %\setcounter{question}{0}
-\bumppoints{14}
+\bumppoints{50}
 \begin{multicols}{2}
 	\question 
 	\LabMatch{Mantle}{body region.}
@@ -182,7 +183,6 @@ Fill in the blanks with the region of the body or the feather group that corresp
 Choose the answer that matches the number of the numbered head region. Ignore the unnumbered labels.}
 %\vspace{\baselineskip}
 
-\bumppoints{6}
 \begin{multicols}{2}
 	\question
 	Region that covers the top of the head.
@@ -215,18 +215,17 @@ Choose the answer that matches the number of the numbered head region. Ignore th
 	Region of the face between the eye and bill.
 	
 	\begin{choices}
-		\choice Malar
-		\choice Nasal
-		\choice Supercilium
+		\choice Malar.
+		\choice Nasal.
+		\choice Supercilium.
 		\correctchoice Lores.
-		\choice Crown
+		\choice Crown.
 	\end{choices}
 	
 \end{multicols}
 
 \newpage
 
-\bumppoints{6}
 \begin{multicols}{2}
 	
 	\vspace*{2\baselineskip}
@@ -238,9 +237,13 @@ Choose the answer that matches the number of the numbered head region. Ignore th
 	\vspace{0.6\baselineskip}
 	
 %	\question\LabMatch{Tarsus}{Overall name for the leg.}
-	\question\LabMatch{Tarsometatarsus}{Proper name for this bone of the lower leg.}
+	\question\LabMatch{Tarsometatarsus}{Proper name for this bone.}
 	\vspace{0.6\baselineskip}
 	
+		\question\LabMatch{Allular digit}{Proper name for this small bone.}
+	\vspace{0.6\baselineskip}
+	
+		\question\LabMatch{Supracoracoid}{Proper name for this bone.} \vspace{0.6\baselineskip}
 	\columnbreak
 	
 	\vspace{-\baselineskip}
@@ -249,108 +252,159 @@ Choose the answer that matches the number of the numbered head region. Ignore th
 	
 \end{multicols}
 
+\bigskip
+
+\begin{multicols}{2} \raggedcolumns
+\question
+The bill of this hummingbird is not straight.
+
+%\vspace{0.5\baselineskip}
+
+\bigskip
+
+It is \ifprintanswers \textbf{decurved}. \else \rule{2.5in}{0.4pt}.\fi
+
+\bigskip
 
 \question
-A character that separates all diving ducks from all dabbling ducks is
+The bill of this hummingbird is round or circular in cross section, which is called
 
-	\begin{choices}
-		\correctchoice The hallux of diving ducks is lobed. The hallux of dabbling ducks is not lobed.
-		\choice The bill of diving ducks is terrete. The bill of dabbling ducks is spatulate.
-		\choice The front toes of diving ducks are fully webbed. The front toes of dabbling ducks are partially webbed.
-		\choice The tomium of diving ducks is serrate. The tomium of dabbling ducks is lamellate.
-	\end{choices}
+\bigskip
+
+\ifprintanswers \textbf{terete}. \else \rule{2.5in}{0.4pt}.\fi
 
 
-\bumppoints{6}
+\columnbreak
+\includegraphics[width=2in]{decurved_lucifer_hummingbird}
+\end{multicols}
 
-\question
-The only grebe in Missouri is the Pied-billed Grebe. It belongs to the family
-
-	\begin{choices}
-		\choice Anatidae
-		\choice Anseriformes
-		\correctchoice Podicipedidae
-		\choice Phasianidae
-		\choice Galloanseriformes
-	\choice Columbiformes
-	\end{choices}
-
-\question
-This family of weak-footed flyers has pamprodactyl feet.
-
-	\begin{choices}
-		\choice Caprimulgidae
-		\correctchoice Apodidae
-		\choice Trochilidae
-		\choice Podicipedidae
-		\choice Passeridae
-	\end{choices}
-
-\question
-This family of birds have a pectinate middle toe as a key characteristic.
-
-\begin{choices}
-	\correctchoice Ardeidae
-	\choice Anatidae
-	\choice Picidae
-	\choice Laridae
-	\choice Scolopacidae
-\end{choices}
-
-\bumppoints{16}
-\fullwidth{Match the proper taxonomic level to each description. Not all names are used. No name is used twice.}
-\vspace{-1\baselineskip}
-\fullwidth{%
-	\input{lab_exam1_matchwordlist.tex}
-}
-\vspace{0.6\baselineskip}
-
-\question\MatchQuestion{Galliformes}{Order with the families Odontophoridae and Phasianidae.}
-\vspace{0.6\baselineskip}
-
-\question\MatchQuestion{Falconiformes}{Order with the American Kestrel and Perigrine Falcon.}
-\vspace{0.6\baselineskip}
-
-\question\MatchQuestion{Columbidae}{Family of doves and pigeons.}
-\vspace{0.6\baselineskip}
-
-\question\MatchQuestion{Phasianidae}{Family with Wild Turkey and Greater Prairie Chicken.}
-\vspace{0.6\baselineskip}
-
-\question\MatchQuestion{Caprimulgiforrmes}{Order with nightjars, swifts, and hummingbirds.}
-\vspace{0.6\baselineskip}
-
-\question\MatchQuestion{Charadriformes}{Order with all shorebirds, gulls, and terns.}
-\vspace{0.6\baselineskip}
-
-\question\MatchQuestion{Cathartidae}{Family with Turkey and Black Vultures.}
-\vspace{0.6\baselineskip}
-
-\question\MatchQuestion{Strigidae / (Tytonidae)}{Family of owls. (Bonus +2 if you name the family you were not required to learn.)}
-\vspace{0.6\baselineskip}
-
-%\bonusquestion (extra credit)
-%Name the type of bill found on the Atlantic Puffin, pictured at right.
-\bumppoints{2}
-\question
-Name the type of bill found on most waterfowl \textit{or} the type of bill found on mergansers. Two answers are possible. Bonus +2 if you name both.
-
-\ifprintanswers
 \vspace{\baselineskip}
 
-\textbf{Waterfowl: Spatulate. Mergansers: terrete}
-\fi
-%\columnbreak
+\begin{multicols}{2} \raggedcolumns
+	\question
+	The proper name for the pouch on the lower bill is
+	
+	%\vspace{0.5\baselineskip}
+	
+	\bigskip
+	
+	\ifprintanswers \textbf{gular sac}. \else \rule{2.5in}{0.4pt}. \fi
+	
+	\columnbreak
+	\includegraphics[width=2in]{gular_sac_pelican2}
+\end{multicols}
 
-%\includegraphics[width=0.75\linewidth]{puffin_head}
+\newpage
 
-%\newpage
-%
-%
+\begin{multicols}{2} \raggedcolumns
+	\question
+	The proper name for the shape of this
+	deep, narrow bill (side to side) is 
+	
+	\bigskip
+	
+	\ifprintanswers \textbf{compressed}. \else \rule{2.5in}{0.4pt}. \fi
+	
+	\columnbreak
+	\includegraphics[width=2in]{compressed_razorbill}
+\end{multicols}
 
-%
+\begin{multicols}{2} \raggedcolumns
+	\question
+	 Roman numerals are toe numbers. The proper name for this foot shape is
+	
+	\bigskip
+	
+	\ifprintanswers \textbf{zygodactyl}. \else \rule{2.5in}{0.4pt}. \fi
+	
+	\smallskip
+	
+	
 
-%	\vfill
+	\bigskip \bigskip
+	
+	\question
+	The proper name for the toe numbered I is
+	
+	\bigskip
+	
+	 \ifprintanswers \textbf{hallux}. \else \rule{2.5in}{0.4pt}. \fi
+	
+	\columnbreak
+	\includegraphics[width=2in]{foot_zygodactyl}
+\end{multicols}
+
+
+\begin{multicols}{2} \raggedcolumns
+	\question
+	The proper name for the toothed edges of \newline 	
+	this bill is
+	
+	\bigskip
+	
+	\ifprintanswers \textbf{serrated} \else \rule{2.5in}{0.4pt}. \fi
+		
+	\columnbreak
+	\includegraphics[width=3in]{serrated_merganser}
+\end{multicols}
+
+
+\begin{multicols}{2} \raggedcolumns
+	\question
+	The type of webbing shown in the left and right images is 
+	
+	\bigskip
+	
+	left:~\ifprintanswers \textbf{semipalmate} \else \rule{2.5in}{0.4pt}. \fi
+	
+	\bigskip
+	
+	right:~\ifprintanswers \textbf{lobate} \else \rule{2.5in}{0.4pt}. \fi
+	
+	\columnbreak
+	\includegraphics[width=1.5in]{foot_semipalmate} \includegraphics[width=1.5in]{foot_lobate_grebe}\newline
+	{\footnotesize Webbing is shaded gray. }
+\end{multicols}
+
+
+\newpage
+
+\begin{multicols}{2} \raggedcolumns
+	\question
+	The proper name for this bill shape is
+	
+	\bigskip \bigskip
+	
+	\ifprintanswers \textbf{bent} \else \rule{2.5in}{0.4pt}. \fi
+	
+	\columnbreak
+	\includegraphics[width=2in]{bent_flamingo}
+\end{multicols}
+
+\vspace{2\baselineskip}
+
+\question
+The proper name for \textit{all} of the main flight feathers of the wing is ~\ifprintanswers \textbf{remiges}. \else \rule{2.25in}{0.4pt}. \fi
+
+\vspace{2\baselineskip}
+
+\bonusquestion[]
+The name for the most common foot type for perching birds is
+
+\bigskip
+
+\ifprintanswers \textbf{anisodactyl}. \else \rule{2.5in}{0.4pt}. \fi
+
+
+\vspace{2\baselineskip}
+
+\bonusquestion[]
+Name your favorite bird. The only restriction is that you must use the full and proper common name.
+
+\bigskip
+
+\ifprintanswers \textbf{whatever}. \else \rule{2.5in}{0.4pt}. \fi
+
 
 
 \end{questions}
