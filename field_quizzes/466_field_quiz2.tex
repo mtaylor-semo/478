@@ -1,0 +1,261 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt]{exam}
+\usepackage[left=1in,right=0.75in,top=1in]{geometry}     
+
+%\printanswers
+
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures=TeX, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional, OldStyle}]{\mainfont}
+%\setmonofont[Scale=MatchLowercase]{Linux Libertine Mono O} 
+%\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+%\usepackage{graphicx}
+%	\graphicspath{%
+%	{/Users/goby/Pictures/teach/478/exams/}}%
+
+
+% Used to get the last two digits of the year for the header below.
+\def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
+
+\pagestyle{headandfoot}
+%\firstpageheader{\bfseries{Ichthyology, Exam 1, F14}}{}{\bfseries{Name: \enspace \makebox[2.5in]{\hrulefill}}}
+\firstpageheader{Ornithology, Field Quiz 2, \textsc{f}\short{\year}}{}{%
+	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
+\runningheader{}{}{\small{pg. \thepage}}
+%\runningheadrule
+
+\footer{\iflastpage{\small \rule{0.6in}{0.4pt} / \numpoints\ points}{}}{}{}%{\makebox[0.75in]{\hrulefill}}
+\extrafootheight{-0.5in}
+
+\usepackage{multicol}
+
+%% Create a Matching question format
+\newcommand*\Matching[1]{
+\ifprintanswers
+	\textbf{#1}
+\else
+	\rule{2.5in}{0.4pt}
+\fi
+}
+\newlength\matchlena
+\newlength\matchlenb
+\settowidth\matchlena{\rule{2.5in}{0pt}}
+\newcommand\MatchQuestion[2]{%
+	\setlength\matchlenb{\linewidth}
+	\addtolength\matchlenb{-\matchlena}
+	\parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}}
+
+\pointname{}
+
+
+\newcommand{\bumppoints}[1]{%
+	\addtocounter{numpoints}{#1}
+}
+
+\begin{document}
+
+\begin{questions}
+
+\bumppoints{44}
+
+\fullwidth{Each question is worth 2 points, including extra credit questions (labeled \textsc{ec}). I don't grade for spelling errors if I can identify the word you write but you may lose a point for each especially bad spelling error. \emph{Be sure to write your answer in the blank that corresponds to the question number.}}
+
+
+\vspace{1\baselineskip}
+
+\begin{multicols}{2}
+\raggedcolumns
+% 1
+\question\MatchQuestion{Tufted Titmouse}{}
+\vspace{2\baselineskip}
+
+%2
+\question\MatchQuestion{Brown-headed Cowbird}{}
+\vspace{2\baselineskip}
+
+%3
+\question\MatchQuestion{American Robin}{}
+\vspace{2\baselineskip}
+
+%4
+\question\MatchQuestion{Turdidae}{}
+\vspace{2\baselineskip}
+
+%5
+\question\MatchQuestion{Barred Owl}{}
+\vspace{2\baselineskip}
+
+%6
+\question\MatchQuestion{Downy Woodpecker}{}
+\vspace{2\baselineskip}
+
+%7
+\question\MatchQuestion{Female}{}
+\vspace{2\baselineskip}
+
+%8
+\question\MatchQuestion{Eastern Towhee}{}
+\vspace{2\baselineskip}
+
+%9
+\question\MatchQuestion{Purple Martin}{}
+\vspace{2\baselineskip}
+
+%10
+\question\MatchQuestion{Killdeer}{}
+\vspace{2\baselineskip}
+
+%11
+\question\MatchQuestion{Charadriiformes}{}
+\vspace{2\baselineskip}
+
+%12
+\question\MatchQuestion{Northern Cardinal}{}
+%\vspace{2\baselineskip}
+
+\columnbreak
+
+%13
+\question\MatchQuestion{Female}{}
+\vspace{2\baselineskip}
+
+%14
+\question\MatchQuestion{Crow (can't tell by sight)}{}
+\vspace{2\baselineskip}
+
+%15ec
+\question\MatchQuestion{Corvidae}{}
+\vspace{2\baselineskip}
+
+%16
+\question\MatchQuestion{Brown Thrasher}{}
+\vspace{2\baselineskip}
+
+%17
+\question\MatchQuestion{Mimidae}{}
+\vspace{2\baselineskip}
+
+%18
+\question\MatchQuestion{Loggerhead Shrike}{}
+\vspace{2\baselineskip}
+
+%19
+\question\MatchQuestion{Field Sparrow}{}
+\vspace{2\baselineskip}
+
+%20
+\question\MatchQuestion{Red-headed Woodpecker}{}
+\vspace{2\baselineskip}
+
+%21
+\question\MatchQuestion{Piciformes}{}
+\vspace{2\baselineskip}
+
+%22
+\question\MatchQuestion{Tree Swallow}{}
+\vspace{2\baselineskip}
+%
+%23
+\question[\textsc{ec}]\MatchQuestion{Hirundinidae}{}
+\vspace{2\baselineskip}
+%
+%24ec
+%
+\question[\textsc{ec}]\MatchQuestion{Cliff Swallow}{}
+\vspace{2\baselineskip}
+%25ec
+\question[\textsc{ec}]\MatchQuestion{Tufted Timouse}{}
+%\vspace{2\baselineskip}
+%
+%26
+%\question\MatchQuestion{\phantom{Bottom-Rover}}{}
+%\vspace{2\baselineskip}
+%
+%%27
+%%\question\MatchQuestion{Basipterygium}{}
+%%\vspace{2\baselineskip}
+%
+%%%28
+%\question\MatchQuestion{Heterocercal}{}
+%\vspace{2\baselineskip}
+%%
+%%39
+%\question\MatchQuestion{Male or Female / Claspers}{}
+%\vspace{2\baselineskip}
+%
+%%30
+%%\question\MatchQuestion{Pectoral Girdle}{}
+%%\vspace{2\baselineskip}
+%
+%%29
+%\question\MatchQuestion{Anus}{}
+%\vspace{2\baselineskip}
+%
+%%32
+%\question\MatchQuestion{Liver}{}
+%\vspace{2\baselineskip}
+%
+%
+%%33
+%\question\MatchQuestion{Male or Female / Gonads}{}
+%\vspace{2\baselineskip}
+%
+%\columnbreak
+%
+%
+%%34
+%%\question\MatchQuestion{Metapterygoid}{}
+%%\vspace{2\baselineskip}
+%
+%%36
+%\question\MatchQuestion{Gill Filaments}{}
+%\vspace{2\baselineskip}
+%
+%%35
+%\question\MatchQuestion{Gill Arch}{}
+%\vspace{2\baselineskip}
+%
+%%XXec
+%\question[\textsc{ec}]\MatchQuestion{Efferent} 
+%
+%\vspace{2\baselineskip}
+%
+%%27
+%%\question\MatchQuestion{Supraoccipital}{}
+%%\vspace{2\baselineskip}
+%
+%%25
+%%\question\MatchQuestion{Parietal}{}
+%%\vspace{2\baselineskip}
+%
+%\question\MatchQuestion{Pre-caudal}{}
+%\vspace{2\baselineskip}
+%
+%
+%\question\MatchQuestion{Hemal}{}
+%\vspace{2\baselineskip}
+%
+%
+%
+%%26
+%\question\MatchQuestion{Barbels}{}
+%\vspace{2\baselineskip}
+%%
+%
+%%%24
+%\question\MatchQuestion{Adipose}{}
+%
+%\vspace{2\baselineskip}
+%
+%%39
+%\question[\textsc{ec}]\MatchQuestion{Pre-caudal}{}
+
+\end{multicols}
+
+\end{questions}
+\end{document}
