@@ -1,13 +1,13 @@
 %!TEX TS-program = lualatex
 %!TEX encoding = UTF-8 Unicode
 
-%\documentclass[t]{beamer}
+\documentclass[t]{beamer}
 
 %%%% HANDOUTS For online Uncomment the following four lines for handout
-\documentclass[t,handout]{beamer}  %Use this for handouts.
-\includeonlylecture{student}
-\usepackage{handoutWithNotes}
-\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
+%\documentclass[t,handout]{beamer}  %Use this for handouts.
+%\includeonlylecture{student}
+%\usepackage{handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
 
 
 %% For students, use \lecture{student}{student}
@@ -24,6 +24,7 @@
 \usepackage{graphicx}
 	\graphicspath{%
 	{/Users/goby/Pictures/teach/478/lectures/}%
+	{/Users/goby/Pictures/teach/348/lectures/}%
 	{/Users/goby/Pictures/teach/common/}} % set of paths to search for images
 
 \usepackage{amsmath,amssymb}
@@ -78,46 +79,56 @@
 %% Grades
 \begin{frame}[t]{You \highlight{earn} your grade with}
 	\begin{center}\large\begin{tabular}{@{}lll@{}}
-	UG		&	Three 75-point exams 				& 	50\% \\
-			&	Lab \& other assignments 			& 	40\% \\
-			&	Life history paper 					& 	10\% \\
+	UG		&	Three 75-point exams 				& 	40\% \\
+			&	Lab practicals 			& 	20\% \\
+			&	Homework \& other assignments	&	20\% \\
+			&	5-in-5 presentation 					& 	20\% \\
 			&										&	\\
-	G / HC	&	Three $\geq$ 75-point exams 		& 	50\% \\
-			&	Lab \& other assignments 			& 	40\% \\
-			&	Life history paper \& presentation 	&	10\% \\
+	G / HC	&	Three $\geq$ 75-point exams 		& 	40\% \\
+			&	Lab practicals 			& 	30\% \\
+			& Homework \& other assignments	&	10\% \\
+			&	Annotated bibliography \& 5-in-5 presentation &	20\% \\
 	\end{tabular}
 	\end{center}
 
 	\vspace{1.5\baselineskip}
 
-	\hspace{2em} Grads /Honors will present their life history paper (50 points),
+	%\hspace{2em} Grads /Honors will present their life history paper (50 points),
 	
-	\vspace{\baselineskip}
+	%\vspace{\baselineskip}
 	
-	\hspace{2em} Undergrads will evaluate (10 points).
+	%\hspace{2em} Undergrads will evaluate (10 points).
 
 \end{frame}
+
+
+{
+	\usebackgroundtemplate{\includegraphics[width=\paperwidth]{5in5_overview}
+	}
+	\begin{frame}[t]
+	\end{frame}
+}
 
 %% Ecological Life History Paper
-\begin{frame}[t,plain]{Each of you will write an \highlight{ecological life history paper. }}
-
-	\hangpara You choose your species.
-	
-	\hspace{2em} Research your choice in advance, and then choose wisely! 
-
-	\hangpara Your paper will cover ecology, taxonomy, and life history.
-
-	\hangpara \highlight{Due dates are}
-	
-	\hspace{2em} Fish choice: 19 September,
-	
-	\hspace{2em} Bibliography: 17 October,
-	
-	\hspace{2em} Paper: 21 November.
-	
-	\hangpara Graduate students will present during final exam period.
-
-\end{frame}
+%\begin{frame}[t,plain]{Each of you will write an \highlight{ecological life history paper. }}
+%
+%	\hangpara You choose your species.
+%	
+%	\hspace{2em} Research your choice in advance, and then choose wisely! 
+%
+%	\hangpara Your paper will cover ecology, taxonomy, and life history.
+%
+%	\hangpara \highlight{Due dates are}
+%	
+%	\hspace{2em} Fish choice: 19 September,
+%	
+%	\hspace{2em} Bibliography: 17 October,
+%	
+%	\hspace{2em} Paper: 21 November.
+%	
+%	\hangpara Graduate students will present during final exam period.
+%
+%\end{frame}
 
 %%% Field Trips
 %\begin{frame}[t,plain]{We will take \highlight{three Saturday field trips.}}
